@@ -1,8 +1,5 @@
 # 🎬 Video DeepResearch 
-
-
-
-In this work, we challenge this common belief by introducing **VideoDeepResearch**, a novel agentic framework for long video understanding. Our approach relies solely on a text-only large reasoning model (LRM) combined with a modular multi-modal toolkit, including multimodal retrievers and visual perceivers, all of which are readily available in practice.
+In this work, we challenge this common belief by introducing **VideoDeepResearch**, a novel agentic framework for long video understanding. Our approach relies solely on a text-only large reasoning model (LRM) combined with a modular multi-modal toolkit, including multimodal retrievers and visual perceivers, all of which are readily available in practice. Our results demonstrate that VideoDeepResearch achieves substantial improvements over existing MLLM baselines, surpassing the previous state-of-the-art by 9.6\%, 6.6\%, and 3.9\% on MLVU (test), LVBench, and LongVideoBench, respectively. These findings highlight the promise of agentic systems in overcoming key challenges in LVU problems. 
 
 
 <p align="center">
