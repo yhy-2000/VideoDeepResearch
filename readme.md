@@ -11,7 +11,7 @@ In this work, we challenge this common belief by introducing **VideoDeepResearch
 ## 🎬 Demo
 
 <div align="center">
-    <video src="./asset/example_sports.mov"/>
+    <video src="https://github.com/user-attachments/assets/b4bdf129-97f3-4399-94a4-926afd0a80ac"/>
 </div>
 
 
