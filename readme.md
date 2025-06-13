@@ -51,14 +51,16 @@ pip install -r requirements.txt
 
 ```
 VideoDeepResearch/
-├── streamlit_video_qa_demo.py    # Streamlit demo script
-├── run.py                        # Terminal-based demo entry
+├── streamlit_demo_vlm_local.py   # Streamlit demo script that use local vllm server as visual module
+├── streamlit_demo_vlm_api.py     # Streamlit demo script that use proprietary API as visual module
 ├── requirements.txt              # Python dependencies
+├── eval/                         # Code for evaluating benchmarks
+├── asset/                        # Assets used in the demo
 ├── data/
 │   ├── videos/                   # Raw video files
 │   ├── clips/                    # Generated video clips
 │   ├── dense_frames/             # Extracted key frames
-│   └── subtitles/                # Subtitle files
+│   └── subtitles/                # Subtitle files(optional)
 └── README.md                     # This documentation
 ```
 
