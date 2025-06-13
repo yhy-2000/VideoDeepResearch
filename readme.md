@@ -11,7 +11,7 @@ In this work, we challenge this common belief by introducing **VideoDeepResearch
 ## 🎬 Demo
 
 <div align="center">
-    <video src="https://github.com/user-attachments/assets/b4bdf129-97f3-4399-94a4-926afd0a80ac"/>
+    <video src="https://github.com/user-attachments/assets/6f90154b-1ab4-4df3-ac02-1deb26d702f1"/>
 </div>
 
 
@@ -139,3 +139,18 @@ Encounter issues or have questions? Reach out to:
 
 > **H.Y. Yuan**
 > Email: [hyyuan@ruc.edu.cn](mailto:hyyuan@ruc.edu.cn)
+
+## 📄 Citation
+
+If you find this work helpful, please cite our paper:
+```bibtex
+@misc{yuan2025videodeepresearchlongvideounderstanding,
+      title={VideoDeepResearch: Long Video Understanding With Agentic Tool Using}, 
+      author={Huaying Yuan and Zheng Liu and Junjie Zhou and Ji-Rong Wen and Zhicheng Dou},
+      year={2025},
+      eprint={2506.10821},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2506.10821}, 
+}
+```
