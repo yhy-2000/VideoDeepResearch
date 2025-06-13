@@ -1,5 +1,13 @@
-# 🎬 Video DeepResearch 
-In this work, we challenge this common belief by introducing **VideoDeepResearch**, a novel agentic framework for long video understanding. Our approach relies solely on a text-only large reasoning model (LRM) combined with a modular multi-modal toolkit, including multimodal retrievers and visual perceivers, all of which are readily available in practice. Our results demonstrate that VideoDeepResearch achieves substantial improvements over existing MLLM baselines, surpassing the previous state-of-the-art by 9.6\%, 6.6\%, and 3.9\% on MLVU (test), LVBench, and LongVideoBench, respectively. These findings highlight the promise of agentic systems in overcoming key challenges in LVU problems. 
+<h2 align="center">🎬 VideoDeepResearch: Long Video Understanding With Agentic Tool Using</a></h2>
+
+<p align="center">
+    <a href="https://arxiv.org/abs/2504.21776">
+            <img alt="Build" src="http://img.shields.io/badge/cs.CV-arXiv%3A2406.04264-B31B1B.svg">
+    </a>
+</p>
+
+## 👉 Introduction
+In this work, we propose **VideoDeepResearch**, an agentic framework that tackles long video understanding (LVU) using a text-only reasoning model with modular multimodal tools, outperforming MLLM baselines across major LVU benchmarks.
 
 
 <p align="center">
@@ -15,7 +23,7 @@ In this work, we challenge this common belief by introducing **VideoDeepResearch
 </div>
 
 
----
+
 
 ## ✨ Key Features
 
@@ -47,7 +55,7 @@ cd VideoDeepResearch
 pip install -r requirements.txt
 ```
 
-### 2. Project Layout
+**Project Layout:**
 
 ```
 VideoDeepResearch/
@@ -64,7 +72,7 @@ VideoDeepResearch/
 └── README.md                     # This documentation
 ```
 
-### ▶️ Launch Demo
+### 2. Launch Demo
 
 Set the following environment variables of text-only large reasoning model(example for `deepseek-reasoner`):
 
@@ -109,38 +117,38 @@ Open **Local URL** in your browser to start.
 
 
 
-## Results Replication
+
+### 🧰 Usage Instructions
+
+1. **Open Browser**: Navigate to `http://localhost:8501`.
+2. **Configure Settings**:
+   * Choose model and API parameters in the sidebar.
+   * Upload or select a video file (`.mp4`) and (optionally) a subtitle file (`.srt`).
+3. **Ask Questions**:
+   * Type your question regarding the video content.
+   * Click **Start Processing**.
+4. **Review Results**:
+   * View tool-call logs, extracted frames/clips, and final answers below the video player.
+> 💡 *Tip: For faster responses, try faster reasoning model apis like `gemini-2.5`.*
+
+
+
+---
+
+
+## ✅ Results Replication
 The examples we provide are sourced from the LVBench and MLVU test sets. To run these examples, please download the corresponding datasets and replace the video_path with the appropriate local path.
 
 We also provide the prompts used in prompt_qwen25vl.py and prompt_seed15vl.py, allowing you to replicate our results using the corresponding configurations.
 
 ---
-
-## 🧰 Usage Instructions
-
-1. **Open Browser**: Navigate to `http://localhost:8501`.
-2. **Configure Settings**:
-
-   * Choose model and API parameters in the sidebar.
-   * Upload or select a video file (`.mp4`) and (optionally) a subtitle file (`.srt`).
-3. **Ask Questions**:
-
-   * Type your question regarding the video content.
-   * Click **Start Processing**.
-4. **Review Results**:
-
-   * View tool-call logs, extracted frames/clips, and final answers below the video player.
-
-> 💡 *Tip: For faster responses, try faster reasoning model apis like `gemini-2.5`.*
-
----
-
 ## 📬 Contact
 
 Encounter issues or have questions? Reach out to:
 
 > **H.Y. Yuan**
 > Email: [hyyuan@ruc.edu.cn](mailto:hyyuan@ruc.edu.cn)
+
 
 ## 📄 Citation
 
