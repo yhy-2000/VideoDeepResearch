@@ -1,7 +1,7 @@
 <h2 align="center">🎬 VideoDeepResearch: Long Video Understanding With Agentic Tool Using</a></h2>
 
 <p align="center">
-    <a href="https://arxiv.org/abs/2504.21776">
+    <a href="https://arxiv.org/pdf/2506.10821">
             <img alt="Build" src="http://img.shields.io/badge/cs.CV-arXiv%3A2406.04264-B31B1B.svg">
     </a>
 </p>
