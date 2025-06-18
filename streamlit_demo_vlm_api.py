@@ -587,7 +587,7 @@ class StreamlitVideoQAManager:
                 output_text = output_text.split('</thinking>')[1]
             query = re.findall(pattern, output_text)[0]
             
-            frame_paths, timestamps = timestamp_to_clip_path(0, batch_states['raw_data'][i]['duration'], video_path, fps=self.args.clip_fps)
+            frame_paths, timestamps = timestamp_to_clip_path(0, duration, video_path, fps=self.args.clip_fps)
 
             query = (
                 "Please watch the given video and answer the following question: " + query +
