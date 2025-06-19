@@ -92,7 +92,7 @@ export API_KEY=YOUR_API_KEY
     ```bash
       streamlit run streamlit_demo_vlm_local.py
     ```
-  * **Proprietary API**: set the enviroment variable `API_MODEL_NAME_VLM`, `API_BASE_URL_VLM`, and `API_KEY_VLM`, e.g.:
+  * **Proprietary API**: set the environment variable `API_MODEL_NAME_VLM`, `API_BASE_URL_VLM`, and `API_KEY_VLM`, e.g.:
     ```bash
       export API_MODEL_NAME_VLM=doubao-1.5-vision-pro-250328
       export API_BASE_URL_VLM=https://ark.cn-beijing.volces.com/api/v3
