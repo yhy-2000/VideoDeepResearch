@@ -453,16 +453,11 @@ class StreamlitVideoQAManager:
             
             # 并行处理视频切分和帧提取
             status_text.text("✂️ Cutting video clips...")
-            with ThreadPoolExecutor(max_workers=2) as executor:
+            with ThreadPoolExecutor(max_workers=24) as executor:
                 clip_future = executor.submit(_cut_video_clips, video_path, clips_dir, video_name, duration)
                 progress_bar.progress(0.5)
                 
-                status_text.text("🎞️ Extracting frames...")  
-                frame_future = executor.submit( video_path, frames_dir)
-                progress_bar.progress(0.8)
-                
                 clip_future.result()
-                frame_future.result()
                 progress_bar.progress(1.0)
             
             status_text.text("✅ Video preprocessing completed!")
