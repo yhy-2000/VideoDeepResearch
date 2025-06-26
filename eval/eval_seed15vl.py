@@ -5,7 +5,7 @@ import sys
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(parent_dir)
 
-from video_utils  import _get_video_duration,_cut_video_clips,extract_subtitles,timestamp_to_clip_path,is_valid_video,is_valid_frame,extract_video_clip,parse_subtitle_time,clip_number_to_clip_path,image_paths_to_base64
+from video_utils  import _get_video_duration,_cut_video_clips,extract_subtitles,timestamp_to_clip_path,is_valid_video,is_valid_frame,extract_video_clip,parse_subtitle_time,clip_number_to_clip_path,image_paths_to_base64,load_image
 import json
 import re
 import torch
@@ -50,7 +50,6 @@ class BatchGeniusManager:
         self.vlm_api_base = os.getenv('API_BASE_URL_VLM')
         self.vlm_api_key = os.getenv('API_KEY_VLM')
 
-
         self.processor = AutoProcessor.from_pretrained('Qwen/Qwen2.5-VL-7B-Instruct',use_fast=True)
         self.processor.tokenizer.padding_side = 'left'
 
@@ -67,11 +66,10 @@ class BatchGeniusManager:
 
         self.current_batch = []
         self.current_sample_idx = 0
-        self.batch_size = 100
+        self.batch_size = 1
         self.batch_size_vlm_vllm = 200 
         self.max_image_resolusion = 768
     
-
     def get_dic_subtitles(self, dic):
         video_id = dic['video_path'].split('/')[-1].split('.')[0]
 
@@ -369,7 +367,7 @@ class BatchGeniusManager:
                         if ':' in match_set:
                             begin_time_stamp, end_time_stamp = match_set.split(':')[0], match_set.split(':')[1]
                             begin_time_stamp, end_time_stamp = float(begin_time_stamp), float(end_time_stamp)
-                            video_clip, timestamps = timestamp_to_clip_path(begin_time_stamp, end_time_stamp, video_path, fps=self.args.clip_fps)
+                            video_clip, timestamps = timestamp_to_clip_path(self.args.dataset_folder,begin_time_stamp, end_time_stamp, video_path, fps=self.args.clip_fps)
                         else:
                             clip_numbers = sorted([int(m) for m in match_set.split(';') if m.isdigit()])
                             video_clip, timestamps = clip_number_to_clip_path(clip_numbers, video_path, clip_duration=self.args.clip_duration, fps = args.clip_fps)
