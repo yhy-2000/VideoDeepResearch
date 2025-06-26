@@ -19,4 +19,4 @@ wait
 
 
 # 运行测试脚本
-python prompt_seed15vl.py --dataset LongVideoBench --dataset_mode '_val' --dataset_folder DATASET_DIR
+python eval_seed15vl.py --dataset LongVideoBench --dataset_mode '_val' --dataset_folder DATASET_DIR
