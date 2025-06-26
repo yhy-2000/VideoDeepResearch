@@ -75,8 +75,8 @@ class BatchGeniusManager:
     def get_dic_subtitles(self, dic):
         video_id = dic['video_path'].split('/')[-1].split('.')[0]
 
-        if os.path.exists(f'{self.args.benchmark_folder}/{self.args.dataset}/subtitles/{video_id}.srt'):
-            subtitle_path = f'{self.args.benchmark_folder}/{self.args.dataset}/subtitles/{video_id}.srt'
+        if os.path.exists(f'{self.args.dataset_folder}/{self.args.dataset}/subtitles/{video_id}.srt'):
+            subtitle_path = f'{self.args.dataset_folder}/{self.args.dataset}/subtitles/{video_id}.srt'
             subtitles = ''
             with open(subtitle_path, "r", encoding="utf-8") as file:
                 content = file.read().split("\n\n")
