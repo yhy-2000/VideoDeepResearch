@@ -258,7 +258,7 @@ class BatchGeniusManager:
         while retry<5:
             try:
                 ans=client.chat.completions.create(
-                    model="doubao-1.5-vision-pro-250328",
+                    model=self.vlm_model_name,
                     messages=messages
                 ).choices[0].message.content
                 return ans
@@ -370,7 +370,7 @@ class BatchGeniusManager:
                             video_clip, timestamps = timestamp_to_clip_path(self.args.dataset_folder,begin_time_stamp, end_time_stamp, video_path, fps=self.args.clip_fps)
                         else:
                             clip_numbers = sorted([int(m) for m in match_set.split(';') if m.isdigit()])
-                            video_clip, timestamps = clip_number_to_clip_path(clip_numbers, video_path, clip_duration=self.args.clip_duration, fps = args.clip_fps)
+                            video_clip, timestamps = clip_number_to_clip_path(self.args.dataset_folder,clip_numbers, video_path, clip_duration=self.args.clip_duration, fps = args.clip_fps)
 
                         query = (
                             "Please watch the given video and answer the following question: " + query +
@@ -404,7 +404,7 @@ class BatchGeniusManager:
                     query=query[0]
                 
                 valid_queries, valid_video_clips, valid_timestamps, valid_match_set, vis = [],[],[],[],[]
-                video_clip, timestamps = timestamp_to_clip_path(0, batch_states['raw_data'][i]['duration'], video_path, fps=self.args.clip_fps)
+                video_clip, timestamps = timestamp_to_clip_path(self.args.dataset_folder, 0, batch_states['raw_data'][i]['duration'], video_path, fps=self.args.clip_fps)
 
                 ans = self.single_video2text([query, video_clip, timestamps])
                 tool_result+=f"The tool results for <video_browser_question>{query}</video_browser_question> is:{ans}\n"  
@@ -535,7 +535,6 @@ class BatchGeniusManager:
                 else:
                     batch_states['messages'][ii].append({'role':'user', 'content': '\n'.join(ans_str_li)})
 
-        # 只有当没有工具调用时候的输出答案才算正确，不然都是蒙的
         for i, output_text in enumerate(ans_text):
             if '<answer>' in output_text and not valid_flag_li[i]:
                 answer = self._extract_final_answer(output_text)
@@ -669,7 +668,6 @@ if __name__ == "__main__":
     args.save_path = f'./eval_result/{args.dataset}{args.dataset_mode}_deepseek_clip_{args.clip_duration}.json.part{args.thread_idx}'
     os.makedirs('./eval_result/',exist_ok=True)
 
-    # videomme可以自定义，其他写死
     if args.dataset == 'LongVideoBench':
         args.use_subtitle = 1
     elif args.dataset in ['mlvu', 'lvbench']:
@@ -677,7 +675,6 @@ if __name__ == "__main__":
 
 
     print(args.save_path)
-    # 初始化管理器
     all_thread_data=[]
     dataset_mode = args.dataset_mode
 
