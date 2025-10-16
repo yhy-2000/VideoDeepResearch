@@ -1,0 +1,54 @@
+### model
+model_name_or_path: ./VideoDeepResearch_release/train/LLaMA-Factory-sft/saves/qwen25-7b-sft-planner_18k/checkpoint-1400
+    
+trust_remote_code: true
+add_tokens: <think>,</think>,<video_reader>,</video_reader>,<video_reader_question>,</video_reader_question>,<answer>,</answer>,<temporal_grounding_agent>,</temporal_grounding_agent>,<video_browser>,</video_browser>,<video_segment_retriever_textual_query>,</video_segment_retriever_textual_query>,<video_segment_retriever_image_query>,</video_segment_retriever_image_query>,<subtitle_retriever>,</subtitle_retriever>,<subtitle_extractor>,</subtitle_extractor>
+
+### method
+stage: dpo
+do_train: true
+finetuning_type: lora
+lora_rank: 8
+lora_target: all
+pref_beta: 0.1
+pref_loss: sigmoid  # choices: [sigmoid (dpo), orpo, simpo]
+pref_ftx: 0.1 # sft loss参数， 默认是0
+
+
+### dataset
+dataset: dpo_marathon
+template: qwen
+cutoff_len: 8192
+max_samples: 1000000
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+
+### output
+output_dir: saves/qwen25-7b-dpo_1k
+logging_steps: 2
+save_steps: 20
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: none  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 5.0e-6
+num_train_epochs: 8.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+# ## eval
+# eval_dataset: dpo_marathon
+# # val_size: 0.05
+# per_device_eval_batch_size: 1
+# eval_strategy: steps
+# eval_steps: 10
+
+

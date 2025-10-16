@@ -1,0 +1,3677 @@
+INFO 10-11 06:44:59 [__init__.py:235] Automatically detected platform cuda.
+Save path: ./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+Max workers: 1
+498 502
+Checking valid data...
+Valid data count: 84
+Loaded 19 previously processed samples
+Total samples: 84, Already processed: 19, To process: 83
+Starting multiprocessing with 1 workers...
+Initializing VLLM server with conservative settings...
+INFO 10-11 06:45:29 [config.py:1604] Using max model len 30000
+INFO 10-11 06:45:30 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-11 06:45:31 [core.py:572] Waiting for init message from front-end.
+INFO 10-11 06:45:31 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=30000, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-11 06:45:36 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-11 06:45:37 [profiling.py:276] The sequence length (30000) is smaller than the pre-defined worst-case total number of multimodal tokens (32768). This may cause certain multi-modal inputs to fail during inference. To avoid this, you should increase `max_model_len` or reduce `mm_counts`.
+WARNING 10-11 06:45:37 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-11 06:45:37 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-11 06:45:37 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-11 06:45:37 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-11 06:45:37 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-11 06:47:44 [default_loader.py:262] Loading weights took 126.48 seconds
+INFO 10-11 06:47:45 [gpu_model_runner.py:1892] Model loading took 15.6277 GiB and 126.774737 seconds
+INFO 10-11 06:47:46 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+INFO 10-11 06:47:55 [gpu_worker.py:255] Available KV cache memory: 49.58 GiB
+INFO 10-11 06:47:55 [kv_cache_utils.py:833] GPU KV cache size: 928,304 tokens
+INFO 10-11 06:47:55 [kv_cache_utils.py:837] Maximum concurrency for 30,000 tokens per request: 30.94x
+INFO 10-11 06:47:55 [core.py:193] init engine (profile, create kv cache, warmup model) took 9.71 seconds
+[TEXT2TEXT] cost time: 1.2027208805084229
+VLM batch processing completed: 7.96s, Tasks: 1, avg per task: 7.96s
+[TEXT2TEXT] cost time: 4.610236167907715
+Thread 1 Accuracy: 0 / 1 0.0
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.002197504043579
+[TEXT2TEXT] cost time: 19.829569101333618
+[TEXT2TEXT] cost time: 11.018243789672852
+VLM batch processing completed: 19.18s, Tasks: 13, avg per task: 1.48s
+[TEXT2TEXT] cost time: 0.8021659851074219
+[TEXT2TEXT] cost time: 1.2029905319213867
+VLM batch processing completed: 2.91s, Tasks: 1, avg per task: 2.91s
+[TEXT2TEXT] cost time: 1.0023958683013916
+VLM batch processing completed: 2.13s, Tasks: 1, avg per task: 2.13s
+[TEXT2TEXT] cost time: 1.00252103805542
+VLM batch processing completed: 3.40s, Tasks: 1, avg per task: 3.40s
+[TEXT2TEXT] cost time: 35.25583553314209
+Thread 1 Accuracy: 0 / 2 0.0
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 3.005277156829834
+[TEXT2TEXT] cost time: 2.404036283493042
+[TEXT2TEXT] cost time: 9.421004295349121
+VLM batch processing completed: 19.06s, Tasks: 11, avg per task: 1.73s
+[TEXT2TEXT] cost time: 3.4095077514648438
+[TEXT2TEXT] cost time: 0.0004954338073730469
+[TEXT2TEXT] cost time: 0.0005033016204833984
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 1.2027833461761475
+[TEXT2TEXT] cost time: 8.013505220413208
+[TEXT2TEXT] cost time: 3.4053006172180176
+VLM batch processing completed: 23.35s, Tasks: 16, avg per task: 1.46s
+[TEXT2TEXT] cost time: 3.609060049057007
+[TEXT2TEXT] cost time: 1.6057765483856201
+VLM batch processing completed: 3.31s, Tasks: 1, avg per task: 3.31s
+[TEXT2TEXT] cost time: 1.4033288955688477
+Thread 1 Accuracy: 0 / 3 0.0
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.202676773071289
+[TEXT2TEXT] cost time: 1.011897325515747
+[TEXT2TEXT] cost time: 2.8050498962402344
+VLM batch processing completed: 26.20s, Tasks: 15, avg per task: 1.75s
+[TEXT2TEXT] cost time: 4.607255220413208
+[TEXT2TEXT] cost time: 69.71106052398682
+[TEXT2TEXT] cost time: 1.4027578830718994
+[TEXT2TEXT] cost time: 4.206297874450684
+VLM batch processing completed: 24.42s, Tasks: 15, avg per task: 1.63s
+[TEXT2TEXT] cost time: 1.803541660308838
+[TEXT2TEXT] cost time: 0.6020169258117676
+[TEXT2TEXT] cost time: 1.0032103061676025
+[TEXT2TEXT] cost time: 3.20544695854187
+VLM batch processing completed: 22.16s, Tasks: 14, avg per task: 1.58s
+[TEXT2TEXT] cost time: 6.612908124923706
+[TEXT2TEXT] cost time: 0.6022007465362549
+[TEXT2TEXT] cost time: 4.607420206069946
+[TEXT2TEXT] cost time: 4.40720534324646
+VLM batch processing completed: 25.97s, Tasks: 17, avg per task: 1.53s
+[TEXT2TEXT] cost time: 1.6029887199401855
+[TEXT2TEXT] cost time: 0.8026700019836426
+[TEXT2TEXT] cost time: 0.6015403270721436
+[TEXT2TEXT] cost time: 4.206284761428833
+VLM batch processing completed: 26.20s, Tasks: 18, avg per task: 1.46s
+[TEXT2TEXT] cost time: 3.6059703826904297
+[TEXT2TEXT] cost time: 7.419676065444946
+VLM batch processing completed: 5.76s, Tasks: 1, avg per task: 5.76s
+[TEXT2TEXT] cost time: 11.017101764678955
+VLM batch processing completed: 4.15s, Tasks: 1, avg per task: 4.15s
+[TEXT2TEXT] cost time: 4.406455755233765
+VLM batch processing completed: 3.82s, Tasks: 1, avg per task: 3.82s
+[TEXT2TEXT] cost time: 31.652052640914917
+Thread 1 Accuracy: 0 / 4 0.0
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 2.604896068572998
+[TEXT2TEXT] cost time: 1.4030718803405762
+[TEXT2TEXT] cost time: 5.408905744552612
+VLM batch processing completed: 21.61s, Tasks: 11, avg per task: 1.96s
+[TEXT2TEXT] cost time: 2.005241870880127
+[TEXT2TEXT] cost time: 4.607819080352783
+Thread 1 Accuracy: 0 / 5 0.0
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.8034987449645996
+[TEXT2TEXT] cost time: 1.8038239479064941
+[TEXT2TEXT] cost time: 6.810467481613159
+VLM batch processing completed: 47.24s, Tasks: 24, avg per task: 1.97s
+[TEXT2TEXT] cost time: 1.8046784400939941
+[TEXT2TEXT] cost time: 1.2033073902130127
+VLM batch processing completed: 2.70s, Tasks: 1, avg per task: 2.70s
+[TEXT2TEXT] cost time: 2.4042959213256836
+VLM batch processing completed: 3.44s, Tasks: 1, avg per task: 3.44s
+[TEXT2TEXT] cost time: 2.2041401863098145
+VLM batch processing completed: 3.01s, Tasks: 1, avg per task: 3.01s
+[TEXT2TEXT] cost time: 2.0047125816345215
+VLM batch processing completed: 3.41s, Tasks: 1, avg per task: 3.41s
+[TEXT2TEXT] cost time: 7.216260671615601
+Thread 1 Accuracy: 0 / 6 0.0
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 2.0042450428009033
+[TEXT2TEXT] cost time: 1.8038630485534668
+[TEXT2TEXT] cost time: 8.412765502929688
+VLM batch processing completed: 53.70s, Tasks: 21, avg per task: 2.56s
+[TEXT2TEXT] cost time: 4.006907939910889
+[TEXT2TEXT] cost time: 1.80326247215271
+VLM batch processing completed: 5.33s, Tasks: 1, avg per task: 5.33s
+[TEXT2TEXT] cost time: 21.038054704666138
+VLM batch processing completed: 3.30s, Tasks: 1, avg per task: 3.30s
+[TEXT2TEXT] cost time: 0.6021296977996826
+Thread 1 Accuracy: 0 / 7 0.0
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.0025393962860107
+[TEXT2TEXT] cost time: 5.408681631088257
+[TEXT2TEXT] cost time: 9.415964126586914
+VLM batch processing completed: 19.50s, Tasks: 15, avg per task: 1.30s
+[TEXT2TEXT] cost time: 0.8022065162658691
+[TEXT2TEXT] cost time: 10.21420431137085
+[TEXT2TEXT] cost time: 1.2022147178649902
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+[TEXT2TEXT] cost time: 112.36190676689148
+VLM batch processing completed: 17.76s, Tasks: 16, avg per task: 1.11s
+[TEXT2TEXT] cost time: 1.6035311222076416
+[TEXT2TEXT] cost time: 0.6017334461212158
+[TEXT2TEXT] cost time: 15.025085926055908
+[TEXT2TEXT] cost time: 3.4085659980773926
+VLM batch processing completed: 22.82s, Tasks: 17, avg per task: 1.34s
+[TEXT2TEXT] cost time: 3.004974126815796
+[TEXT2TEXT] cost time: 17.82882785797119
+[TEXT2TEXT] cost time: 3.205765962600708
+[TEXT2TEXT] cost time: 5.2126007080078125
+VLM batch processing completed: 16.24s, Tasks: 15, avg per task: 1.08s
+[TEXT2TEXT] cost time: 0.8020422458648682
+[TEXT2TEXT] cost time: 31.04864001274109
+Thread 1 Accuracy: 1 / 8 12.499998437500198
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.403620958328247
+[TEXT2TEXT] cost time: 2.2049286365509033
+[TEXT2TEXT] cost time: 6.210035085678101
+VLM batch processing completed: 33.67s, Tasks: 22, avg per task: 1.53s
+[TEXT2TEXT] cost time: 2.207679033279419
+[TEXT2TEXT] cost time: 22.63114047050476
+VLM batch processing completed: 12.35s, Tasks: 9, avg per task: 1.37s
+[TEXT2TEXT] cost time: 1.603492259979248
+Thread 1 Accuracy: 2 / 9 22.222219753086698
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8024742603302002
+[TEXT2TEXT] cost time: 16.236247301101685
+[TEXT2TEXT] cost time: 3.2060885429382324
+VLM batch processing completed: 18.41s, Tasks: 15, avg per task: 1.23s
+[TEXT2TEXT] cost time: 1.603229284286499
+[TEXT2TEXT] cost time: 29.0474271774292
+Thread 1 Accuracy: 2 / 10 19.9999980000002
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.6035702228546143
+VLM batch processing completed: 3.85s, Tasks: 1, avg per task: 3.85s
+[TEXT2TEXT] cost time: 1.40283203125
+[TEXT2TEXT] cost time: 4.8079845905303955
+[TEXT2TEXT] cost time: 7.817542791366577
+VLM batch processing completed: 22.94s, Tasks: 31, avg per task: 0.74s
+[TEXT2TEXT] cost time: 4.207197189331055
+[TEXT2TEXT] cost time: 3.606661081314087
+VLM batch processing completed: 3.03s, Tasks: 1, avg per task: 3.03s
+[TEXT2TEXT] cost time: 2.8050644397735596
+VLM batch processing completed: 2.43s, Tasks: 1, avg per task: 2.43s
+[TEXT2TEXT] cost time: 5.212208032608032
+VLM batch processing completed: 2.18s, Tasks: 1, avg per task: 2.18s
+[TEXT2TEXT] cost time: 4.612424612045288
+VLM batch processing completed: 2.03s, Tasks: 1, avg per task: 2.03s
+[TEXT2TEXT] cost time: 4.408828496932983
+Thread 1 Accuracy: 2 / 11 18.181816528925772
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 2.0041563510894775
+VLM batch processing completed: 3.74s, Tasks: 1, avg per task: 3.74s
+[TEXT2TEXT] cost time: 1.202881097793579
+[TEXT2TEXT] cost time: 5.811053514480591
+[TEXT2TEXT] cost time: 3.0049309730529785
+VLM batch processing completed: 9.38s, Tasks: 12, avg per task: 0.78s
+[TEXT2TEXT] cost time: 7.423731088638306
+[TEXT2TEXT] cost time: 40.865283250808716
+Thread 1 Accuracy: 2 / 12 16.666665277777895
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 3.004775047302246
+VLM batch processing completed: 5.03s, Tasks: 1, avg per task: 5.03s
+[TEXT2TEXT] cost time: 2.4044625759124756
+[TEXT2TEXT] cost time: 3.0048093795776367
+[TEXT2TEXT] cost time: 11.4263014793396
+VLM batch processing completed: 54.18s, Tasks: 36, avg per task: 1.50s
+[TEXT2TEXT] cost time: 0.6020753383636475
+[TEXT2TEXT] cost time: 36.65857458114624
+[TEXT2TEXT] cost time: 1.2022862434387207
+[TEXT2TEXT] cost time: 22.838310718536377
+VLM batch processing completed: 117.12s, Tasks: 83, avg per task: 1.41s
+[TEXT2TEXT] cost time: 3.606226682662964
+[TEXT2TEXT] cost time: 6.412216901779175
+[TEXT2TEXT] cost time: 1.0040326118469238
+[TEXT2TEXT] cost time: 6.812320709228516
+VLM batch processing completed: 53.13s, Tasks: 39, avg per task: 1.36s
+[TEXT2TEXT] cost time: 7.414734363555908
+[TEXT2TEXT] cost time: 2.6055908203125
+Thread 1 Accuracy: 2 / 13 15.384614201183524
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8056480884552002
+[TEXT2TEXT] cost time: 17.030386447906494
+[TEXT2TEXT] cost time: 3.8086135387420654
+VLM batch processing completed: 22.34s, Tasks: 18, avg per task: 1.24s
+[TEXT2TEXT] cost time: 3.8080270290374756
+[TEXT2TEXT] cost time: 1.2063958644866943
+VLM batch processing completed: 3.01s, Tasks: 1, avg per task: 3.01s
+[TEXT2TEXT] cost time: 7.413244724273682
+VLM batch processing completed: 3.73s, Tasks: 1, avg per task: 3.73s
+[TEXT2TEXT] cost time: 0.8026196956634521
+VLM batch processing completed: 1.89s, Tasks: 1, avg per task: 1.89s
+[TEXT2TEXT] cost time: 0.8024516105651855
+VLM batch processing completed: 2.39s, Tasks: 1, avg per task: 2.39s
+[TEXT2TEXT] cost time: 7.015261650085449
+VLM batch processing completed: 2.77s, Tasks: 1, avg per task: 2.77s
+[TEXT2TEXT] cost time: 4.008189678192139
+VLM batch processing completed: 2.30s, Tasks: 1, avg per task: 2.30s
+[TEXT2TEXT] cost time: 1.404759407043457
+VLM batch processing completed: 2.02s, Tasks: 1, avg per task: 2.02s
+[TEXT2TEXT] cost time: 2.40773606300354
+VLM batch processing completed: 2.06s, Tasks: 1, avg per task: 2.06s
+[TEXT2TEXT] cost time: 13.225098371505737
+Thread 1 Accuracy: 3 / 14 21.428569897959292
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.4058263301849365
+[TEXT2TEXT] cost time: 1.4062066078186035
+VLM batch processing completed: 4.11s, Tasks: 1, avg per task: 4.11s
+[TEXT2TEXT] cost time: 7.2774035930633545
+VLM batch processing completed: 12.30s, Tasks: 5, avg per task: 2.46s
+[TEXT2TEXT] cost time: 1.6060304641723633
+[TEXT2TEXT] cost time: 1.6057868003845215
+VLM batch processing completed: 5.64s, Tasks: 1, avg per task: 5.64s
+[TEXT2TEXT] cost time: 4.009721755981445
+VLM batch processing completed: 3.02s, Tasks: 1, avg per task: 3.02s
+[TEXT2TEXT] cost time: 1.2026991844177246
+VLM batch processing completed: 3.18s, Tasks: 1, avg per task: 3.18s
+[TEXT2TEXT] cost time: 0.8024821281433105
+VLM batch processing completed: 3.18s, Tasks: 1, avg per task: 3.18s
+[TEXT2TEXT] cost time: 0.804070234298706
+VLM batch processing completed: 3.31s, Tasks: 1, avg per task: 3.31s
+[TEXT2TEXT] cost time: 4.008526802062988
+VLM batch processing completed: 4.88s, Tasks: 1, avg per task: 4.88s
+[TEXT2TEXT] cost time: 5.609980583190918
+Thread 1 Accuracy: 4 / 15 26.66666488888901
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.8038742542266846
+VLM batch processing completed: 2.72s, Tasks: 1, avg per task: 2.72s
+[TEXT2TEXT] cost time: 1.202923059463501
+[TEXT2TEXT] cost time: 4.210189342498779
+[TEXT2TEXT] cost time: 5.408502817153931
+VLM batch processing completed: 17.61s, Tasks: 21, avg per task: 0.84s
+[TEXT2TEXT] cost time: 9.417425632476807
+[TEXT2TEXT] cost time: 1.2023041248321533
+VLM batch processing completed: 1.83s, Tasks: 1, avg per task: 1.83s
+[TEXT2TEXT] cost time: 1.8051490783691406
+VLM batch processing completed: 1.73s, Tasks: 1, avg per task: 1.73s
+[TEXT2TEXT] cost time: 2.2056221961975098
+[TEXT2TEXT] cost time: 5.210287570953369
+[TEXT2TEXT] cost time: 8.212589263916016
+VLM batch processing completed: 20.19s, Tasks: 28, avg per task: 0.72s
+[TEXT2TEXT] cost time: 0.6020426750183105
+[TEXT2TEXT] cost time: 7.212437629699707
+Thread 1 Accuracy: 4 / 16 24.999998437500096
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8026878833770752
+VLM batch processing completed: 5.97s, Tasks: 1, avg per task: 5.97s
+[TEXT2TEXT] cost time: 2.8046982288360596
+Thread 1 Accuracy: 4 / 17 23.529410380622917
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.802152156829834
+[TEXT2TEXT] cost time: 8.615745067596436
+[TEXT2TEXT] cost time: 3.609175205230713
+VLM batch processing completed: 40.17s, Tasks: 16, avg per task: 2.51s
+[TEXT2TEXT] cost time: 6.014297723770142
+[TEXT2TEXT] cost time: 1.0036365985870361
+VLM batch processing completed: 3.80s, Tasks: 1, avg per task: 3.80s
+[TEXT2TEXT] cost time: 10.219031572341919
+Thread 1 Accuracy: 5 / 18 27.777776234567988
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8021595478057861
+VLM batch processing completed: 4.68s, Tasks: 1, avg per task: 4.68s
+[TEXT2TEXT] cost time: 0.6022889614105225
+Thread 1 Accuracy: 6 / 19 31.578945706371275
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8020966053009033
+VLM batch processing completed: 6.39s, Tasks: 1, avg per task: 6.39s
+[TEXT2TEXT] cost time: 0.6018033027648926
+Thread 1 Accuracy: 7 / 20 34.99999825000009
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.0052926540374756
+VLM batch processing completed: 2.90s, Tasks: 1, avg per task: 2.90s
+[TEXT2TEXT] cost time: 2.4042000770568848
+[TEXT2TEXT] cost time: 0.601975679397583
+[TEXT2TEXT] cost time: 3.8087351322174072
+VLM batch processing completed: 11.08s, Tasks: 13, avg per task: 0.85s
+[TEXT2TEXT] cost time: 0.4015326499938965
+[TEXT2TEXT] cost time: 4.8092381954193115
+[TEXT2TEXT] cost time: 1.0026276111602783
+[TEXT2TEXT] cost time: 18.04005241394043
+VLM batch processing completed: 17.94s, Tasks: 22, avg per task: 0.82s
+[TEXT2TEXT] cost time: 0.20158600807189941
+[TEXT2TEXT] cost time: 35.855961561203
+[TEXT2TEXT] cost time: 1.0029017925262451
+[TEXT2TEXT] cost time: 4.409931182861328
+VLM batch processing completed: 15.62s, Tasks: 23, avg per task: 0.68s
+[TEXT2TEXT] cost time: 2.60974383354187
+[TEXT2TEXT] cost time: 0.4026367664337158
+[TEXT2TEXT] cost time: 1.2065489292144775
+[TEXT2TEXT] cost time: 4.211479187011719
+VLM batch processing completed: 18.34s, Tasks: 25, avg per task: 0.73s
+[TEXT2TEXT] cost time: 0.4019443988800049
+[TEXT2TEXT] cost time: 24.855399131774902
+[TEXT2TEXT] cost time: 6.657678842544556
+[TEXT2TEXT] cost time: 4.010801553726196
+VLM batch processing completed: 11.25s, Tasks: 20, avg per task: 0.56s
+[TEXT2TEXT] cost time: 0.402144193649292
+[TEXT2TEXT] cost time: 14.22692084312439
+[TEXT2TEXT] cost time: 1.6055138111114502
+[TEXT2TEXT] cost time: 4.209045886993408
+VLM batch processing completed: 17.70s, Tasks: 22, avg per task: 0.80s
+[TEXT2TEXT] cost time: 1.6033892631530762
+[TEXT2TEXT] cost time: 63.907352924346924
+[TEXT2TEXT] cost time: 44.268261194229126
+Thread 1 Accuracy: 7 / 21 33.33333174603182
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 10.823949098587036
+[TEXT2TEXT] cost time: 0.8035533428192139
+[TEXT2TEXT] cost time: 7.819764137268066
+VLM batch processing completed: 47.81s, Tasks: 20, avg per task: 2.39s
+[TEXT2TEXT] cost time: 6.011633396148682
+[TEXT2TEXT] cost time: 3.409189224243164
+VLM batch processing completed: 7.46s, Tasks: 3, avg per task: 2.49s
+[TEXT2TEXT] cost time: 21.436137676239014
+Thread 1 Accuracy: 7 / 22 31.81818037190089
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.2040693759918213
+[TEXT2TEXT] cost time: 1.6055104732513428
+[TEXT2TEXT] cost time: 20.03691601753235
+VLM batch processing completed: 450.18s, Tasks: 80, avg per task: 5.63s
+[TEXT2TEXT] cost time: 8.612354755401611
+[TEXT2TEXT] cost time: 2.604109048843384
+VLM batch processing completed: 5.67s, Tasks: 1, avg per task: 5.67s
+[TEXT2TEXT] cost time: 0.6017758846282959
+Thread 1 Accuracy: 7 / 23 30.43478128544429
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.6041247844696045
+[TEXT2TEXT] cost time: 4.811142444610596
+[TEXT2TEXT] cost time: 3.0047848224639893
+VLM batch processing completed: 28.62s, Tasks: 12, avg per task: 2.39s
+[TEXT2TEXT] cost time: 4.406611680984497
+[TEXT2TEXT] cost time: 1.402576208114624
+VLM batch processing completed: 4.04s, Tasks: 1, avg per task: 4.04s
+[TEXT2TEXT] cost time: 1.20280122756958
+VLM batch processing completed: 3.63s, Tasks: 1, avg per task: 3.63s
+[TEXT2TEXT] cost time: 1.2030062675476074
+VLM batch processing completed: 3.86s, Tasks: 1, avg per task: 3.86s
+[TEXT2TEXT] cost time: 1.6028122901916504
+VLM batch processing completed: 3.98s, Tasks: 1, avg per task: 3.98s
+[TEXT2TEXT] cost time: 1.0022308826446533
+Thread 1 Accuracy: 7 / 24 29.16666545138894
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.202439308166504
+[TEXT2TEXT] cost time: 0.8019659519195557
+[TEXT2TEXT] cost time: 4.406373023986816
+VLM batch processing completed: 11.16s, Tasks: 10, avg per task: 1.12s
+[TEXT2TEXT] cost time: 1.4028303623199463
+[TEXT2TEXT] cost time: 1.8032560348510742
+VLM batch processing completed: 2.42s, Tasks: 1, avg per task: 2.42s
+[TEXT2TEXT] cost time: 1.0020062923431396
+VLM batch processing completed: 2.30s, Tasks: 1, avg per task: 2.30s
+[TEXT2TEXT] cost time: 0.6015830039978027
+VLM batch processing completed: 2.11s, Tasks: 1, avg per task: 2.11s
+[TEXT2TEXT] cost time: 0.8018450736999512
+VLM batch processing completed: 2.75s, Tasks: 1, avg per task: 2.75s
+[TEXT2TEXT] cost time: 0.8020830154418945
+VLM batch processing completed: 2.31s, Tasks: 1, avg per task: 2.31s
+[TEXT2TEXT] cost time: 0.6016674041748047
+VLM batch processing completed: 2.28s, Tasks: 1, avg per task: 2.28s
+[TEXT2TEXT] cost time: 0.6015455722808838
+VLM batch processing completed: 1.98s, Tasks: 1, avg per task: 1.98s
+[TEXT2TEXT] cost time: 57.06933355331421
+[TEXT2TEXT] cost time: 17.222545862197876
+Thread 1 Accuracy: 8 / 25 31.99999872000005
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.4027369022369385
+[TEXT2TEXT] cost time: 1.4027276039123535
+[TEXT2TEXT] cost time: 8.010859489440918
+VLM batch processing completed: 4.61s, Tasks: 1, avg per task: 4.61s
+[TEXT2TEXT] cost time: 5.007654190063477
+[TEXT2TEXT] cost time: 1.2041146755218506
+VLM batch processing completed: 2.82s, Tasks: 1, avg per task: 2.82s
+[TEXT2TEXT] cost time: 1.4027011394500732
+Thread 1 Accuracy: 8 / 26 30.76922958579886
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.202174425125122
+[TEXT2TEXT] cost time: 1.4019794464111328
+[TEXT2TEXT] cost time: 4.20584511756897
+VLM batch processing completed: 4.53s, Tasks: 2, avg per task: 2.27s
+[TEXT2TEXT] cost time: 5.20720911026001
+[TEXT2TEXT] cost time: 1.4025905132293701
+VLM batch processing completed: 3.31s, Tasks: 1, avg per task: 3.31s
+[TEXT2TEXT] cost time: 0.8018596172332764
+Thread 1 Accuracy: 9 / 27 33.33333209876548
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8018679618835449
+VLM batch processing completed: 9.66s, Tasks: 1, avg per task: 9.66s
+[TEXT2TEXT] cost time: 0.6021645069122314
+Thread 1 Accuracy: 10 / 28 35.71428443877556
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8020234107971191
+[TEXT2TEXT] cost time: 2.2038230895996094
+[TEXT2TEXT] cost time: 2.6043412685394287
+VLM batch processing completed: 16.65s, Tasks: 13, avg per task: 1.28s
+[TEXT2TEXT] cost time: 0.601658821105957
+[TEXT2TEXT] cost time: 0.8019137382507324
+VLM batch processing completed: 1.97s, Tasks: 1, avg per task: 1.97s
+[TEXT2TEXT] cost time: 1.002040147781372
+VLM batch processing completed: 2.50s, Tasks: 1, avg per task: 2.50s
+[TEXT2TEXT] cost time: 0.6017172336578369
+Thread 1 Accuracy: 11 / 29 37.931033174791956
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.4034178256988525
+[TEXT2TEXT] cost time: 4.207165956497192
+[TEXT2TEXT] cost time: 5.608788013458252
+VLM batch processing completed: 19.25s, Tasks: 16, avg per task: 1.20s
+[TEXT2TEXT] cost time: 0.802147388458252
+[TEXT2TEXT] cost time: 17.62189269065857
+VLM batch processing completed: 2.76s, Tasks: 1, avg per task: 2.76s
+[TEXT2TEXT] cost time: 20.22669553756714
+VLM batch processing completed: 2.48s, Tasks: 1, avg per task: 2.48s
+[TEXT2TEXT] cost time: 7.610623598098755
+VLM batch processing completed: 2.22s, Tasks: 1, avg per task: 2.22s
+[TEXT2TEXT] cost time: 1.2024061679840088
+VLM batch processing completed: 2.52s, Tasks: 1, avg per task: 2.52s
+[TEXT2TEXT] cost time: 1.202561378479004
+VLM batch processing completed: 2.53s, Tasks: 1, avg per task: 2.53s
+[TEXT2TEXT] cost time: 1.202479600906372
+VLM batch processing completed: 2.13s, Tasks: 1, avg per task: 2.13s
+[TEXT2TEXT] cost time: 5.607941627502441
+Thread 1 Accuracy: 12 / 30 39.999998666666706
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 6.0090508460998535
+[TEXT2TEXT] cost time: 2.404222011566162
+[TEXT2TEXT] cost time: 4.006255865097046
+VLM batch processing completed: 17.76s, Tasks: 15, avg per task: 1.18s
+[TEXT2TEXT] cost time: 0.6017398834228516
+[TEXT2TEXT] cost time: 1.0022025108337402
+VLM batch processing completed: 1.99s, Tasks: 1, avg per task: 1.99s
+[TEXT2TEXT] cost time: 0.8023509979248047
+Thread 1 Accuracy: 12 / 31 38.709676170655605
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.002173662185669
+[TEXT2TEXT] cost time: 4.207335948944092
+[TEXT2TEXT] cost time: 8.211138248443604
+VLM batch processing completed: 48.78s, Tasks: 26, avg per task: 1.88s
+[TEXT2TEXT] cost time: 16.42055320739746
+[TEXT2TEXT] cost time: 2.403872013092041
+VLM batch processing completed: 4.07s, Tasks: 1, avg per task: 4.07s
+[TEXT2TEXT] cost time: 1.8032684326171875
+VLM batch processing completed: 3.16s, Tasks: 1, avg per task: 3.16s
+[TEXT2TEXT] cost time: 1.8034632205963135
+VLM batch processing completed: 2.65s, Tasks: 1, avg per task: 2.65s
+[TEXT2TEXT] cost time: 1.803450107574463
+VLM batch processing completed: 3.23s, Tasks: 1, avg per task: 3.23s
+[TEXT2TEXT] cost time: 2.604083776473999
+VLM batch processing completed: 3.29s, Tasks: 1, avg per task: 3.29s
+[TEXT2TEXT] cost time: 1.6035096645355225
+VLM batch processing completed: 2.89s, Tasks: 1, avg per task: 2.89s
+[TEXT2TEXT] cost time: 7.811017036437988
+Thread 1 Accuracy: 12 / 32 37.499998828125044
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.202833652496338
+[TEXT2TEXT] cost time: 1.2027828693389893
+[TEXT2TEXT] cost time: 3.8054654598236084
+VLM batch processing completed: 66.03s, Tasks: 15, avg per task: 4.40s
+[TEXT2TEXT] cost time: 0.8019089698791504
+[TEXT2TEXT] cost time: 1.4027314186096191
+[TEXT2TEXT] cost time: 0.8019750118255615
+[TEXT2TEXT] cost time: 4.207202911376953
+VLM batch processing completed: 77.37s, Tasks: 17, avg per task: 4.55s
+[TEXT2TEXT] cost time: 1.6035184860229492
+[TEXT2TEXT] cost time: 2.203972816467285
+VLM batch processing completed: 8.89s, Tasks: 1, avg per task: 8.89s
+[TEXT2TEXT] cost time: 1.4029414653778076
+VLM batch processing completed: 7.34s, Tasks: 1, avg per task: 7.34s
+[TEXT2TEXT] cost time: 1.2027673721313477
+VLM batch processing completed: 7.17s, Tasks: 1, avg per task: 7.17s
+[TEXT2TEXT] cost time: 1.2040908336639404
+VLM batch processing completed: 7.69s, Tasks: 1, avg per task: 7.69s
+[TEXT2TEXT] cost time: 58.46809530258179
+[TEXT2TEXT] cost time: 7.933241128921509
+[TEXT2TEXT] cost time: 6.80884313583374
+VLM batch processing completed: 60.91s, Tasks: 14, avg per task: 4.35s
+[TEXT2TEXT] cost time: 0.4013488292694092
+[TEXT2TEXT] cost time: 15.819192886352539
+[TEXT2TEXT] cost time: 1.00189208984375
+[TEXT2TEXT] cost time: 5.807582855224609
+The video segment for <video_reader>2:0</video_reader> is empty. Please check the provided timestamps and ensure they are within the video's duration and the end_time_stamp is no less than the begin_time_stamp.
+The video segment for <video_reader>1:0</video_reader> is empty. Please check the provided timestamps and ensure they are within the video's duration and the end_time_stamp is no less than the begin_time_stamp.
+VLM batch processing completed: 100.28s, Tasks: 16, avg per task: 6.27s
+[TEXT2TEXT] cost time: 1.2031471729278564
+[TEXT2TEXT] cost time: 4.011961460113525
+[TEXT2TEXT] cost time: 1.2024905681610107
+[TEXT2TEXT] cost time: 4.406104326248169
+VLM batch processing completed: 78.97s, Tasks: 17, avg per task: 4.65s
+[TEXT2TEXT] cost time: 3.8061861991882324
+[TEXT2TEXT] cost time: 5.207528591156006
+VLM batch processing completed: 4.87s, Tasks: 1, avg per task: 4.87s
+[TEXT2TEXT] cost time: 4.206268072128296
+Thread 1 Accuracy: 12 / 33 36.363635261708026
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.0028431415557861
+[TEXT2TEXT] cost time: 2.2038073539733887
+[TEXT2TEXT] cost time: 4.40648889541626
+VLM batch processing completed: 45.86s, Tasks: 17, avg per task: 2.70s
+[TEXT2TEXT] cost time: 0.6015112400054932
+[TEXT2TEXT] cost time: 11.214768409729004
+VLM batch processing completed: 4.61s, Tasks: 1, avg per task: 4.61s
+[TEXT2TEXT] cost time: 6.608896970748901
+Thread 1 Accuracy: 13 / 34 38.235292993079625
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 3.8057591915130615
+[TEXT2TEXT] cost time: 1.0024657249450684
+[TEXT2TEXT] cost time: 5.206886053085327
+VLM batch processing completed: 19.59s, Tasks: 22, avg per task: 0.89s
+[TEXT2TEXT] cost time: 0.40132832527160645
+[TEXT2TEXT] cost time: 5.808759689331055
+[TEXT2TEXT] cost time: 4.006332159042358
+[TEXT2TEXT] cost time: 3.40510630607605
+VLM batch processing completed: 11.00s, Tasks: 15, avg per task: 0.73s
+[TEXT2TEXT] cost time: 19.42321467399597
+[TEXT2TEXT] cost time: 0.6016983985900879
+[TEXT2TEXT] cost time: 3.605332136154175
+[TEXT2TEXT] cost time: 8.211529731750488
+VLM batch processing completed: 32.41s, Tasks: 42, avg per task: 0.77s
+[TEXT2TEXT] cost time: 0.8021097183227539
+[TEXT2TEXT] cost time: 9.41239047050476
+[TEXT2TEXT] cost time: 1.0020842552185059
+[TEXT2TEXT] cost time: 5.407302379608154
+VLM batch processing completed: 14.88s, Tasks: 19, avg per task: 0.78s
+[TEXT2TEXT] cost time: 0.6019153594970703
+[TEXT2TEXT] cost time: 0.6019372940063477
+[TEXT2TEXT] cost time: 4.206226587295532
+[TEXT2TEXT] cost time: 5.00713849067688
+VLM batch processing completed: 19.60s, Tasks: 23, avg per task: 0.85s
+[TEXT2TEXT] cost time: 1.202418327331543
+[TEXT2TEXT] cost time: 9.21243691444397
+VLM batch processing completed: 2.82s, Tasks: 1, avg per task: 2.82s
+[TEXT2TEXT] cost time: 0.6017789840698242
+VLM batch processing completed: 1.83s, Tasks: 1, avg per task: 1.83s
+[TEXT2TEXT] cost time: 0.6017804145812988
+Thread 1 Accuracy: 13 / 35 37.14285608163269
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.4027953147888184
+[TEXT2TEXT] cost time: 2.4103496074676514
+[TEXT2TEXT] cost time: 5.60805606842041
+VLM batch processing completed: 19.50s, Tasks: 12, avg per task: 1.63s
+[TEXT2TEXT] cost time: 8.811253786087036
+[TEXT2TEXT] cost time: 2.0035386085510254
+VLM batch processing completed: 2.22s, Tasks: 1, avg per task: 2.22s
+[TEXT2TEXT] cost time: 1.6024196147918701
+VLM batch processing completed: 2.77s, Tasks: 1, avg per task: 2.77s
+[TEXT2TEXT] cost time: 1.8036339282989502
+VLM batch processing completed: 2.31s, Tasks: 1, avg per task: 2.31s
+[TEXT2TEXT] cost time: 2.003774404525757
+Thread 1 Accuracy: 13 / 36 36.111110108024725
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.0022563934326172
+[TEXT2TEXT] cost time: 1.8037230968475342
+[TEXT2TEXT] cost time: 16.82331156730652
+VLM batch processing completed: 120.94s, Tasks: 69, avg per task: 1.75s
+[TEXT2TEXT] cost time: 1.8031938076019287
+[TEXT2TEXT] cost time: 1.2025315761566162
+VLM batch processing completed: 3.53s, Tasks: 1, avg per task: 3.53s
+[TEXT2TEXT] cost time: 3.2055866718292236
+Thread 1 Accuracy: 14 / 37 37.837836815193604
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8023891448974609
+[TEXT2TEXT] cost time: 4.00583291053772
+[TEXT2TEXT] cost time: 6.011815071105957
+VLM batch processing completed: 48.62s, Tasks: 30, avg per task: 1.62s
+[TEXT2TEXT] cost time: 4.406994581222534
+[TEXT2TEXT] cost time: 3.0059680938720703
+VLM batch processing completed: 8.44s, Tasks: 5, avg per task: 1.69s
+[TEXT2TEXT] cost time: 2.4040133953094482
+VLM batch processing completed: 4.65s, Tasks: 3, avg per task: 1.55s
+[TEXT2TEXT] cost time: 1.8034210205078125
+Thread 1 Accuracy: 15 / 38 39.473683171745186
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8020329475402832
+VLM batch processing completed: 1.25s, Tasks: 1, avg per task: 1.25s
+[TEXT2TEXT] cost time: 0.6019198894500732
+Thread 1 Accuracy: 16 / 39 41.025639973701544
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.0022642612457275
+[TEXT2TEXT] cost time: 1.6033596992492676
+[TEXT2TEXT] cost time: 6.209450721740723
+VLM batch processing completed: 19.82s, Tasks: 24, avg per task: 0.83s
+[TEXT2TEXT] cost time: 2.805004119873047
+[TEXT2TEXT] cost time: 0.8022043704986572
+Thread 1 Accuracy: 16 / 40 39.999999000000024
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.802234411239624
+[TEXT2TEXT] cost time: 3.205568313598633
+[TEXT2TEXT] cost time: 5.607996940612793
+VLM batch processing completed: 24.45s, Tasks: 21, avg per task: 1.16s
+[TEXT2TEXT] cost time: 1.6027202606201172
+[TEXT2TEXT] cost time: 2.2047183513641357
+VLM batch processing completed: 2.72s, Tasks: 4, avg per task: 0.68s
+[TEXT2TEXT] cost time: 1.0020108222961426
+Thread 1 Accuracy: 16 / 41 39.02438929208807
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8021888732910156
+[TEXT2TEXT] cost time: 4.206418037414551
+[TEXT2TEXT] cost time: 4.406225919723511
+VLM batch processing completed: 82.78s, Tasks: 16, avg per task: 5.17s
+[TEXT2TEXT] cost time: 0.6017799377441406
+[TEXT2TEXT] cost time: 43.252212047576904
+[TEXT2TEXT] cost time: 0.6017401218414307
+[TEXT2TEXT] cost time: 7.009156227111816
+VLM batch processing completed: 103.60s, Tasks: 23, avg per task: 4.50s
+[TEXT2TEXT] cost time: 3.204733371734619
+[TEXT2TEXT] cost time: 2.6042988300323486
+[TEXT2TEXT] cost time: 1.0020287036895752
+[TEXT2TEXT] cost time: 3.0043249130249023
+VLM batch processing completed: 82.95s, Tasks: 17, avg per task: 4.88s
+[TEXT2TEXT] cost time: 2.4037134647369385
+[TEXT2TEXT] cost time: 1.0020291805267334
+[TEXT2TEXT] cost time: 0.8018968105316162
+[TEXT2TEXT] cost time: 4.806498289108276
+VLM batch processing completed: 92.20s, Tasks: 20, avg per task: 4.61s
+[TEXT2TEXT] cost time: 13.036396980285645
+[TEXT2TEXT] cost time: 1.2023100852966309
+VLM batch processing completed: 6.03s, Tasks: 1, avg per task: 6.03s
+[TEXT2TEXT] cost time: 1.2022628784179688
+Thread 1 Accuracy: 17 / 42 40.476189512471684
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8022017478942871
+VLM batch processing completed: 3.37s, Tasks: 1, avg per task: 3.37s
+[TEXT2TEXT] cost time: 0.6017727851867676
+Thread 1 Accuracy: 18 / 43 41.860464142779904
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.60280179977417
+[TEXT2TEXT] cost time: 1.002138614654541
+[TEXT2TEXT] cost time: 3.8057310581207275
+VLM batch processing completed: 18.71s, Tasks: 16, avg per task: 1.17s
+[TEXT2TEXT] cost time: 0.6019554138183594
+[TEXT2TEXT] cost time: 1.0022640228271484
+VLM batch processing completed: 3.19s, Tasks: 1, avg per task: 3.19s
+[TEXT2TEXT] cost time: 0.6016461849212646
+Thread 1 Accuracy: 19 / 44 43.18181720041325
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8020918369293213
+VLM batch processing completed: 3.23s, Tasks: 1, avg per task: 3.23s
+[TEXT2TEXT] cost time: 1.8034512996673584
+Thread 1 Accuracy: 20 / 45 44.444443456790154
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8022401332855225
+VLM batch processing completed: 3.55s, Tasks: 1, avg per task: 3.55s
+[TEXT2TEXT] cost time: 0.6017313003540039
+Thread 1 Accuracy: 21 / 46 45.65217292060494
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.8032526969909668
+[TEXT2TEXT] cost time: 2.404103994369507
+[TEXT2TEXT] cost time: 6.20904278755188
+VLM batch processing completed: 100.84s, Tasks: 22, avg per task: 4.58s
+[TEXT2TEXT] cost time: 1.002044439315796
+[TEXT2TEXT] cost time: 11.813274621963501
+VLM batch processing completed: 8.29s, Tasks: 1, avg per task: 8.29s
+[TEXT2TEXT] cost time: 35.64342761039734
+Thread 1 Accuracy: 21 / 47 44.680850113173406
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.803351640701294
+[TEXT2TEXT] cost time: 14.818475723266602
+[TEXT2TEXT] cost time: 3.005232095718384
+VLM batch processing completed: 12.30s, Tasks: 10, avg per task: 1.23s
+[TEXT2TEXT] cost time: 1.00227952003479
+[TEXT2TEXT] cost time: 7.8107476234436035
+VLM batch processing completed: 1.83s, Tasks: 1, avg per task: 1.83s
+[TEXT2TEXT] cost time: 2.8046138286590576
+VLM batch processing completed: 2.02s, Tasks: 1, avg per task: 2.02s
+[TEXT2TEXT] cost time: 1.4027962684631348
+Thread 1 Accuracy: 21 / 48 43.749999088541685
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 5.406943082809448
+[TEXT2TEXT] cost time: 1.4024882316589355
+[TEXT2TEXT] cost time: 12.618510007858276
+VLM batch processing completed: 55.73s, Tasks: 48, avg per task: 1.16s
+[TEXT2TEXT] cost time: 5.2080466747283936
+[TEXT2TEXT] cost time: 2.003466844558716
+VLM batch processing completed: 2.21s, Tasks: 1, avg per task: 2.21s
+[TEXT2TEXT] cost time: 0.601834774017334
+Thread 1 Accuracy: 22 / 49 44.89795826738861
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 3.6057586669921875
+[TEXT2TEXT] cost time: 1.2026302814483643
+[TEXT2TEXT] cost time: 3.8065390586853027
+VLM batch processing completed: 20.00s, Tasks: 13, avg per task: 1.54s
+[TEXT2TEXT] cost time: 3.60656476020813
+[TEXT2TEXT] cost time: 25.030328273773193
+[TEXT2TEXT] cost time: 1.002319574356079
+[TEXT2TEXT] cost time: 5.808476209640503
+INFO 10-11 08:30:21 [__init__.py:235] Automatically detected platform cuda.
+Save path: ./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+Max workers: 1
+498 502
+Checking valid data...
+Valid data count: 84
+Total samples: 84, Already processed: 0, To process: 84
+Starting multiprocessing with 1 workers...
+Initializing VLLM server with conservative settings...
+INFO 10-11 08:30:41 [config.py:1604] Using max model len 50000
+INFO 10-11 08:30:42 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-11 08:30:42 [core.py:572] Waiting for init message from front-end.
+INFO 10-11 08:30:42 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=50000, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-11 08:30:48 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-11 08:30:49 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-11 08:30:49 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-11 08:30:49 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-11 08:30:49 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-11 08:30:49 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-11 08:32:34 [default_loader.py:262] Loading weights took 104.09 seconds
+INFO 10-11 08:32:34 [gpu_model_runner.py:1892] Model loading took 15.6271 GiB and 104.393637 seconds
+INFO 10-11 08:32:34 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 32768 tokens, and profiled with 1 video items of the maximum feature size.
+INFO 10-11 08:32:45 [gpu_worker.py:255] Available KV cache memory: 51.70 GiB
+INFO 10-11 08:32:46 [kv_cache_utils.py:833] GPU KV cache size: 968,048 tokens
+INFO 10-11 08:32:46 [kv_cache_utils.py:837] Maximum concurrency for 50,000 tokens per request: 19.36x
+INFO 10-11 08:32:46 [core.py:193] init engine (profile, create kv cache, warmup model) took 11.66 seconds
+[TEXT2TEXT] cost time: 0.8018088340759277
+[TEXT2TEXT] cost time: 2.403887987136841
+[TEXT2TEXT] cost time: 18.02272319793701
+VLM batch processing completed: 30.92s, Tasks: 16, avg per task: 1.93s
+[TEXT2TEXT] cost time: 0.6032614707946777
+[TEXT2TEXT] cost time: 1.2029576301574707
+[TEXT2TEXT] cost time: 0.802131175994873
+[TEXT2TEXT] cost time: 4.206492185592651
+VLM batch processing completed: 33.46s, Tasks: 20, avg per task: 1.67s
+[TEXT2TEXT] cost time: 2.005702018737793
+[TEXT2TEXT] cost time: 1.2026066780090332
+VLM batch processing completed: 3.42s, Tasks: 1, avg per task: 3.42s
+[TEXT2TEXT] cost time: 2.004128932952881
+[TEXT2TEXT] cost time: 1.2034180164337158
+[TEXT2TEXT] cost time: 4.006028890609741
+VLM batch processing completed: 23.64s, Tasks: 17, avg per task: 1.39s
+[TEXT2TEXT] cost time: 5.808651924133301
+[TEXT2TEXT] cost time: 4.405789136886597
+VLM batch processing completed: 2.68s, Tasks: 1, avg per task: 2.68s
+[TEXT2TEXT] cost time: 3.20497727394104
+VLM batch processing completed: 2.43s, Tasks: 1, avg per task: 2.43s
+[TEXT2TEXT] cost time: 2.003674268722534
+VLM batch processing completed: 2.64s, Tasks: 1, avg per task: 2.64s
+[TEXT2TEXT] cost time: 1.4050588607788086
+Thread 1 Accuracy: 1 / 1 99.99990000010001
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.2027308940887451
+VLM batch processing completed: 3.87s, Tasks: 1, avg per task: 3.87s
+[TEXT2TEXT] cost time: 3.405456304550171
+Thread 1 Accuracy: 1 / 2 49.9999750000125
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.0021588802337646
+[TEXT2TEXT] cost time: 1.2026546001434326
+[TEXT2TEXT] cost time: 3.6063482761383057
+VLM batch processing completed: 16.55s, Tasks: 13, avg per task: 1.27s
+[TEXT2TEXT] cost time: 0.8020973205566406
+[TEXT2TEXT] cost time: 2.2046289443969727
+VLM batch processing completed: 2.86s, Tasks: 4, avg per task: 0.72s
+[TEXT2TEXT] cost time: 2.0040342807769775
+VLM batch processing completed: 4.55s, Tasks: 1, avg per task: 4.55s
+[TEXT2TEXT] cost time: 17.42260479927063
+Thread 1 Accuracy: 1 / 3 33.333322222225924
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.2026968002319336
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+[TEXT2TEXT] cost time: 85.6982216835022
+VLM batch processing completed: 31.42s, Tasks: 20, avg per task: 1.57s
+[TEXT2TEXT] cost time: 3.4051969051361084
+[TEXT2TEXT] cost time: 22.42725682258606
+VLM batch processing completed: 2.80s, Tasks: 1, avg per task: 2.80s
+[TEXT2TEXT] cost time: 2.403886556625366
+VLM batch processing completed: 2.66s, Tasks: 1, avg per task: 2.66s
+[TEXT2TEXT] cost time: 2.40401554107666
+VLM batch processing completed: 1.90s, Tasks: 1, avg per task: 1.90s
+[TEXT2TEXT] cost time: 2.404362916946411
+Thread 1 Accuracy: 1 / 4 24.99999375000156
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.2027063369750977
+[TEXT2TEXT] cost time: 1.6035566329956055
+[TEXT2TEXT] cost time: 3.6057140827178955
+VLM batch processing completed: 19.88s, Tasks: 12, avg per task: 1.66s
+[TEXT2TEXT] cost time: 4.4075562953948975
+[TEXT2TEXT] cost time: 0.8022923469543457
+[TEXT2TEXT] cost time: 0.6016819477081299
+[TEXT2TEXT] cost time: 3.806164503097534
+VLM batch processing completed: 24.14s, Tasks: 15, avg per task: 1.61s
+[TEXT2TEXT] cost time: 1.803523063659668
+[TEXT2TEXT] cost time: 9.813783884048462
+[TEXT2TEXT] cost time: 0.6018304824829102
+[TEXT2TEXT] cost time: 3.2049102783203125
+VLM batch processing completed: 22.75s, Tasks: 14, avg per task: 1.63s
+[TEXT2TEXT] cost time: 3.405621290206909
+[TEXT2TEXT] cost time: 1.4027526378631592
+[TEXT2TEXT] cost time: 6.008684158325195
+[TEXT2TEXT] cost time: 10.614592552185059
+VLM batch processing completed: 27.25s, Tasks: 17, avg per task: 1.60s
+[TEXT2TEXT] cost time: 1.6033611297607422
+[TEXT2TEXT] cost time: 8.81173586845398
+[TEXT2TEXT] cost time: 0.8022820949554443
+[TEXT2TEXT] cost time: 4.206140995025635
+VLM batch processing completed: 27.30s, Tasks: 18, avg per task: 1.52s
+[TEXT2TEXT] cost time: 13.819161891937256
+[TEXT2TEXT] cost time: 6.608765125274658
+VLM batch processing completed: 3.86s, Tasks: 1, avg per task: 3.86s
+[TEXT2TEXT] cost time: 23.427550315856934
+VLM batch processing completed: 3.52s, Tasks: 1, avg per task: 3.52s
+[TEXT2TEXT] cost time: 38.44783067703247
+Thread 1 Accuracy: 1 / 5 19.9999960000008
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 11.014596223831177
+[TEXT2TEXT] cost time: 1.40273118019104
+[TEXT2TEXT] cost time: 5.0078818798065186
+VLM batch processing completed: 17.99s, Tasks: 11, avg per task: 1.64s
+[TEXT2TEXT] cost time: 5.609274387359619
+[TEXT2TEXT] cost time: 1.403073787689209
+VLM batch processing completed: 3.63s, Tasks: 1, avg per task: 3.63s
+[TEXT2TEXT] cost time: 1.4033522605895996
+Thread 1 Accuracy: 1 / 6 16.666663888889353
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.6021249294281006
+[TEXT2TEXT] cost time: 1.2027695178985596
+[TEXT2TEXT] cost time: 5.407810211181641
+VLM batch processing completed: 42.97s, Tasks: 24, avg per task: 1.79s
+[TEXT2TEXT] cost time: 2.0082342624664307
+[TEXT2TEXT] cost time: 1.8049492835998535
+VLM batch processing completed: 4.68s, Tasks: 2, avg per task: 2.34s
+[TEXT2TEXT] cost time: 14.418403148651123
+VLM batch processing completed: 4.05s, Tasks: 2, avg per task: 2.03s
+[TEXT2TEXT] cost time: 1.803607702255249
+VLM batch processing completed: 3.17s, Tasks: 1, avg per task: 3.17s
+[TEXT2TEXT] cost time: 3.0047340393066406
+VLM batch processing completed: 3.90s, Tasks: 1, avg per task: 3.90s
+[TEXT2TEXT] cost time: 1.6033194065093994
+Thread 1 Accuracy: 1 / 7 14.28571224489825
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.2023158073425293
+[TEXT2TEXT] cost time: 2.8060879707336426
+[TEXT2TEXT] cost time: 8.212248802185059
+VLM batch processing completed: 52.56s, Tasks: 21, avg per task: 2.50s
+[TEXT2TEXT] cost time: 0.8024475574493408
+[TEXT2TEXT] cost time: 1.8035595417022705
+VLM batch processing completed: 5.29s, Tasks: 1, avg per task: 5.29s
+[TEXT2TEXT] cost time: 13.419638395309448
+VLM batch processing completed: 3.15s, Tasks: 1, avg per task: 3.15s
+[TEXT2TEXT] cost time: 0.6016709804534912
+Thread 1 Accuracy: 1 / 8 12.499998437500198
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.0022506713867188
+[TEXT2TEXT] cost time: 8.611283779144287
+[TEXT2TEXT] cost time: 3.605189561843872
+VLM batch processing completed: 19.09s, Tasks: 15, avg per task: 1.27s
+[TEXT2TEXT] cost time: 1.0023517608642578
+[TEXT2TEXT] cost time: 2.2041375637054443
+[TEXT2TEXT] cost time: 1.0024211406707764
+[TEXT2TEXT] cost time: 3.005185604095459
+VLM batch processing completed: 18.12s, Tasks: 16, avg per task: 1.13s
+[TEXT2TEXT] cost time: 1.0050897598266602
+[TEXT2TEXT] cost time: 6.639692068099976
+[TEXT2TEXT] cost time: 1.8036870956420898
+[TEXT2TEXT] cost time: 5.207308769226074
+VLM batch processing completed: 30.47s, Tasks: 27, avg per task: 1.13s
+[TEXT2TEXT] cost time: 14.618361234664917
+[TEXT2TEXT] cost time: 12.617900848388672
+[TEXT2TEXT] cost time: 4.0065758228302
+[TEXT2TEXT] cost time: 3.605586051940918
+VLM batch processing completed: 21.09s, Tasks: 20, avg per task: 1.05s
+[TEXT2TEXT] cost time: 7.2103869915008545
+[TEXT2TEXT] cost time: 1.603712558746338
+[TEXT2TEXT] cost time: 10.415441989898682
+[TEXT2TEXT] cost time: 6.611427307128906
+VLM batch processing completed: 21.35s, Tasks: 21, avg per task: 1.02s
+[TEXT2TEXT] cost time: 1.0022904872894287
+[TEXT2TEXT] cost time: 14.418248653411865
+Thread 1 Accuracy: 2 / 9 22.222219753086698
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.4031083583831787
+[TEXT2TEXT] cost time: 3.004556179046631
+[TEXT2TEXT] cost time: 5.809410572052002
+VLM batch processing completed: 33.22s, Tasks: 22, avg per task: 1.51s
+[TEXT2TEXT] cost time: 6.008568286895752
+[TEXT2TEXT] cost time: 4.00663423538208
+VLM batch processing completed: 12.26s, Tasks: 9, avg per task: 1.36s
+[TEXT2TEXT] cost time: 1.603219747543335
+Thread 1 Accuracy: 3 / 10 29.9999970000003
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.6018261909484863
+[TEXT2TEXT] cost time: 0.6023986339569092
+[TEXT2TEXT] cost time: 2.6040501594543457
+VLM batch processing completed: 14.27s, Tasks: 11, avg per task: 1.30s
+[TEXT2TEXT] cost time: 1.0077402591705322
+[TEXT2TEXT] cost time: 2.204162836074829
+VLM batch processing completed: 3.52s, Tasks: 3, avg per task: 1.17s
+[TEXT2TEXT] cost time: 3.806077241897583
+VLM batch processing completed: 2.20s, Tasks: 1, avg per task: 2.20s
+[TEXT2TEXT] cost time: 1.8066513538360596
+VLM batch processing completed: 2.25s, Tasks: 1, avg per task: 2.25s
+[TEXT2TEXT] cost time: 1.4028518199920654
+VLM batch processing completed: 2.80s, Tasks: 1, avg per task: 2.80s
+[TEXT2TEXT] cost time: 20.026785612106323
+Thread 1 Accuracy: 3 / 11 27.272724793388658
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 3.0051357746124268
+VLM batch processing completed: 3.17s, Tasks: 1, avg per task: 3.17s
+[TEXT2TEXT] cost time: 1.6044106483459473
+[TEXT2TEXT] cost time: 1.403282642364502
+[TEXT2TEXT] cost time: 7.811513900756836
+VLM batch processing completed: 23.40s, Tasks: 28, avg per task: 0.84s
+[TEXT2TEXT] cost time: 3.005420684814453
+[TEXT2TEXT] cost time: 2.6043894290924072
+VLM batch processing completed: 2.15s, Tasks: 1, avg per task: 2.15s
+[TEXT2TEXT] cost time: 2.0036721229553223
+VLM batch processing completed: 2.72s, Tasks: 1, avg per task: 2.72s
+[TEXT2TEXT] cost time: 6.809826374053955
+VLM batch processing completed: 2.64s, Tasks: 1, avg per task: 2.64s
+[TEXT2TEXT] cost time: 9.413381576538086
+VLM batch processing completed: 1.82s, Tasks: 1, avg per task: 1.82s
+[TEXT2TEXT] cost time: 19.624902725219727
+Thread 1 Accuracy: 3 / 12 24.999997916666842
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.804154872894287
+VLM batch processing completed: 2.61s, Tasks: 1, avg per task: 2.61s
+[TEXT2TEXT] cost time: 0.8018736839294434
+Thread 1 Accuracy: 3 / 13 23.076921301775286
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8020563125610352
+VLM batch processing completed: 5.03s, Tasks: 1, avg per task: 5.03s
+[TEXT2TEXT] cost time: 6.810189723968506
+[TEXT2TEXT] cost time: 6.008378267288208
+[TEXT2TEXT] cost time: 11.615403652191162
+VLM batch processing completed: 52.41s, Tasks: 36, avg per task: 1.46s
+[TEXT2TEXT] cost time: 1.6030218601226807
+[TEXT2TEXT] cost time: 40.6504921913147
+Thread 1 Accuracy: 3 / 14 21.428569897959292
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 63.476842164993286
+[TEXT2TEXT] cost time: 1.4026730060577393
+[TEXT2TEXT] cost time: 4.206522703170776
+VLM batch processing completed: 16.22s, Tasks: 14, avg per task: 1.16s
+[TEXT2TEXT] cost time: 1.8033182621002197
+[TEXT2TEXT] cost time: 1.002277135848999
+VLM batch processing completed: 2.36s, Tasks: 1, avg per task: 2.36s
+[TEXT2TEXT] cost time: 3.407485008239746
+VLM batch processing completed: 3.73s, Tasks: 1, avg per task: 3.73s
+[TEXT2TEXT] cost time: 15.220752000808716
+VLM batch processing completed: 2.59s, Tasks: 1, avg per task: 2.59s
+[TEXT2TEXT] cost time: 3.205648899078369
+VLM batch processing completed: 1.95s, Tasks: 1, avg per task: 1.95s
+[TEXT2TEXT] cost time: 0.8019647598266602
+VLM batch processing completed: 2.72s, Tasks: 1, avg per task: 2.72s
+[TEXT2TEXT] cost time: 1.20322585105896
+VLM batch processing completed: 2.29s, Tasks: 1, avg per task: 2.29s
+[TEXT2TEXT] cost time: 0.8036594390869141
+VLM batch processing completed: 2.46s, Tasks: 1, avg per task: 2.46s
+[TEXT2TEXT] cost time: 27.437847137451172
+Thread 1 Accuracy: 3 / 15 19.99999866666676
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.8032810688018799
+[TEXT2TEXT] cost time: 1.4025752544403076
+VLM batch processing completed: 4.04s, Tasks: 1, avg per task: 4.04s
+[TEXT2TEXT] cost time: 3.005021095275879
+VLM batch processing completed: 12.06s, Tasks: 5, avg per task: 2.41s
+[TEXT2TEXT] cost time: 1.403027057647705
+[TEXT2TEXT] cost time: 1.0021276473999023
+VLM batch processing completed: 5.60s, Tasks: 1, avg per task: 5.60s
+[TEXT2TEXT] cost time: 2.4048449993133545
+Thread 1 Accuracy: 4 / 16 24.999998437500096
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8035402297973633
+VLM batch processing completed: 3.97s, Tasks: 1, avg per task: 3.97s
+[TEXT2TEXT] cost time: 1.402733325958252
+[TEXT2TEXT] cost time: 8.812371253967285
+[TEXT2TEXT] cost time: 21.628456830978394
+VLM batch processing completed: 52.66s, Tasks: 55, avg per task: 0.96s
+[TEXT2TEXT] cost time: 6.210439443588257
+[TEXT2TEXT] cost time: 1.6031391620635986
+VLM batch processing completed: 3.49s, Tasks: 1, avg per task: 3.49s
+[TEXT2TEXT] cost time: 1.6032195091247559
+VLM batch processing completed: 2.27s, Tasks: 1, avg per task: 2.27s
+[TEXT2TEXT] cost time: 1.0025124549865723
+Thread 1 Accuracy: 4 / 17 23.529410380622917
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8022074699401855
+VLM batch processing completed: 5.98s, Tasks: 1, avg per task: 5.98s
+[TEXT2TEXT] cost time: 0.8028466701507568
+Thread 1 Accuracy: 4 / 18 22.22222098765439
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.6017680168151855
+[TEXT2TEXT] cost time: 4.6071600914001465
+[TEXT2TEXT] cost time: 3.605773448944092
+VLM batch processing completed: 40.28s, Tasks: 16, avg per task: 2.52s
+[TEXT2TEXT] cost time: 14.648037433624268
+[TEXT2TEXT] cost time: 54.46684694290161
+VLM batch processing completed: 3.77s, Tasks: 1, avg per task: 3.77s
+[TEXT2TEXT] cost time: 6.609208822250366
+Thread 1 Accuracy: 5 / 19 26.315788088642734
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.6040422916412354
+VLM batch processing completed: 4.59s, Tasks: 1, avg per task: 4.59s
+[TEXT2TEXT] cost time: 0.6018500328063965
+Thread 1 Accuracy: 6 / 20 29.999998500000075
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8017377853393555
+VLM batch processing completed: 6.26s, Tasks: 1, avg per task: 6.26s
+[TEXT2TEXT] cost time: 0.6017920970916748
+Thread 1 Accuracy: 7 / 21 33.33333174603182
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.002622127532959
+VLM batch processing completed: 3.25s, Tasks: 1, avg per task: 3.25s
+[TEXT2TEXT] cost time: 4.405921220779419
+[TEXT2TEXT] cost time: 12.2163987159729
+[TEXT2TEXT] cost time: 12.01632285118103
+VLM batch processing completed: 2.18s, Tasks: 1, avg per task: 2.18s
+[TEXT2TEXT] cost time: 3.004899024963379
+[TEXT2TEXT] cost time: 0.0004687309265136719
+[TEXT2TEXT] cost time: 0.0004901885986328125
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 14.618882179260254
+Thread 1 Accuracy: 8 / 22 36.363634710743874
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.2024786472320557
+[TEXT2TEXT] cost time: 4.206400632858276
+[TEXT2TEXT] cost time: 4.807318449020386
+VLM batch processing completed: 44.78s, Tasks: 19, avg per task: 2.36s
+[TEXT2TEXT] cost time: 1.2022898197174072
+[TEXT2TEXT] cost time: 48.45763659477234
+VLM batch processing completed: 3.92s, Tasks: 1, avg per task: 3.92s
+[TEXT2TEXT] cost time: 1.0022931098937988
+VLM batch processing completed: 3.86s, Tasks: 1, avg per task: 3.86s
+[TEXT2TEXT] cost time: 1.0022425651550293
+VLM batch processing completed: 4.51s, Tasks: 1, avg per task: 4.51s
+[TEXT2TEXT] cost time: 1.4027204513549805
+VLM batch processing completed: 3.55s, Tasks: 1, avg per task: 3.55s
+[TEXT2TEXT] cost time: 2.003936290740967
+VLM batch processing completed: 5.76s, Tasks: 1, avg per task: 5.76s
+[TEXT2TEXT] cost time: 2.605027198791504
+Thread 1 Accuracy: 8 / 23 34.7826071833649
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8019020557403564
+[TEXT2TEXT] cost time: 1.4027392864227295
+[TEXT2TEXT] cost time: 13.819010496139526
+VLM batch processing completed: 442.96s, Tasks: 80, avg per task: 5.54s
+[TEXT2TEXT] cost time: 66.28074645996094
+[TEXT2TEXT] cost time: 5.408202648162842
+VLM batch processing completed: 5.09s, Tasks: 1, avg per task: 5.09s
+[TEXT2TEXT] cost time: 1.0028984546661377
+Thread 1 Accuracy: 8 / 24 33.3333319444445
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.802405595779419
+[TEXT2TEXT] cost time: 10.01492691040039
+[TEXT2TEXT] cost time: 6.809346437454224
+VLM batch processing completed: 28.40s, Tasks: 12, avg per task: 2.37s
+[TEXT2TEXT] cost time: 3.2052547931671143
+[TEXT2TEXT] cost time: 1.2025065422058105
+VLM batch processing completed: 3.50s, Tasks: 1, avg per task: 3.50s
+[TEXT2TEXT] cost time: 1.0022330284118652
+VLM batch processing completed: 3.76s, Tasks: 1, avg per task: 3.76s
+[TEXT2TEXT] cost time: 1.2029428482055664
+VLM batch processing completed: 3.66s, Tasks: 1, avg per task: 3.66s
+[TEXT2TEXT] cost time: 1.0023324489593506
+VLM batch processing completed: 3.55s, Tasks: 1, avg per task: 3.55s
+[TEXT2TEXT] cost time: 2.003633737564087
+VLM batch processing completed: 3.86s, Tasks: 1, avg per task: 3.86s
+[TEXT2TEXT] cost time: 1.4044389724731445
+[TEXT2TEXT] cost time: 1.8036777973175049
+[TEXT2TEXT] cost time: 22.228577852249146
+VLM batch processing completed: 65.25s, Tasks: 26, avg per task: 2.51s
+[TEXT2TEXT] cost time: 0.6018838882446289
+[TEXT2TEXT] cost time: 5.208698511123657
+VLM batch processing completed: 4.14s, Tasks: 1, avg per task: 4.14s
+[TEXT2TEXT] cost time: 2.604397773742676
+[TEXT2TEXT] cost time: 2.40519118309021
+[TEXT2TEXT] cost time: 3.2052135467529297
+VLM batch processing completed: 30.19s, Tasks: 14, avg per task: 2.16s
+[TEXT2TEXT] cost time: 7.209256172180176
+[TEXT2TEXT] cost time: 2.0041589736938477
+[TEXT2TEXT] cost time: 1.2024900913238525
+[TEXT2TEXT] cost time: 4.006511688232422
+VLM batch processing completed: 38.66s, Tasks: 18, avg per task: 2.15s
+[TEXT2TEXT] cost time: 1.2029082775115967
+[TEXT2TEXT] cost time: 3.0047645568847656
+[TEXT2TEXT] cost time: 6.608696460723877
+[TEXT2TEXT] cost time: 2.8043460845947266
+VLM batch processing completed: 23.99s, Tasks: 11, avg per task: 2.18s
+[TEXT2TEXT] cost time: 5.20756459236145
+[TEXT2TEXT] cost time: 2.0037920475006104
+[TEXT2TEXT] cost time: 1.2023606300354004
+[TEXT2TEXT] cost time: 10.428564310073853
+VLM batch processing completed: 42.09s, Tasks: 19, avg per task: 2.22s
+[TEXT2TEXT] cost time: 0.40166306495666504
+[TEXT2TEXT] cost time: 11.014144659042358
+[TEXT2TEXT] cost time: 1.0020132064819336
+[TEXT2TEXT] cost time: 3.0044755935668945
+VLM batch processing completed: 26.01s, Tasks: 12, avg per task: 2.17s
+[TEXT2TEXT] cost time: 0.8019483089447021
+[TEXT2TEXT] cost time: 24.432889699935913
+[TEXT2TEXT] cost time: 2.0038726329803467
+[TEXT2TEXT] cost time: 4.00581955909729
+VLM batch processing completed: 36.82s, Tasks: 17, avg per task: 2.17s
+[TEXT2TEXT] cost time: 0.6020216941833496
+[TEXT2TEXT] cost time: 25.43100142478943
+VLM batch processing completed: 4.57s, Tasks: 1, avg per task: 4.57s
+[TEXT2TEXT] cost time: 32.841163635253906
+Thread 1 Accuracy: 8 / 25 31.99999872000005
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.8034684658050537
+[TEXT2TEXT] cost time: 3.6052052974700928
+[TEXT2TEXT] cost time: 3.8062520027160645
+VLM batch processing completed: 11.22s, Tasks: 10, avg per task: 1.12s
+[TEXT2TEXT] cost time: 1.8079066276550293
+[TEXT2TEXT] cost time: 38.649925231933594
+VLM batch processing completed: 5.61s, Tasks: 6, avg per task: 0.93s
+[TEXT2TEXT] cost time: 4.206862926483154
+VLM batch processing completed: 2.36s, Tasks: 1, avg per task: 2.36s
+[TEXT2TEXT] cost time: 1.0024008750915527
+VLM batch processing completed: 2.00s, Tasks: 1, avg per task: 2.00s
+[TEXT2TEXT] cost time: 0.8018736839294434
+VLM batch processing completed: 2.69s, Tasks: 1, avg per task: 2.69s
+[TEXT2TEXT] cost time: 1.0091321468353271
+VLM batch processing completed: 1.95s, Tasks: 1, avg per task: 1.95s
+[TEXT2TEXT] cost time: 6.0108232498168945
+Thread 1 Accuracy: 9 / 26 34.61538328402372
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.4039263725280762
+[TEXT2TEXT] cost time: 32.444495677948
+[TEXT2TEXT] cost time: 18.623603582382202
+INFO 10-11 09:36:55 [__init__.py:235] Automatically detected platform cuda.
+Save path: ./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+Max workers: 1
+498 502
+Checking valid data...
+Valid data count: 84
+Loaded 128 previously processed samples
+Total samples: 84, Already processed: 128, To process: 58
+Starting multiprocessing with 1 workers...
+Initializing VLLM server with conservative settings...
+INFO 10-11 09:37:19 [config.py:1604] Using max model len 50000
+INFO 10-11 09:37:19 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-11 09:37:20 [core.py:572] Waiting for init message from front-end.
+INFO 10-11 09:37:20 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=50000, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-11 09:37:25 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-11 09:37:26 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-11 09:37:26 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-11 09:37:26 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-11 09:37:26 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-11 09:37:26 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-11 09:39:10 [default_loader.py:262] Loading weights took 104.03 seconds
+INFO 10-11 09:39:11 [gpu_model_runner.py:1892] Model loading took 15.6271 GiB and 104.237471 seconds
+INFO 10-11 09:39:11 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 32768 tokens, and profiled with 1 video items of the maximum feature size.
+INFO 10-11 09:39:22 [gpu_worker.py:255] Available KV cache memory: 51.70 GiB
+INFO 10-11 09:39:22 [kv_cache_utils.py:833] GPU KV cache size: 968,048 tokens
+INFO 10-11 09:39:22 [kv_cache_utils.py:837] Maximum concurrency for 50,000 tokens per request: 19.36x
+INFO 10-11 09:39:22 [core.py:193] init engine (profile, create kv cache, warmup model) took 11.12 seconds
+[TEXT2TEXT] cost time: 1.4030380249023438
+[TEXT2TEXT] cost time: 1.4028816223144531
+[TEXT2TEXT] cost time: 18.424176931381226
+VLM batch processing completed: 171.99s, Tasks: 85, avg per task: 2.02s
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+[TEXT2TEXT] cost time: 38.04659366607666
+[TEXT2TEXT] cost time: 0.00046944618225097656
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 2.203753709793091
+[TEXT2TEXT] cost time: 4.00665807723999
+[TEXT2TEXT] cost time: 13.619370937347412
+VLM batch processing completed: 56.09s, Tasks: 32, avg per task: 1.75s
+[TEXT2TEXT] cost time: 7.6111602783203125
+[TEXT2TEXT] cost time: 5.007091522216797
+VLM batch processing completed: 4.33s, Tasks: 1, avg per task: 4.33s
+[TEXT2TEXT] cost time: 3.605973958969116
+Thread 1 Accuracy: 0 / 1 0.0
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.2023606300354004
+[TEXT2TEXT] cost time: 1.6034431457519531
+[TEXT2TEXT] cost time: 4.407751560211182
+VLM batch processing completed: 4.62s, Tasks: 2, avg per task: 2.31s
+[TEXT2TEXT] cost time: 0.8037192821502686
+[TEXT2TEXT] cost time: 1.2026174068450928
+VLM batch processing completed: 2.89s, Tasks: 1, avg per task: 2.89s
+[TEXT2TEXT] cost time: 0.4015510082244873
+Thread 1 Accuracy: 1 / 2 49.9999750000125
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8021156787872314
+VLM batch processing completed: 9.51s, Tasks: 1, avg per task: 9.51s
+[TEXT2TEXT] cost time: 10.412902593612671
+Thread 1 Accuracy: 2 / 3 66.66664444445185
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.002401351928711
+[TEXT2TEXT] cost time: 2.8045406341552734
+[TEXT2TEXT] cost time: 2.8048198223114014
+VLM batch processing completed: 16.69s, Tasks: 13, avg per task: 1.28s
+[TEXT2TEXT] cost time: 1.80393648147583
+[TEXT2TEXT] cost time: 2.0039093494415283
+VLM batch processing completed: 2.44s, Tasks: 1, avg per task: 2.44s
+[TEXT2TEXT] cost time: 1.002244234085083
+VLM batch processing completed: 2.48s, Tasks: 1, avg per task: 2.48s
+[TEXT2TEXT] cost time: 5.00822377204895
+Thread 1 Accuracy: 3 / 4 74.9999812500047
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8018941879272461
+[TEXT2TEXT] cost time: 1.2025892734527588
+[TEXT2TEXT] cost time: 4.606573104858398
+VLM batch processing completed: 23.25s, Tasks: 18, avg per task: 1.29s
+[TEXT2TEXT] cost time: 8.612602710723877
+[TEXT2TEXT] cost time: 15.620495319366455
+VLM batch processing completed: 3.68s, Tasks: 1, avg per task: 3.68s
+[TEXT2TEXT] cost time: 6.4236345291137695
+VLM batch processing completed: 3.36s, Tasks: 1, avg per task: 3.36s
+[TEXT2TEXT] cost time: 0.8023920059204102
+Thread 1 Accuracy: 4 / 5 79.9999840000032
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8030035495758057
+[TEXT2TEXT] cost time: 26.63367509841919
+[TEXT2TEXT] cost time: 4.606836557388306
+VLM batch processing completed: 17.82s, Tasks: 13, avg per task: 1.37s
+[TEXT2TEXT] cost time: 1.0029702186584473
+[TEXT2TEXT] cost time: 0.8021869659423828
+[TEXT2TEXT] cost time: 0.8019099235534668
+[TEXT2TEXT] cost time: 3.4054365158081055
+VLM batch processing completed: 16.59s, Tasks: 13, avg per task: 1.28s
+[TEXT2TEXT] cost time: 5.607751369476318
+[TEXT2TEXT] cost time: 1.202322006225586
+VLM batch processing completed: 2.77s, Tasks: 1, avg per task: 2.77s
+[TEXT2TEXT] cost time: 113.73683977127075
+Thread 1 Accuracy: 4 / 6 66.66665555555741
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 4.406637907028198
+[TEXT2TEXT] cost time: 8.010756969451904
+[TEXT2TEXT] cost time: 9.0118567943573
+VLM batch processing completed: 38.80s, Tasks: 22, avg per task: 1.76s
+[TEXT2TEXT] cost time: 1.6030614376068115
+[TEXT2TEXT] cost time: 9.412035703659058
+VLM batch processing completed: 3.35s, Tasks: 1, avg per task: 3.35s
+[TEXT2TEXT] cost time: 1.0022838115692139
+Thread 1 Accuracy: 5 / 7 71.42856122449125
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.2027137279510498
+[TEXT2TEXT] cost time: 4.406122922897339
+[TEXT2TEXT] cost time: 3.606031894683838
+VLM batch processing completed: 77.10s, Tasks: 17, avg per task: 4.54s
+[TEXT2TEXT] cost time: 0.40149760246276855
+[TEXT2TEXT] cost time: 0.00046706199645996094
+[TEXT2TEXT] cost time: 0.0005090236663818359
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 1.8030316829681396
+[TEXT2TEXT] cost time: 7.281643629074097
+[TEXT2TEXT] cost time: 16.220001459121704
+VLM batch processing completed: 121.79s, Tasks: 26, avg per task: 4.68s
+[TEXT2TEXT] cost time: 1.2027738094329834
+[TEXT2TEXT] cost time: 29.036031007766724
+VLM batch processing completed: 9.79s, Tasks: 1, avg per task: 9.79s
+[TEXT2TEXT] cost time: 12.617469310760498
+Thread 1 Accuracy: 5 / 8 62.499992187500986
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.202836513519287
+[TEXT2TEXT] cost time: 4.20723819732666
+[TEXT2TEXT] cost time: 5.008227586746216
+VLM batch processing completed: 44.35s, Tasks: 17, avg per task: 2.61s
+[TEXT2TEXT] cost time: 2.8049113750457764
+[TEXT2TEXT] cost time: 1.0024564266204834
+VLM batch processing completed: 3.43s, Tasks: 1, avg per task: 3.43s
+[TEXT2TEXT] cost time: 1.2030823230743408
+VLM batch processing completed: 4.46s, Tasks: 1, avg per task: 4.46s
+[TEXT2TEXT] cost time: 0.6018764972686768
+Thread 1 Accuracy: 6 / 9 66.66665925926009
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8020057678222656
+[TEXT2TEXT] cost time: 1.60347580909729
+[TEXT2TEXT] cost time: 3.8063833713531494
+VLM batch processing completed: 19.53s, Tasks: 22, avg per task: 0.89s
+[TEXT2TEXT] cost time: 3.606419563293457
+[TEXT2TEXT] cost time: 42.85595178604126
+[TEXT2TEXT] cost time: 1.0020596981048584
+[TEXT2TEXT] cost time: 4.005946636199951
+VLM batch processing completed: 10.78s, Tasks: 15, avg per task: 0.72s
+[TEXT2TEXT] cost time: 8.617279529571533
+[TEXT2TEXT] cost time: 15.420153141021729
+[TEXT2TEXT] cost time: 2.0039913654327393
+[TEXT2TEXT] cost time: 9.213048219680786
+VLM batch processing completed: 31.50s, Tasks: 42, avg per task: 0.75s
+[TEXT2TEXT] cost time: 2.404050827026367
+[TEXT2TEXT] cost time: 0.6017053127288818
+[TEXT2TEXT] cost time: 5.2077295780181885
+[TEXT2TEXT] cost time: 4.607036828994751
+VLM batch processing completed: 15.11s, Tasks: 19, avg per task: 0.80s
+[TEXT2TEXT] cost time: 0.6017508506774902
+[TEXT2TEXT] cost time: 0.4019291400909424
+[TEXT2TEXT] cost time: 1.2023200988769531
+[TEXT2TEXT] cost time: 4.807008504867554
+VLM batch processing completed: 22.66s, Tasks: 27, avg per task: 0.84s
+[TEXT2TEXT] cost time: 0.6018209457397461
+[TEXT2TEXT] cost time: 0.6016466617584229
+[TEXT2TEXT] cost time: 1.002596378326416
+[TEXT2TEXT] cost time: 6.410841226577759
+VLM batch processing completed: 24.28s, Tasks: 29, avg per task: 0.84s
+[TEXT2TEXT] cost time: 4.808372974395752
+[TEXT2TEXT] cost time: 0.802271842956543
+VLM batch processing completed: 2.82s, Tasks: 1, avg per task: 2.82s
+[TEXT2TEXT] cost time: 0.40164709091186523
+Thread 1 Accuracy: 6 / 10 59.9999940000006
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.40303635597229
+[TEXT2TEXT] cost time: 1.803325891494751
+[TEXT2TEXT] cost time: 4.606689453125
+VLM batch processing completed: 19.46s, Tasks: 12, avg per task: 1.62s
+[TEXT2TEXT] cost time: 1.003204345703125
+[TEXT2TEXT] cost time: 3.0049126148223877
+VLM batch processing completed: 6.48s, Tasks: 3, avg per task: 2.16s
+[TEXT2TEXT] cost time: 1.2025504112243652
+Thread 1 Accuracy: 6 / 11 54.545449586777316
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.2024872303009033
+[TEXT2TEXT] cost time: 1.8034164905548096
+[TEXT2TEXT] cost time: 9.8140127658844
+list index out of range
+[TEXT2TEXT] cost time: 0.0004565715789794922
+[TEXT2TEXT] cost time: 0.0005257129669189453
+[TEXT2TEXT] cost time: 0.00047469139099121094
+list index out of range
+[TEXT2TEXT] cost time: 0.0004296302795410156
+[TEXT2TEXT] cost time: 0.0004284381866455078
+[TEXT2TEXT] cost time: 0.00045418739318847656
+list index out of range
+[TEXT2TEXT] cost time: 0.00039887428283691406
+[TEXT2TEXT] cost time: 0.0004112720489501953
+[TEXT2TEXT] cost time: 0.0005049705505371094
+list index out of range
+[TEXT2TEXT] cost time: 0.0004210472106933594
+[TEXT2TEXT] cost time: 0.00046515464782714844
+[TEXT2TEXT] cost time: 0.0004894733428955078
+list index out of range
+[TEXT2TEXT] cost time: 0.00041222572326660156
+[TEXT2TEXT] cost time: 0.0004520416259765625
+[TEXT2TEXT] cost time: 0.00047469139099121094
+list index out of range
+[TEXT2TEXT] cost time: 0.00043272972106933594
+[TEXT2TEXT] cost time: 0.00042319297790527344
+[TEXT2TEXT] cost time: 0.0005300045013427734
+list index out of range
+[TEXT2TEXT] cost time: 0.0004303455352783203
+[TEXT2TEXT] cost time: 0.0004475116729736328
+[TEXT2TEXT] cost time: 0.0004146099090576172
+list index out of range
+[TEXT2TEXT] cost time: 0.0004062652587890625
+[TEXT2TEXT] cost time: 0.00044608116149902344
+[TEXT2TEXT] cost time: 0.0004711151123046875
+list index out of range
+[TEXT2TEXT] cost time: 0.0004208087921142578
+[TEXT2TEXT] cost time: 0.0004253387451171875
+[TEXT2TEXT] cost time: 0.00044727325439453125
+list index out of range
+[TEXT2TEXT] cost time: 0.000423431396484375
+[TEXT2TEXT] cost time: 0.00041413307189941406
+[TEXT2TEXT] cost time: 0.00042819976806640625
+list index out of range
+[TEXT2TEXT] cost time: 0.00041747093200683594
+[TEXT2TEXT] cost time: 0.0004382133483886719
+[TEXT2TEXT] cost time: 0.00043129920959472656
+list index out of range
+[TEXT2TEXT] cost time: 0.0004105567932128906
+[TEXT2TEXT] cost time: 0.00041222572326660156
+[TEXT2TEXT] cost time: 0.00046944618225097656
+list index out of range
+[TEXT2TEXT] cost time: 0.00038051605224609375
+[TEXT2TEXT] cost time: 0.00042438507080078125
+[TEXT2TEXT] cost time: 0.0004367828369140625
+list index out of range
+[TEXT2TEXT] cost time: 0.0003871917724609375
+[TEXT2TEXT] cost time: 0.00042247772216796875
+[TEXT2TEXT] cost time: 0.0004611015319824219
+list index out of range
+[TEXT2TEXT] cost time: 0.0004239082336425781
+[TEXT2TEXT] cost time: 0.00041604042053222656
+[TEXT2TEXT] cost time: 0.00044798851013183594
+list index out of range
+[TEXT2TEXT] cost time: 0.0004222393035888672
+[TEXT2TEXT] cost time: 0.0004253387451171875
+[TEXT2TEXT] cost time: 0.00039124488830566406
+list index out of range
+[TEXT2TEXT] cost time: 0.0003917217254638672
+[TEXT2TEXT] cost time: 0.0004677772521972656
+[TEXT2TEXT] cost time: 0.0006353855133056641
+list index out of range
+[TEXT2TEXT] cost time: 0.0004730224609375
+[TEXT2TEXT] cost time: 0.0003986358642578125
+[TEXT2TEXT] cost time: 0.00040793418884277344
+list index out of range
+[TEXT2TEXT] cost time: 0.00040030479431152344
+[TEXT2TEXT] cost time: 0.00040602684020996094
+[TEXT2TEXT] cost time: 0.0004932880401611328
+list index out of range
+[TEXT2TEXT] cost time: 0.0004296302795410156
+[TEXT2TEXT] cost time: 0.0004265308380126953
+[TEXT2TEXT] cost time: 0.0004811286926269531
+list index out of range
+[TEXT2TEXT] cost time: 0.0004515647888183594
+[TEXT2TEXT] cost time: 0.0005707740783691406
+[TEXT2TEXT] cost time: 0.0004668235778808594
+list index out of range
+[TEXT2TEXT] cost time: 0.0004451274871826172
+[TEXT2TEXT] cost time: 0.0004367828369140625
+[TEXT2TEXT] cost time: 0.0004208087921142578
+list index out of range
+[TEXT2TEXT] cost time: 0.0004227161407470703
+[TEXT2TEXT] cost time: 0.0004177093505859375
+[TEXT2TEXT] cost time: 0.0004181861877441406
+list index out of range
+[TEXT2TEXT] cost time: 0.0004124641418457031
+[TEXT2TEXT] cost time: 0.0003943443298339844
+[TEXT2TEXT] cost time: 0.0004425048828125
+list index out of range
+[TEXT2TEXT] cost time: 0.00037932395935058594
+[TEXT2TEXT] cost time: 0.0004458427429199219
+[TEXT2TEXT] cost time: 0.0004563331604003906
+list index out of range
+[TEXT2TEXT] cost time: 0.0004534721374511719
+[TEXT2TEXT] cost time: 0.0004220008850097656
+[TEXT2TEXT] cost time: 0.00045752525329589844
+list index out of range
+[TEXT2TEXT] cost time: 0.00043487548828125
+[TEXT2TEXT] cost time: 0.0004439353942871094
+[TEXT2TEXT] cost time: 0.00047135353088378906
+list index out of range
+[TEXT2TEXT] cost time: 0.000415802001953125
+[TEXT2TEXT] cost time: 0.0004489421844482422
+[TEXT2TEXT] cost time: 0.0004477500915527344
+list index out of range
+[TEXT2TEXT] cost time: 0.0004038810729980469
+[TEXT2TEXT] cost time: 0.0004601478576660156
+[TEXT2TEXT] cost time: 0.00047135353088378906
+list index out of range
+[TEXT2TEXT] cost time: 0.00039577484130859375
+[TEXT2TEXT] cost time: 0.0004439353942871094
+[TEXT2TEXT] cost time: 0.0005450248718261719
+list index out of range
+[TEXT2TEXT] cost time: 0.000408172607421875
+[TEXT2TEXT] cost time: 0.00044035911560058594
+[TEXT2TEXT] cost time: 0.0005099773406982422
+list index out of range
+[TEXT2TEXT] cost time: 0.00043702125549316406
+[TEXT2TEXT] cost time: 0.0004591941833496094
+[TEXT2TEXT] cost time: 0.00047135353088378906
+list index out of range
+[TEXT2TEXT] cost time: 0.0004305839538574219
+[TEXT2TEXT] cost time: 0.0004277229309082031
+[TEXT2TEXT] cost time: 0.0004131793975830078
+list index out of range
+[TEXT2TEXT] cost time: 0.0004100799560546875
+[TEXT2TEXT] cost time: 0.00041031837463378906
+[TEXT2TEXT] cost time: 0.0004410743713378906
+list index out of range
+[TEXT2TEXT] cost time: 0.0004677772521972656
+[TEXT2TEXT] cost time: 0.0004887580871582031
+[TEXT2TEXT] cost time: 0.00047326087951660156
+list index out of range
+[TEXT2TEXT] cost time: 0.0004296302795410156
+[TEXT2TEXT] cost time: 0.00043010711669921875
+[TEXT2TEXT] cost time: 0.0005071163177490234
+list index out of range
+[TEXT2TEXT] cost time: 0.00044155120849609375
+[TEXT2TEXT] cost time: 0.00045943260192871094
+[TEXT2TEXT] cost time: 0.00045013427734375
+list index out of range
+[TEXT2TEXT] cost time: 0.0004074573516845703
+[TEXT2TEXT] cost time: 0.0004410743713378906
+[TEXT2TEXT] cost time: 0.00044798851013183594
+list index out of range
+[TEXT2TEXT] cost time: 0.0005047321319580078
+[TEXT2TEXT] cost time: 0.00048661231994628906
+[TEXT2TEXT] cost time: 0.0004119873046875
+list index out of range
+[TEXT2TEXT] cost time: 0.0004017353057861328
+[TEXT2TEXT] cost time: 0.0004410743713378906
+[TEXT2TEXT] cost time: 0.0004496574401855469
+list index out of range
+[TEXT2TEXT] cost time: 0.0007510185241699219
+[TEXT2TEXT] cost time: 0.0004096031188964844
+[TEXT2TEXT] cost time: 0.00041031837463378906
+list index out of range
+[TEXT2TEXT] cost time: 0.0003955364227294922
+[TEXT2TEXT] cost time: 0.0004112720489501953
+[TEXT2TEXT] cost time: 0.0004482269287109375
+list index out of range
+[TEXT2TEXT] cost time: 0.00041174888610839844
+[TEXT2TEXT] cost time: 0.0004410743713378906
+[TEXT2TEXT] cost time: 0.00045800209045410156
+list index out of range
+[TEXT2TEXT] cost time: 0.0004093647003173828
+[TEXT2TEXT] cost time: 0.0004506111145019531
+[TEXT2TEXT] cost time: 0.0005061626434326172
+list index out of range
+[TEXT2TEXT] cost time: 0.00042247772216796875
+[TEXT2TEXT] cost time: 0.0004532337188720703
+[TEXT2TEXT] cost time: 0.00046324729919433594
+list index out of range
+[TEXT2TEXT] cost time: 0.0004444122314453125
+[TEXT2TEXT] cost time: 0.0004334449768066406
+[TEXT2TEXT] cost time: 0.00042629241943359375
+list index out of range
+[TEXT2TEXT] cost time: 0.000408172607421875
+[TEXT2TEXT] cost time: 0.0004329681396484375
+[TEXT2TEXT] cost time: 0.00046825408935546875
+list index out of range
+[TEXT2TEXT] cost time: 0.00038504600524902344
+[TEXT2TEXT] cost time: 0.0004150867462158203
+[TEXT2TEXT] cost time: 0.0004298686981201172
+list index out of range
+[TEXT2TEXT] cost time: 0.00038051605224609375
+[TEXT2TEXT] cost time: 0.00039315223693847656
+[TEXT2TEXT] cost time: 0.00046133995056152344
+list index out of range
+[TEXT2TEXT] cost time: 0.0004279613494873047
+[TEXT2TEXT] cost time: 0.00044465065002441406
+[TEXT2TEXT] cost time: 0.0005497932434082031
+list index out of range
+[TEXT2TEXT] cost time: 0.0004444122314453125
+[TEXT2TEXT] cost time: 0.0004589557647705078
+[TEXT2TEXT] cost time: 0.0005068778991699219
+list index out of range
+[TEXT2TEXT] cost time: 0.0004227161407470703
+[TEXT2TEXT] cost time: 0.0004551410675048828
+[TEXT2TEXT] cost time: 0.0004971027374267578
+list index out of range
+[TEXT2TEXT] cost time: 0.0004742145538330078
+[TEXT2TEXT] cost time: 0.00047898292541503906
+[TEXT2TEXT] cost time: 0.00048542022705078125
+list index out of range
+[TEXT2TEXT] cost time: 0.00045418739318847656
+[TEXT2TEXT] cost time: 0.0005066394805908203
+[TEXT2TEXT] cost time: 0.00047969818115234375
+list index out of range
+[TEXT2TEXT] cost time: 0.0005147457122802734
+[TEXT2TEXT] cost time: 0.0004961490631103516
+[TEXT2TEXT] cost time: 0.0006062984466552734
+list index out of range
+[TEXT2TEXT] cost time: 0.0004203319549560547
+[TEXT2TEXT] cost time: 0.0005555152893066406
+[TEXT2TEXT] cost time: 0.00051116943359375
+list index out of range
+[TEXT2TEXT] cost time: 0.00041365623474121094
+[TEXT2TEXT] cost time: 0.0005424022674560547
+[TEXT2TEXT] cost time: 0.0005006790161132812
+list index out of range
+[TEXT2TEXT] cost time: 0.0004372596740722656
+[TEXT2TEXT] cost time: 0.0004317760467529297
+[TEXT2TEXT] cost time: 0.0005049705505371094
+list index out of range
+[TEXT2TEXT] cost time: 0.0004181861877441406
+[TEXT2TEXT] cost time: 0.0004220008850097656
+[TEXT2TEXT] cost time: 0.0005633831024169922
+list index out of range
+[TEXT2TEXT] cost time: 0.0004394054412841797
+[TEXT2TEXT] cost time: 0.00046443939208984375
+[TEXT2TEXT] cost time: 0.0004849433898925781
+list index out of range
+[TEXT2TEXT] cost time: 0.00044846534729003906
+[TEXT2TEXT] cost time: 0.0004837512969970703
+[TEXT2TEXT] cost time: 0.0005033016204833984
+list index out of range
+[TEXT2TEXT] cost time: 0.0004458427429199219
+[TEXT2TEXT] cost time: 0.0004589557647705078
+[TEXT2TEXT] cost time: 0.0005185604095458984
+list index out of range
+[TEXT2TEXT] cost time: 0.0007834434509277344
+[TEXT2TEXT] cost time: 0.0005235671997070312
+[TEXT2TEXT] cost time: 0.0005328655242919922
+list index out of range
+[TEXT2TEXT] cost time: 0.0005481243133544922
+[TEXT2TEXT] cost time: 0.0005097389221191406
+[TEXT2TEXT] cost time: 0.0005340576171875
+list index out of range
+[TEXT2TEXT] cost time: 0.00043964385986328125
+[TEXT2TEXT] cost time: 0.000560760498046875
+[TEXT2TEXT] cost time: 0.0006921291351318359
+list index out of range
+[TEXT2TEXT] cost time: 0.00042057037353515625
+[TEXT2TEXT] cost time: 0.0005772113800048828
+[TEXT2TEXT] cost time: 0.0006744861602783203
+list index out of range
+[TEXT2TEXT] cost time: 0.0005652904510498047
+[TEXT2TEXT] cost time: 0.0006353855133056641
+[TEXT2TEXT] cost time: 0.0010285377502441406
+list index out of range
+[TEXT2TEXT] cost time: 0.0004611015319824219
+[TEXT2TEXT] cost time: 0.0005209445953369141
+[TEXT2TEXT] cost time: 0.0006735324859619141
+list index out of range
+[TEXT2TEXT] cost time: 0.0005409717559814453
+[TEXT2TEXT] cost time: 0.0004711151123046875
+[TEXT2TEXT] cost time: 0.0005290508270263672
+list index out of range
+[TEXT2TEXT] cost time: 0.00042557716369628906
+[TEXT2TEXT] cost time: 0.00049591064453125
+[TEXT2TEXT] cost time: 0.0005104541778564453
+list index out of range
+[TEXT2TEXT] cost time: 0.0005249977111816406
+[TEXT2TEXT] cost time: 0.0005364418029785156
+[TEXT2TEXT] cost time: 0.0005064010620117188
+list index out of range
+[TEXT2TEXT] cost time: 0.0004601478576660156
+[TEXT2TEXT] cost time: 0.0005216598510742188
+[TEXT2TEXT] cost time: 0.0005321502685546875
+list index out of range
+[TEXT2TEXT] cost time: 0.0004448890686035156
+[TEXT2TEXT] cost time: 0.0004963874816894531
+[TEXT2TEXT] cost time: 0.0005216598510742188
+list index out of range
+[TEXT2TEXT] cost time: 0.0004661083221435547
+[TEXT2TEXT] cost time: 0.0004544258117675781
+[TEXT2TEXT] cost time: 0.000492095947265625
+list index out of range
+[TEXT2TEXT] cost time: 0.0004489421844482422
+[TEXT2TEXT] cost time: 0.00047087669372558594
+[TEXT2TEXT] cost time: 0.00047278404235839844
+list index out of range
+[TEXT2TEXT] cost time: 0.000446319580078125
+[TEXT2TEXT] cost time: 0.00043702125549316406
+[TEXT2TEXT] cost time: 0.0004532337188720703
+list index out of range
+[TEXT2TEXT] cost time: 0.0004525184631347656
+[TEXT2TEXT] cost time: 0.0004394054412841797
+[TEXT2TEXT] cost time: 0.00047969818115234375
+list index out of range
+[TEXT2TEXT] cost time: 0.00044798851013183594
+[TEXT2TEXT] cost time: 0.00045228004455566406
+[TEXT2TEXT] cost time: 0.0004658699035644531
+list index out of range
+[TEXT2TEXT] cost time: 0.00042366981506347656
+[TEXT2TEXT] cost time: 0.0004360675811767578
+[TEXT2TEXT] cost time: 0.0005354881286621094
+list index out of range
+[TEXT2TEXT] cost time: 0.00046062469482421875
+[TEXT2TEXT] cost time: 0.00045561790466308594
+[TEXT2TEXT] cost time: 0.000514984130859375
+list index out of range
+[TEXT2TEXT] cost time: 0.00046563148498535156
+[TEXT2TEXT] cost time: 0.0005562305450439453
+[TEXT2TEXT] cost time: 0.0004889965057373047
+list index out of range
+[TEXT2TEXT] cost time: 0.0004763603210449219
+[TEXT2TEXT] cost time: 0.0004763603210449219
+[TEXT2TEXT] cost time: 0.000476837158203125
+list index out of range
+[TEXT2TEXT] cost time: 0.00045490264892578125
+[TEXT2TEXT] cost time: 0.0004665851593017578
+[TEXT2TEXT] cost time: 0.00048351287841796875
+list index out of range
+[TEXT2TEXT] cost time: 0.0004744529724121094
+[TEXT2TEXT] cost time: 0.0004775524139404297
+[TEXT2TEXT] cost time: 0.0004570484161376953
+list index out of range
+[TEXT2TEXT] cost time: 0.0004558563232421875
+[TEXT2TEXT] cost time: 0.001148223876953125
+[TEXT2TEXT] cost time: 0.0004382133483886719
+list index out of range
+[TEXT2TEXT] cost time: 0.00042319297790527344
+[TEXT2TEXT] cost time: 0.0005967617034912109
+[TEXT2TEXT] cost time: 0.0004582405090332031
+list index out of range
+[TEXT2TEXT] cost time: 0.00039768218994140625
+[TEXT2TEXT] cost time: 0.0004596710205078125
+[TEXT2TEXT] cost time: 0.0005209445953369141
+list index out of range
+[TEXT2TEXT] cost time: 0.00045013427734375
+[TEXT2TEXT] cost time: 0.0004811286926269531
+[TEXT2TEXT] cost time: 0.00046944618225097656
+list index out of range
+[TEXT2TEXT] cost time: 0.0004520416259765625
+[TEXT2TEXT] cost time: 0.00043511390686035156
+[TEXT2TEXT] cost time: 0.00046324729919433594
+list index out of range
+[TEXT2TEXT] cost time: 0.0004622936248779297
+[TEXT2TEXT] cost time: 0.0004813671112060547
+[TEXT2TEXT] cost time: 0.0004646778106689453
+list index out of range
+[TEXT2TEXT] cost time: 0.000438690185546875
+[TEXT2TEXT] cost time: 0.0004601478576660156
+[TEXT2TEXT] cost time: 0.00047016143798828125
+list index out of range
+[TEXT2TEXT] cost time: 0.00041866302490234375
+[TEXT2TEXT] cost time: 0.00043511390686035156
+[TEXT2TEXT] cost time: 0.0005090236663818359
+list index out of range
+[TEXT2TEXT] cost time: 0.000453948974609375
+[TEXT2TEXT] cost time: 0.0005168914794921875
+[TEXT2TEXT] cost time: 0.00046515464782714844
+list index out of range
+[TEXT2TEXT] cost time: 0.00042819976806640625
+[TEXT2TEXT] cost time: 0.0004508495330810547
+[TEXT2TEXT] cost time: 0.0004775524139404297
+list index out of range
+[TEXT2TEXT] cost time: 0.0004200935363769531
+[TEXT2TEXT] cost time: 0.00044989585876464844
+[TEXT2TEXT] cost time: 0.0004792213439941406
+list index out of range
+[TEXT2TEXT] cost time: 0.00044274330139160156
+[TEXT2TEXT] cost time: 0.0004487037658691406
+[TEXT2TEXT] cost time: 0.00048804283142089844
+list index out of range
+[TEXT2TEXT] cost time: 0.00043392181396484375
+[TEXT2TEXT] cost time: 0.000461578369140625
+[TEXT2TEXT] cost time: 0.0005023479461669922
+list index out of range
+[TEXT2TEXT] cost time: 0.00047588348388671875
+[TEXT2TEXT] cost time: 0.0004448890686035156
+[TEXT2TEXT] cost time: 0.0004992485046386719
+list index out of range
+[TEXT2TEXT] cost time: 0.00044083595275878906
+[TEXT2TEXT] cost time: 0.0004456043243408203
+[TEXT2TEXT] cost time: 0.0004742145538330078
+list index out of range
+[TEXT2TEXT] cost time: 0.0004088878631591797
+[TEXT2TEXT] cost time: 0.0004253387451171875
+[TEXT2TEXT] cost time: 0.0004544258117675781
+list index out of range
+[TEXT2TEXT] cost time: 0.00042176246643066406
+[TEXT2TEXT] cost time: 0.0004107952117919922
+[TEXT2TEXT] cost time: 0.0008187294006347656
+list index out of range
+[TEXT2TEXT] cost time: 0.0003993511199951172
+[TEXT2TEXT] cost time: 0.0004718303680419922
+[TEXT2TEXT] cost time: 0.0004639625549316406
+list index out of range
+[TEXT2TEXT] cost time: 0.000438690185546875
+[TEXT2TEXT] cost time: 0.00044417381286621094
+[TEXT2TEXT] cost time: 0.0004990100860595703
+list index out of range
+[TEXT2TEXT] cost time: 0.00047206878662109375
+[TEXT2TEXT] cost time: 0.0005159378051757812
+[TEXT2TEXT] cost time: 0.0004947185516357422
+list index out of range
+[TEXT2TEXT] cost time: 0.00044798851013183594
+[TEXT2TEXT] cost time: 0.0004448890686035156
+[TEXT2TEXT] cost time: 0.000453948974609375
+list index out of range
+[TEXT2TEXT] cost time: 0.0004191398620605469
+[TEXT2TEXT] cost time: 0.00042057037353515625
+[TEXT2TEXT] cost time: 0.00044536590576171875
+list index out of range
+[TEXT2TEXT] cost time: 0.00040149688720703125
+[TEXT2TEXT] cost time: 0.0004558563232421875
+[TEXT2TEXT] cost time: 0.0005130767822265625
+list index out of range
+[TEXT2TEXT] cost time: 0.0004146099090576172
+[TEXT2TEXT] cost time: 0.00041794776916503906
+[TEXT2TEXT] cost time: 0.0004253387451171875
+list index out of range
+[TEXT2TEXT] cost time: 0.00044345855712890625
+[TEXT2TEXT] cost time: 0.0004284381866455078
+[TEXT2TEXT] cost time: 0.0004885196685791016
+list index out of range
+[TEXT2TEXT] cost time: 0.0004451274871826172
+[TEXT2TEXT] cost time: 0.0004820823669433594
+[TEXT2TEXT] cost time: 0.0004703998565673828
+list index out of range
+[TEXT2TEXT] cost time: 0.0004298686981201172
+[TEXT2TEXT] cost time: 0.0004916191101074219
+[TEXT2TEXT] cost time: 0.0004680156707763672
+list index out of range
+[TEXT2TEXT] cost time: 0.0004353523254394531
+[TEXT2TEXT] cost time: 0.0004787445068359375
+[TEXT2TEXT] cost time: 0.0004951953887939453
+list index out of range
+[TEXT2TEXT] cost time: 0.0004105567932128906
+[TEXT2TEXT] cost time: 0.00042557716369628906
+[TEXT2TEXT] cost time: 0.00042438507080078125
+list index out of range
+[TEXT2TEXT] cost time: 0.0003998279571533203
+[TEXT2TEXT] cost time: 0.0004241466522216797
+[TEXT2TEXT] cost time: 0.0004565715789794922
+list index out of range
+[TEXT2TEXT] cost time: 0.00043582916259765625
+[TEXT2TEXT] cost time: 0.00043654441833496094
+[TEXT2TEXT] cost time: 0.0004329681396484375
+list index out of range
+[TEXT2TEXT] cost time: 0.0003917217254638672
+[TEXT2TEXT] cost time: 0.00044989585876464844
+[TEXT2TEXT] cost time: 0.000461578369140625
+list index out of range
+[TEXT2TEXT] cost time: 0.0004451274871826172
+[TEXT2TEXT] cost time: 0.0004665851593017578
+[TEXT2TEXT] cost time: 0.0004420280456542969
+list index out of range
+[TEXT2TEXT] cost time: 0.00044846534729003906
+[TEXT2TEXT] cost time: 0.0004966259002685547
+[TEXT2TEXT] cost time: 0.000453948974609375
+list index out of range
+[TEXT2TEXT] cost time: 0.0004410743713378906
+[TEXT2TEXT] cost time: 0.000461578369140625
+[TEXT2TEXT] cost time: 0.00047779083251953125
+list index out of range
+[TEXT2TEXT] cost time: 0.00042939186096191406
+[TEXT2TEXT] cost time: 0.0004210472106933594
+[TEXT2TEXT] cost time: 0.0004551410675048828
+list index out of range
+[TEXT2TEXT] cost time: 0.00042366981506347656
+[TEXT2TEXT] cost time: 0.0004017353057861328
+[TEXT2TEXT] cost time: 0.00048804283142089844
+list index out of range
+[TEXT2TEXT] cost time: 0.0004467964172363281
+[TEXT2TEXT] cost time: 0.0005202293395996094
+[TEXT2TEXT] cost time: 0.0004990100860595703
+list index out of range
+[TEXT2TEXT] cost time: 0.0004317760467529297
+[TEXT2TEXT] cost time: 0.0005095005035400391
+[TEXT2TEXT] cost time: 0.00046372413635253906
+list index out of range
+[TEXT2TEXT] cost time: 0.0004131793975830078
+[TEXT2TEXT] cost time: 0.0004405975341796875
+[TEXT2TEXT] cost time: 0.00045800209045410156
+list index out of range
+[TEXT2TEXT] cost time: 0.00042724609375
+[TEXT2TEXT] cost time: 0.0004391670227050781
+[TEXT2TEXT] cost time: 0.0005125999450683594
+list index out of range
+[TEXT2TEXT] cost time: 0.0004315376281738281
+[TEXT2TEXT] cost time: 0.00044655799865722656
+[TEXT2TEXT] cost time: 0.00045228004455566406
+list index out of range
+[TEXT2TEXT] cost time: 0.00043082237243652344
+[TEXT2TEXT] cost time: 0.00046634674072265625
+[TEXT2TEXT] cost time: 0.0004706382751464844
+list index out of range
+[TEXT2TEXT] cost time: 0.0004394054412841797
+[TEXT2TEXT] cost time: 0.0004673004150390625
+[TEXT2TEXT] cost time: 0.0004444122314453125
+list index out of range
+[TEXT2TEXT] cost time: 0.0004353523254394531
+[TEXT2TEXT] cost time: 0.00042128562927246094
+[TEXT2TEXT] cost time: 0.0004897117614746094
+list index out of range
+[TEXT2TEXT] cost time: 0.00043201446533203125
+[TEXT2TEXT] cost time: 0.0004589557647705078
+[TEXT2TEXT] cost time: 0.00044345855712890625
+list index out of range
+[TEXT2TEXT] cost time: 0.00041675567626953125
+[TEXT2TEXT] cost time: 0.0004444122314453125
+[TEXT2TEXT] cost time: 0.0004892349243164062
+list index out of range
+[TEXT2TEXT] cost time: 0.00041961669921875
+[TEXT2TEXT] cost time: 0.0004665851593017578
+[TEXT2TEXT] cost time: 0.0004525184631347656
+list index out of range
+[TEXT2TEXT] cost time: 0.00042939186096191406
+[TEXT2TEXT] cost time: 0.0004398822784423828
+[TEXT2TEXT] cost time: 0.0004904270172119141
+list index out of range
+[TEXT2TEXT] cost time: 0.00046634674072265625
+[TEXT2TEXT] cost time: 0.00046181678771972656
+[TEXT2TEXT] cost time: 0.0004909038543701172
+list index out of range
+[TEXT2TEXT] cost time: 0.0004260540008544922
+[TEXT2TEXT] cost time: 0.0004489421844482422
+[TEXT2TEXT] cost time: 0.0004551410675048828
+list index out of range
+[TEXT2TEXT] cost time: 0.00044345855712890625
+[TEXT2TEXT] cost time: 0.0004405975341796875
+[TEXT2TEXT] cost time: 0.0004494190216064453
+list index out of range
+[TEXT2TEXT] cost time: 0.000476837158203125
+[TEXT2TEXT] cost time: 0.0004642009735107422
+[TEXT2TEXT] cost time: 0.00045943260192871094
+list index out of range
+[TEXT2TEXT] cost time: 0.0004265308380126953
+[TEXT2TEXT] cost time: 0.0004987716674804688
+[TEXT2TEXT] cost time: 0.0004382133483886719
+list index out of range
+[TEXT2TEXT] cost time: 0.00044536590576171875
+[TEXT2TEXT] cost time: 0.00045490264892578125
+[TEXT2TEXT] cost time: 0.0004477500915527344
+list index out of range
+[TEXT2TEXT] cost time: 0.0004210472106933594
+[TEXT2TEXT] cost time: 0.0004279613494873047
+[TEXT2TEXT] cost time: 0.00044035911560058594
+list index out of range
+[TEXT2TEXT] cost time: 0.00046324729919433594
+[TEXT2TEXT] cost time: 0.00045299530029296875
+[TEXT2TEXT] cost time: 0.0004405975341796875
+list index out of range
+[TEXT2TEXT] cost time: 0.00042891502380371094
+[TEXT2TEXT] cost time: 0.00043463706970214844
+[TEXT2TEXT] cost time: 0.00047016143798828125
+list index out of range
+[TEXT2TEXT] cost time: 0.0004429817199707031
+[TEXT2TEXT] cost time: 0.0004494190216064453
+[TEXT2TEXT] cost time: 0.0004589557647705078
+list index out of range
+[TEXT2TEXT] cost time: 0.0004222393035888672
+[TEXT2TEXT] cost time: 0.0005068778991699219
+[TEXT2TEXT] cost time: 0.0004825592041015625
+list index out of range
+[TEXT2TEXT] cost time: 0.00043773651123046875
+[TEXT2TEXT] cost time: 0.0004665851593017578
+[TEXT2TEXT] cost time: 0.00043892860412597656
+list index out of range
+[TEXT2TEXT] cost time: 0.00045180320739746094
+[TEXT2TEXT] cost time: 0.00042366981506347656
+[TEXT2TEXT] cost time: 0.000431060791015625
+list index out of range
+[TEXT2TEXT] cost time: 0.0004374980926513672
+[TEXT2TEXT] cost time: 0.0004596710205078125
+[TEXT2TEXT] cost time: 0.00044083595275878906
+list index out of range
+[TEXT2TEXT] cost time: 0.00044465065002441406
+[TEXT2TEXT] cost time: 0.0004417896270751953
+[TEXT2TEXT] cost time: 0.0004482269287109375
+list index out of range
+[TEXT2TEXT] cost time: 0.0004315376281738281
+[TEXT2TEXT] cost time: 0.0004611015319824219
+[TEXT2TEXT] cost time: 0.0005068778991699219
+list index out of range
+[TEXT2TEXT] cost time: 0.00045680999755859375
+[TEXT2TEXT] cost time: 0.00044536590576171875
+[TEXT2TEXT] cost time: 0.0004379749298095703
+list index out of range
+[TEXT2TEXT] cost time: 0.00042366981506347656
+[TEXT2TEXT] cost time: 0.00046825408935546875
+[TEXT2TEXT] cost time: 0.0004773139953613281
+list index out of range
+[TEXT2TEXT] cost time: 0.0004436969757080078
+[TEXT2TEXT] cost time: 0.0004508495330810547
+[TEXT2TEXT] cost time: 0.00047135353088378906
+list index out of range
+[TEXT2TEXT] cost time: 0.00042128562927246094
+[TEXT2TEXT] cost time: 0.00046563148498535156
+[TEXT2TEXT] cost time: 0.00048732757568359375
+list index out of range
+[TEXT2TEXT] cost time: 0.0004246234893798828
+[TEXT2TEXT] cost time: 0.00045108795166015625
+[TEXT2TEXT] cost time: 0.0004911422729492188
+list index out of range
+[TEXT2TEXT] cost time: 0.0004305839538574219
+[TEXT2TEXT] cost time: 0.0004725456237792969
+[TEXT2TEXT] cost time: 0.0004601478576660156
+list index out of range
+[TEXT2TEXT] cost time: 0.00045037269592285156
+[TEXT2TEXT] cost time: 0.0004353523254394531
+[TEXT2TEXT] cost time: 0.0004665851593017578
+list index out of range
+[TEXT2TEXT] cost time: 0.0004200935363769531
+[TEXT2TEXT] cost time: 0.0004649162292480469
+[TEXT2TEXT] cost time: 0.0004611015319824219
+list index out of range
+[TEXT2TEXT] cost time: 0.0004253387451171875
+[TEXT2TEXT] cost time: 0.00045418739318847656
+[TEXT2TEXT] cost time: 0.0004444122314453125
+list index out of range
+[TEXT2TEXT] cost time: 0.0004341602325439453
+[TEXT2TEXT] cost time: 0.00045943260192871094
+[TEXT2TEXT] cost time: 0.00046825408935546875
+list index out of range
+[TEXT2TEXT] cost time: 0.0004138946533203125
+[TEXT2TEXT] cost time: 0.00044989585876464844
+[TEXT2TEXT] cost time: 0.0004482269287109375
+list index out of range
+[TEXT2TEXT] cost time: 0.0004565715789794922
+[TEXT2TEXT] cost time: 0.00043201446533203125
+[TEXT2TEXT] cost time: 0.00045752525329589844
+list index out of range
+[TEXT2TEXT] cost time: 0.0004401206970214844
+[TEXT2TEXT] cost time: 0.00045228004455566406
+[TEXT2TEXT] cost time: 0.0005221366882324219
+list index out of range
+[TEXT2TEXT] cost time: 0.00042748451232910156
+[TEXT2TEXT] cost time: 0.0005018711090087891
+[TEXT2TEXT] cost time: 0.00047779083251953125
+list index out of range
+[TEXT2TEXT] cost time: 0.0004279613494873047
+[TEXT2TEXT] cost time: 0.001077413558959961
+[TEXT2TEXT] cost time: 0.0005130767822265625
+list index out of range
+[TEXT2TEXT] cost time: 0.00043010711669921875
+[TEXT2TEXT] cost time: 0.0004520416259765625
+[TEXT2TEXT] cost time: 0.00046133995056152344
+list index out of range
+[TEXT2TEXT] cost time: 0.00044846534729003906
+[TEXT2TEXT] cost time: 0.0004394054412841797
+[TEXT2TEXT] cost time: 0.00045108795166015625
+list index out of range
+[TEXT2TEXT] cost time: 0.00043702125549316406
+[TEXT2TEXT] cost time: 0.00044655799865722656
+[TEXT2TEXT] cost time: 0.0005061626434326172
+list index out of range
+[TEXT2TEXT] cost time: 0.0004341602325439453
+[TEXT2TEXT] cost time: 0.0004458427429199219
+[TEXT2TEXT] cost time: 0.0004374980926513672
+list index out of range
+[TEXT2TEXT] cost time: 0.00044465065002441406
+[TEXT2TEXT] cost time: 0.0004913806915283203
+[TEXT2TEXT] cost time: 0.00045371055603027344
+list index out of range
+[TEXT2TEXT] cost time: 0.00044155120849609375
+[TEXT2TEXT] cost time: 0.0004520416259765625
+[TEXT2TEXT] cost time: 0.0004456043243408203
+list index out of range
+[TEXT2TEXT] cost time: 0.0004763603210449219
+[TEXT2TEXT] cost time: 0.00047278404235839844
+[TEXT2TEXT] cost time: 0.0005006790161132812
+list index out of range
+[TEXT2TEXT] cost time: 0.00045371055603027344
+[TEXT2TEXT] cost time: 0.0005009174346923828
+[TEXT2TEXT] cost time: 0.0004699230194091797
+list index out of range
+[TEXT2TEXT] cost time: 0.00045609474182128906
+[TEXT2TEXT] cost time: 0.0004515647888183594
+[TEXT2TEXT] cost time: 0.00047707557678222656
+list index out of range
+[TEXT2TEXT] cost time: 0.00043702125549316406
+[TEXT2TEXT] cost time: 0.00045013427734375
+[TEXT2TEXT] cost time: 0.0005233287811279297
+list index out of range
+[TEXT2TEXT] cost time: 0.00043892860412597656
+[TEXT2TEXT] cost time: 0.00043463706970214844
+[TEXT2TEXT] cost time: 0.00043702125549316406
+list index out of range
+[TEXT2TEXT] cost time: 0.0004444122314453125
+[TEXT2TEXT] cost time: 0.0004429817199707031
+[TEXT2TEXT] cost time: 0.0004706382751464844
+list index out of range
+[TEXT2TEXT] cost time: 0.0004405975341796875
+[TEXT2TEXT] cost time: 0.00044727325439453125
+[TEXT2TEXT] cost time: 0.0004525184631347656
+list index out of range
+[TEXT2TEXT] cost time: 0.0004131793975830078
+[TEXT2TEXT] cost time: 0.0004611015319824219
+[TEXT2TEXT] cost time: 0.00045228004455566406
+list index out of range
+[TEXT2TEXT] cost time: 0.0004379749298095703
+[TEXT2TEXT] cost time: 0.00043129920959472656
+[TEXT2TEXT] cost time: 0.0005071163177490234
+list index out of range
+[TEXT2TEXT] cost time: 0.0011250972747802734
+[TEXT2TEXT] cost time: 0.000461578369140625
+[TEXT2TEXT] cost time: 0.0004570484161376953
+list index out of range
+[TEXT2TEXT] cost time: 0.00045108795166015625
+[TEXT2TEXT] cost time: 0.0004391670227050781
+[TEXT2TEXT] cost time: 0.0004968643188476562
+list index out of range
+[TEXT2TEXT] cost time: 0.0004584789276123047
+[TEXT2TEXT] cost time: 0.0004596710205078125
+[TEXT2TEXT] cost time: 0.000438690185546875
+list index out of range
+[TEXT2TEXT] cost time: 0.00045418739318847656
+[TEXT2TEXT] cost time: 0.00044989585876464844
+[TEXT2TEXT] cost time: 0.0005116462707519531
+list index out of range
+[TEXT2TEXT] cost time: 0.00046706199645996094
+[TEXT2TEXT] cost time: 0.0004467964172363281
+[TEXT2TEXT] cost time: 0.00045037269592285156
+list index out of range
+[TEXT2TEXT] cost time: 0.00045108795166015625
+[TEXT2TEXT] cost time: 0.0004544258117675781
+[TEXT2TEXT] cost time: 0.0004477500915527344
+list index out of range
+[TEXT2TEXT] cost time: 0.0004787445068359375
+[TEXT2TEXT] cost time: 0.00045490264892578125
+[TEXT2TEXT] cost time: 0.00045871734619140625
+list index out of range
+[TEXT2TEXT] cost time: 0.0004546642303466797
+[TEXT2TEXT] cost time: 0.00044274330139160156
+[TEXT2TEXT] cost time: 0.0005333423614501953
+list index out of range
+[TEXT2TEXT] cost time: 0.0005044937133789062
+[TEXT2TEXT] cost time: 0.0005123615264892578
+[TEXT2TEXT] cost time: 0.0005178451538085938
+list index out of range
+[TEXT2TEXT] cost time: 0.0005085468292236328
+[TEXT2TEXT] cost time: 0.0005159378051757812
+[TEXT2TEXT] cost time: 0.0005328655242919922
+list index out of range
+[TEXT2TEXT] cost time: 0.0005767345428466797
+[TEXT2TEXT] cost time: 0.0005154609680175781
+[TEXT2TEXT] cost time: 0.0008957386016845703
+list index out of range
+[TEXT2TEXT] cost time: 0.0004305839538574219
+[TEXT2TEXT] cost time: 0.0009570121765136719
+[TEXT2TEXT] cost time: 0.0004329681396484375
+list index out of range
+[TEXT2TEXT] cost time: 0.00042176246643066406
+[TEXT2TEXT] cost time: 0.000453948974609375
+[TEXT2TEXT] cost time: 0.00044083595275878906
+list index out of range
+[TEXT2TEXT] cost time: 0.00041413307189941406
+[TEXT2TEXT] cost time: 0.0004456043243408203
+[TEXT2TEXT] cost time: 0.00047779083251953125
+list index out of range
+[TEXT2TEXT] cost time: 0.000438690185546875
+[TEXT2TEXT] cost time: 0.00043082237243652344
+[TEXT2TEXT] cost time: 0.0004792213439941406
+list index out of range
+[TEXT2TEXT] cost time: 0.0004420280456542969
+[TEXT2TEXT] cost time: 0.00041604042053222656
+[TEXT2TEXT] cost time: 0.0004603862762451172
+list index out of range
+[TEXT2TEXT] cost time: 0.0004291534423828125
+[TEXT2TEXT] cost time: 0.0004322528839111328
+[TEXT2TEXT] cost time: 0.00043702125549316406
+list index out of range
+[TEXT2TEXT] cost time: 0.0004508495330810547
+[TEXT2TEXT] cost time: 0.0004405975341796875
+[TEXT2TEXT] cost time: 0.0004391670227050781
+list index out of range
+[TEXT2TEXT] cost time: 0.0004868507385253906
+[TEXT2TEXT] cost time: 0.0004780292510986328
+[TEXT2TEXT] cost time: 0.0004925727844238281
+list index out of range
+[TEXT2TEXT] cost time: 0.00042557716369628906
+[TEXT2TEXT] cost time: 0.0004284381866455078
+[TEXT2TEXT] cost time: 0.00046062469482421875
+list index out of range
+[TEXT2TEXT] cost time: 0.00039505958557128906
+[TEXT2TEXT] cost time: 0.00040078163146972656
+[TEXT2TEXT] cost time: 0.00048160552978515625
+list index out of range
+[TEXT2TEXT] cost time: 0.00043845176696777344
+[TEXT2TEXT] cost time: 0.0004658699035644531
+[TEXT2TEXT] cost time: 0.00047588348388671875
+list index out of range
+[TEXT2TEXT] cost time: 0.00043702125549316406
+[TEXT2TEXT] cost time: 0.0004506111145019531
+[TEXT2TEXT] cost time: 0.00045299530029296875
+list index out of range
+[TEXT2TEXT] cost time: 0.00044608116149902344
+[TEXT2TEXT] cost time: 0.00042128562927246094
+[TEXT2TEXT] cost time: 0.00045418739318847656
+list index out of range
+[TEXT2TEXT] cost time: 0.00043773651123046875
+[TEXT2TEXT] cost time: 0.00046372413635253906
+[TEXT2TEXT] cost time: 0.0005087852478027344
+list index out of range
+[TEXT2TEXT] cost time: 0.0005040168762207031
+[TEXT2TEXT] cost time: 0.0004684925079345703
+[TEXT2TEXT] cost time: 0.00047659873962402344
+list index out of range
+[TEXT2TEXT] cost time: 0.0004169940948486328
+[TEXT2TEXT] cost time: 0.00041937828063964844
+[TEXT2TEXT] cost time: 0.0004706382751464844
+list index out of range
+[TEXT2TEXT] cost time: 0.0004096031188964844
+[TEXT2TEXT] cost time: 0.00042438507080078125
+[TEXT2TEXT] cost time: 0.00044918060302734375
+list index out of range
+[TEXT2TEXT] cost time: 0.0004048347473144531
+[TEXT2TEXT] cost time: 0.0004649162292480469
+[TEXT2TEXT] cost time: 0.0004258155822753906
+list index out of range
+[TEXT2TEXT] cost time: 0.0003986358642578125
+[TEXT2TEXT] cost time: 0.0004153251647949219
+[TEXT2TEXT] cost time: 0.0004930496215820312
+list index out of range
+[TEXT2TEXT] cost time: 0.00040411949157714844
+[TEXT2TEXT] cost time: 0.00041556358337402344
+[TEXT2TEXT] cost time: 0.0004456043243408203
+list index out of range
+[TEXT2TEXT] cost time: 0.00046062469482421875
+[TEXT2TEXT] cost time: 0.0004515647888183594
+[TEXT2TEXT] cost time: 0.00043487548828125
+list index out of range
+[TEXT2TEXT] cost time: 0.0004246234893798828
+[TEXT2TEXT] cost time: 0.000415802001953125
+[TEXT2TEXT] cost time: 0.0004744529724121094
+list index out of range
+[TEXT2TEXT] cost time: 0.0003986358642578125
+[TEXT2TEXT] cost time: 0.0005176067352294922
+[TEXT2TEXT] cost time: 0.0004668235778808594
+list index out of range
+[TEXT2TEXT] cost time: 0.00044846534729003906
+[TEXT2TEXT] cost time: 0.0004711151123046875
+[TEXT2TEXT] cost time: 0.0004878044128417969
+list index out of range
+[TEXT2TEXT] cost time: 0.0004744529724121094
+[TEXT2TEXT] cost time: 0.0004451274871826172
+[TEXT2TEXT] cost time: 0.0004792213439941406
+list index out of range
+[TEXT2TEXT] cost time: 0.0004417896270751953
+[TEXT2TEXT] cost time: 0.0004763603210449219
+[TEXT2TEXT] cost time: 0.0005364418029785156
+list index out of range
+[TEXT2TEXT] cost time: 0.0009632110595703125
+[TEXT2TEXT] cost time: 0.0004551410675048828
+[TEXT2TEXT] cost time: 0.0005502700805664062
+list index out of range
+[TEXT2TEXT] cost time: 0.0004506111145019531
+[TEXT2TEXT] cost time: 0.0004391670227050781
+[TEXT2TEXT] cost time: 0.0004658699035644531
+list index out of range
+[TEXT2TEXT] cost time: 0.0004436969757080078
+[TEXT2TEXT] cost time: 0.00042319297790527344
+[TEXT2TEXT] cost time: 0.0005238056182861328
+list index out of range
+[TEXT2TEXT] cost time: 0.0004372596740722656
+[TEXT2TEXT] cost time: 0.00043010711669921875
+[TEXT2TEXT] cost time: 0.0004849433898925781
+list index out of range
+[TEXT2TEXT] cost time: 0.0004432201385498047
+[TEXT2TEXT] cost time: 0.00045752525329589844
+[TEXT2TEXT] cost time: 0.00048160552978515625
+list index out of range
+[TEXT2TEXT] cost time: 0.0004775524139404297
+[TEXT2TEXT] cost time: 0.0004839897155761719
+[TEXT2TEXT] cost time: 0.0005209445953369141
+list index out of range
+[TEXT2TEXT] cost time: 0.0004589557647705078
+[TEXT2TEXT] cost time: 0.0005383491516113281
+[TEXT2TEXT] cost time: 0.0005421638488769531
+list index out of range
+[TEXT2TEXT] cost time: 0.00042748451232910156
+[TEXT2TEXT] cost time: 0.0005342960357666016
+[TEXT2TEXT] cost time: 0.0006721019744873047
+list index out of range
+[TEXT2TEXT] cost time: 0.0004467964172363281
+[TEXT2TEXT] cost time: 0.00047135353088378906
+[TEXT2TEXT] cost time: 0.0005545616149902344
+list index out of range
+[TEXT2TEXT] cost time: 0.00041794776916503906
+[TEXT2TEXT] cost time: 0.0004858970642089844
+[TEXT2TEXT] cost time: 0.0005214214324951172
+list index out of range
+[TEXT2TEXT] cost time: 0.00042319297790527344
+[TEXT2TEXT] cost time: 0.00042748451232910156
+[TEXT2TEXT] cost time: 0.0005142688751220703
+list index out of range
+[TEXT2TEXT] cost time: 0.0004703998565673828
+[TEXT2TEXT] cost time: 0.0004978179931640625
+[TEXT2TEXT] cost time: 0.0007317066192626953
+list index out of range
+[TEXT2TEXT] cost time: 0.000675201416015625
+[TEXT2TEXT] cost time: 0.0005631446838378906
+[TEXT2TEXT] cost time: 0.0005755424499511719
+list index out of range
+[TEXT2TEXT] cost time: 0.0004634857177734375
+[TEXT2TEXT] cost time: 0.000507354736328125
+[TEXT2TEXT] cost time: 0.0005118846893310547
+list index out of range
+[TEXT2TEXT] cost time: 0.0006420612335205078
+[TEXT2TEXT] cost time: 0.00045800209045410156
+[TEXT2TEXT] cost time: 0.0005271434783935547
+list index out of range
+[TEXT2TEXT] cost time: 0.0004506111145019531
+[TEXT2TEXT] cost time: 0.0004718303680419922
+[TEXT2TEXT] cost time: 0.0005333423614501953
+list index out of range
+[TEXT2TEXT] cost time: 0.00044465065002441406
+[TEXT2TEXT] cost time: 0.000484466552734375
+[TEXT2TEXT] cost time: 0.0004937648773193359
+list index out of range
+[TEXT2TEXT] cost time: 0.00044798851013183594
+[TEXT2TEXT] cost time: 0.00047707557678222656
+[TEXT2TEXT] cost time: 0.0004982948303222656
+list index out of range
+[TEXT2TEXT] cost time: 0.00045490264892578125
+[TEXT2TEXT] cost time: 0.0004603862762451172
+[TEXT2TEXT] cost time: 0.0005033016204833984
+list index out of range
+[TEXT2TEXT] cost time: 0.0004336833953857422
+[TEXT2TEXT] cost time: 0.00047969818115234375
+[TEXT2TEXT] cost time: 0.0005164146423339844
+list index out of range
+[TEXT2TEXT] cost time: 0.0004394054412841797
+[TEXT2TEXT] cost time: 0.0004570484161376953
+[TEXT2TEXT] cost time: 0.0005216598510742188
+list index out of range
+[TEXT2TEXT] cost time: 0.0004730224609375
+[TEXT2TEXT] cost time: 0.0005033016204833984
+[TEXT2TEXT] cost time: 0.0004954338073730469
+list index out of range
+[TEXT2TEXT] cost time: 0.0004506111145019531
+[TEXT2TEXT] cost time: 0.0004544258117675781
+[TEXT2TEXT] cost time: 0.00048089027404785156
+list index out of range
+[TEXT2TEXT] cost time: 0.00044465065002441406
+[TEXT2TEXT] cost time: 0.00046825408935546875
+[TEXT2TEXT] cost time: 0.0005211830139160156
+list index out of range
+[TEXT2TEXT] cost time: 0.00043463706970214844
+[TEXT2TEXT] cost time: 0.0004520416259765625
+[TEXT2TEXT] cost time: 0.0004870891571044922
+list index out of range
+[TEXT2TEXT] cost time: 0.00043964385986328125
+[TEXT2TEXT] cost time: 0.0004999637603759766
+[TEXT2TEXT] cost time: 0.00046706199645996094
+list index out of range
+[TEXT2TEXT] cost time: 0.0004360675811767578
+[TEXT2TEXT] cost time: 0.000469207763671875
+[TEXT2TEXT] cost time: 0.00046324729919433594
+list index out of range
+[TEXT2TEXT] cost time: 0.00044035911560058594
+[TEXT2TEXT] cost time: 0.0004534721374511719
+[TEXT2TEXT] cost time: 0.0004627704620361328
+list index out of range
+[TEXT2TEXT] cost time: 0.00045371055603027344
+[TEXT2TEXT] cost time: 0.0004467964172363281
+[TEXT2TEXT] cost time: 0.0004684925079345703
+list index out of range
+[TEXT2TEXT] cost time: 0.0004277229309082031
+[TEXT2TEXT] cost time: 0.0004622936248779297
+[TEXT2TEXT] cost time: 0.0004734992980957031
+list index out of range
+[TEXT2TEXT] cost time: 0.00045490264892578125
+[TEXT2TEXT] cost time: 0.0004608631134033203
+[TEXT2TEXT] cost time: 0.0004949569702148438
+list index out of range
+[TEXT2TEXT] cost time: 0.0004258155822753906
+[TEXT2TEXT] cost time: 0.0004520416259765625
+[TEXT2TEXT] cost time: 0.0004405975341796875
+list index out of range
+[TEXT2TEXT] cost time: 0.0004436969757080078
+[TEXT2TEXT] cost time: 0.00044083595275878906
+[TEXT2TEXT] cost time: 0.0004925727844238281
+list index out of range
+[TEXT2TEXT] cost time: 0.0004363059997558594
+[TEXT2TEXT] cost time: 0.0004532337188720703
+[TEXT2TEXT] cost time: 0.0004951953887939453
+list index out of range
+[TEXT2TEXT] cost time: 0.0004544258117675781
+[TEXT2TEXT] cost time: 0.0004220008850097656
+[TEXT2TEXT] cost time: 0.00047659873962402344
+list index out of range
+[TEXT2TEXT] cost time: 0.00043129920959472656
+[TEXT2TEXT] cost time: 0.00045371055603027344
+[TEXT2TEXT] cost time: 0.000457763671875
+list index out of range
+[TEXT2TEXT] cost time: 0.000438690185546875
+[TEXT2TEXT] cost time: 0.00045990943908691406
+[TEXT2TEXT] cost time: 0.00047898292541503906
+list index out of range
+[TEXT2TEXT] cost time: 0.0004367828369140625
+[TEXT2TEXT] cost time: 0.00044536590576171875
+[TEXT2TEXT] cost time: 0.0005078315734863281
+list index out of range
+[TEXT2TEXT] cost time: 0.0004391670227050781
+[TEXT2TEXT] cost time: 0.0004439353942871094
+[TEXT2TEXT] cost time: 0.0004990100860595703
+list index out of range
+[TEXT2TEXT] cost time: 0.0004508495330810547
+[TEXT2TEXT] cost time: 0.0004856586456298828
+[TEXT2TEXT] cost time: 0.0004589557647705078
+list index out of range
+[TEXT2TEXT] cost time: 0.00042366981506347656
+[TEXT2TEXT] cost time: 0.00041794776916503906
+[TEXT2TEXT] cost time: 0.0004954338073730469
+list index out of range
+[TEXT2TEXT] cost time: 0.0004918575286865234
+[TEXT2TEXT] cost time: 0.00047206878662109375
+[TEXT2TEXT] cost time: 0.00047326087951660156
+list index out of range
+[TEXT2TEXT] cost time: 0.0004992485046386719
+[TEXT2TEXT] cost time: 0.00047898292541503906
+[TEXT2TEXT] cost time: 0.00048065185546875
+list index out of range
+[TEXT2TEXT] cost time: 0.0004942417144775391
+[TEXT2TEXT] cost time: 0.00045228004455566406
+[TEXT2TEXT] cost time: 0.0005202293395996094
+list index out of range
+[TEXT2TEXT] cost time: 0.0004711151123046875
+[TEXT2TEXT] cost time: 0.0005469322204589844
+[TEXT2TEXT] cost time: 0.0005953311920166016
+list index out of range
+[TEXT2TEXT] cost time: 0.0008616447448730469
+[TEXT2TEXT] cost time: 0.0005002021789550781
+[TEXT2TEXT] cost time: 0.00048422813415527344
+list index out of range
+[TEXT2TEXT] cost time: 0.0004448890686035156
+[TEXT2TEXT] cost time: 0.0004723072052001953
+[TEXT2TEXT] cost time: 0.0004756450653076172
+list index out of range
+[TEXT2TEXT] cost time: 0.00045299530029296875
+[TEXT2TEXT] cost time: 0.0005002021789550781
+[TEXT2TEXT] cost time: 0.0005578994750976562
+list index out of range
+[TEXT2TEXT] cost time: 0.00044727325439453125
+[TEXT2TEXT] cost time: 0.0004911422729492188
+[TEXT2TEXT] cost time: 0.0005116462707519531
+list index out of range
+[TEXT2TEXT] cost time: 0.0004572868347167969
+[TEXT2TEXT] cost time: 0.0005145072937011719
+[TEXT2TEXT] cost time: 0.000522613525390625
+list index out of range
+[TEXT2TEXT] cost time: 0.0004954338073730469
+[TEXT2TEXT] cost time: 0.0004801750183105469
+[TEXT2TEXT] cost time: 0.0005197525024414062
+list index out of range
+[TEXT2TEXT] cost time: 0.00044345855712890625
+[TEXT2TEXT] cost time: 0.00048542022705078125
+[TEXT2TEXT] cost time: 0.0004942417144775391
+list index out of range
+[TEXT2TEXT] cost time: 0.0004582405090332031
+[TEXT2TEXT] cost time: 0.00046706199645996094
+[TEXT2TEXT] cost time: 0.0005104541778564453
+list index out of range
+[TEXT2TEXT] cost time: 0.00046825408935546875
+[TEXT2TEXT] cost time: 0.0004987716674804688
+[TEXT2TEXT] cost time: 0.0004985332489013672
+list index out of range
+[TEXT2TEXT] cost time: 0.0004451274871826172
+[TEXT2TEXT] cost time: 0.0004894733428955078
+[TEXT2TEXT] cost time: 0.0005078315734863281
+list index out of range
+[TEXT2TEXT] cost time: 0.0004436969757080078
+[TEXT2TEXT] cost time: 0.0005245208740234375
+[TEXT2TEXT] cost time: 0.00047779083251953125
+list index out of range
+[TEXT2TEXT] cost time: 0.0004477500915527344
+[TEXT2TEXT] cost time: 0.00045752525329589844
+[TEXT2TEXT] cost time: 0.0004673004150390625
+list index out of range
+[TEXT2TEXT] cost time: 0.00046753883361816406
+[TEXT2TEXT] cost time: 0.000514984130859375
+[TEXT2TEXT] cost time: 0.00045990943908691406
+list index out of range
+[TEXT2TEXT] cost time: 0.0004475116729736328
+[TEXT2TEXT] cost time: 0.0004906654357910156
+[TEXT2TEXT] cost time: 0.00048661231994628906
+list index out of range
+[TEXT2TEXT] cost time: 0.0004410743713378906
+[TEXT2TEXT] cost time: 0.0005042552947998047
+[TEXT2TEXT] cost time: 0.0004630088806152344
+list index out of range
+[TEXT2TEXT] cost time: 0.0004591941833496094
+[TEXT2TEXT] cost time: 0.00045943260192871094
+[TEXT2TEXT] cost time: 0.0006241798400878906
+list index out of range
+[TEXT2TEXT] cost time: 0.000438690185546875
+[TEXT2TEXT] cost time: 0.0004482269287109375
+[TEXT2TEXT] cost time: 0.0005085468292236328
+list index out of range
+[TEXT2TEXT] cost time: 0.0004665851593017578
+[TEXT2TEXT] cost time: 0.00047469139099121094
+[TEXT2TEXT] cost time: 0.0004749298095703125
+list index out of range
+[TEXT2TEXT] cost time: 0.0004715919494628906
+[TEXT2TEXT] cost time: 0.00045228004455566406
+[TEXT2TEXT] cost time: 0.0005013942718505859
+list index out of range
+[TEXT2TEXT] cost time: 0.0004582405090332031
+[TEXT2TEXT] cost time: 0.0004489421844482422
+[TEXT2TEXT] cost time: 0.0005247592926025391
+list index out of range
+[TEXT2TEXT] cost time: 0.00045871734619140625
+[TEXT2TEXT] cost time: 0.0005035400390625
+[TEXT2TEXT] cost time: 0.0004870891571044922
+list index out of range
+[TEXT2TEXT] cost time: 0.0004603862762451172
+[TEXT2TEXT] cost time: 0.0004963874816894531
+[TEXT2TEXT] cost time: 0.0004775524139404297
+list index out of range
+[TEXT2TEXT] cost time: 0.0004284381866455078
+[TEXT2TEXT] cost time: 0.00044083595275878906
+[TEXT2TEXT] cost time: 0.0004546642303466797
+list index out of range
+[TEXT2TEXT] cost time: 0.0004394054412841797
+[TEXT2TEXT] cost time: 0.00045228004455566406
+[TEXT2TEXT] cost time: 0.0005002021789550781
+list index out of range
+[TEXT2TEXT] cost time: 0.0004611015319824219
+[TEXT2TEXT] cost time: 0.0007989406585693359
+[TEXT2TEXT] cost time: 0.00042438507080078125
+list index out of range
+[TEXT2TEXT] cost time: 0.00041794776916503906
+[TEXT2TEXT] cost time: 0.0004744529724121094
+[TEXT2TEXT] cost time: 0.0004527568817138672
+list index out of range
+[TEXT2TEXT] cost time: 0.0004286766052246094
+[TEXT2TEXT] cost time: 0.0004239082336425781
+[TEXT2TEXT] cost time: 0.00046133995056152344
+list index out of range
+[TEXT2TEXT] cost time: 0.00042629241943359375
+[TEXT2TEXT] cost time: 0.0004975795745849609
+[TEXT2TEXT] cost time: 0.00048065185546875
+list index out of range
+[TEXT2TEXT] cost time: 0.00042510032653808594
+[TEXT2TEXT] cost time: 0.00042891502380371094
+[TEXT2TEXT] cost time: 0.00043201446533203125
+list index out of range
+[TEXT2TEXT] cost time: 0.0004627704620361328
+[TEXT2TEXT] cost time: 0.0004360675811767578
+[TEXT2TEXT] cost time: 0.0005269050598144531
+list index out of range
+[TEXT2TEXT] cost time: 0.00042128562927246094
+[TEXT2TEXT] cost time: 0.00045609474182128906
+[TEXT2TEXT] cost time: 0.00043511390686035156
+list index out of range
+[TEXT2TEXT] cost time: 0.0004203319549560547
+[TEXT2TEXT] cost time: 0.0004227161407470703
+[TEXT2TEXT] cost time: 0.0004456043243408203
+list index out of range
+[TEXT2TEXT] cost time: 0.0004990100860595703
+[TEXT2TEXT] cost time: 0.0004718303680419922
+[TEXT2TEXT] cost time: 0.0005388259887695312
+list index out of range
+[TEXT2TEXT] cost time: 0.0004839897155761719
+[TEXT2TEXT] cost time: 0.0004973411560058594
+[TEXT2TEXT] cost time: 0.0005013942718505859
+list index out of range
+[TEXT2TEXT] cost time: 0.00043010711669921875
+[TEXT2TEXT] cost time: 0.0004303455352783203
+[TEXT2TEXT] cost time: 0.00044846534729003906
+list index out of range
+[TEXT2TEXT] cost time: 0.0004191398620605469
+[TEXT2TEXT] cost time: 0.000423431396484375
+[TEXT2TEXT] cost time: 0.00046324729919433594
+list index out of range
+[TEXT2TEXT] cost time: 0.0004067420959472656
+[TEXT2TEXT] cost time: 0.00042366981506347656
+[TEXT2TEXT] cost time: 0.00042557716369628906
+list index out of range
+[TEXT2TEXT] cost time: 0.0004181861877441406
+[TEXT2TEXT] cost time: 0.0004763603210449219
+[TEXT2TEXT] cost time: 0.00043320655822753906
+list index out of range
+[TEXT2TEXT] cost time: 0.00040912628173828125
+[TEXT2TEXT] cost time: 0.0004298686981201172
+[TEXT2TEXT] cost time: 0.00043392181396484375
+list index out of range
+[TEXT2TEXT] cost time: 0.0004131793975830078
+[TEXT2TEXT] cost time: 0.00045490264892578125
+[TEXT2TEXT] cost time: 0.0004832744598388672
+list index out of range
+[TEXT2TEXT] cost time: 0.00044989585876464844
+[TEXT2TEXT] cost time: 0.0004620552062988281
+[TEXT2TEXT] cost time: 0.0004801750183105469
+list index out of range
+[TEXT2TEXT] cost time: 0.00045752525329589844
+[TEXT2TEXT] cost time: 0.0005273818969726562
+[TEXT2TEXT] cost time: 0.00045013427734375
+list index out of range
+[TEXT2TEXT] cost time: 0.00044536590576171875
+[TEXT2TEXT] cost time: 0.0004246234893798828
+[TEXT2TEXT] cost time: 0.0004456043243408203
+list index out of range
+[TEXT2TEXT] cost time: 0.0004112720489501953
+[TEXT2TEXT] cost time: 0.00043272972106933594
+[TEXT2TEXT] cost time: 0.00046062469482421875
+list index out of range
+[TEXT2TEXT] cost time: 0.0004150867462158203
+[TEXT2TEXT] cost time: 0.0004520416259765625
+[TEXT2TEXT] cost time: 0.0004496574401855469
+list index out of range
+[TEXT2TEXT] cost time: 0.0003952980041503906
+[TEXT2TEXT] cost time: 0.0004277229309082031
+[TEXT2TEXT] cost time: 0.0005192756652832031
+list index out of range
+[TEXT2TEXT] cost time: 0.0004124641418457031
+[TEXT2TEXT] cost time: 0.0004410743713378906
+[TEXT2TEXT] cost time: 0.0004737377166748047
+list index out of range
+[TEXT2TEXT] cost time: 0.0004284381866455078
+[TEXT2TEXT] cost time: 0.00042819976806640625
+[TEXT2TEXT] cost time: 0.00044417381286621094
+list index out of range
+[TEXT2TEXT] cost time: 0.0004525184631347656
+[TEXT2TEXT] cost time: 0.0004534721374511719
+[TEXT2TEXT] cost time: 0.0004906654357910156
+list index out of range
+[TEXT2TEXT] cost time: 0.0004336833953857422
+[TEXT2TEXT] cost time: 0.0004456043243408203
+[TEXT2TEXT] cost time: 0.000461578369140625
+list index out of range
+[TEXT2TEXT] cost time: 0.00042510032653808594
+[TEXT2TEXT] cost time: 0.0004832744598388672
+[TEXT2TEXT] cost time: 0.0004425048828125
+list index out of range
+[TEXT2TEXT] cost time: 0.00045800209045410156
+[TEXT2TEXT] cost time: 0.00045609474182128906
+[TEXT2TEXT] cost time: 0.0004506111145019531
+list index out of range
+[TEXT2TEXT] cost time: 0.0004553794860839844
+[TEXT2TEXT] cost time: 0.0004329681396484375
+[TEXT2TEXT] cost time: 0.0004398822784423828
+list index out of range
+[TEXT2TEXT] cost time: 0.0004076957702636719
+[TEXT2TEXT] cost time: 0.00047969818115234375
+[TEXT2TEXT] cost time: 0.0004627704620361328
+list index out of range
+[TEXT2TEXT] cost time: 0.00041174888610839844
+[TEXT2TEXT] cost time: 0.0004591941833496094
+[TEXT2TEXT] cost time: 0.00044608116149902344
+list index out of range
+[TEXT2TEXT] cost time: 0.0004582405090332031
+[TEXT2TEXT] cost time: 0.00046563148498535156
+[TEXT2TEXT] cost time: 0.00045228004455566406
+list index out of range
+[TEXT2TEXT] cost time: 0.00041103363037109375
+[TEXT2TEXT] cost time: 0.0004525184631347656
+[TEXT2TEXT] cost time: 0.0004918575286865234
+list index out of range
+[TEXT2TEXT] cost time: 0.0004093647003173828
+[TEXT2TEXT] cost time: 0.00042557716369628906
+[TEXT2TEXT] cost time: 0.00043392181396484375
+list index out of range
+[TEXT2TEXT] cost time: 0.0003829002380371094
+[TEXT2TEXT] cost time: 0.0004482269287109375
+[TEXT2TEXT] cost time: 0.00044155120849609375
+list index out of range
+[TEXT2TEXT] cost time: 0.0004031658172607422
+[TEXT2TEXT] cost time: 0.00040435791015625
+[TEXT2TEXT] cost time: 0.00046133995056152344
+list index out of range
+[TEXT2TEXT] cost time: 0.00042939186096191406
+[TEXT2TEXT] cost time: 0.0004875659942626953
+[TEXT2TEXT] cost time: 0.00044608116149902344
+list index out of range
+[TEXT2TEXT] cost time: 0.00041985511779785156
+[TEXT2TEXT] cost time: 0.0004062652587890625
+[TEXT2TEXT] cost time: 0.0004439353942871094
+list index out of range
+[TEXT2TEXT] cost time: 0.00041294097900390625
+[TEXT2TEXT] cost time: 0.00045037269592285156
+[TEXT2TEXT] cost time: 0.00041985511779785156
+list index out of range
+[TEXT2TEXT] cost time: 0.0004146099090576172
+[TEXT2TEXT] cost time: 0.0004291534423828125
+[TEXT2TEXT] cost time: 0.0004673004150390625
+list index out of range
+[TEXT2TEXT] cost time: 0.0004086494445800781
+[TEXT2TEXT] cost time: 0.00044727325439453125
+[TEXT2TEXT] cost time: 0.000431060791015625
+list index out of range
+[TEXT2TEXT] cost time: 0.0004012584686279297
+[TEXT2TEXT] cost time: 0.00041675567626953125
+[TEXT2TEXT] cost time: 0.0004782676696777344
+list index out of range
+[TEXT2TEXT] cost time: 0.0004410743713378906
+[TEXT2TEXT] cost time: 0.0004506111145019531
+[TEXT2TEXT] cost time: 0.0004634857177734375
+list index out of range
+[TEXT2TEXT] cost time: 0.0004363059997558594
+[TEXT2TEXT] cost time: 0.0005135536193847656
+[TEXT2TEXT] cost time: 0.0005061626434326172
+list index out of range
+[TEXT2TEXT] cost time: 0.0004963874816894531
+[TEXT2TEXT] cost time: 0.0004935264587402344
+[TEXT2TEXT] cost time: 0.00041556358337402344
+list index out of range
+[TEXT2TEXT] cost time: 0.0004253387451171875
+[TEXT2TEXT] cost time: 0.0010635852813720703
+[TEXT2TEXT] cost time: 0.0004680156707763672
+list index out of range
+[TEXT2TEXT] cost time: 0.0004684925079345703
+[TEXT2TEXT] cost time: 0.0004475116729736328
+[TEXT2TEXT] cost time: 0.0004420280456542969
+list index out of range
+[TEXT2TEXT] cost time: 0.00041985511779785156
+[TEXT2TEXT] cost time: 0.0004532337188720703
+[TEXT2TEXT] cost time: 0.0004260540008544922
+list index out of range
+[TEXT2TEXT] cost time: 0.00041031837463378906
+[TEXT2TEXT] cost time: 0.0004208087921142578
+[TEXT2TEXT] cost time: 0.0004298686981201172
+list index out of range
+[TEXT2TEXT] cost time: 0.0004494190216064453
+[TEXT2TEXT] cost time: 0.0004532337188720703
+[TEXT2TEXT] cost time: 0.0004837512969970703
+list index out of range
+[TEXT2TEXT] cost time: 0.0004165172576904297
+[TEXT2TEXT] cost time: 0.0004286766052246094
+[TEXT2TEXT] cost time: 0.0004563331604003906
+list index out of range
+[TEXT2TEXT] cost time: 0.00042247772216796875
+[TEXT2TEXT] cost time: 0.0004506111145019531
+[TEXT2TEXT] cost time: 0.00044345855712890625
+list index out of range
+[TEXT2TEXT] cost time: 0.0003960132598876953
+[TEXT2TEXT] cost time: 0.0004253387451171875
+[TEXT2TEXT] cost time: 0.0004184246063232422
+list index out of range
+[TEXT2TEXT] cost time: 0.0004832744598388672
+[TEXT2TEXT] cost time: 0.0004417896270751953
+[TEXT2TEXT] cost time: 0.0004534721374511719
+list index out of range
+[TEXT2TEXT] cost time: 0.0004143714904785156
+[TEXT2TEXT] cost time: 0.0004248619079589844
+[TEXT2TEXT] cost time: 0.0004520416259765625
+list index out of range
+[TEXT2TEXT] cost time: 0.000438690185546875
+[TEXT2TEXT] cost time: 0.0004930496215820312
+[TEXT2TEXT] cost time: 0.0006043910980224609
+list index out of range
+[TEXT2TEXT] cost time: 0.0004508495330810547
+[TEXT2TEXT] cost time: 0.0005106925964355469
+[TEXT2TEXT] cost time: 0.001455545425415039
+list index out of range
+[TEXT2TEXT] cost time: 0.0004904270172119141
+[TEXT2TEXT] cost time: 0.0004611015319824219
+[TEXT2TEXT] cost time: 0.0005095005035400391
+list index out of range
+[TEXT2TEXT] cost time: 0.0004763603210449219
+[TEXT2TEXT] cost time: 0.00047516822814941406
+[TEXT2TEXT] cost time: 0.000701904296875
+list index out of range
+[TEXT2TEXT] cost time: 0.0004944801330566406
+[TEXT2TEXT] cost time: 0.0004551410675048828
+[TEXT2TEXT] cost time: 0.000576019287109375
+list index out of range
+[TEXT2TEXT] cost time: 0.0005025863647460938
+[TEXT2TEXT] cost time: 0.0005140304565429688
+[TEXT2TEXT] cost time: 0.0005288124084472656
+list index out of range
+[TEXT2TEXT] cost time: 0.0004363059997558594
+[TEXT2TEXT] cost time: 0.0004429817199707031
+[TEXT2TEXT] cost time: 0.0004909038543701172
+list index out of range
+[TEXT2TEXT] cost time: 0.00041961669921875
+[TEXT2TEXT] cost time: 0.0004353523254394531
+[TEXT2TEXT] cost time: 0.0005214214324951172
+list index out of range
+[TEXT2TEXT] cost time: 0.0005145072937011719
+[TEXT2TEXT] cost time: 0.0004999637603759766
+[TEXT2TEXT] cost time: 0.0005433559417724609
+list index out of range
+[TEXT2TEXT] cost time: 0.000423431396484375
+[TEXT2TEXT] cost time: 0.000446319580078125
+[TEXT2TEXT] cost time: 0.0004901885986328125
+list index out of range
+[TEXT2TEXT] cost time: 0.00047135353088378906
+[TEXT2TEXT] cost time: 0.0004973411560058594
+[TEXT2TEXT] cost time: 0.0004634857177734375
+list index out of range
+[TEXT2TEXT] cost time: 0.0005211830139160156
+[TEXT2TEXT] cost time: 0.0004978179931640625
+[TEXT2TEXT] cost time: 0.00047659873962402344
+list index out of range
+[TEXT2TEXT] cost time: 0.0004515647888183594
+[TEXT2TEXT] cost time: 0.0004928112030029297
+[TEXT2TEXT] cost time: 0.0005011558532714844
+list index out of range
+[TEXT2TEXT] cost time: 0.0004553794860839844
+[TEXT2TEXT] cost time: 0.00048232078552246094
+[TEXT2TEXT] cost time: 0.0005125999450683594
+list index out of range
+[TEXT2TEXT] cost time: 0.0004754066467285156
+[TEXT2TEXT] cost time: 0.0005061626434326172
+[TEXT2TEXT] cost time: 0.0004928112030029297
+list index out of range
+[TEXT2TEXT] cost time: 0.0004677772521972656
+[TEXT2TEXT] cost time: 0.0004839897155761719
+[TEXT2TEXT] cost time: 0.0005090236663818359
+list index out of range
+[TEXT2TEXT] cost time: 0.0004639625549316406
+[TEXT2TEXT] cost time: 0.0004975795745849609
+[TEXT2TEXT] cost time: 0.0004699230194091797
+list index out of range
+[TEXT2TEXT] cost time: 0.0004570484161376953
+[TEXT2TEXT] cost time: 0.0004611015319824219
+[TEXT2TEXT] cost time: 0.0004951953887939453
+list index out of range
+[TEXT2TEXT] cost time: 0.0004756450653076172
+[TEXT2TEXT] cost time: 0.0004591941833496094
+[TEXT2TEXT] cost time: 0.00048804283142089844
+list index out of range
+[TEXT2TEXT] cost time: 0.00044417381286621094
+[TEXT2TEXT] cost time: 0.00049591064453125
+[TEXT2TEXT] cost time: 0.00048732757568359375
+list index out of range
+[TEXT2TEXT] cost time: 0.00045871734619140625
+[TEXT2TEXT] cost time: 0.0004801750183105469
+[TEXT2TEXT] cost time: 0.00045752525329589844
+list index out of range
+[TEXT2TEXT] cost time: 0.0004589557647705078
+[TEXT2TEXT] cost time: 0.0004649162292480469
+[TEXT2TEXT] cost time: 0.0004642009735107422
+list index out of range
+[TEXT2TEXT] cost time: 0.00045299530029296875
+[TEXT2TEXT] cost time: 0.0004794597625732422
+[TEXT2TEXT] cost time: 0.0004780292510986328
+list index out of range
+[TEXT2TEXT] cost time: 0.0004482269287109375
+[TEXT2TEXT] cost time: 0.0004284381866455078
+[TEXT2TEXT] cost time: 0.0004634857177734375
+list index out of range
+[TEXT2TEXT] cost time: 0.0004749298095703125
+[TEXT2TEXT] cost time: 0.0004949569702148438
+[TEXT2TEXT] cost time: 0.0005173683166503906
+list index out of range
+[TEXT2TEXT] cost time: 0.0004596710205078125
+[TEXT2TEXT] cost time: 0.0004780292510986328
+[TEXT2TEXT] cost time: 0.0004918575286865234
+list index out of range
+[TEXT2TEXT] cost time: 0.00048041343688964844
+[TEXT2TEXT] cost time: 0.00047206878662109375
+[TEXT2TEXT] cost time: 0.00047278404235839844
+list index out of range
+[TEXT2TEXT] cost time: 0.0004458427429199219
+[TEXT2TEXT] cost time: 0.0004680156707763672
+[TEXT2TEXT] cost time: 0.0004811286926269531
+list index out of range
+[TEXT2TEXT] cost time: 0.0004425048828125
+[TEXT2TEXT] cost time: 0.0004706382751464844
+[TEXT2TEXT] cost time: 0.00044417381286621094
+list index out of range
+[TEXT2TEXT] cost time: 0.00048351287841796875
+[TEXT2TEXT] cost time: 0.00045037269592285156
+[TEXT2TEXT] cost time: 0.0004987716674804688
+list index out of range
+[TEXT2TEXT] cost time: 0.00047469139099121094
+[TEXT2TEXT] cost time: 0.00045680999755859375
+[TEXT2TEXT] cost time: 0.00045800209045410156
+list index out of range
+[TEXT2TEXT] cost time: 0.0004565715789794922
+[TEXT2TEXT] cost time: 0.0004889965057373047
+[TEXT2TEXT] cost time: 0.0004944801330566406
+list index out of range
+[TEXT2TEXT] cost time: 0.0004851818084716797
+[TEXT2TEXT] cost time: 0.0004398822784423828
+[TEXT2TEXT] cost time: 0.0005128383636474609
+list index out of range
+[TEXT2TEXT] cost time: 0.00044465065002441406
+[TEXT2TEXT] cost time: 0.00046539306640625
+[TEXT2TEXT] cost time: 0.0004911422729492188
+list index out of range
+[TEXT2TEXT] cost time: 0.0004634857177734375
+[TEXT2TEXT] cost time: 0.0005199909210205078
+[TEXT2TEXT] cost time: 0.00046181678771972656
+list index out of range
+[TEXT2TEXT] cost time: 0.00047016143798828125
+[TEXT2TEXT] cost time: 0.0004527568817138672
+[TEXT2TEXT] cost time: 0.00047969818115234375
+list index out of range
+[TEXT2TEXT] cost time: 0.00046944618225097656
+[TEXT2TEXT] cost time: 0.0004634857177734375
+[TEXT2TEXT] cost time: 0.0004811286926269531
+list index out of range
+[TEXT2TEXT] cost time: 0.00047397613525390625
+[TEXT2TEXT] cost time: 0.00043272972106933594
+[TEXT2TEXT] cost time: 0.0005071163177490234
+list index out of range
+[TEXT2TEXT] cost time: 0.0004467964172363281
+[TEXT2TEXT] cost time: 0.0004999637603759766
+[TEXT2TEXT] cost time: 0.00047516822814941406
+list index out of range
+[TEXT2TEXT] cost time: 0.0004410743713378906
+[TEXT2TEXT] cost time: 0.0004425048828125
+[TEXT2TEXT] cost time: 0.0004563331604003906
+list index out of range
+[TEXT2TEXT] cost time: 0.0004658699035644531
+[TEXT2TEXT] cost time: 0.00044918060302734375
+[TEXT2TEXT] cost time: 0.00044345855712890625
+list index out of range
+[TEXT2TEXT] cost time: 0.0004737377166748047
+[TEXT2TEXT] cost time: 0.00044655799865722656
+[TEXT2TEXT] cost time: 0.0004742145538330078
+list index out of range
+[TEXT2TEXT] cost time: 0.0004448890686035156
+[TEXT2TEXT] cost time: 0.0004520416259765625
+[TEXT2TEXT] cost time: 0.0004940032958984375
+list index out of range
+[TEXT2TEXT] cost time: 0.00045418739318847656
+[TEXT2TEXT] cost time: 0.0004963874816894531
+[TEXT2TEXT] cost time: 0.00048804283142089844
+list index out of range
+[TEXT2TEXT] cost time: 0.0004515647888183594
+[TEXT2TEXT] cost time: 0.0004680156707763672
+[TEXT2TEXT] cost time: 0.0004642009735107422
+list index out of range
+[TEXT2TEXT] cost time: 0.0004286766052246094
+[TEXT2TEXT] cost time: 0.0004913806915283203
+[TEXT2TEXT] cost time: 0.0004756450653076172
+list index out of range
+[TEXT2TEXT] cost time: 0.0004966259002685547
+[TEXT2TEXT] cost time: 0.0004868507385253906
+[TEXT2TEXT] cost time: 0.00046825408935546875
+list index out of range
+[TEXT2TEXT] cost time: 0.00043487548828125
+[TEXT2TEXT] cost time: 0.0004987716674804688
+[TEXT2TEXT] cost time: 0.0005338191986083984
+list index out of range
+[TEXT2TEXT] cost time: 0.000507354736328125
+[TEXT2TEXT] cost time: 0.0004799365997314453
+[TEXT2TEXT] cost time: 0.0005049705505371094
+list index out of range
+[TEXT2TEXT] cost time: 0.0004985332489013672
+[TEXT2TEXT] cost time: 0.00048470497131347656
+[TEXT2TEXT] cost time: 0.00045871734619140625
+list index out of range
+[TEXT2TEXT] cost time: 0.00044918060302734375
+[TEXT2TEXT] cost time: 0.00046563148498535156
+[TEXT2TEXT] cost time: 0.00044465065002441406
+list index out of range
+[TEXT2TEXT] cost time: 0.0004372596740722656
+[TEXT2TEXT] cost time: 0.0004100799560546875
+[TEXT2TEXT] cost time: 0.0004620552062988281
+list index out of range
+[TEXT2TEXT] cost time: 0.00045561790466308594
+[TEXT2TEXT] cost time: 0.00046896934509277344
+[TEXT2TEXT] cost time: 0.0004725456237792969
+list index out of range
+[TEXT2TEXT] cost time: 0.0004949569702148438
+[TEXT2TEXT] cost time: 0.0004639625549316406
+[TEXT2TEXT] cost time: 0.00051116943359375
+list index out of range
+[TEXT2TEXT] cost time: 0.0004696846008300781
+[TEXT2TEXT] cost time: 0.0004911422729492188
+[TEXT2TEXT] cost time: 0.0005366802215576172
+list index out of range
+[TEXT2TEXT] cost time: 0.00047969818115234375
+[TEXT2TEXT] cost time: 0.00044989585876464844
+[TEXT2TEXT] cost time: 0.00046062469482421875
+list index out of range
+[TEXT2TEXT] cost time: 0.00046634674072265625
+[TEXT2TEXT] cost time: 7.811625003814697
+[TEXT2TEXT] cost time: 20.629481315612793
+VLM batch processing completed: 119.30s, Tasks: 70, avg per task: 1.70s
+[TEXT2TEXT] cost time: 1.0028367042541504
+[TEXT2TEXT] cost time: 1.6036617755889893
+VLM batch processing completed: 3.24s, Tasks: 1, avg per task: 3.24s
+[TEXT2TEXT] cost time: 0.6021754741668701
+Thread 1 Accuracy: 7 / 12 58.33332847222263
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8023419380187988
+[TEXT2TEXT] cost time: 2.003408908843994
+[TEXT2TEXT] cost time: 6.009286403656006
+VLM batch processing completed: 43.17s, Tasks: 28, avg per task: 1.54s
+[TEXT2TEXT] cost time: 7.814058780670166
+[TEXT2TEXT] cost time: 4.006717920303345
+VLM batch processing completed: 8.76s, Tasks: 5, avg per task: 1.75s
+[TEXT2TEXT] cost time: 5.408273458480835
+VLM batch processing completed: 5.10s, Tasks: 3, avg per task: 1.70s
+[TEXT2TEXT] cost time: 2.204212188720703
+VLM batch processing completed: 5.66s, Tasks: 3, avg per task: 1.89s
+[TEXT2TEXT] cost time: 3.005042791366577
+VLM batch processing completed: 3.44s, Tasks: 2, avg per task: 1.72s
+[TEXT2TEXT] cost time: 2.0036964416503906
+Thread 1 Accuracy: 7 / 13 53.846149704142334
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8020484447479248
+VLM batch processing completed: 3.04s, Tasks: 1, avg per task: 3.04s
+[TEXT2TEXT] cost time: 0.6020784378051758
+Thread 1 Accuracy: 8 / 14 57.142853061224784
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.002488374710083
+[TEXT2TEXT] cost time: 0.8019816875457764
+[TEXT2TEXT] cost time: 4.807520389556885
+VLM batch processing completed: 16.33s, Tasks: 21, avg per task: 0.78s
+[TEXT2TEXT] cost time: 7.907088041305542
+[TEXT2TEXT] cost time: 1.0026304721832275
+VLM batch processing completed: 3.62s, Tasks: 1, avg per task: 3.62s
+[TEXT2TEXT] cost time: 1.8042314052581787
+Thread 1 Accuracy: 8 / 15 53.33332977777802
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8023214340209961
+[TEXT2TEXT] cost time: 1.8037188053131104
+[TEXT2TEXT] cost time: 5.609693765640259
+VLM batch processing completed: 24.25s, Tasks: 21, avg per task: 1.15s
+[TEXT2TEXT] cost time: 2.8052635192871094
+[TEXT2TEXT] cost time: 1.4030609130859375
+VLM batch processing completed: 2.50s, Tasks: 3, avg per task: 0.83s
+[TEXT2TEXT] cost time: 6.809519052505493
+Thread 1 Accuracy: 8 / 16 49.99999687500019
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.0028047561645508
+[TEXT2TEXT] cost time: 3.2063302993774414
+[TEXT2TEXT] cost time: 6.810679912567139
+VLM batch processing completed: 84.55s, Tasks: 16, avg per task: 5.28s
+[TEXT2TEXT] cost time: 0.4016878604888916
+[TEXT2TEXT] cost time: 30.437374114990234
+[TEXT2TEXT] cost time: 0.6017706394195557
+[TEXT2TEXT] cost time: 7.009619474411011
+VLM batch processing completed: 104.06s, Tasks: 23, avg per task: 4.52s
+[TEXT2TEXT] cost time: 5.006889581680298
+[TEXT2TEXT] cost time: 1.8032095432281494
+VLM batch processing completed: 9.67s, Tasks: 1, avg per task: 9.67s
+[TEXT2TEXT] cost time: 3.405949115753174
+VLM batch processing completed: 8.24s, Tasks: 1, avg per task: 8.24s
+[TEXT2TEXT] cost time: 3.205639600753784
+Thread 1 Accuracy: 9 / 17 52.94117335640156
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.6017985343933105
+VLM batch processing completed: 3.56s, Tasks: 1, avg per task: 3.56s
+[TEXT2TEXT] cost time: 1.002509355545044
+Thread 1 Accuracy: 10 / 18 55.555552469135975
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.6031379699707031
+[TEXT2TEXT] cost time: 3.20566725730896
+[TEXT2TEXT] cost time: 3.806133508682251
+VLM batch processing completed: 18.17s, Tasks: 16, avg per task: 1.14s
+[TEXT2TEXT] cost time: 3.205596446990967
+[TEXT2TEXT] cost time: 1.0026135444641113
+VLM batch processing completed: 3.13s, Tasks: 1, avg per task: 3.13s
+[TEXT2TEXT] cost time: 0.4013700485229492
+Thread 1 Accuracy: 11 / 19 57.894733795014005
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8020057678222656
+VLM batch processing completed: 5.10s, Tasks: 1, avg per task: 5.10s
+[TEXT2TEXT] cost time: 1.002802848815918
+Thread 1 Accuracy: 12 / 20 59.99999700000015
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8021209239959717
+VLM batch processing completed: 3.71s, Tasks: 1, avg per task: 3.71s
+[TEXT2TEXT] cost time: 1.2031571865081787
+Thread 1 Accuracy: 13 / 21 61.90475895691624
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.0036499500274658
+[TEXT2TEXT] cost time: 4.6077210903167725
+[TEXT2TEXT] cost time: 3.204927921295166
+VLM batch processing completed: 59.54s, Tasks: 14, avg per task: 4.25s
+[TEXT2TEXT] cost time: 3.2056548595428467
+[TEXT2TEXT] cost time: 1.4032559394836426
+VLM batch processing completed: 4.60s, Tasks: 1, avg per task: 4.60s
+[TEXT2TEXT] cost time: 0.6019144058227539
+Thread 1 Accuracy: 14 / 22 63.63636074380178
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.4028205871582031
+[TEXT2TEXT] cost time: 3.204974412918091
+[TEXT2TEXT] cost time: 2.203671455383301
+VLM batch processing completed: 9.76s, Tasks: 8, avg per task: 1.22s
+[TEXT2TEXT] cost time: 2.0041680335998535
+[TEXT2TEXT] cost time: 0.0005095005035400391
+[TEXT2TEXT] cost time: 0.0004954338073730469
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 0.602208137512207
+Thread 1 Accuracy: 14 / 23 60.86956257088858
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.0028393268585205
+[TEXT2TEXT] cost time: 1.2027289867401123
+[TEXT2TEXT] cost time: 12.416045427322388
+VLM batch processing completed: 54.63s, Tasks: 48, avg per task: 1.14s
+[TEXT2TEXT] cost time: 3.2059032917022705
+[TEXT2TEXT] cost time: 7.571223974227905
+VLM batch processing completed: 2.23s, Tasks: 1, avg per task: 2.23s
+[TEXT2TEXT] cost time: 0.6021380424499512
+Thread 1 Accuracy: 15 / 24 62.49999739583344
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8022451400756836
+[TEXT2TEXT] cost time: 0.8021678924560547
+[TEXT2TEXT] cost time: 4.006801605224609
+VLM batch processing completed: 19.80s, Tasks: 13, avg per task: 1.52s
+[TEXT2TEXT] cost time: 0.40181636810302734
+[TEXT2TEXT] cost time: 1.403148889541626
+[TEXT2TEXT] cost time: 1.8043417930603027
+[TEXT2TEXT] cost time: 6.208788633346558
+VLM batch processing completed: 18.93s, Tasks: 17, avg per task: 1.11s
+[TEXT2TEXT] cost time: 1.4032623767852783
+[TEXT2TEXT] cost time: 1.2026615142822266
+[TEXT2TEXT] cost time: 2.8051247596740723
+[TEXT2TEXT] cost time: 4.408205270767212
+VLM batch processing completed: 20.47s, Tasks: 17, avg per task: 1.20s
+[TEXT2TEXT] cost time: 6.009885311126709
+[TEXT2TEXT] cost time: 0.6032261848449707
+[TEXT2TEXT] cost time: 1.207118034362793
+[TEXT2TEXT] cost time: 4.60691499710083
+VLM batch processing completed: 18.89s, Tasks: 17, avg per task: 1.11s
+[TEXT2TEXT] cost time: 1.6029250621795654
+[TEXT2TEXT] cost time: 6.80914568901062
+VLM batch processing completed: 2.70s, Tasks: 1, avg per task: 2.70s
+[TEXT2TEXT] cost time: 4.807779550552368
+[TEXT2TEXT] cost time: 1.202270269393921
+[TEXT2TEXT] cost time: 5.008315324783325
+VLM batch processing completed: 14.95s, Tasks: 14, avg per task: 1.07s
+[TEXT2TEXT] cost time: 4.006452798843384
+[TEXT2TEXT] cost time: 6.810466766357422
+Thread 1 Accuracy: 16 / 25 63.9999974400001
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.607069492340088
+VLM batch processing completed: 3.96s, Tasks: 1, avg per task: 3.96s
+[TEXT2TEXT] cost time: 1.6046645641326904
+Thread 1 Accuracy: 17 / 26 65.38461286982258
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.20130276679992676
+[TEXT2TEXT] cost time: 5.407841920852661
+[TEXT2TEXT] cost time: 3.204458236694336
+VLM batch processing completed: 32.79s, Tasks: 14, avg per task: 2.34s
+[TEXT2TEXT] cost time: 10.213597536087036
+[TEXT2TEXT] cost time: 30.44094944000244
+VLM batch processing completed: 3.92s, Tasks: 1, avg per task: 3.92s
+[TEXT2TEXT] cost time: 6.488736152648926
+Thread 1 Accuracy: 18 / 27 66.66666419753096
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.8033406734466553
+[TEXT2TEXT] cost time: 2.404648542404175
+[TEXT2TEXT] cost time: 5.20735239982605
+VLM batch processing completed: 23.05s, Tasks: 20, avg per task: 1.15s
+[TEXT2TEXT] cost time: 0.4016728401184082
+[TEXT2TEXT] cost time: 4.2052977085113525
+VLM batch processing completed: 3.10s, Tasks: 1, avg per task: 3.10s
+[TEXT2TEXT] cost time: 1.202521562576294
+Thread 1 Accuracy: 19 / 28 67.85714043367356
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.002443552017212
+VLM batch processing completed: 2.81s, Tasks: 1, avg per task: 2.81s
+[TEXT2TEXT] cost time: 1.0022053718566895
+[TEXT2TEXT] cost time: 4.8071417808532715
+[TEXT2TEXT] cost time: 4.006754398345947
+VLM batch processing completed: 13.72s, Tasks: 16, avg per task: 0.86s
+[TEXT2TEXT] cost time: 0.8023557662963867
+[TEXT2TEXT] cost time: 0.60201096534729
+[TEXT2TEXT] cost time: 4.207044363021851
+[TEXT2TEXT] cost time: 5.008341073989868
+VLM batch processing completed: 15.27s, Tasks: 20, avg per task: 0.76s
+[TEXT2TEXT] cost time: 2.0036983489990234
+[TEXT2TEXT] cost time: 6.6095802783966064
+[TEXT2TEXT] cost time: 1.2026972770690918
+[TEXT2TEXT] cost time: 6.209136486053467
+VLM batch processing completed: 8.86s, Tasks: 12, avg per task: 0.74s
+[TEXT2TEXT] cost time: 0.2017056941986084
+[TEXT2TEXT] cost time: 0.6020410060882568
+[TEXT2TEXT] cost time: 1.203021764755249
+[TEXT2TEXT] cost time: 3.405606985092163
+VLM batch processing completed: 11.41s, Tasks: 17, avg per task: 0.67s
+[TEXT2TEXT] cost time: 12.816651582717896
+[TEXT2TEXT] cost time: 0.40155887603759766
+[TEXT2TEXT] cost time: 3.807163953781128
+[TEXT2TEXT] cost time: 3.807180881500244
+VLM batch processing completed: 12.59s, Tasks: 17, avg per task: 0.74s
+[TEXT2TEXT] cost time: 0.8022551536560059
+[TEXT2TEXT] cost time: 49.26319193840027
+[TEXT2TEXT] cost time: 1.8056070804595947
+[TEXT2TEXT] cost time: 5.007280111312866
+VLM batch processing completed: 11.71s, Tasks: 15, avg per task: 0.78s
+[TEXT2TEXT] cost time: 0.401580810546875
+[TEXT2TEXT] cost time: 2.808861494064331
+[TEXT2TEXT] cost time: 0.6025583744049072
+[TEXT2TEXT] cost time: 6.81239914894104
+VLM batch processing completed: 18.90s, Tasks: 21, avg per task: 0.90s
+[TEXT2TEXT] cost time: 3.6055073738098145
+[TEXT2TEXT] cost time: 19.02468466758728
+VLM batch processing completed: 1.67s, Tasks: 1, avg per task: 1.67s
+[TEXT2TEXT] cost time: 10.614273071289062
+Thread 1 Accuracy: 19 / 29 65.51723912009521
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.603356122970581
+VLM batch processing completed: 4.32s, Tasks: 1, avg per task: 4.32s
+[TEXT2TEXT] cost time: 17.622379779815674
+[TEXT2TEXT] cost time: 1.8040809631347656
+[TEXT2TEXT] cost time: 9.212174415588379
+VLM batch processing completed: 50.53s, Tasks: 26, avg per task: 1.94s
+[TEXT2TEXT] cost time: 3.8064568042755127
+[TEXT2TEXT] cost time: 8.411417484283447
+[TEXT2TEXT] cost time: 8.411347150802612
+[TEXT2TEXT] cost time: 7.209888935089111
+VLM batch processing completed: 71.92s, Tasks: 38, avg per task: 1.89s
+[TEXT2TEXT] cost time: 1.4041409492492676
+[TEXT2TEXT] cost time: 4.206156015396118
+Thread 1 Accuracy: 20 / 30 66.6666644444445
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.2026259899139404
+VLM batch processing completed: 0.82s, Tasks: 1, avg per task: 0.82s
+[TEXT2TEXT] cost time: 11.215418100357056
+[TEXT2TEXT] cost time: 1.6029644012451172
+[TEXT2TEXT] cost time: 7.010329723358154
+VLM batch processing completed: 17.75s, Tasks: 20, avg per task: 0.89s
+[TEXT2TEXT] cost time: 3.205320358276367
+[TEXT2TEXT] cost time: 1.4031116962432861
+VLM batch processing completed: 2.74s, Tasks: 1, avg per task: 2.74s
+[TEXT2TEXT] cost time: 1.2028672695159912
+VLM batch processing completed: 3.47s, Tasks: 1, avg per task: 3.47s
+[TEXT2TEXT] cost time: 1.4029581546783447
+Thread 1 Accuracy: 21 / 31 67.74193329864731
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.403184413909912
+[TEXT2TEXT] cost time: 7.810766220092773
+[TEXT2TEXT] cost time: 4.206124544143677
+VLM batch processing completed: 58.98s, Tasks: 22, avg per task: 2.68s
+[TEXT2TEXT] cost time: 2.003560781478882
+[TEXT2TEXT] cost time: 2.403787136077881
+VLM batch processing completed: 5.44s, Tasks: 1, avg per task: 5.44s
+[TEXT2TEXT] cost time: 1.6032495498657227
+VLM batch processing completed: 3.46s, Tasks: 1, avg per task: 3.46s
+[TEXT2TEXT] cost time: 24.631970167160034
+VLM batch processing completed: 5.26s, Tasks: 1, avg per task: 5.26s
+[TEXT2TEXT] cost time: 1.4033665657043457
+Thread 1 Accuracy: 21 / 32 65.62499794921882
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.002274751663208
+VLM batch processing completed: 3.31s, Tasks: 1, avg per task: 3.31s
+[TEXT2TEXT] cost time: 2.6050455570220947
+[TEXT2TEXT] cost time: 1.6031889915466309
+[TEXT2TEXT] cost time: 9.012458562850952
+VLM batch processing completed: 28.23s, Tasks: 16, avg per task: 1.76s
+[TEXT2TEXT] cost time: 3.0046396255493164
+[TEXT2TEXT] cost time: 4.607191562652588
+Thread 1 Accuracy: 22 / 33 66.66666464646471
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8022496700286865
+[TEXT2TEXT] cost time: 1.8038954734802246
+[TEXT2TEXT] cost time: 9.613024950027466
+VLM batch processing completed: 13.02s, Tasks: 22, avg per task: 0.59s
+[TEXT2TEXT] cost time: 1.0024292469024658
+[TEXT2TEXT] cost time: 10.213844299316406
+VLM batch processing completed: 3.17s, Tasks: 1, avg per task: 3.17s
+[TEXT2TEXT] cost time: 18.023351669311523
+[TEXT2TEXT] cost time: 1.0022683143615723
+[TEXT2TEXT] cost time: 35.044567823410034
+VLM batch processing completed: 16.12s, Tasks: 26, avg per task: 0.62s
+[TEXT2TEXT] cost time: 0.20128440856933594
+[TEXT2TEXT] cost time: 5.809662580490112
+[TEXT2TEXT] cost time: 1.0023918151855469
+[TEXT2TEXT] cost time: 4.807197570800781
+VLM batch processing completed: 15.48s, Tasks: 21, avg per task: 0.74s
+[TEXT2TEXT] cost time: 1.8042500019073486
+[TEXT2TEXT] cost time: 42.253769397735596
+[TEXT2TEXT] cost time: 1.4026010036468506
+[TEXT2TEXT] cost time: 5.007415533065796
+VLM batch processing completed: 9.06s, Tasks: 17, avg per task: 0.53s
+[TEXT2TEXT] cost time: 1.202599287033081
+[TEXT2TEXT] cost time: 19.82556676864624
+[TEXT2TEXT] cost time: 0.8020331859588623
+[TEXT2TEXT] cost time: 9.011333465576172
+VLM batch processing completed: 15.48s, Tasks: 29, avg per task: 0.53s
+[TEXT2TEXT] cost time: 1.6027734279632568
+[TEXT2TEXT] cost time: 34.641846656799316
+[TEXT2TEXT] cost time: 0.8021430969238281
+[TEXT2TEXT] cost time: 5.206173419952393
+VLM batch processing completed: 10.14s, Tasks: 16, avg per task: 0.63s
+[TEXT2TEXT] cost time: 0.20109772682189941
+[TEXT2TEXT] cost time: 18.22309970855713
+[TEXT2TEXT] cost time: 1.0021674633026123
+[TEXT2TEXT] cost time: 6.0081706047058105
+VLM batch processing completed: 18.54s, Tasks: 36, avg per task: 0.52s
+[TEXT2TEXT] cost time: 12.21664547920227
+[TEXT2TEXT] cost time: 7.009874582290649
+[TEXT2TEXT] cost time: 0.8020319938659668
+[TEXT2TEXT] cost time: 3.8057124614715576
+VLM batch processing completed: 12.16s, Tasks: 19, avg per task: 0.64s
+[TEXT2TEXT] cost time: 3.806791305541992
+[TEXT2TEXT] cost time: 29.037862062454224
+Thread 1 Accuracy: 22 / 34 64.70588044982705
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.002392053604126
+[TEXT2TEXT] cost time: 1.0022680759429932
+[TEXT2TEXT] cost time: 3.6057214736938477
+VLM batch processing completed: 18.41s, Tasks: 14, avg per task: 1.32s
+[TEXT2TEXT] cost time: 0.801943302154541
+[TEXT2TEXT] cost time: 1.2029991149902344
+VLM batch processing completed: 2.61s, Tasks: 1, avg per task: 2.61s
+[TEXT2TEXT] cost time: 1.603381872177124
+[TEXT2TEXT] cost time: 37.24825954437256
+[TEXT2TEXT] cost time: 118.34661316871643
+VLM batch processing completed: 4.02s, Tasks: 1, avg per task: 4.02s
+[TEXT2TEXT] cost time: 5.408288478851318
+[TEXT2TEXT] cost time: 0.00048089027404785156
+[TEXT2TEXT] cost time: 0.00045680999755859375
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 3.0051631927490234
+VLM batch processing completed: 2.24s, Tasks: 1, avg per task: 2.24s
+[TEXT2TEXT] cost time: 1.6034233570098877
+Thread 1 Accuracy: 23 / 35 65.71428383673475
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.6015040874481201
+[TEXT2TEXT] cost time: 1.002030372619629
+[TEXT2TEXT] cost time: 3.004603147506714
+VLM batch processing completed: 16.64s, Tasks: 14, avg per task: 1.19s
+[TEXT2TEXT] cost time: 2.604719638824463
+[TEXT2TEXT] cost time: 0.8021087646484375
+[TEXT2TEXT] cost time: 2.404179334640503
+[TEXT2TEXT] cost time: 3.606675624847412
+VLM batch processing completed: 18.00s, Tasks: 20, avg per task: 0.90s
+[TEXT2TEXT] cost time: 0.4015355110168457
+[TEXT2TEXT] cost time: 0.0004870891571044922
+[TEXT2TEXT] cost time: 0.00048160552978515625
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 1.0021588802337646
+[TEXT2TEXT] cost time: 1.0021367073059082
+[TEXT2TEXT] cost time: 3.606393575668335
+VLM batch processing completed: 14.67s, Tasks: 15, avg per task: 0.98s
+[TEXT2TEXT] cost time: 4.206494569778442
+[TEXT2TEXT] cost time: 2.604219675064087
+[TEXT2TEXT] cost time: 2.003511667251587
+[TEXT2TEXT] cost time: 10.414332628250122
+VLM batch processing completed: 11.15s, Tasks: 13, avg per task: 0.86s
+[TEXT2TEXT] cost time: 0.8020727634429932
+[TEXT2TEXT] cost time: 1.0021636486053467
+[TEXT2TEXT] cost time: 1.0021824836730957
+[TEXT2TEXT] cost time: 4.606977939605713
+VLM batch processing completed: 22.80s, Tasks: 26, avg per task: 0.88s
+[TEXT2TEXT] cost time: 6.20878005027771
+[TEXT2TEXT] cost time: 3.0047383308410645
+Thread 1 Accuracy: 23 / 36 63.88888711419759
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.8036229610443115
+[TEXT2TEXT] cost time: 2.4038758277893066
+[TEXT2TEXT] cost time: 5.0084593296051025
+VLM batch processing completed: 45.24s, Tasks: 30, avg per task: 1.51s
+[TEXT2TEXT] cost time: 3.0056979656219482
+[TEXT2TEXT] cost time: 26.634941577911377
+VLM batch processing completed: 3.66s, Tasks: 1, avg per task: 3.66s
+[TEXT2TEXT] cost time: 4.60625433921814
+[TEXT2TEXT] cost time: 1.2029218673706055
+[TEXT2TEXT] cost time: 12.417374849319458
+VLM batch processing completed: 123.18s, Tasks: 84, avg per task: 1.47s
+[TEXT2TEXT] cost time: 1.6037063598632812
+[TEXT2TEXT] cost time: 5.409303903579712
+[TEXT2TEXT] cost time: 3.607314109802246
+[TEXT2TEXT] cost time: 5.808475732803345
+VLM batch processing completed: 51.52s, Tasks: 29, avg per task: 1.78s
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+[TEXT2TEXT] cost time: 102.12078928947449
+[TEXT2TEXT] cost time: 3.8054068088531494
+VLM batch processing completed: 3.05s, Tasks: 1, avg per task: 3.05s
+[TEXT2TEXT] cost time: 11.415628671646118
+[TEXT2TEXT] cost time: 0.0008640289306640625
+[TEXT2TEXT] cost time: 0.0008411407470703125
+VLM batch processing completed: 47.52s, Tasks: 29, avg per task: 1.64s
+[TEXT2TEXT] cost time: 2.805007219314575
+[TEXT2TEXT] cost time: 3.2053236961364746
+[TEXT2TEXT] cost time: 1.2023558616638184
+[TEXT2TEXT] cost time: 4.807675838470459
+VLM batch processing completed: 14.50s, Tasks: 11, avg per task: 1.32s
+[TEXT2TEXT] cost time: 3.605836868286133
+[TEXT2TEXT] cost time: 1.6040515899658203
+[TEXT2TEXT] cost time: 6.0103418827056885
+[TEXT2TEXT] cost time: 9.8139488697052
+VLM batch processing completed: 35.57s, Tasks: 23, avg per task: 1.55s
+[TEXT2TEXT] cost time: 0.802114725112915
+[TEXT2TEXT] cost time: 29.236878633499146
+[TEXT2TEXT] cost time: 1.8033497333526611
+[TEXT2TEXT] cost time: 4.406187057495117
+VLM batch processing completed: 5.44s, Tasks: 4, avg per task: 1.36s
+[TEXT2TEXT] cost time: 0.6059350967407227
+[TEXT2TEXT] cost time: 11.216464519500732
+Thread 1 Accuracy: 23 / 37 62.16216048210378
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8025238513946533
+[TEXT2TEXT] cost time: 1.6029572486877441
+[TEXT2TEXT] cost time: 4.006031274795532
+VLM batch processing completed: 20.62s, Tasks: 16, avg per task: 1.29s
+[TEXT2TEXT] cost time: 0.8020575046539307
+[TEXT2TEXT] cost time: 0.00046539306640625
+[TEXT2TEXT] cost time: 0.0004620552062988281
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 0.40169620513916016
+Thread 1 Accuracy: 23 / 38 60.52631419667595
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.802095890045166
+[TEXT2TEXT] cost time: 1.6029205322265625
+[TEXT2TEXT] cost time: 3.8057937622070312
+VLM batch processing completed: 12.67s, Tasks: 10, avg per task: 1.27s
+[TEXT2TEXT] cost time: 1.202850103378296
+[TEXT2TEXT] cost time: 1.6029860973358154
+[TEXT2TEXT] cost time: 2.604490280151367
+[TEXT2TEXT] cost time: 5.207787275314331
+VLM batch processing completed: 24.61s, Tasks: 23, avg per task: 1.07s
+[TEXT2TEXT] cost time: 0.8022253513336182
+[TEXT2TEXT] cost time: 31.042572736740112
+[TEXT2TEXT] cost time: 0.8017218112945557
+[TEXT2TEXT] cost time: 6.007785797119141
+VLM batch processing completed: 15.19s, Tasks: 15, avg per task: 1.01s
+[TEXT2TEXT] cost time: 0.6020128726959229
+[TEXT2TEXT] cost time: 63.879194021224976
+[TEXT2TEXT] cost time: 1.202387809753418
+[TEXT2TEXT] cost time: 9.011817693710327
+VLM batch processing completed: 15.82s, Tasks: 14, avg per task: 1.13s
+[TEXT2TEXT] cost time: 0.8035423755645752
+[TEXT2TEXT] cost time: 34.44372749328613
+Thread 1 Accuracy: 24 / 39 61.538459960552316
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.6037113666534424
+[TEXT2TEXT] cost time: 3.6059200763702393
+[TEXT2TEXT] cost time: 6.210373640060425
+VLM batch processing completed: 21.80s, Tasks: 15, avg per task: 1.45s
+[TEXT2TEXT] cost time: 1.8030390739440918
+[TEXT2TEXT] cost time: 1.4031217098236084
+[TEXT2TEXT] cost time: 3.8060121536254883
+[TEXT2TEXT] cost time: 6.8102099895477295
+VLM batch processing completed: 40.95s, Tasks: 30, avg per task: 1.36s
+[TEXT2TEXT] cost time: 1.0025370121002197
+[TEXT2TEXT] cost time: 3.8060455322265625
+VLM batch processing completed: 2.03s, Tasks: 1, avg per task: 2.03s
+[TEXT2TEXT] cost time: 3.405846118927002
+[TEXT2TEXT] cost time: 6.40943717956543
+[TEXT2TEXT] cost time: 3.806623935699463
+VLM batch processing completed: 21.24s, Tasks: 18, avg per task: 1.18s
+[TEXT2TEXT] cost time: 1.4037158489227295
+[TEXT2TEXT] cost time: 4.006569147109985
+Thread 1 Accuracy: 25 / 40 62.49999843750005
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 2.205289602279663
+[TEXT2TEXT] cost time: 1.4025554656982422
+[TEXT2TEXT] cost time: 3.805953025817871
+VLM batch processing completed: 13.28s, Tasks: 6, avg per task: 2.21s
+[TEXT2TEXT] cost time: 2.204420804977417
+[TEXT2TEXT] cost time: 1.2023682594299316
+VLM batch processing completed: 3.60s, Tasks: 1, avg per task: 3.60s
+[TEXT2TEXT] cost time: 1.2030785083770752
+Thread 1 Accuracy: 25 / 41 60.975608268887605
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.0023283958435059
+VLM batch processing completed: 6.06s, Tasks: 1, avg per task: 6.06s
+[TEXT2TEXT] cost time: 1.202291488647461
+[TEXT2TEXT] cost time: 1.4029943943023682
+[TEXT2TEXT] cost time: 15.220348834991455
+VLM batch processing completed: 126.07s, Tasks: 55, avg per task: 2.29s
+[TEXT2TEXT] cost time: 6.208969593048096
+[TEXT2TEXT] cost time: 1.0023517608642578
+Thread 1 Accuracy: 26 / 42 61.90476043083905
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 3.0051541328430176
+[TEXT2TEXT] cost time: 17.624590635299683
+[TEXT2TEXT] cost time: 10.965377569198608
+VLM batch processing completed: 31.55s, Tasks: 18, avg per task: 1.75s
+[TEXT2TEXT] cost time: 1.8049094676971436
+[TEXT2TEXT] cost time: 1.603614091873169
+VLM batch processing completed: 2.88s, Tasks: 1, avg per task: 2.88s
+[TEXT2TEXT] cost time: 1.203179121017456
+Thread 1 Accuracy: 26 / 43 60.465114872904316
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.8093581199645996
+[TEXT2TEXT] cost time: 1.2027437686920166
+[TEXT2TEXT] cost time: 4.406646013259888
+VLM batch processing completed: 21.84s, Tasks: 18, avg per task: 1.21s
+[TEXT2TEXT] cost time: 2.403224229812622
+[TEXT2TEXT] cost time: 2.004398822784424
+VLM batch processing completed: 2.02s, Tasks: 1, avg per task: 2.02s
+[TEXT2TEXT] cost time: 0.6020474433898926
+Thread 1 Accuracy: 27 / 44 61.363634969008295
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8020954132080078
+[TEXT2TEXT] cost time: 12.216423988342285
+[TEXT2TEXT] cost time: 4.206473112106323
+VLM batch processing completed: 18.27s, Tasks: 16, avg per task: 1.14s
+[TEXT2TEXT] cost time: 0.8023052215576172
+[TEXT2TEXT] cost time: 1.603492021560669
+VLM batch processing completed: 3.22s, Tasks: 2, avg per task: 1.61s
+[TEXT2TEXT] cost time: 1.2029521465301514
+Thread 1 Accuracy: 28 / 45 62.22222083950621
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8020470142364502
+[TEXT2TEXT] cost time: 1.403001070022583
+[TEXT2TEXT] cost time: 14.21837043762207
+VLM batch processing completed: 16.00s, Tasks: 13, avg per task: 1.23s
+[TEXT2TEXT] cost time: 3.206005334854126
+[TEXT2TEXT] cost time: 0.8019521236419678
+[TEXT2TEXT] cost time: 1.0025134086608887
+[TEXT2TEXT] cost time: 6.008974552154541
+VLM batch processing completed: 16.98s, Tasks: 14, avg per task: 1.21s
+[TEXT2TEXT] cost time: 0.4014158248901367
+[TEXT2TEXT] cost time: 1.4031791687011719
+[TEXT2TEXT] cost time: 1.2028963565826416
+[TEXT2TEXT] cost time: 6.8104774951934814
+VLM batch processing completed: 12.15s, Tasks: 11, avg per task: 1.10s
+[TEXT2TEXT] cost time: 2.2046847343444824
+[TEXT2TEXT] cost time: 0.8022379875183105
+[TEXT2TEXT] cost time: 0.8021087646484375
+[TEXT2TEXT] cost time: 2.8049254417419434
+VLM batch processing completed: 15.31s, Tasks: 14, avg per task: 1.09s
+[TEXT2TEXT] cost time: 6.809643983840942
+[TEXT2TEXT] cost time: 2.804433584213257
+Thread 1 Accuracy: 29 / 46 63.04347689035921
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8025338649749756
+[TEXT2TEXT] cost time: 3.806511163711548
+[TEXT2TEXT] cost time: 4.607055187225342
+VLM batch processing completed: 18.04s, Tasks: 13, avg per task: 1.39s
+[TEXT2TEXT] cost time: 0.8020896911621094
+[TEXT2TEXT] cost time: 11.415834665298462
+[TEXT2TEXT] cost time: 3.204667329788208
+[TEXT2TEXT] cost time: 4.406642913818359
+VLM batch processing completed: 17.90s, Tasks: 14, avg per task: 1.28s
+[TEXT2TEXT] cost time: 3.4089133739471436
+[TEXT2TEXT] cost time: 0.601747989654541
+[TEXT2TEXT] cost time: 1.0025041103363037
+[TEXT2TEXT] cost time: 4.208601474761963
+VLM batch processing completed: 16.66s, Tasks: 16, avg per task: 1.04s
+[TEXT2TEXT] cost time: 1.002216100692749
+[TEXT2TEXT] cost time: 0.6017904281616211
+[TEXT2TEXT] cost time: 0.8020312786102295
+[TEXT2TEXT] cost time: 15.42071533203125
+VLM batch processing completed: 73.38s, Tasks: 67, avg per task: 1.10s
+[TEXT2TEXT] cost time: 1.402735710144043
+[TEXT2TEXT] cost time: 13.220326662063599
+VLM batch processing completed: 2.52s, Tasks: 1, avg per task: 2.52s
+[TEXT2TEXT] cost time: 4.607506036758423
+Thread 1 Accuracy: 29 / 47 61.70212634676327
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.6031668186187744
+[TEXT2TEXT] cost time: 1.6038110256195068
+[TEXT2TEXT] cost time: 3.406075954437256
+VLM batch processing completed: 26.24s, Tasks: 13, avg per task: 2.02s
+[TEXT2TEXT] cost time: 17.822791814804077
+[TEXT2TEXT] cost time: 19.2263605594635
+VLM batch processing completed: 2.78s, Tasks: 1, avg per task: 2.78s
+[TEXT2TEXT] cost time: 2.004072427749634
+VLM batch processing completed: 3.24s, Tasks: 1, avg per task: 3.24s
+[TEXT2TEXT] cost time: 5.608285427093506
+VLM batch processing completed: 3.88s, Tasks: 1, avg per task: 3.88s
+[TEXT2TEXT] cost time: 1.603433609008789
+Thread 1 Accuracy: 29 / 48 60.41666540798614
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.6032776832580566
+[TEXT2TEXT] cost time: 3.008430004119873
+[TEXT2TEXT] cost time: 16.2227520942688
+VLM batch processing completed: 19.41s, Tasks: 14, avg per task: 1.39s
+[TEXT2TEXT] cost time: 1.803739309310913
+[TEXT2TEXT] cost time: 35.44766139984131
+VLM batch processing completed: 1.82s, Tasks: 1, avg per task: 1.82s
+[TEXT2TEXT] cost time: 1.603980302810669
+VLM batch processing completed: 2.22s, Tasks: 1, avg per task: 2.22s
+[TEXT2TEXT] cost time: 9.078314065933228
+VLM batch processing completed: 3.09s, Tasks: 1, avg per task: 3.09s
+[TEXT2TEXT] cost time: 4.007117748260498
+Thread 1 Accuracy: 30 / 49 61.22448854643901
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.2023637294769287
+[TEXT2TEXT] cost time: 3.6063003540039062
+[TEXT2TEXT] cost time: 3.2057125568389893
+VLM batch processing completed: 11.64s, Tasks: 11, avg per task: 1.06s
+[TEXT2TEXT] cost time: 5.808141708374023
+[TEXT2TEXT] cost time: 1.002629041671753
+VLM batch processing completed: 1.75s, Tasks: 1, avg per task: 1.75s
+[TEXT2TEXT] cost time: 1.0024714469909668
+VLM batch processing completed: 2.64s, Tasks: 1, avg per task: 2.64s
+[TEXT2TEXT] cost time: 1.0026137828826904
+VLM batch processing completed: 1.83s, Tasks: 1, avg per task: 1.83s
+[TEXT2TEXT] cost time: 1.0036289691925049
+VLM batch processing completed: 2.19s, Tasks: 1, avg per task: 2.19s
+[TEXT2TEXT] cost time: 0.8022520542144775
+VLM batch processing completed: 2.40s, Tasks: 1, avg per task: 2.40s
+[TEXT2TEXT] cost time: 0.8022525310516357
+VLM batch processing completed: 2.71s, Tasks: 1, avg per task: 2.71s
+[TEXT2TEXT] cost time: 2.004836320877075
+VLM batch processing completed: 2.73s, Tasks: 1, avg per task: 2.73s
+[TEXT2TEXT] cost time: 1.6034226417541504
+Thread 1 Accuracy: 30 / 50 59.99999880000003
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.0025417804718018
+VLM batch processing completed: 5.63s, Tasks: 1, avg per task: 5.63s
+[TEXT2TEXT] cost time: 2.404378890991211
+Thread 1 Accuracy: 31 / 51 60.784312533640936
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 8.813121318817139
+VLM batch processing completed: 4.41s, Tasks: 1, avg per task: 4.41s
+[TEXT2TEXT] cost time: 0.8022377490997314
+Thread 1 Accuracy: 31 / 52 59.61538346893494
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.0025057792663574
+[TEXT2TEXT] cost time: 1.002441644668579
+[TEXT2TEXT] cost time: 7.4111411571502686
+VLM batch processing completed: 17.11s, Tasks: 16, avg per task: 1.07s
+[TEXT2TEXT] cost time: 0.4014418125152588
+[TEXT2TEXT] cost time: 2.005466938018799
+Thread 1 Accuracy: 31 / 53 58.49056493414029
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.8019149303436279
+[TEXT2TEXT] cost time: 0.802804708480835
+[TEXT2TEXT] cost time: 8.011035919189453
+VLM batch processing completed: 41.42s, Tasks: 20, avg per task: 2.07s
+[TEXT2TEXT] cost time: 0.601696252822876
+[TEXT2TEXT] cost time: 28.03368878364563
+VLM batch processing completed: 2.74s, Tasks: 1, avg per task: 2.74s
+[TEXT2TEXT] cost time: 0.8020551204681396
+VLM batch processing completed: 2.88s, Tasks: 1, avg per task: 2.88s
+[TEXT2TEXT] cost time: 1.8214941024780273
+[TEXT2TEXT] cost time: 1.6032299995422363
+[TEXT2TEXT] cost time: 4.407296657562256
+VLM batch processing completed: 35.48s, Tasks: 19, avg per task: 1.87s
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+[TEXT2TEXT] cost time: 56.06742763519287
+[TEXT2TEXT] cost time: 18.422525882720947
+VLM batch processing completed: 3.56s, Tasks: 1, avg per task: 3.56s
+[TEXT2TEXT] cost time: 0.802081823348999
+VLM batch processing completed: 2.61s, Tasks: 1, avg per task: 2.61s
+[TEXT2TEXT] cost time: 2.0042920112609863
+Thread 1 Accuracy: 31 / 54 57.40740634430729
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.6017992496490479
+[TEXT2TEXT] cost time: 1.0032074451446533
+[TEXT2TEXT] cost time: 29.0371572971344
+VLM batch processing completed: 31.87s, Tasks: 14, avg per task: 2.28s
+[TEXT2TEXT] cost time: 5.407805919647217
+[TEXT2TEXT] cost time: 1.0021681785583496
+VLM batch processing completed: 3.01s, Tasks: 1, avg per task: 3.01s
+[TEXT2TEXT] cost time: 0.8025610446929932
+Thread 1 Accuracy: 31 / 55 56.363635338843
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 0.802335262298584
+[TEXT2TEXT] cost time: 2.00395131111145
+[TEXT2TEXT] cost time: 3.4050655364990234
+VLM batch processing completed: 36.08s, Tasks: 15, avg per task: 2.41s
+[TEXT2TEXT] cost time: 0.8020944595336914
+[TEXT2TEXT] cost time: 2.20479154586792
+VLM batch processing completed: 5.30s, Tasks: 1, avg per task: 5.30s
+[TEXT2TEXT] cost time: 1.403670310974121
+VLM batch processing completed: 2.55s, Tasks: 1, avg per task: 2.55s
+[TEXT2TEXT] cost time: 0.8031280040740967
+Thread 1 Accuracy: 32 / 56 57.142856122449004
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.0024068355560303
+[TEXT2TEXT] cost time: 1.4034996032714844
+[TEXT2TEXT] cost time: 8.61299467086792
+VLM batch processing completed: 12.57s, Tasks: 12, avg per task: 1.05s
+[TEXT2TEXT] cost time: 0.8020756244659424
+[TEXT2TEXT] cost time: 14.82201862335205
+[TEXT2TEXT] cost time: 1.8031303882598877
+[TEXT2TEXT] cost time: 3.2049412727355957
+VLM batch processing completed: 14.24s, Tasks: 13, avg per task: 1.10s
+[TEXT2TEXT] cost time: 0.6019048690795898
+[TEXT2TEXT] cost time: 0.4015076160430908
+[TEXT2TEXT] cost time: 0.802210807800293
+[TEXT2TEXT] cost time: 3.405726432800293
+VLM batch processing completed: 13.31s, Tasks: 13, avg per task: 1.02s
+[TEXT2TEXT] cost time: 0.8022892475128174
+[TEXT2TEXT] cost time: 9.412707805633545
+[TEXT2TEXT] cost time: 0.8019144535064697
+[TEXT2TEXT] cost time: 4.206049680709839
+VLM batch processing completed: 20.91s, Tasks: 18, avg per task: 1.16s
+[TEXT2TEXT] cost time: 4.006268262863159
+[TEXT2TEXT] cost time: 30.842262983322144
+[TEXT2TEXT] cost time: 1.2038800716400146
+[TEXT2TEXT] cost time: 5.207735538482666
+VLM batch processing completed: 10.52s, Tasks: 12, avg per task: 0.88s
+[TEXT2TEXT] cost time: 6.520769119262695
+[TEXT2TEXT] cost time: 6.4104163646698
+[TEXT2TEXT] cost time: 1.2023494243621826
+[TEXT2TEXT] cost time: 3.6057522296905518
+VLM batch processing completed: 14.55s, Tasks: 13, avg per task: 1.12s
+[TEXT2TEXT] cost time: 0.40178489685058594
+[TEXT2TEXT] cost time: 13.217469692230225
+VLM batch processing completed: 5.14s, Tasks: 1, avg per task: 5.14s
+[TEXT2TEXT] cost time: 7.410312175750732
+Thread 1 Accuracy: 33 / 57 57.89473582640815
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+[TEXT2TEXT] cost time: 1.4029431343078613
+[TEXT2TEXT] cost time: 8.211642503738403
+[TEXT2TEXT] cost time: 32.64159679412842
+VLM batch processing completed: 38.70s, Tasks: 24, avg per task: 1.61s
+[TEXT2TEXT] cost time: 4.60763692855835
+[TEXT2TEXT] cost time: 1.202514410018921
+[TEXT2TEXT] cost time: 1.0023555755615234
+[TEXT2TEXT] cost time: 13.418612957000732
+VLM batch processing completed: 119.56s, Tasks: 68, avg per task: 1.76s
+[TEXT2TEXT] cost time: 20.026259422302246
+[TEXT2TEXT] cost time: 0.0005176067352294922
+[TEXT2TEXT] cost time: 0.0005023479461669922
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 3.8059215545654297
+VLM batch processing completed: 4.43s, Tasks: 3, avg per task: 1.48s
+[TEXT2TEXT] cost time: 1.603588342666626
+VLM batch processing completed: 4.15s, Tasks: 3, avg per task: 1.38s
+[TEXT2TEXT] cost time: 2.4047579765319824
+VLM batch processing completed: 3.37s, Tasks: 1, avg per task: 3.37s
+[TEXT2TEXT] cost time: 1.2036693096160889
+Thread 1 Accuracy: 33 / 58 56.89655074316292
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+
+Processing completed!
+Total processed samples: 186
+Final accuracy: 55.91% (104/186)
+INFO 10-11 12:46:37 [__init__.py:235] Automatically detected platform cuda.
+Save path: ./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part1
+Max workers: 1
+498 502
+Checking valid data...
+Valid data count: 84
+Loaded 494 previously processed samples
+Total samples: 84, Already processed: 494, To process: 0
+All samples already processed!

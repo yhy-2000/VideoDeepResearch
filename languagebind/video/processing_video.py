@@ -19,10 +19,13 @@ OPENAI_DATASET_STD = (0.26862954, 0.26130258, 0.27577711)
 
 
 # import multiprocessing
+
 # multiprocessing.set_start_method('spawn')
 
 from tqdm import tqdm
 def make_list_of_images(x):
+    if type(x)==list and x[0][-4:] in ['.png','.jpg']:
+        return [x]
     if not isinstance(x, list):
         return [x]
     return x
@@ -81,8 +84,29 @@ def load_and_transform_video(
         clip_end_sec=None,
         num_frames=8
 ):
-
-    if video_decode_backend == 'pytorchvideo':
+    #  frame_list
+    # print('*'*100)
+    # print(video_path)
+    if type(video_path)==list:
+        video_data = []
+        
+        for frame_path in video_path:
+            try:
+                # Read with PIL
+                from PIL import Image
+                frame = Image.open(frame_path).convert('RGB')
+                # Convert PIL Image to numpy array
+                frame_np = torch.from_numpy(np.array(frame)).permute(2, 0, 1)  # This creates a uint8 array [H, W, C]
+                video_data.append(frame_np)
+                
+            except Exception as e:
+                print(f"Error loading {frame_path}: {e}")
+                continue
+        
+        video_data = torch.stack(video_data, dim=1)
+        video_outputs = transform(video_data)
+        
+    elif video_decode_backend == 'pytorchvideo':
         #  decord pyav
         video = EncodedVideo.from_path(video_path, decoder="decord", decode_audio=False)
         duration = video.duration
@@ -117,51 +141,8 @@ def load_and_transform_video(
         video_outputs = transform(video_data)
     else:
         raise NameError('video_decode_backend should specify in (pytorchvideo, decord, opencv)')
+
     return video_outputs
-
-
-
-# def load_and_transform_video(args):
-#     video_path,transform,video_decode_backend,num_frames,config=args
-
-#     if config!=None:
-#         transform = get_video_transform(config)
-
-#     if video_decode_backend == 'pytorchvideo':
-#         #  decord pyav
-#         video = EncodedVideo.from_path(video_path, decoder="decord", decode_audio=False)
-#         duration = video.duration
-#         start_sec = clip_start_sec  # secs
-#         end_sec = clip_end_sec if clip_end_sec is not None else duration  # secs
-#         video_data = video.get_clip(start_sec=start_sec, end_sec=end_sec)
-#         video_outputs = transform(video_data)
-
-#     elif video_decode_backend == 'decord':
-#         decord.bridge.set_bridge('torch')
-#         decord_vr = VideoReader(video_path, ctx=cpu(0), num_threads=1)
-#         duration = len(decord_vr)
-#         frame_id_list = np.linspace(0, duration-1, num_frames, dtype=int)
-#         video_data = decord_vr.get_batch(frame_id_list)
-#         video_data = video_data.permute(3, 0, 1, 2)  # (T, H, W, C) -> (C, T, H, W)
-#         video_outputs = transform(video_data)
-
-#     elif video_decode_backend == 'opencv':
-#         cv2_vr = cv2.VideoCapture(video_path)
-#         duration = int(cv2_vr.get(cv2.CAP_PROP_FRAME_COUNT))
-#         frame_id_list = np.linspace(0, duration-1, num_frames, dtype=int)
-
-#         video_data = []
-#         for frame_idx in frame_id_list:
-#             cv2_vr.set(1, frame_idx)
-#             _, frame = cv2_vr.read()
-#             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-#             video_data.append(torch.from_numpy(frame).permute(2, 0, 1))
-#         cv2_vr.release()
-#         video_data = torch.stack(video_data, dim=1)
-#         video_outputs = transform(video_data)
-#     else:
-#         raise NameError('video_decode_backend should specify in (pytorchvideo, decord, opencv)')
-#     return video_outputs
 
 
 
@@ -186,17 +167,14 @@ class LanguageBindVideoProcessor(ProcessorMixin):
 
         if images is not None:
             images = make_list_of_images(images)
-
-            image_features = [self.image_processor(image, self.transform,
+            image_features = []
+            
+            for image in images:
+                image_features.append(self.image_processor(image, self.transform,
                                                    video_decode_backend=self.config.vision_config.video_decode_backend,
-                                                   num_frames=self.config.vision_config.num_frames) for image in images]
+                                                   num_frames=self.config.vision_config.num_frames))
+                
             image_features = torch.stack(image_features)
-            # args = [(image, None, self.config.vision_config.video_decode_backend, self.config.vision_config.num_frames, self.config) for image in images]
-
-            # with multiprocessing.Pool(processes=10) as pool:
-            #     image_features = list(tqdm(pool.map(load_and_transform_video, args),desc='parallel processing videos'))
-            #     image_features = torch.stack(image_features)
-
         if text is not None and images is not None:
             encoding["pixel_values"] = image_features
             return encoding

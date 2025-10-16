@@ -1,4 +1,4 @@
-<h2 align="center">🎬 VideoDeepResearch: Long Video Understanding With Agentic Tool Using</a></h2>
+<h2 align="center">🎬 VideoExplorer: Thinking with Video for Long-Form Understanding </a></h2>
 
 <p align="center">
     <a href="https://arxiv.org/pdf/2506.10821">
@@ -7,38 +7,42 @@
 </p>
 
 ## 👉 Introduction
-In this work, we propose **VideoDeepResearch**, an agentic framework that tackles long video understanding (LVU) using a text-only reasoning model with modular multimodal tools, outperforming MLLM baselines across major LVU benchmarks.
+
+**VideoExplorer** is a novel framework for long-video understanding  that moves beyond single-pass reasoning. Inspired by the "thinking with video" principle, it performs **faithful, efficient, and interpretable reasoning** by dynamically exploring video content.
 
 
-<p align="center">
-  <img src="./asset/result.png" width="100%" />
-</p>
+## 🎉 News 
+2025.10.16 - We released the newest version of VideoDeepResearch called VideoExplorer! It's smaller, cheaper, but just as effective in long video understanding. Details refer to our [updated paper]("https://arxiv.org/pdf/2506.10821"). ✨
+2025.06.10 - We released the first version of VideoDeepResearch. 🎬
 
+## 🚀 Overview
 
+Long-video understanding is challenging. Existing methods often sacrifice detail by downsampling or rely on task-agnostic representations, limiting their perception.
 
-## 🎬 Demo
+VideoExplorer solves this by **intertwining planning, temporal grounding, and scalable perception** into a coherent, iterative loop:
+1.  **Formulates** a sub-question.
+2.  **Locates** the relevant moments.
+3.  **Performs** task-oriented, fine-grained perception.
+4.  **Repeats** until the final answer is reached.
 
-<div align="center">
-    <video src="https://github.com/user-attachments/assets/6f90154b-1ab4-4df3-ac02-1deb26d702f1"/>
-</div>
+## 💡 Key Features
 
+*   **Iterative Reasoning:** Dynamically explores video content instead of relying on a static context.
+*   **Task-Oriented Perception:** Focuses computational resources on relevant moments, enabling scalable analysis.
+*   **Interpretable Trajectories:** Each step of the reasoning process is transparent and traceable.
 
+## 🏛️ Framework & Training
 
+To overcome the lack of LVU training data, we constructed a high-quality dataset using **difficulty-adaptive sampling**. Our training pipeline consists of:
+1.  **Supervised Trajectory Initialization**
+2.  **Trajectory-level Preference Optimization**
 
-## ✨ Key Features
+This two-stage approach encourages adaptive temporal grounding and iterative information integration guided by downstream rewards.
 
-* 📹 **Diverse Long-Video Understanding**
+## 📈 Results
 
-  * Single-detail, multi-detail, and multi-hop question answering across various scenes
-* 🛠️ **Multi-Tool Integration**
+Extensive evaluations on popular long-video benchmarks show that VideoExplorer achieves **significant performance advantages** over existing baselines, demonstrating its robustness, adaptability, and efficiency.
 
-  * Visual Perceiver, Video Browser, Text/Subtitle/Image Retriever & Extractor
-* 🔄 **Dynamic Multi-Round Calls**
-
-  * Automated tool-call scheduling based on question complexity
-* 🔍 **Full Interpretability**
-
-  * Detailed trace logs and step-by-step reasoning
 
 ---
 
@@ -55,91 +59,76 @@ cd VideoDeepResearch
 pip install -r requirements.txt
 ```
 
+
 **Project Layout:**
 
 ```
 VideoDeepResearch/
-├── streamlit_demo_vlm_local.py   # Streamlit demo script that use local vllm server as visual module
-├── streamlit_demo_vlm_api.py     # Streamlit demo script that use proprietary API as visual module
 ├── requirements.txt              # Python dependencies
 ├── eval/                         # Code for evaluating benchmarks
+├── train/                        # Code for supervised finetuning (SFT) and trajectory-based direct preference optimization (TDPO)
 ├── asset/                        # Assets used in the demo
 ├── data/
 │   ├── videos/                   # Raw video files
 │   ├── clips/                    # Generated video clips
 │   ├── dense_frames/             # Extracted key frames
-│   └── subtitles/                # Subtitle files(optional)
 └── README.md                     # This documentation
 ```
 
-### 2. Launch Demo
 
-Set the following environment variables of text-only large reasoning model(example for `deepseek-reasoner`):
-
-```bash
-export API_MODEL_NAME=deepseek-r1-250120
-export API_BASE_URL=https://ark.cn-beijing.volces.com/api/v3
-export API_KEY=YOUR_API_KEY
-```
-
-
-> 💡 *Tip: We recomment to use volcengine(https://www.volcengine.com/product/ark) for faster and more stable responses.*
-
-
-* For **Visual Perceiver & Video Browser**:
-
-  * **Local Server**: run `bash init_vllm_server.sh` then:
-    ```bash
-      streamlit run streamlit_demo_vlm_local.py
-    ```
-  * **Proprietary API**: set the enviroment variable `API_MODEL_NAME_VLM`, `API_BASE_URL_VLM`, and `API_KEY_VLM`, e.g.:
-    ```bash
-      export API_MODEL_NAME_VLM=doubao-1.5-vision-pro-250328
-      export API_BASE_URL_VLM=https://ark.cn-beijing.volces.com/api/v3
-      export API_KEY_VLM=YOUR_API_KEY
-    ```
-    then:
-
-    ```bash
-      streamlit run streamlit_demo_vlm_api.py
-    ```
-
-
-* After that, you should see in terminal like:
+## Launch Demo
 
 ```bash
-  Local URL:    http://localhost:8501
-  Network URL:  http://192.168.x.x:8501
-  External URL: http://your_public_ip:8501
+base eval/demo.sh
 ```
 
-Open **Local URL** in your browser to start.
+## Evaluation on Benchmarks
+```bash
+base eval/eval.sh
+```
 
+## Training
 
+Our training dataset is available at https://huggingface.co/datasets/avery00/VideoExplorer-Dataset/tree/main. To set up:
 
+1. Place dpo_marathon.json in train/LLaMA-Factory-dpo/data.
 
-### 🧰 Usage Instructions
+2. Place the remaining two files in train/LLaMA-Factory-sft/data.
 
-1. **Open Browser**: Navigate to `http://localhost:8501`.
-2. **Configure Settings**:
-   * Choose model and API parameters in the sidebar.
-   * Upload or select a video file (`.mp4`) and (optionally) a subtitle file (`.srt`).
-3. **Ask Questions**:
-   * Type your question regarding the video content.
-   * Click **Start Processing**.
-4. **Review Results**:
-   * View tool-call logs, extracted frames/clips, and final answers below the video player.
-> 💡 *Tip: For faster responses, try faster reasoning model apis like `gemini-2.5`.*
+## Environment Setting
+```bash
+mv train/LLaMA-Factory-sft train/LLaMA-Factory-main
+cd train/LLaMA-Factory-main
+pip install -e ".[torch,metrics]" --no-build-isolation
+mv train/LLaMA-Factory-main train/LLaMA-Factory-sft
+```
 
+## Supervised Finetuning
+```bash
+cd train
 
+# load the right code
+mv train/LLaMA-Factory-sft train/LLaMA-Factory-main
 
----
+# finetuning planner
+bash sft_planner.sh
 
+# finetuning temporal grounder
+bash sft_temporal_grounding_agent.sh
 
-## ✅ Results Replication
-The examples we provide are sourced from the LVBench and MLVU test sets. To run these examples, please download the corresponding datasets and replace the video_path with the appropriate local path.
+mv train/LLaMA-Factory-main train/LLaMA-Factory-sft
+```
 
-We also provide the prompts used in prompt_qwen25vl.py and prompt_seed15vl.py, allowing you to replicate our results using the corresponding configurations.
+## Trajectory-based Direct Preference Optimization
+```bash
+# load the right code
+mv train/LLaMA-Factory-dpo train/LLaMA-Factory-main
+
+# Trajectory-based DPO
+bash train/dpo_planner.sh
+
+mv train/LLaMA-Factory-main train/LLaMA-Factory-dpo
+```
 
 ---
 ## 📬 Contact
@@ -154,9 +143,9 @@ Encounter issues or have questions? Reach out to:
 
 If you find this work helpful, please cite our paper:
 ```bibtex
-@misc{yuan2025videodeepresearchlongvideounderstanding,
-      title={VideoDeepResearch: Long Video Understanding With Agentic Tool Using}, 
-      author={Huaying Yuan and Zheng Liu and Junjie Zhou and Ji-Rong Wen and Zhicheng Dou},
+@misc{yuan2025thinkvideosagenticlongvideo,
+      title={Think With Videos For Agentic Long-Video Understanding}, 
+      author={Huaying Yuan and Zheng Liu and Junjie Zhou and Hongjin Qian and Yan Shu and Nicu Sebe and Ji-Rong Wen and Zhicheng Dou},
       year={2025},
       eprint={2506.10821},
       archivePrefix={arXiv},

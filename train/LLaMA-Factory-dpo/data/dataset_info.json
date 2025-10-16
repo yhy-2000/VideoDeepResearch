@@ -1,0 +1,11 @@
+{
+    "dpo_marathon": {
+      "file_name": "dpo_marathon.json",
+      "ranking": true,
+      "formatting": "sharegpt",
+      "columns": {
+        "chosen": "chosen",
+        "rejected": "rejected"
+      }
+    }
+}

@@ -1,0 +1,15 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: ./VideoDeepResearch_release/train/LLaMA-Factory-sft/saves/qwen25-3b-sft-planner_18k/checkpoint-2000
+adapter_name_or_path: ./VideoDeepResearch_release/train/LLaMA-Factory-main/saves/qwen25-3b-dpo_1k/checkpoint-40
+template: qwen
+trust_remote_code: true
+
+### export
+export_dir: ./VideoDeepResearch_release/train/LLaMA-Factory-main/saves/qwen25-3b-dpo_1k/checkpoint-40/full_model
+export_size: 5
+export_device: cpu  # choices: [cpu, auto]
+export_legacy_format: false
+
+

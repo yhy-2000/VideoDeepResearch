@@ -1,0 +1,55 @@
+### model
+# model_name_or_path: ./pretrained_models/Qwen2.5-7B
+# -Instruct
+model_name_or_path: ./pretrained_models/Qwen2.5-3B
+# model_name_or_path: /share/project/junwei/models/Qwen3-8B
+trust_remote_code: true
+add_tokens: <think>,</think>,<video_reader>,</video_reader>,<video_reader_question>,</video_reader_question>,<answer>,</answer>,<temporal_grounding_agent>,</temporal_grounding_agent>,<video_browser>,</video_browser>,<video_segment_retriever_textual_query>,</video_segment_retriever_textual_query>,<video_segment_retriever_image_query>,</video_segment_retriever_image_query>,<subtitle_retriever>,</subtitle_retriever>,<subtitle_extractor>,</subtitle_extractor>
+
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z3_config.json  # choices: [ds_z0_config.json, ds_z2_config.json, ds_z3_config.json]
+
+### dataset
+dataset: video_marathon_planner
+template: qwen
+cutoff_len: 8192
+max_samples: 100000
+overwrite_cache: true
+preprocessing_num_workers: 32
+dataloader_num_workers: 0
+
+### output
+output_dir: saves/qwen25-3b-sft-planner
+logging_steps: 10
+save_steps: 100
+plot_loss: true
+overwrite_output_dir: false
+save_only_model: false
+report_to: wandb  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+
+### train
+per_device_train_batch_size: 32
+gradient_accumulation_steps: 1
+learning_rate: 1.0e-5
+# num_train_epochs: 4
+max_steps: 4000
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+optim: paged_adamw_8bit
+use_unsloth_gc: true
+enable_liger_kernel: true
+save_total_limit: 5
+
+### eval
+# eval_dataset: alpaca_en_demo
+# val_size: 0.1
+# per_device_eval_batch_size: 1
+# eval_strategy: steps
+# eval_steps: 500

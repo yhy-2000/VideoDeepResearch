@@ -1,0 +1,624 @@
+INFO 10-15 08:09:57 [__init__.py:235] Automatically detected platform cuda.
+Initializing VLM model...
+INFO 10-15 08:10:25 [__init__.py:235] Automatically detected platform cuda.
+Initializing VLM model...
+INFO 10-15 08:10:41 [config.py:1604] Using max model len 32768
+INFO 10-15 08:10:42 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-15 08:10:42 [core.py:572] Waiting for init message from front-end.
+INFO 10-15 08:10:42 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-15 08:10:45 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-15 08:10:45 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-15 08:10:45 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-15 08:10:46 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-15 08:10:46 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-15 08:10:46 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-15 08:12:10 [__init__.py:235] Automatically detected platform cuda.
+Initializing VLM model...
+INFO 10-15 08:12:22 [config.py:1604] Using max model len 32768
+INFO 10-15 08:12:22 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-15 08:12:23 [core.py:572] Waiting for init message from front-end.
+INFO 10-15 08:12:23 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-15 08:12:26 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-15 08:12:27 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-15 08:12:27 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-15 08:12:27 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-15 08:12:27 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-15 08:12:27 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-15 08:13:39 [default_loader.py:262] Loading weights took 72.00 seconds
+INFO 10-15 08:13:40 [gpu_model_runner.py:1892] Model loading took 15.6271 GiB and 72.230532 seconds
+INFO 10-15 08:13:40 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+INFO 10-15 08:13:45 [gpu_worker.py:255] Available KV cache memory: 45.62 GiB
+INFO 10-15 08:13:46 [kv_cache_utils.py:833] GPU KV cache size: 854,256 tokens
+INFO 10-15 08:13:46 [kv_cache_utils.py:837] Maximum concurrency for 32,768 tokens per request: 26.07x
+INFO 10-15 08:13:46 [core.py:193] init engine (profile, create kv cache, warmup model) took 6.02 seconds
+✓ VLM model loaded: /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct
+Initializing retriever...
+INFO 10-15 08:14:27 [__init__.py:235] Automatically detected platform cuda.
+Initializing VLM model...
+INFO 10-15 08:14:38 [config.py:1604] Using max model len 32768
+INFO 10-15 08:14:39 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-15 08:14:39 [core.py:572] Waiting for init message from front-end.
+INFO 10-15 08:14:39 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-15 08:14:42 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-15 08:14:43 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-15 08:14:43 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-15 08:14:43 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-15 08:14:43 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-15 08:14:43 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-15 08:15:43 [default_loader.py:262] Loading weights took 59.53 seconds
+INFO 10-15 08:15:43 [gpu_model_runner.py:1892] Model loading took 15.6271 GiB and 59.771812 seconds
+INFO 10-15 08:15:43 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+INFO 10-15 08:15:49 [gpu_worker.py:255] Available KV cache memory: 45.62 GiB
+INFO 10-15 08:15:49 [kv_cache_utils.py:833] GPU KV cache size: 854,256 tokens
+INFO 10-15 08:15:49 [kv_cache_utils.py:837] Maximum concurrency for 32,768 tokens per request: 26.07x
+INFO 10-15 08:15:49 [core.py:193] init engine (profile, create kv cache, warmup model) took 5.64 seconds
+✓ VLM model loaded: /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct
+Initializing retriever...
+✓ Retriever initialized
+✓ Demo initialized successfully
+  Video: /share/project/huaying/benchmark/lvbench/videos/_T2Avd3tFHc.mp4
+  Duration: 1844s
+  Question: What is the main topic of this video?
+
+============================================================
+Starting Video QA Demo
+============================================================
+
+Step 1: Extracting subtitles...
+✓ No subtitles or subtitle extraction disabled
+
+Step 2: Building initial prompt...
+✓ Initial prompt built
+
+Step 3: Processing video segment (demo)...
+Processing video segment: 0s - 10s
+✓ Video segment processed
+  Result: The video segment appears to be a travel vlog or documentary-style video. It features a person walking through a bustling square, interacting with the environment, and then transitioning to scenes of ...
+
+============================================================
+Demo completed successfully!
+============================================================
+
+
+✓ Results saved to: demo_result.json
+INFO 10-15 08:27:23 [__init__.py:235] Automatically detected platform cuda.
+Error: Video file not found: ./data/sample_video.mp4
+Please update VIDEO_PATH in the script to point to a valid video file.
+INFO 10-15 08:29:39 [__init__.py:235] Automatically detected platform cuda.
+Initializing VLM model...
+INFO 10-15 08:29:54 [config.py:1604] Using max model len 32768
+INFO 10-15 08:29:54 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-15 08:29:55 [core.py:572] Waiting for init message from front-end.
+INFO 10-15 08:29:55 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-15 08:29:59 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-15 08:29:59 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-15 08:29:59 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-15 08:29:59 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-15 08:29:59 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-15 08:30:00 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-15 08:30:52 [default_loader.py:262] Loading weights took 52.18 seconds
+INFO 10-15 08:30:52 [gpu_model_runner.py:1892] Model loading took 15.6271 GiB and 52.438496 seconds
+INFO 10-15 08:30:53 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+INFO 10-15 08:30:58 [gpu_worker.py:255] Available KV cache memory: 45.62 GiB
+INFO 10-15 08:30:58 [kv_cache_utils.py:833] GPU KV cache size: 854,256 tokens
+INFO 10-15 08:30:58 [kv_cache_utils.py:837] Maximum concurrency for 32,768 tokens per request: 26.07x
+INFO 10-15 08:30:59 [core.py:193] init engine (profile, create kv cache, warmup model) took 6.20 seconds
+✓ VLM model loaded: /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct
+Initializing retriever...
+✓ Retriever initialized
+✓ Demo initialized successfully
+  Video: /share/project/huaying/benchmark/lvbench/videos/_T2Avd3tFHc.mp4
+  Duration: 1844s
+  Question: What is the main topic discussed in this video?
+
+======================================================================
+Starting Video QA Demo - Multi-Turn Tool Calling
+======================================================================
+
+
+======================================================================
+Round 1/20
+======================================================================
+
+[Planner] Generating response...
+Text2Text API error: Connection error.
+Text2Text API error: Connection error.
+Text2Text API error: Connection error.
+Error: No response from planner
+
+======================================================================
+Demo completed (max rounds reached without answer)
+======================================================================
+
+
+✓ Results saved to: demo_result.json
+
+======================================================================
+Summary
+======================================================================
+Question: What is the main topic discussed in this video?
+Predicted Answer: -
+Ground Truth: A
+Correctness: ✗ Incorrect
+Total Rounds: 0
+Conversation Length: 1 messages
+======================================================================
+
+INFO 10-15 08:34:32 [__init__.py:235] Automatically detected platform cuda.
+Initializing VLM model...
+INFO 10-15 08:34:44 [config.py:1604] Using max model len 32768
+INFO 10-15 08:34:44 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-15 08:34:45 [core.py:572] Waiting for init message from front-end.
+INFO 10-15 08:34:45 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-15 08:34:48 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-15 08:34:48 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-15 08:34:48 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-15 08:34:49 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-15 08:34:49 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-15 08:34:49 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-15 08:35:47 [default_loader.py:262] Loading weights took 58.43 seconds
+INFO 10-15 08:35:48 [gpu_model_runner.py:1892] Model loading took 15.6271 GiB and 58.632925 seconds
+INFO 10-15 08:35:48 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+INFO 10-15 08:35:53 [gpu_worker.py:255] Available KV cache memory: 45.62 GiB
+INFO 10-15 08:35:53 [kv_cache_utils.py:833] GPU KV cache size: 854,256 tokens
+INFO 10-15 08:35:53 [kv_cache_utils.py:837] Maximum concurrency for 32,768 tokens per request: 26.07x
+INFO 10-15 08:35:53 [core.py:193] init engine (profile, create kv cache, warmup model) took 5.64 seconds
+✓ VLM model loaded: /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct
+Initializing retriever...
+✓ Retriever initialized
+✓ Demo initialized successfully
+  Video: /share/project/huaying/benchmark/lvbench/videos/_T2Avd3tFHc.mp4
+  Duration: 1844s
+  Question: What is the main topic discussed in this video?
+
+======================================================================
+Starting Video QA Demo - Multi-Turn Tool Calling
+======================================================================
+
+
+======================================================================
+Round 1/20
+======================================================================
+
+[Planner] Generating response...
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-dpo/saves/qwen25-3b-dpo_1k/checkpoint-40/full_model_3b
+Error: No response from planner
+
+======================================================================
+Demo completed (max rounds reached without answer)
+======================================================================
+
+
+✓ Results saved to: demo_result.json
+
+======================================================================
+Summary
+======================================================================
+Question: What is the main topic discussed in this video?
+Predicted Answer: -
+Ground Truth: A
+Correctness: ✗ Incorrect
+Total Rounds: 0
+Conversation Length: 1 messages
+======================================================================
+
+INFO 10-15 08:38:47 [__init__.py:235] Automatically detected platform cuda.
+Initializing VLM model...
+INFO 10-15 08:39:00 [config.py:1604] Using max model len 32768
+INFO 10-15 08:39:00 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-15 08:39:01 [core.py:572] Waiting for init message from front-end.
+INFO 10-15 08:39:01 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-15 08:39:04 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-15 08:39:04 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-15 08:39:04 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-15 08:39:04 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-15 08:39:04 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-15 08:39:05 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-15 08:40:01 [default_loader.py:262] Loading weights took 56.83 seconds
+INFO 10-15 08:40:02 [gpu_model_runner.py:1892] Model loading took 15.6271 GiB and 57.030147 seconds
+INFO 10-15 08:40:02 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+INFO 10-15 08:40:07 [gpu_worker.py:255] Available KV cache memory: 45.62 GiB
+INFO 10-15 08:40:07 [kv_cache_utils.py:833] GPU KV cache size: 854,256 tokens
+INFO 10-15 08:40:07 [kv_cache_utils.py:837] Maximum concurrency for 32,768 tokens per request: 26.07x
+INFO 10-15 08:40:07 [core.py:193] init engine (profile, create kv cache, warmup model) took 5.52 seconds
+✓ VLM model loaded: /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct
+Initializing retriever...
+✓ Retriever initialized
+✓ Demo initialized successfully
+  Video: /share/project/huaying/benchmark/lvbench/videos/_T2Avd3tFHc.mp4
+  Duration: 1844s
+  Question: What is the main topic discussed in this video?
+
+======================================================================
+Starting Video QA Demo - Multi-Turn Tool Calling
+======================================================================
+
+
+======================================================================
+Round 1/20
+======================================================================
+
+[Planner] Generating response...
+[TEXT2TEXT] cost time: 1.002711296081543
+
+[Tool Processor] Processing tool calls...
+
+[Tool] Video Browser
+INFO 10-15 08:47:01 [__init__.py:235] Automatically detected platform cuda.
+Initializing VLM model...
+INFO 10-15 08:47:14 [config.py:1604] Using max model len 32768
+INFO 10-15 08:47:14 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-15 08:47:14 [core.py:572] Waiting for init message from front-end.
+INFO 10-15 08:47:14 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-15 08:47:18 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-15 08:47:18 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-15 08:47:18 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-15 08:47:18 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-15 08:47:18 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-15 08:47:18 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-15 08:48:31 [default_loader.py:262] Loading weights took 72.53 seconds
+INFO 10-15 08:48:32 [gpu_model_runner.py:1892] Model loading took 15.6271 GiB and 72.826143 seconds
+INFO 10-15 08:48:32 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+INFO 10-15 08:48:37 [gpu_worker.py:255] Available KV cache memory: 45.62 GiB
+INFO 10-15 08:48:37 [kv_cache_utils.py:833] GPU KV cache size: 854,256 tokens
+INFO 10-15 08:48:37 [kv_cache_utils.py:837] Maximum concurrency for 32,768 tokens per request: 26.07x
+INFO 10-15 08:48:37 [core.py:193] init engine (profile, create kv cache, warmup model) took 5.91 seconds
+✓ VLM model loaded: /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct
+Initializing retriever...
+✓ Retriever initialized
+✓ Demo initialized successfully
+  Video: /share/project/huaying/benchmark/lvbench/videos/_T2Avd3tFHc.mp4
+  Duration: 1844s
+  Question: What is the main topic discussed in this video?
+
+======================================================================
+Starting Video QA Demo - Multi-Turn Tool Calling
+======================================================================
+
+
+======================================================================
+Round 1/20
+======================================================================
+
+[Planner] Generating response...
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-dpo/saves/qwen25-3b-dpo_1k/checkpoint-40/full_model_3b
+
+[Planner Output]
+
+
+Error: No response from planner
+
+======================================================================
+Demo completed (max rounds reached without answer)
+======================================================================
+
+
+✓ Results saved to: demo_result.json
+
+======================================================================
+Summary
+======================================================================
+Question: What is the main topic discussed in this video?
+Predicted Answer: -
+Ground Truth: A
+Correctness: ✗ Incorrect
+Total Rounds: 0
+Conversation Length: 1 messages
+======================================================================
+
+INFO 10-15 08:52:11 [__init__.py:235] Automatically detected platform cuda.
+Initializing VLM model...
+INFO 10-15 08:52:23 [config.py:1604] Using max model len 32768
+INFO 10-15 08:52:24 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-15 08:52:24 [core.py:572] Waiting for init message from front-end.
+INFO 10-15 08:52:24 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-15 08:52:27 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-15 08:52:28 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-15 08:52:28 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-15 08:52:28 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-15 08:52:28 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-15 08:52:28 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-15 08:53:25 [default_loader.py:262] Loading weights took 57.08 seconds
+INFO 10-15 08:53:26 [gpu_model_runner.py:1892] Model loading took 15.6271 GiB and 57.324761 seconds
+INFO 10-15 08:53:26 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+INFO 10-15 08:53:31 [gpu_worker.py:255] Available KV cache memory: 45.62 GiB
+INFO 10-15 08:53:31 [kv_cache_utils.py:833] GPU KV cache size: 854,256 tokens
+INFO 10-15 08:53:31 [kv_cache_utils.py:837] Maximum concurrency for 32,768 tokens per request: 26.07x
+INFO 10-15 08:53:31 [core.py:193] init engine (profile, create kv cache, warmup model) took 5.68 seconds
+✓ VLM model loaded: /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct
+Initializing retriever...
+✓ Retriever initialized
+✓ Demo initialized successfully
+  Video: /share/project/huaying/benchmark/lvbench/videos/_T2Avd3tFHc.mp4
+  Duration: 1844s
+  Question: What is the main topic discussed in this video?
+
+======================================================================
+Starting Video QA Demo - Multi-Turn Tool Calling
+======================================================================
+
+
+======================================================================
+Round 1/20
+======================================================================
+
+[Planner] Generating response...
+INFO 10-15 08:55:08 [__init__.py:235] Automatically detected platform cuda.
+Initializing VLM model...
+INFO 10-15 08:55:20 [config.py:1604] Using max model len 32768
+INFO 10-15 08:55:20 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-15 08:55:21 [core.py:572] Waiting for init message from front-end.
+INFO 10-15 08:55:21 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-15 08:55:24 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-15 08:55:24 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-15 08:55:24 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-15 08:55:25 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-15 08:55:25 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-15 08:55:25 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-15 08:56:25 [default_loader.py:262] Loading weights took 60.13 seconds
+INFO 10-15 08:56:25 [gpu_model_runner.py:1892] Model loading took 15.6271 GiB and 60.340363 seconds
+INFO 10-15 08:56:26 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+INFO 10-15 08:56:31 [gpu_worker.py:255] Available KV cache memory: 45.62 GiB
+INFO 10-15 08:56:31 [kv_cache_utils.py:833] GPU KV cache size: 854,256 tokens
+INFO 10-15 08:56:31 [kv_cache_utils.py:837] Maximum concurrency for 32,768 tokens per request: 26.07x
+INFO 10-15 08:56:31 [core.py:193] init engine (profile, create kv cache, warmup model) took 5.82 seconds
+✓ VLM model loaded: /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct
+Initializing retriever...
+✓ Retriever initialized
+✓ Demo initialized successfully
+  Video: /share/project/huaying/benchmark/lvbench/videos/_T2Avd3tFHc.mp4
+  Duration: 1844s
+  Question: What is the main topic discussed in this video?
+
+======================================================================
+Starting Video QA Demo - Multi-Turn Tool Calling
+======================================================================
+
+
+======================================================================
+Round 1/20
+======================================================================
+
+[Planner] Generating response...
+
+[Planner Output]
+<think>The question asks about the main topic discussed in the video. This is a holistic question that the `video_browser` agent is suitable for. I will use `video_browser` to get an overview of the video's content.</think>
+<video_browser>What is the main topic discussed in this video? A. Technology and AI B. Sports and fitness C. Cooking and recipes D. Travel destinations</video_browser>
+[Pause]
+
+
+[Tool Processor] Processing tool calls...
+
+[Tool] Video Browser
+  Browsed entire video
+
+[Tool Results]
+The tool results for <video_browser>What is the main topic discussed in this video? A. Technology and AI B. Sports and fitness C. Cooking and recipes D. Travel destinations</video_browser> is:The video features scenes of people exploring different locations, such as a park, a restaurant, and a city square, which are typical elements of a travel vlog. Therefore, the main topic discussed in this video is Travel destinations. Therefore, the correct answer is D.
+
+
+
+[System] Tool results provided to planner
+
+======================================================================
+Round 2/20
+======================================================================
+
+[Planner] Generating response...
+
+[Planner Output]
+<think>The `video_browser` agent has provided a clear answer that the main topic is "Travel destinations". This directly answers the question and aligns with one of the given options. Therefore, I can now provide the final answer.</think>
+<answer>D</answer>
+
+
+======================================================================
+Final Answer: D
+======================================================================
+
+Ground Truth: A
+Correctness: ✗ Incorrect
+
+
+✓ Results saved to: demo_result.json
+
+======================================================================
+Summary
+======================================================================
+Question: What is the main topic discussed in this video?
+Predicted Answer: D
+Ground Truth: A
+Correctness: ✗ Incorrect
+Total Rounds: 2
+Conversation Length: 4 messages
+======================================================================
+
+INFO 10-15 09:02:00 [__init__.py:235] Automatically detected platform cuda.
+Error: Video file not found: /share/project/huaying/benchmark/mlvu/videos/test_tutorial_21.mp4
+Please update VIDEO_PATH in the script to point to a valid video file.
+INFO 10-15 09:05:02 [__init__.py:235] Automatically detected platform cuda.
+Initializing VLM model...
+INFO 10-15 09:05:14 [config.py:1604] Using max model len 32768
+INFO 10-15 09:05:14 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-15 09:05:15 [core.py:572] Waiting for init message from front-end.
+INFO 10-15 09:05:15 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-15 09:05:18 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-15 09:05:18 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-15 09:05:18 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-15 09:05:18 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-15 09:05:18 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-15 09:05:19 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-15 09:06:34 [default_loader.py:262] Loading weights took 75.79 seconds
+INFO 10-15 09:06:35 [gpu_model_runner.py:1892] Model loading took 15.6271 GiB and 76.028534 seconds
+INFO 10-15 09:06:35 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+INFO 10-15 09:06:41 [gpu_worker.py:255] Available KV cache memory: 45.62 GiB
+INFO 10-15 09:06:41 [kv_cache_utils.py:833] GPU KV cache size: 854,256 tokens
+INFO 10-15 09:06:41 [kv_cache_utils.py:837] Maximum concurrency for 32,768 tokens per request: 26.07x
+INFO 10-15 09:06:41 [core.py:193] init engine (profile, create kv cache, warmup model) took 6.16 seconds
+✓ VLM model loaded: /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct
+Initializing retriever...
+✓ Retriever initialized
+✓ Demo initialized successfully
+  Video: /share/project/huaying/benchmark/mlvu/videos/test_tutorial_21.mp4
+  Duration: 1765s
+  Question: Which technique is primarily used when editing the landscape photo in the video?
+
+======================================================================
+Starting Video QA Demo - Multi-Turn Tool Calling
+======================================================================
+
+
+======================================================================
+Round 1/20
+======================================================================
+
+[Planner] Generating response...
+
+[Planner Output]
+<think>The user is asking about a specific technique used for editing a landscape photo in the video. I need to find the segment where a landscape photo is being edited and then identify the primary technique from the given options. I will start by using the temporal grounding agent to locate the relevant segment. I will include all the editing techniques from the options in my query to help the agent find the most relevant segment.</think>
+<temporal_grounding_agent>Locate the segment where a landscape photo is being edited using techniques such as Sharpening, Color correction, Compositing, Contrast enhancement, Saturation adjustment, or Exposure adjustment.</temporal_grounding_agent>
+[Pause]
+
+
+[Tool Processor] Processing tool calls...
+
+[Tool] Temporal Grounding Agent
+
+[Tool] Video Segment Retriever (Text)
+All video clip embedding should be calculated when pre-processing the dataset!
+  Error: 'list' object has no attribute 'cpu'
+All video clip embedding should be calculated when pre-processing the dataset!
+  Error: 'list' object has no attribute 'cpu'
+All video clip embedding should be calculated when pre-processing the dataset!
+  Error: 'list' object has no attribute 'cpu'
+All video clip embedding should be calculated when pre-processing the dataset!
+  Error: 'list' object has no attribute 'cpu'
+All video clip embedding should be calculated when pre-processing the dataset!
+  Error: 'list' object has no attribute 'cpu'
+All video clip embedding should be calculated when pre-processing the dataset!
+  Error: 'list' object has no attribute 'cpu'
+All video clip embedding should be calculated when pre-processing the dataset!
+  Error: 'list' object has no attribute 'cpu'
+All video clip embedding should be calculated when pre-processing the dataset!
+  Error: 'list' object has no attribute 'cpu'
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+  Found 7 segments
+
+[Tool Results]
+There are 7 related segments in the video: [Pause]
+
+
+[System] Tool results provided to planner
+
+======================================================================
+Round 2/20
+======================================================================
+
+[Planner] Generating response...
+
+[Planner Output]
+<think>The temporal grounding agent has returned 7 relevant segments. I need to examine these segments to determine which editing technique is primarily used for the landscape photo. I will use the video reader to check each segment and see if it provides information about the primary editing technique. Since the question asks for the *primary* technique, I should look for the one that is most prominently or frequently mentioned, or visually demonstrated, across these segments. I will start by asking a general question about photo editing techniques in these segments, including all options to cover my bases.</think>
+<video_reader>0:100</video_reader><video_reader_question>Which technique is primarily used when editing the landscape photo? A. Sharpening B. Color correction C. Compositing D. Contrast enhancement E. Saturation adjustment F. Exposure adjustment</video_reader_question>
+[Pause]
+
+
+[Tool Processor] Processing tool calls...
+
+[Tool] Video Reader
+  Processed segment: 0:100
+
+[Tool Results]
+The tool result for <video_reader>0:100</video_reader> is The description of the video is: The video features a person sitting at a desk in a studio setting, speaking into a microphone. The scene transitions to a computer screen displaying a photo editing software interface, specifically Adobe Photoshop. The video demonstrates the process of editing a photo of a dancer in a red dress. The person in the video explains the use of layer masks, showing how to apply a layer mask to the text "FLOW" and then to the dancer's dress. The video highlights the use of the eraser tool to remove parts of the layer mask, revealing the background beneath. The person also demonstrates how to change the color of the layer mask by pressing the "D" key to set the foreground color to black and then using the eraser tool to reveal the background.
+
+The answer is: C. Compositing.
+
+
+
+[System] Tool results provided to planner
+
+======================================================================
+Round 3/20
+======================================================================
+
+[Planner] Generating response...
+
+[Planner Output]
+<think>The video reader for 0:100 indicates that compositing is used for a photo of a dancer, not a landscape photo. This means the primary editing technique for *landscape* photos is likely not compositing, or at least not the primary focus in this segment. I need to continue examining the other segments to find information specifically about landscape photo editing. Since the previous segment didn't show landscape photo editing, I will proceed to the next segment and keep checking all the segments returned by the temporal grounding agent, specifically looking for "landscape photo editing" and the given techniques. I will ask the video reader to summarize the editing techniques applied to the landscape photo in the next segment.</think>
+<video_reader>100:200</video_reader><video_reader_question>Which technique is primarily used when editing the landscape photo? A. Sharpening B. Color correction C. Compositing D. Contrast enhancement E. Saturation adjustment F. Exposure adjustment</video_reader_question>
+[Pause]
+
+
+[Tool Processor] Processing tool calls...
+
+[Tool] Video Reader
+  Processed segment: 100:200
+
+[Tool Results]
+The tool result for <video_reader>100:200</video_reader> is The description of the video is: The video appears to be a tutorial or demonstration of photo editing techniques using Adobe Photoshop. It shows a person sitting at a desk with a microphone, likely explaining the process. The main focus is on a photo editing software interface where a woman in a red dress is being edited. The video demonstrates the use of the "Flow" tool, which is used to create a mask or selection around the subject. The person in the video is likely explaining the steps and techniques involved in this process. The video also includes a segment where the person is speaking directly to the camera, possibly providing additional information or instructions.
+
+The answer is: C. Compositing.
+
+
+
+[System] Tool results provided to planner
+
+======================================================================
+Round 4/20
+======================================================================
+
+[Planner] Generating response...
+
+[Planner Output]
+<think>Again, the video reader for 100:200 focuses on editing a dancer, not a landscape, and mentions compositing. This is problematic because the question specifically asks about landscape photo editing, and the previous segment results also focused on a dancer. It seems the initial grounding might be too broad or the video content is primarily about portrait/dancer editing. I need to keep checking the remaining segments to find a clear instance of landscape photo editing. I will continue through the list of segments provided by the temporal grounding agent, skipping any that don't explicitly mention landscape or a similar large outdoor setting, and focusing on identifying *landscape photo editing*. I will try to find a segment that explicitly shows landscape photo editing and then apply the options to it.</think>
+<video_reader>200:300</video_reader><video_reader_question>Which technique is primarily used when editing the landscape photo? A. Sharpening B. Color correction C. Compositing D. Contrast enhancement E. Saturation adjustment F. Exposure adjustment</video_reader_question>
+[Pause]
+
+
+[Tool Processor] Processing tool calls...
+
+[Tool] Video Reader
+  Processed segment: 200:300
+
+[Tool Results]
+The tool result for <video_reader>200:300</video_reader> is The description of the video is: The video begins with a YouTube channel page for a Photoshop course, highlighting the channel's content and offerings. The scene transitions to a man sitting at a desk with a microphone, likely a tutorial host, who introduces the topic of using layer masks in Photoshop. The video then shows a Photoshop interface where the host demonstrates how to composite a landscape image by placing a sky image over a land image. The host explains the process of using layer masks to blend the two images seamlessly. The video includes close-ups of the Photoshop interface, showing the layers panel and the layer mask being applied to the sky layer. The host also demonstrates how to select and delete the background of the sky image using the Content-Aware Fill feature, and then how to adjust the layer mask to refine the blend between the two images. The video concludes with the host explaining the importance of non-destructive editing techniques and the use of layer masks for compositing.
+
+The answer is: C. Compositing.
+
+
+
+[System] Tool results provided to planner
+
+======================================================================
+Round 5/20
+======================================================================
+
+[Planner] Generating response...
+
+[Planner Output]
+<think>The video reader for 200:300 explicitly mentions "compositing a landscape image by placing a sky image over a land image" and "using layer masks to blend the two images seamlessly". This is a strong indicator that this segment shows landscape photo editing, specifically compositing. While the previous segment descriptions have been about a dancer, this one clearly matches the "landscape photo" part of the question. However, the video reader also answered "C. Compositing", which is confusing if the description implies compositing is *being done* or is the primary technique.
+
+I need to re-evaluate. The question is "Which technique is *primarily used* when editing the landscape photo". The description clearly states "The video then shows a Photoshop interface where the host demonstrates how to composite a landscape image... The host explains the process of using layer masks to blend the two images seamlessly." This is a direct match for the technique "Compositing".
+
+Given the explicit description of compositing a landscape image, even though the previous results were about a dancer, this segment is the first to explicitly mention "landscape photo" and "compositing" in the same description. Therefore, it's highly probable that compositing is the primary technique demonstrated for *landscape* photos in this video. I will assume the provided answer from the video reader is correct for this specific detailed description of the video segment.</think>
+<answer>C</answer>
+
+
+======================================================================
+Final Answer: C
+======================================================================
+
+Ground Truth: C
+Correctness: ✓ Correct
+
+
+✓ Results saved to: demo_result.json
+
+======================================================================
+Summary
+======================================================================
+Question: Which technique is primarily used when editing the landscape photo in the video?
+Predicted Answer: C
+Ground Truth: C
+Correctness: ✓ Correct
+Total Rounds: 5
+Conversation Length: 10 messages
+======================================================================
+

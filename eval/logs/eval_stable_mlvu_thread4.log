@@ -1,0 +1,2536 @@
+INFO 10-11 06:44:59 [__init__.py:235] Automatically detected platform cuda.
+Save path: ./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+Max workers: 1
+498 502
+Checking valid data...
+Valid data count: 84
+Total samples: 84, Already processed: 0, To process: 84
+Starting multiprocessing with 1 workers...
+Initializing VLLM server with conservative settings...
+INFO 10-11 06:45:29 [config.py:1604] Using max model len 30000
+INFO 10-11 06:45:30 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-11 06:45:31 [core.py:572] Waiting for init message from front-end.
+INFO 10-11 06:45:31 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=30000, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-11 06:45:36 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-11 06:45:37 [profiling.py:276] The sequence length (30000) is smaller than the pre-defined worst-case total number of multimodal tokens (32768). This may cause certain multi-modal inputs to fail during inference. To avoid this, you should increase `max_model_len` or reduce `mm_counts`.
+WARNING 10-11 06:45:37 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-11 06:45:37 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-11 06:45:37 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-11 06:45:37 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-11 06:45:37 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-11 06:47:44 [default_loader.py:262] Loading weights took 126.50 seconds
+INFO 10-11 06:47:45 [gpu_model_runner.py:1892] Model loading took 15.6277 GiB and 126.765444 seconds
+INFO 10-11 06:47:46 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+INFO 10-11 06:47:55 [gpu_worker.py:255] Available KV cache memory: 49.58 GiB
+INFO 10-11 06:47:55 [kv_cache_utils.py:833] GPU KV cache size: 928,304 tokens
+INFO 10-11 06:47:55 [kv_cache_utils.py:837] Maximum concurrency for 30,000 tokens per request: 30.94x
+INFO 10-11 06:47:55 [core.py:193] init engine (profile, create kv cache, warmup model) took 9.64 seconds
+[TEXT2TEXT] cost time: 1.6034319400787354
+[TEXT2TEXT] cost time: 3.205294132232666
+[TEXT2TEXT] cost time: 30.846576690673828
+VLM batch processing completed: 39.91s, Tasks: 19, avg per task: 2.10s
+[TEXT2TEXT] cost time: 1.4028775691986084
+[TEXT2TEXT] cost time: 2.605518102645874
+VLM batch processing completed: 2.49s, Tasks: 1, avg per task: 2.49s
+[TEXT2TEXT] cost time: 34.049646615982056
+Thread 4 Accuracy: 1 / 1 99.99990000010001
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 2.003643035888672
+VLM batch processing completed: 6.13s, Tasks: 1, avg per task: 6.13s
+[TEXT2TEXT] cost time: 1.2065095901489258
+[TEXT2TEXT] cost time: 9.415003538131714
+[TEXT2TEXT] cost time: 11.22244143486023
+VLM batch processing completed: 74.47s, Tasks: 36, avg per task: 2.07s
+[TEXT2TEXT] cost time: 6.209462642669678
+[TEXT2TEXT] cost time: 58.69288873672485
+Thread 4 Accuracy: 1 / 2 49.9999750000125
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 13.02240777015686
+VLM batch processing completed: 8.15s, Tasks: 1, avg per task: 8.15s
+[TEXT2TEXT] cost time: 0.6025891304016113
+Thread 4 Accuracy: 2 / 3 66.66664444445185
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2031841278076172
+[TEXT2TEXT] cost time: 4.609450101852417
+VLM batch processing completed: 13.26s, Tasks: 6, avg per task: 2.21s
+[TEXT2TEXT] cost time: 0.8018670082092285
+[TEXT2TEXT] cost time: 0.00046062469482421875
+[TEXT2TEXT] cost time: 0.0004851818084716797
+VLM batch processing completed: 5.67s, Tasks: 3, avg per task: 1.89s
+[TEXT2TEXT] cost time: 6.209407567977905
+[TEXT2TEXT] cost time: 2.2045090198516846
+[TEXT2TEXT] cost time: 1.803396463394165
+VLM batch processing completed: 2.62s, Tasks: 1, avg per task: 2.62s
+[TEXT2TEXT] cost time: 0.8021268844604492
+[TEXT2TEXT] cost time: 8.012731552124023
+[TEXT2TEXT] cost time: 5.408964395523071
+[TEMPORAL GROUNDING] Warning: Failed to get video_reader call after 3 retries
+[TEXT2TEXT] cost time: 4.207564115524292
+[TEXT2TEXT] cost time: 1.2030515670776367
+VLM batch processing completed: 3.87s, Tasks: 1, avg per task: 3.87s
+[TEXT2TEXT] cost time: 1.0028791427612305
+VLM batch processing completed: 3.75s, Tasks: 1, avg per task: 3.75s
+[TEXT2TEXT] cost time: 0.8041203022003174
+Thread 4 Accuracy: 2 / 4 49.99998750000312
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8023109436035156
+VLM batch processing completed: 10.49s, Tasks: 1, avg per task: 10.49s
+[TEXT2TEXT] cost time: 1.6032826900482178
+[TEXT2TEXT] cost time: 2.4055631160736084
+[TEXT2TEXT] cost time: 10.218311786651611
+VLM batch processing completed: 148.01s, Tasks: 27, avg per task: 5.48s
+[TEXT2TEXT] cost time: 2.604705572128296
+[TEXT2TEXT] cost time: 1.6035094261169434
+Thread 4 Accuracy: 2 / 5 39.9999920000016
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8020832538604736
+[TEXT2TEXT] cost time: 0.6017467975616455
+[TEXT2TEXT] cost time: 4.8081934452056885
+VLM batch processing completed: 47.21s, Tasks: 21, avg per task: 2.25s
+[TEXT2TEXT] cost time: 1.2058353424072266
+[TEXT2TEXT] cost time: 1.6033635139465332
+VLM batch processing completed: 2.83s, Tasks: 1, avg per task: 2.83s
+[TEXT2TEXT] cost time: 1.002457618713379
+Thread 4 Accuracy: 3 / 6 49.99999166666805
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.4028875827789307
+VLM batch processing completed: 2.19s, Tasks: 1, avg per task: 2.19s
+[TEXT2TEXT] cost time: 1.6028573513031006
+[TEXT2TEXT] cost time: 4.606666326522827
+[TEXT2TEXT] cost time: 7.2097249031066895
+VLM batch processing completed: 7.16s, Tasks: 4, avg per task: 1.79s
+[TEXT2TEXT] cost time: 1.6035921573638916
+[TEXT2TEXT] cost time: 1.6047406196594238
+VLM batch processing completed: 3.68s, Tasks: 1, avg per task: 3.68s
+[TEXT2TEXT] cost time: 1.2028672695159912
+Thread 4 Accuracy: 4 / 7 57.142848979593
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8022816181182861
+VLM batch processing completed: 4.40s, Tasks: 1, avg per task: 4.40s
+[TEXT2TEXT] cost time: 1.2027595043182373
+Thread 4 Accuracy: 5 / 8 62.499992187500986
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8019485473632812
+VLM batch processing completed: 3.36s, Tasks: 1, avg per task: 3.36s
+[TEXT2TEXT] cost time: 0.6019277572631836
+Thread 4 Accuracy: 6 / 9 66.66665925926009
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.6017520427703857
+[TEXT2TEXT] cost time: 1.0023062229156494
+[TEXT2TEXT] cost time: 2.804859161376953
+VLM batch processing completed: 21.80s, Tasks: 12, avg per task: 1.82s
+[TEXT2TEXT] cost time: 6.609922885894775
+[TEXT2TEXT] cost time: 12.626534700393677
+VLM batch processing completed: 3.71s, Tasks: 1, avg per task: 3.71s
+[TEXT2TEXT] cost time: 0.6020748615264893
+Thread 4 Accuracy: 7 / 10 69.9999930000007
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.4042630195617676
+[TEXT2TEXT] cost time: 4.607879400253296
+[TEXT2TEXT] cost time: 9.41556715965271
+VLM batch processing completed: 90.75s, Tasks: 56, avg per task: 1.62s
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+[TEXT2TEXT] cost time: 49.67095327377319
+[TEXT2TEXT] cost time: 1.4040772914886475
+[TEXT2TEXT] cost time: 1.2041692733764648
+[TEXT2TEXT] cost time: 5.808394193649292
+VLM batch processing completed: 44.63s, Tasks: 28, avg per task: 1.59s
+[TEXT2TEXT] cost time: 10.413902521133423
+[TEXT2TEXT] cost time: 18.228360652923584
+VLM batch processing completed: 3.74s, Tasks: 1, avg per task: 3.74s
+[TEXT2TEXT] cost time: 9.022350072860718
+VLM batch processing completed: 3.79s, Tasks: 1, avg per task: 3.79s
+[TEXT2TEXT] cost time: 26.64086389541626
+VLM batch processing completed: 5.38s, Tasks: 1, avg per task: 5.38s
+[TEXT2TEXT] cost time: 46.27426028251648
+[TEXT2TEXT] cost time: 1.8036372661590576
+[TEXT2TEXT] cost time: 4.20942234992981
+VLM batch processing completed: 27.82s, Tasks: 20, avg per task: 1.39s
+[TEXT2TEXT] cost time: 0.40178894996643066
+[TEXT2TEXT] cost time: 52.0911660194397
+Thread 4 Accuracy: 7 / 11 63.6363578512402
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.603210687637329
+[TEXT2TEXT] cost time: 2.0034573078155518
+[TEXT2TEXT] cost time: 10.414950370788574
+VLM batch processing completed: 16.89s, Tasks: 14, avg per task: 1.21s
+[TEXT2TEXT] cost time: 1.0027616024017334
+[TEXT2TEXT] cost time: 1.4054625034332275
+VLM batch processing completed: 3.14s, Tasks: 2, avg per task: 1.57s
+[TEXT2TEXT] cost time: 1.6065118312835693
+[TEXT2TEXT] cost time: 3.8119733333587646
+[TEXT2TEXT] cost time: 5.408955097198486
+VLM batch processing completed: 10.61s, Tasks: 12, avg per task: 0.88s
+[TEXT2TEXT] cost time: 0.802264928817749
+[TEXT2TEXT] cost time: 2.607414484024048
+VLM batch processing completed: 10.86s, Tasks: 3, avg per task: 3.62s
+[TEXT2TEXT] cost time: 5.009160757064819
+Thread 4 Accuracy: 7 / 12 58.33332847222263
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 2.0088131427764893
+[TEXT2TEXT] cost time: 4.412577390670776
+[TEXT2TEXT] cost time: 5.81186842918396
+VLM batch processing completed: 71.69s, Tasks: 28, avg per task: 2.56s
+[TEXT2TEXT] cost time: 3.205552577972412
+[TEXT2TEXT] cost time: 3.004979133605957
+VLM batch processing completed: 5.55s, Tasks: 1, avg per task: 5.55s
+[TEXT2TEXT] cost time: 5.2120208740234375
+Thread 4 Accuracy: 8 / 13 61.538456804734096
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2030465602874756
+[TEXT2TEXT] cost time: 1.8046016693115234
+[TEXT2TEXT] cost time: 13.018442869186401
+VLM batch processing completed: 27.74s, Tasks: 19, avg per task: 1.46s
+[TEXT2TEXT] cost time: 1.0023534297943115
+[TEXT2TEXT] cost time: 43.872172355651855
+[TEXT2TEXT] cost time: 1.2025189399719238
+[TEXT2TEXT] cost time: 22.83665657043457
+VLM batch processing completed: 30.29s, Tasks: 25, avg per task: 1.21s
+[TEXT2TEXT] cost time: 1.6056420803070068
+[TEXT2TEXT] cost time: 3.8073463439941406
+[TEXT2TEXT] cost time: 0.8019070625305176
+[TEXT2TEXT] cost time: 3.60955810546875
+VLM batch processing completed: 10.95s, Tasks: 11, avg per task: 1.00s
+[TEXT2TEXT] cost time: 1.603193998336792
+[TEXT2TEXT] cost time: 14.623181343078613
+[TEXT2TEXT] cost time: 1.202979326248169
+[TEXT2TEXT] cost time: 6.009135723114014
+VLM batch processing completed: 12.34s, Tasks: 11, avg per task: 1.12s
+[TEXT2TEXT] cost time: 1.4039745330810547
+[TEXT2TEXT] cost time: 4.008245229721069
+[TEXT2TEXT] cost time: 1.2028203010559082
+[TEXT2TEXT] cost time: 3.0049245357513428
+VLM batch processing completed: 11.42s, Tasks: 10, avg per task: 1.14s
+[TEXT2TEXT] cost time: 2.4067223072052
+[TEXT2TEXT] cost time: 1.6051433086395264
+[TEXT2TEXT] cost time: 2.0059454441070557
+[TEXT2TEXT] cost time: 5.609078645706177
+VLM batch processing completed: 15.37s, Tasks: 16, avg per task: 0.96s
+[TEXT2TEXT] cost time: 1.6039988994598389
+[TEXT2TEXT] cost time: 5.010349988937378
+VLM batch processing completed: 5.03s, Tasks: 1, avg per task: 5.03s
+[TEXT2TEXT] cost time: 18.4371395111084
+Thread 4 Accuracy: 9 / 14 64.28570969387788
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 2.2059926986694336
+[TEXT2TEXT] cost time: 0.8022279739379883
+[TEXT2TEXT] cost time: 13.428400754928589
+VLM batch processing completed: 22.94s, Tasks: 18, avg per task: 1.27s
+[TEXT2TEXT] cost time: 13.424630165100098
+[TEXT2TEXT] cost time: 1.2043650150299072
+[TEXT2TEXT] cost time: 3.4076480865478516
+[TEXT2TEXT] cost time: 5.010013818740845
+VLM batch processing completed: 20.87s, Tasks: 14, avg per task: 1.49s
+[TEXT2TEXT] cost time: 2.00693941116333
+[TEXT2TEXT] cost time: 1.405709981918335
+[TEXT2TEXT] cost time: 1.2049040794372559
+[TEXT2TEXT] cost time: 4.206653594970703
+VLM batch processing completed: 18.28s, Tasks: 16, avg per task: 1.14s
+[TEXT2TEXT] cost time: 0.8073639869689941
+[TEXT2TEXT] cost time: 1.2024309635162354
+[TEXT2TEXT] cost time: 1.0021765232086182
+[TEXT2TEXT] cost time: 6.010309219360352
+VLM batch processing completed: 28.41s, Tasks: 25, avg per task: 1.14s
+[TEXT2TEXT] cost time: 1.204571008682251
+[TEXT2TEXT] cost time: 2.6043686866760254
+VLM batch processing completed: 2.03s, Tasks: 1, avg per task: 2.03s
+[TEXT2TEXT] cost time: 2.404423475265503
+VLM batch processing completed: 2.29s, Tasks: 1, avg per task: 2.29s
+[TEXT2TEXT] cost time: 0.8026232719421387
+VLM batch processing completed: 2.58s, Tasks: 1, avg per task: 2.58s
+[TEXT2TEXT] cost time: 1.6043143272399902
+VLM batch processing completed: 4.40s, Tasks: 1, avg per task: 4.40s
+[TEXT2TEXT] cost time: 1.0065875053405762
+Thread 4 Accuracy: 10 / 15 66.66666222222251
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8021864891052246
+VLM batch processing completed: 4.41s, Tasks: 1, avg per task: 4.41s
+[TEXT2TEXT] cost time: 1.60552978515625
+[TEXT2TEXT] cost time: 1.0024898052215576
+[TEXT2TEXT] cost time: 6.011261940002441
+VLM batch processing completed: 31.25s, Tasks: 18, avg per task: 1.74s
+[TEXT2TEXT] cost time: 6.614098787307739
+[TEXT2TEXT] cost time: 1.2061922550201416
+VLM batch processing completed: 2.85s, Tasks: 1, avg per task: 2.85s
+[TEXT2TEXT] cost time: 1.2031970024108887
+Thread 4 Accuracy: 11 / 16 68.74999570312526
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8074696063995361
+[TEXT2TEXT] cost time: 1.8044164180755615
+[TEXT2TEXT] cost time: 3.809028148651123
+VLM batch processing completed: 16.24s, Tasks: 14, avg per task: 1.16s
+[TEXT2TEXT] cost time: 3.8072948455810547
+[TEXT2TEXT] cost time: 1.202280044555664
+VLM batch processing completed: 2.88s, Tasks: 1, avg per task: 2.88s
+[TEXT2TEXT] cost time: 1.4051179885864258
+Thread 4 Accuracy: 11 / 17 64.70587854671302
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2026538848876953
+[TEXT2TEXT] cost time: 1.4052724838256836
+[TEXT2TEXT] cost time: 3.8084821701049805
+VLM batch processing completed: 55.30s, Tasks: 11, avg per task: 5.03s
+[TEXT2TEXT] cost time: 5.214630842208862
+[TEXT2TEXT] cost time: 1.2029814720153809
+VLM batch processing completed: 7.57s, Tasks: 1, avg per task: 7.57s
+[TEXT2TEXT] cost time: 1.6032817363739014
+VLM batch processing completed: 6.00s, Tasks: 1, avg per task: 6.00s
+[TEXT2TEXT] cost time: 7.011571407318115
+VLM batch processing completed: 6.52s, Tasks: 1, avg per task: 6.52s
+[TEXT2TEXT] cost time: 4.00899600982666
+Thread 4 Accuracy: 12 / 18 66.66666296296316
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 2.0055878162384033
+[TEXT2TEXT] cost time: 1.8040995597839355
+[TEXT2TEXT] cost time: 12.225983142852783
+VLM batch processing completed: 36.01s, Tasks: 25, avg per task: 1.44s
+[TEXT2TEXT] cost time: 3.0104339122772217
+[TEXT2TEXT] cost time: 1.2033424377441406
+VLM batch processing completed: 2.16s, Tasks: 1, avg per task: 2.16s
+[TEXT2TEXT] cost time: 1.0026447772979736
+VLM batch processing completed: 2.35s, Tasks: 1, avg per task: 2.35s
+[TEXT2TEXT] cost time: 1.203155517578125
+VLM batch processing completed: 3.08s, Tasks: 1, avg per task: 3.08s
+[TEXT2TEXT] cost time: 3.209137439727783
+VLM batch processing completed: 2.08s, Tasks: 1, avg per task: 2.08s
+[TEXT2TEXT] cost time: 2.404109239578247
+Thread 4 Accuracy: 13 / 19 68.42104903047111
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2025244235992432
+[TEXT2TEXT] cost time: 5.212375640869141
+[TEXT2TEXT] cost time: 9.415956497192383
+VLM batch processing completed: 54.71s, Tasks: 25, avg per task: 2.19s
+[TEXT2TEXT] cost time: 0.2014620304107666
+[TEXT2TEXT] cost time: 21.2369704246521
+VLM batch processing completed: 6.03s, Tasks: 1, avg per task: 6.03s
+[TEXT2TEXT] cost time: 4.609296560287476
+[TEXT2TEXT] cost time: 1.803377389907837
+[TEXT2TEXT] cost time: 7.819393634796143
+VLM batch processing completed: 34.17s, Tasks: 18, avg per task: 1.90s
+[TEXT2TEXT] cost time: 0.4018228054046631
+[TEXT2TEXT] cost time: 14.429030895233154
+Thread 4 Accuracy: 14 / 20 69.99999650000018
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 2.204925537109375
+[TEXT2TEXT] cost time: 5.00944972038269
+[TEXT2TEXT] cost time: 8.01427936553955
+VLM batch processing completed: 33.83s, Tasks: 20, avg per task: 1.69s
+[TEXT2TEXT] cost time: 4.010619640350342
+[TEXT2TEXT] cost time: 1.2063283920288086
+VLM batch processing completed: 3.33s, Tasks: 1, avg per task: 3.33s
+[TEXT2TEXT] cost time: 1.8038203716278076
+[TEXT2TEXT] cost time: 1.8033297061920166
+[TEXT2TEXT] cost time: 4.407227993011475
+VLM batch processing completed: 21.22s, Tasks: 15, avg per task: 1.41s
+[TEXT2TEXT] cost time: 1.2067773342132568
+[TEXT2TEXT] cost time: 39.457462787628174
+[TEXT2TEXT] cost time: 1.6049137115478516
+[TEXT2TEXT] cost time: 3.6071934700012207
+VLM batch processing completed: 24.23s, Tasks: 16, avg per task: 1.51s
+[TEXT2TEXT] cost time: 2.2038779258728027
+[TEXT2TEXT] cost time: 18.03421378135681
+VLM batch processing completed: 2.70s, Tasks: 1, avg per task: 2.70s
+[TEXT2TEXT] cost time: 2.4045815467834473
+VLM batch processing completed: 2.17s, Tasks: 1, avg per task: 2.17s
+[TEXT2TEXT] cost time: 25.450457334518433
+[TEXT2TEXT] cost time: 1.807570457458496
+[TEXT2TEXT] cost time: 5.810562372207642
+VLM batch processing completed: 28.00s, Tasks: 18, avg per task: 1.56s
+[TEXT2TEXT] cost time: 2.60758376121521
+[TEXT2TEXT] cost time: 23.243247270584106
+Thread 4 Accuracy: 14 / 21 66.66666349206363
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 3.4084134101867676
+[TEXT2TEXT] cost time: 1.4028639793395996
+[TEXT2TEXT] cost time: 7.417960166931152
+VLM batch processing completed: 22.85s, Tasks: 17, avg per task: 1.34s
+[TEXT2TEXT] cost time: 2.4059207439422607
+[TEXT2TEXT] cost time: 1.0048365592956543
+VLM batch processing completed: 2.69s, Tasks: 1, avg per task: 2.69s
+[TEXT2TEXT] cost time: 1.2029244899749756
+Thread 4 Accuracy: 14 / 22 63.63636074380178
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.4020810127258301
+[TEXT2TEXT] cost time: 2.2059719562530518
+[TEXT2TEXT] cost time: 5.617162704467773
+VLM batch processing completed: 23.40s, Tasks: 17, avg per task: 1.38s
+[TEXT2TEXT] cost time: 1.8077521324157715
+[TEXT2TEXT] cost time: 1.0025484561920166
+[TEXT2TEXT] cost time: 1.0023436546325684
+[TEXT2TEXT] cost time: 3.205742597579956
+VLM batch processing completed: 11.56s, Tasks: 12, avg per task: 0.96s
+[TEXT2TEXT] cost time: 1.0027391910552979
+[TEXT2TEXT] cost time: 1.0024325847625732
+[TEXT2TEXT] cost time: 1.2034204006195068
+[TEXT2TEXT] cost time: 3.608198404312134
+VLM batch processing completed: 14.88s, Tasks: 14, avg per task: 1.06s
+[TEXT2TEXT] cost time: 3.4085848331451416
+[TEXT2TEXT] cost time: 0.8025107383728027
+[TEXT2TEXT] cost time: 1.0023918151855469
+[TEXT2TEXT] cost time: 4.40619421005249
+VLM batch processing completed: 20.23s, Tasks: 19, avg per task: 1.06s
+[TEXT2TEXT] cost time: 1.202747106552124
+[TEXT2TEXT] cost time: 13.818107604980469
+VLM batch processing completed: 2.65s, Tasks: 1, avg per task: 2.65s
+[TEXT2TEXT] cost time: 7.611378908157349
+VLM batch processing completed: 4.61s, Tasks: 1, avg per task: 4.61s
+[TEXT2TEXT] cost time: 17.0223069190979
+VLM batch processing completed: 2.90s, Tasks: 1, avg per task: 2.90s
+[TEXT2TEXT] cost time: 5.607956886291504
+VLM batch processing completed: 2.40s, Tasks: 1, avg per task: 2.40s
+[TEXT2TEXT] cost time: 8.013694286346436
+Thread 4 Accuracy: 15 / 23 65.21738846880919
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2026598453521729
+[TEXT2TEXT] cost time: 3.004643678665161
+[TEXT2TEXT] cost time: 3.6055808067321777
+VLM batch processing completed: 13.80s, Tasks: 7, avg per task: 1.97s
+[TEXT2TEXT] cost time: 4.011445999145508
+[TEXT2TEXT] cost time: 2.0039737224578857
+VLM batch processing completed: 3.99s, Tasks: 1, avg per task: 3.99s
+[TEXT2TEXT] cost time: 6.409098386764526
+VLM batch processing completed: 4.08s, Tasks: 1, avg per task: 4.08s
+[TEXT2TEXT] cost time: 1.6025378704071045
+Thread 4 Accuracy: 15 / 24 62.49999739583344
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0023682117462158
+[TEXT2TEXT] cost time: 1.002807855606079
+[TEXT2TEXT] cost time: 6.409389019012451
+VLM batch processing completed: 28.42s, Tasks: 23, avg per task: 1.24s
+[TEXT2TEXT] cost time: 1.0021395683288574
+[TEXT2TEXT] cost time: 2.003706932067871
+VLM batch processing completed: 1.54s, Tasks: 1, avg per task: 1.54s
+[TEXT2TEXT] cost time: 0.8020684719085693
+Thread 4 Accuracy: 16 / 25 63.9999974400001
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8021211624145508
+[TEXT2TEXT] cost time: 2.003706216812134
+[TEXT2TEXT] cost time: 4.6068220138549805
+VLM batch processing completed: 30.55s, Tasks: 27, avg per task: 1.13s
+[TEXT2TEXT] cost time: 0.6023099422454834
+[TEXT2TEXT] cost time: 1.0023865699768066
+[TEXT2TEXT] cost time: 2.003383159637451
+[TEXT2TEXT] cost time: 4.606340646743774
+VLM batch processing completed: 17.20s, Tasks: 13, avg per task: 1.32s
+[TEXT2TEXT] cost time: 1.0022284984588623
+[TEXT2TEXT] cost time: 2.204228401184082
+[TEXT2TEXT] cost time: 1.0028643608093262
+[TEXT2TEXT] cost time: 5.80853009223938
+VLM batch processing completed: 20.34s, Tasks: 17, avg per task: 1.20s
+[TEXT2TEXT] cost time: 1.002579689025879
+[TEXT2TEXT] cost time: 11.41446828842163
+[TEXT2TEXT] cost time: 2.204061508178711
+[TEXT2TEXT] cost time: 4.206110715866089
+VLM batch processing completed: 20.88s, Tasks: 20, avg per task: 1.04s
+[TEXT2TEXT] cost time: 0.8019669055938721
+[TEXT2TEXT] cost time: 16.21955442428589
+[TEXT2TEXT] cost time: 0.8018121719360352
+[TEXT2TEXT] cost time: 3.605100154876709
+VLM batch processing completed: 15.18s, Tasks: 14, avg per task: 1.08s
+[TEXT2TEXT] cost time: 0.6019241809844971
+[TEXT2TEXT] cost time: 2.2038378715515137
+Thread 4 Accuracy: 17 / 26 65.38461286982258
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8068740367889404
+[TEXT2TEXT] cost time: 1.2027866840362549
+[TEXT2TEXT] cost time: 4.005556344985962
+VLM batch processing completed: 21.24s, Tasks: 17, avg per task: 1.25s
+[TEXT2TEXT] cost time: 0.8021242618560791
+[TEXT2TEXT] cost time: 0.6018843650817871
+[TEXT2TEXT] cost time: 0.8019108772277832
+[TEXT2TEXT] cost time: 4.206303596496582
+VLM batch processing completed: 19.93s, Tasks: 20, avg per task: 1.00s
+[TEXT2TEXT] cost time: 1.402946949005127
+[TEXT2TEXT] cost time: 1.0025079250335693
+[TEXT2TEXT] cost time: 5.008554697036743
+[TEXT2TEXT] cost time: 4.6082518100738525
+VLM batch processing completed: 21.68s, Tasks: 21, avg per task: 1.03s
+[TEXT2TEXT] cost time: 2.804757595062256
+[TEXT2TEXT] cost time: 0.0005116462707519531
+[TEXT2TEXT] cost time: 0.0005481243133544922
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 1.001913070678711
+[TEXT2TEXT] cost time: 6.0086989402771
+[TEXT2TEXT] cost time: 4.207889080047607
+VLM batch processing completed: 22.80s, Tasks: 23, avg per task: 0.99s
+[TEXT2TEXT] cost time: 0.8018732070922852
+[TEXT2TEXT] cost time: 1.2024896144866943
+[TEXT2TEXT] cost time: 1.002281665802002
+[TEXT2TEXT] cost time: 4.406245470046997
+VLM batch processing completed: 19.11s, Tasks: 19, avg per task: 1.01s
+[TEXT2TEXT] cost time: 4.0052735805511475
+[TEXT2TEXT] cost time: 1.6036407947540283
+[TEXT2TEXT] cost time: 1.2026853561401367
+[TEXT2TEXT] cost time: 3.404695987701416
+VLM batch processing completed: 15.50s, Tasks: 15, avg per task: 1.03s
+[TEXT2TEXT] cost time: 0.6017856597900391
+[TEXT2TEXT] cost time: 47.054503440856934
+[TEXT2TEXT] cost time: 1.0021696090698242
+[TEXT2TEXT] cost time: 3.4053027629852295
+VLM batch processing completed: 13.24s, Tasks: 16, avg per task: 0.83s
+[TEXT2TEXT] cost time: 1.0022919178009033
+[TEXT2TEXT] cost time: 1.4027354717254639
+VLM batch processing completed: 4.89s, Tasks: 1, avg per task: 4.89s
+[TEXT2TEXT] cost time: 2.8041751384735107
+[TEXT2TEXT] cost time: 0.8018200397491455
+[TEXT2TEXT] cost time: 3.8060600757598877
+VLM batch processing completed: 15.04s, Tasks: 16, avg per task: 0.94s
+[TEXT2TEXT] cost time: 0.40166687965393066
+[TEXT2TEXT] cost time: 1.0024816989898682
+[TEXT2TEXT] cost time: 1.0021016597747803
+[TEXT2TEXT] cost time: 5.808025360107422
+VLM batch processing completed: 16.98s, Tasks: 20, avg per task: 0.85s
+[TEXT2TEXT] cost time: 2.2036924362182617
+[TEXT2TEXT] cost time: 1.2047512531280518
+[TEXT2TEXT] cost time: 1.003161907196045
+[TEXT2TEXT] cost time: 5.808281660079956
+VLM batch processing completed: 27.76s, Tasks: 30, avg per task: 0.93s
+[TEXT2TEXT] cost time: 0.40142226219177246
+[TEXT2TEXT] cost time: 1.202672004699707
+[TEXT2TEXT] cost time: 0.8019979000091553
+[TEXT2TEXT] cost time: 3.405010461807251
+VLM batch processing completed: 21.91s, Tasks: 19, avg per task: 1.15s
+[TEXT2TEXT] cost time: 0.40160536766052246
+[TEXT2TEXT] cost time: 28.033634185791016
+[TEXT2TEXT] cost time: 2.6040050983428955
+[TEXT2TEXT] cost time: 8.011303186416626
+VLM batch processing completed: 23.84s, Tasks: 23, avg per task: 1.04s
+[TEXT2TEXT] cost time: 13.016944408416748
+[TEXT2TEXT] cost time: 9.212314128875732
+VLM batch processing completed: 2.34s, Tasks: 1, avg per task: 2.34s
+[TEXT2TEXT] cost time: 1.2027299404144287
+VLM batch processing completed: 2.48s, Tasks: 1, avg per task: 2.48s
+[TEXT2TEXT] cost time: 2.0035552978515625
+[TEXT2TEXT] cost time: 0.0011610984802246094
+[TEXT2TEXT] cost time: 0.0011181831359863281
+VLM batch processing completed: 18.60s, Tasks: 19, avg per task: 0.98s
+[TEXT2TEXT] cost time: 0.8017983436584473
+[TEXT2TEXT] cost time: 1.803253412246704
+[TEXT2TEXT] cost time: 0.8018348217010498
+[TEXT2TEXT] cost time: 3.805424213409424
+VLM batch processing completed: 13.20s, Tasks: 16, avg per task: 0.83s
+[TEXT2TEXT] cost time: 1.001979112625122
+[TEXT2TEXT] cost time: 2.8086071014404297
+VLM batch processing completed: 2.21s, Tasks: 1, avg per task: 2.21s
+[TEXT2TEXT] cost time: 8.010462999343872
+VLM batch processing completed: 1.85s, Tasks: 1, avg per task: 1.85s
+[TEXT2TEXT] cost time: 2.4055557250976562
+[TEXT2TEXT] cost time: 0.8024733066558838
+[TEXT2TEXT] cost time: 4.005949020385742
+VLM batch processing completed: 18.79s, Tasks: 17, avg per task: 1.11s
+[TEXT2TEXT] cost time: 0.4023306369781494
+Thread 4 Accuracy: 17 / 27 62.96296063100145
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0027940273284912
+[TEXT2TEXT] cost time: 2.4050421714782715
+[TEXT2TEXT] cost time: 15.419361591339111
+VLM batch processing completed: 82.81s, Tasks: 56, avg per task: 1.48s
+[TEXT2TEXT] cost time: 0.8019769191741943
+[TEXT2TEXT] cost time: 0.0005712509155273438
+[TEXT2TEXT] cost time: 0.0004906654357910156
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 1.402580738067627
+[TEXT2TEXT] cost time: 1.6032249927520752
+[TEXT2TEXT] cost time: 3.8060338497161865
+VLM batch processing completed: 3.64s, Tasks: 1, avg per task: 3.64s
+[TEXT2TEXT] cost time: 0.6018621921539307
+[TEXT2TEXT] cost time: 0.0005156993865966797
+[TEXT2TEXT] cost time: 0.0005106925964355469
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 1.402841329574585
+VLM batch processing completed: 5.03s, Tasks: 1, avg per task: 5.03s
+[TEXT2TEXT] cost time: 1.803877830505371
+[TEXT2TEXT] cost time: 3.6057534217834473
+[TEXT2TEXT] cost time: 2.804936647415161
+VLM batch processing completed: 14.20s, Tasks: 10, avg per task: 1.42s
+[TEXT2TEXT] cost time: 1.2028348445892334
+[TEXT2TEXT] cost time: 1.0023472309112549
+[TEXT2TEXT] cost time: 2.0035510063171387
+[TEXT2TEXT] cost time: 3.4051785469055176
+VLM batch processing completed: 21.40s, Tasks: 14, avg per task: 1.53s
+[TEXT2TEXT] cost time: 2.003713607788086
+[TEXT2TEXT] cost time: 2.2040598392486572
+[TEXT2TEXT] cost time: 2.0035219192504883
+[TEXT2TEXT] cost time: 3.605032205581665
+VLM batch processing completed: 17.11s, Tasks: 11, avg per task: 1.56s
+[TEXT2TEXT] cost time: 2.203758478164673
+[TEXT2TEXT] cost time: 1.0026841163635254
+[TEXT2TEXT] cost time: 4.406641483306885
+[TEXT2TEXT] cost time: 4.00615382194519
+VLM batch processing completed: 25.91s, Tasks: 17, avg per task: 1.52s
+[TEXT2TEXT] cost time: 1.803067684173584
+[TEXT2TEXT] cost time: 1.0023036003112793
+[TEXT2TEXT] cost time: 4.607327699661255
+[TEXT2TEXT] cost time: 5.808581829071045
+VLM batch processing completed: 39.53s, Tasks: 26, avg per task: 1.52s
+[TEXT2TEXT] cost time: 0.6016871929168701
+[TEXT2TEXT] cost time: 5.4077231884002686
+VLM batch processing completed: 3.98s, Tasks: 1, avg per task: 3.98s
+[TEXT2TEXT] cost time: 57.86812090873718
+Thread 4 Accuracy: 18 / 28 64.285711989796
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 4.6067421436309814
+[TEXT2TEXT] cost time: 2.6050994396209717
+[TEXT2TEXT] cost time: 11.414827108383179
+VLM batch processing completed: 16.79s, Tasks: 11, avg per task: 1.53s
+[TEXT2TEXT] cost time: 2.203749418258667
+[TEXT2TEXT] cost time: 4.405762434005737
+VLM batch processing completed: 2.93s, Tasks: 1, avg per task: 2.93s
+[TEXT2TEXT] cost time: 1.6034369468688965
+VLM batch processing completed: 2.61s, Tasks: 1, avg per task: 2.61s
+[TEXT2TEXT] cost time: 1.4027678966522217
+VLM batch processing completed: 3.20s, Tasks: 1, avg per task: 3.20s
+[TEXT2TEXT] cost time: 7.409846782684326
+VLM batch processing completed: 2.48s, Tasks: 1, avg per task: 2.48s
+[TEXT2TEXT] cost time: 35.24300146102905
+VLM batch processing completed: 2.85s, Tasks: 1, avg per task: 2.85s
+[TEXT2TEXT] cost time: 2.8045310974121094
+VLM batch processing completed: 3.03s, Tasks: 1, avg per task: 3.03s
+[TEXT2TEXT] cost time: 1.4028706550598145
+VLM batch processing completed: 2.50s, Tasks: 1, avg per task: 2.50s
+[TEXT2TEXT] cost time: 1.2026753425598145
+VLM batch processing completed: 2.99s, Tasks: 1, avg per task: 2.99s
+[TEXT2TEXT] cost time: 1.6031222343444824
+VLM batch processing completed: 3.15s, Tasks: 1, avg per task: 3.15s
+[TEXT2TEXT] cost time: 1.803910255432129
+VLM batch processing completed: 3.52s, Tasks: 1, avg per task: 3.52s
+[TEXT2TEXT] cost time: 1.2025055885314941
+Thread 4 Accuracy: 19 / 29 65.51723912009521
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8023581504821777
+[TEXT2TEXT] cost time: 0.8022189140319824
+[TEXT2TEXT] cost time: 5.207732439041138
+VLM batch processing completed: 82.56s, Tasks: 30, avg per task: 2.75s
+[TEXT2TEXT] cost time: 2.204685926437378
+[TEXT2TEXT] cost time: 3.8056323528289795
+VLM batch processing completed: 2.88s, Tasks: 1, avg per task: 2.88s
+[TEXT2TEXT] cost time: 1.0021867752075195
+Thread 4 Accuracy: 20 / 30 66.6666644444445
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8020260334014893
+VLM batch processing completed: 3.93s, Tasks: 1, avg per task: 3.93s
+[TEXT2TEXT] cost time: 1.4032492637634277
+[TEXT2TEXT] cost time: 1.2025516033172607
+[TEXT2TEXT] cost time: 5.407768249511719
+VLM batch processing completed: 59.82s, Tasks: 24, avg per task: 2.49s
+[TEXT2TEXT] cost time: 0.6021227836608887
+[TEXT2TEXT] cost time: 1.8034183979034424
+[TEXT2TEXT] cost time: 0.8021645545959473
+[TEXT2TEXT] cost time: 4.20632266998291
+VLM batch processing completed: 46.10s, Tasks: 19, avg per task: 2.43s
+[TEXT2TEXT] cost time: 8.863515615463257
+[TEXT2TEXT] cost time: 1.602973222732544
+[TEXT2TEXT] cost time: 1.002234697341919
+[TEXT2TEXT] cost time: 4.40690279006958
+VLM batch processing completed: 38.88s, Tasks: 16, avg per task: 2.43s
+[TEXT2TEXT] cost time: 1.4028995037078857
+[TEXT2TEXT] cost time: 22.628193378448486
+Thread 4 Accuracy: 21 / 31 67.74193329864731
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 4.606565713882446
+VLM batch processing completed: 4.26s, Tasks: 1, avg per task: 4.26s
+[TEXT2TEXT] cost time: 1.2027897834777832
+Thread 4 Accuracy: 22 / 32 68.74999785156257
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2028040885925293
+[TEXT2TEXT] cost time: 1.402968168258667
+[TEXT2TEXT] cost time: 27.83473253250122
+VLM batch processing completed: 21.88s, Tasks: 18, avg per task: 1.22s
+[TEXT2TEXT] cost time: 1.402555227279663
+[TEXT2TEXT] cost time: 0.6019923686981201
+[TEXT2TEXT] cost time: 1.2022287845611572
+[TEXT2TEXT] cost time: 4.40651798248291
+VLM batch processing completed: 20.70s, Tasks: 17, avg per task: 1.22s
+[TEXT2TEXT] cost time: 1.002101182937622
+[TEXT2TEXT] cost time: 2.6041927337646484
+[TEXT2TEXT] cost time: 1.0021865367889404
+[TEXT2TEXT] cost time: 5.407205581665039
+VLM batch processing completed: 12.90s, Tasks: 13, avg per task: 0.99s
+[TEXT2TEXT] cost time: 0.6020321846008301
+[TEXT2TEXT] cost time: 0.6017498970031738
+[TEXT2TEXT] cost time: 1.202406644821167
+[TEXT2TEXT] cost time: 4.207339525222778
+VLM batch processing completed: 17.28s, Tasks: 13, avg per task: 1.33s
+[TEXT2TEXT] cost time: 1.2029204368591309
+[TEXT2TEXT] cost time: 13.81783652305603
+Thread 4 Accuracy: 23 / 33 69.69696758494038
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 4.005993604660034
+VLM batch processing completed: 3.25s, Tasks: 1, avg per task: 3.25s
+[TEXT2TEXT] cost time: 1.2027273178100586
+Thread 4 Accuracy: 24 / 34 70.58823321799315
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8020181655883789
+VLM batch processing completed: 5.54s, Tasks: 1, avg per task: 5.54s
+[TEXT2TEXT] cost time: 1.202289342880249
+[TEXT2TEXT] cost time: 1.20225191116333
+[TEXT2TEXT] cost time: 18.42363953590393
+VLM batch processing completed: 177.89s, Tasks: 66, avg per task: 2.70s
+[TEXT2TEXT] cost time: 1.6031379699707031
+[TEXT2TEXT] cost time: 1.0019128322601318
+VLM batch processing completed: 5.34s, Tasks: 1, avg per task: 5.34s
+[TEXT2TEXT] cost time: 27.43401575088501
+Thread 4 Accuracy: 25 / 35 71.42856938775518
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2023532390594482
+[TEXT2TEXT] cost time: 1.2027602195739746
+[TEXT2TEXT] cost time: 4.206459283828735
+VLM batch processing completed: 16.58s, Tasks: 14, avg per task: 1.18s
+[TEXT2TEXT] cost time: 0.6017274856567383
+[TEXT2TEXT] cost time: 0.0005593299865722656
+[TEXT2TEXT] cost time: 0.00047087669372558594
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 0.4013814926147461
+Thread 4 Accuracy: 25 / 36 69.44444251543216
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8020925521850586
+[TEXT2TEXT] cost time: 1.0020956993103027
+[TEXT2TEXT] cost time: 3.604973793029785
+VLM batch processing completed: 24.19s, Tasks: 19, avg per task: 1.27s
+[TEXT2TEXT] cost time: 0.6019668579101562
+[TEXT2TEXT] cost time: 0.8023366928100586
+[TEXT2TEXT] cost time: 0.6017110347747803
+[TEXT2TEXT] cost time: 3.0047783851623535
+VLM batch processing completed: 15.61s, Tasks: 14, avg per task: 1.11s
+[TEXT2TEXT] cost time: 5.40756630897522
+[TEXT2TEXT] cost time: 0.8023207187652588
+[TEXT2TEXT] cost time: 0.8020408153533936
+[TEXT2TEXT] cost time: 5.408574104309082
+VLM batch processing completed: 26.27s, Tasks: 23, avg per task: 1.14s
+[TEXT2TEXT] cost time: 4.807176351547241
+[TEXT2TEXT] cost time: 0.6016807556152344
+[TEXT2TEXT] cost time: 4.606898546218872
+[TEXT2TEXT] cost time: 3.406080722808838
+VLM batch processing completed: 15.33s, Tasks: 14, avg per task: 1.09s
+[TEXT2TEXT] cost time: 1.0023763179779053
+[TEXT2TEXT] cost time: 0.6020593643188477
+[TEXT2TEXT] cost time: 0.8019099235534668
+[TEXT2TEXT] cost time: 2.203643321990967
+VLM batch processing completed: 9.93s, Tasks: 10, avg per task: 0.99s
+[TEXT2TEXT] cost time: 0.801865816116333
+[TEXT2TEXT] cost time: 1.6032183170318604
+VLM batch processing completed: 6.87s, Tasks: 1, avg per task: 6.87s
+[TEXT2TEXT] cost time: 4.606266021728516
+[TEXT2TEXT] cost time: 0.6017735004425049
+[TEXT2TEXT] cost time: 2.8040611743927
+VLM batch processing completed: 13.82s, Tasks: 13, avg per task: 1.06s
+[TEXT2TEXT] cost time: 5.007432699203491
+[TEXT2TEXT] cost time: 56.666279554367065
+VLM batch processing completed: 4.99s, Tasks: 1, avg per task: 4.99s
+[TEXT2TEXT] cost time: 55.66654419898987
+VLM batch processing completed: 6.89s, Tasks: 1, avg per task: 6.89s
+[TEXT2TEXT] cost time: 50.86185050010681
+Thread 4 Accuracy: 26 / 37 70.27026837107383
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 3.0050086975097656
+[TEXT2TEXT] cost time: 1.0022926330566406
+[TEXT2TEXT] cost time: 3.2047157287597656
+VLM batch processing completed: 13.15s, Tasks: 12, avg per task: 1.10s
+[TEXT2TEXT] cost time: 6.008641719818115
+[TEXT2TEXT] cost time: 0.8017539978027344
+VLM batch processing completed: 4.25s, Tasks: 1, avg per task: 4.25s
+[TEXT2TEXT] cost time: 0.8022465705871582
+Thread 4 Accuracy: 26 / 38 68.42105083102498
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8020927906036377
+[TEXT2TEXT] cost time: 6.6084301471710205
+[TEXT2TEXT] cost time: 2.80587100982666
+VLM batch processing completed: 49.17s, Tasks: 10, avg per task: 4.92s
+[TEXT2TEXT] cost time: 2.003901481628418
+[TEXT2TEXT] cost time: 1.2025117874145508
+VLM batch processing completed: 8.76s, Tasks: 1, avg per task: 8.76s
+[TEXT2TEXT] cost time: 0.6020209789276123
+Thread 4 Accuracy: 27 / 39 69.23076745562136
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2026302814483643
+[TEXT2TEXT] cost time: 1.4027814865112305
+[TEXT2TEXT] cost time: 6.809486150741577
+VLM batch processing completed: 38.29s, Tasks: 20, avg per task: 1.91s
+[TEXT2TEXT] cost time: 1.4026587009429932
+[TEXT2TEXT] cost time: 27.250420331954956
+VLM batch processing completed: 3.06s, Tasks: 1, avg per task: 3.06s
+[TEXT2TEXT] cost time: 1.402669906616211
+VLM batch processing completed: 3.27s, Tasks: 1, avg per task: 3.27s
+[TEXT2TEXT] cost time: 0.6018776893615723
+Thread 4 Accuracy: 27 / 40 67.49999831250004
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.6029484272003174
+[TEXT2TEXT] cost time: 8.410758018493652
+[TEXT2TEXT] cost time: 6.60839056968689
+VLM batch processing completed: 45.44s, Tasks: 25, avg per task: 1.82s
+[TEXT2TEXT] cost time: 2.404364824295044
+[TEXT2TEXT] cost time: 1.00221848487854
+VLM batch processing completed: 2.99s, Tasks: 1, avg per task: 2.99s
+[TEXT2TEXT] cost time: 1.8033194541931152
+VLM batch processing completed: 4.42s, Tasks: 1, avg per task: 4.42s
+[TEXT2TEXT] cost time: 1.6030285358428955
+VLM batch processing completed: 2.89s, Tasks: 1, avg per task: 2.89s
+[TEXT2TEXT] cost time: 1.402977466583252
+VLM batch processing completed: 3.06s, Tasks: 1, avg per task: 3.06s
+[TEXT2TEXT] cost time: 6.008399248123169
+VLM batch processing completed: 2.73s, Tasks: 1, avg per task: 2.73s
+[TEXT2TEXT] cost time: 1.6073956489562988
+VLM batch processing completed: 3.07s, Tasks: 1, avg per task: 3.07s
+[TEXT2TEXT] cost time: 5.608402729034424
+VLM batch processing completed: 3.28s, Tasks: 1, avg per task: 3.28s
+[TEXT2TEXT] cost time: 1.202667474746704
+VLM batch processing completed: 2.79s, Tasks: 1, avg per task: 2.79s
+[TEXT2TEXT] cost time: 1.6032640933990479
+VLM batch processing completed: 3.44s, Tasks: 1, avg per task: 3.44s
+[TEXT2TEXT] cost time: 2.804527759552002
+[TEXT2TEXT] cost time: 2.003002166748047
+[TEXT2TEXT] cost time: 3.407231330871582
+VLM batch processing completed: 16.82s, Tasks: 11, avg per task: 1.53s
+[TEXT2TEXT] cost time: 8.01035189628601
+[TEXT2TEXT] cost time: 57.269638538360596
+[TEXT2TEXT] cost time: 43.65383529663086
+Thread 4 Accuracy: 27 / 41 65.85365693039861
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 2.4040753841400146
+[TEXT2TEXT] cost time: 1.2025196552276611
+[TEXT2TEXT] cost time: 14.81953763961792
+VLM batch processing completed: 2.99s, Tasks: 1, avg per task: 2.99s
+[TEXT2TEXT] cost time: 5.809574842453003
+[TEXT2TEXT] cost time: 14.418977499008179
+VLM batch processing completed: 2.54s, Tasks: 1, avg per task: 2.54s
+[TEXT2TEXT] cost time: 3.4053683280944824
+VLM batch processing completed: 3.43s, Tasks: 1, avg per task: 3.43s
+[TEXT2TEXT] cost time: 5.407546043395996
+Thread 4 Accuracy: 27 / 42 64.28571275510208
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2023041248321533
+[TEXT2TEXT] cost time: 0.8021640777587891
+[TEXT2TEXT] cost time: 16.621936082839966
+VLM batch processing completed: 43.01s, Tasks: 23, avg per task: 1.87s
+[TEXT2TEXT] cost time: 5.007961988449097
+[TEXT2TEXT] cost time: 2.2029895782470703
+VLM batch processing completed: 3.25s, Tasks: 1, avg per task: 3.25s
+[TEXT2TEXT] cost time: 1.0023777484893799
+Thread 4 Accuracy: 27 / 43 62.79069621416986
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 3.806584119796753
+[TEXT2TEXT] cost time: 1.0023000240325928
+[TEXT2TEXT] cost time: 6.009082317352295
+VLM batch processing completed: 12.09s, Tasks: 11, avg per task: 1.10s
+[TEXT2TEXT] cost time: 2.40443754196167
+[TEXT2TEXT] cost time: 0.8020238876342773
+[TEXT2TEXT] cost time: 0.801793098449707
+[TEXT2TEXT] cost time: 4.606382846832275
+VLM batch processing completed: 15.15s, Tasks: 16, avg per task: 0.95s
+[TEXT2TEXT] cost time: 0.4015219211578369
+[TEXT2TEXT] cost time: 9.011783838272095
+[TEXT2TEXT] cost time: 1.0022003650665283
+[TEXT2TEXT] cost time: 5.607743978500366
+INFO 10-11 08:30:21 [__init__.py:235] Automatically detected platform cuda.
+Save path: ./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+Max workers: 1
+498 502
+Checking valid data...
+Valid data count: 84
+Total samples: 84, Already processed: 0, To process: 84
+Starting multiprocessing with 1 workers...
+Initializing VLLM server with conservative settings...
+INFO 10-11 08:30:41 [config.py:1604] Using max model len 50000
+INFO 10-11 08:30:42 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-11 08:30:42 [core.py:572] Waiting for init message from front-end.
+INFO 10-11 08:30:42 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=50000, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-11 08:30:48 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-11 08:30:49 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-11 08:30:49 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-11 08:30:49 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-11 08:30:49 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-11 08:30:49 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-11 08:32:33 [default_loader.py:262] Loading weights took 103.92 seconds
+INFO 10-11 08:32:34 [gpu_model_runner.py:1892] Model loading took 15.6271 GiB and 104.235860 seconds
+INFO 10-11 08:32:34 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 32768 tokens, and profiled with 1 video items of the maximum feature size.
+INFO 10-11 08:32:45 [gpu_worker.py:255] Available KV cache memory: 51.70 GiB
+INFO 10-11 08:32:46 [kv_cache_utils.py:833] GPU KV cache size: 968,048 tokens
+INFO 10-11 08:32:46 [kv_cache_utils.py:837] Maximum concurrency for 50,000 tokens per request: 19.36x
+INFO 10-11 08:32:46 [core.py:193] init engine (profile, create kv cache, warmup model) took 11.66 seconds
+[TEXT2TEXT] cost time: 1.202826976776123
+[TEXT2TEXT] cost time: 1.6027655601501465
+[TEXT2TEXT] cost time: 18.021692991256714
+VLM batch processing completed: 107.75s, Tasks: 57, avg per task: 1.89s
+[TEXT2TEXT] cost time: 6.008686780929565
+[TEXT2TEXT] cost time: 4.406672477722168
+VLM batch processing completed: 3.09s, Tasks: 1, avg per task: 3.09s
+[TEXT2TEXT] cost time: 4.006475210189819
+VLM batch processing completed: 2.83s, Tasks: 1, avg per task: 2.83s
+[TEXT2TEXT] cost time: 1.6038780212402344
+Thread 4 Accuracy: 1 / 1 99.99990000010001
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.403017520904541
+VLM batch processing completed: 6.13s, Tasks: 1, avg per task: 6.13s
+[TEXT2TEXT] cost time: 1.2029035091400146
+[TEXT2TEXT] cost time: 1.00407075881958
+[TEXT2TEXT] cost time: 6.009215354919434
+VLM batch processing completed: 35.74s, Tasks: 17, avg per task: 2.10s
+[TEXT2TEXT] cost time: 2.8054769039154053
+[TEXT2TEXT] cost time: 0.8019354343414307
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+[TEXT2TEXT] cost time: 2.4053335189819336
+VLM batch processing completed: 19.48s, Tasks: 10, avg per task: 1.95s
+[TEXT2TEXT] cost time: 1.0021982192993164
+[TEXT2TEXT] cost time: 37.24528360366821
+[TEXT2TEXT] cost time: 1.8029954433441162
+[TEXT2TEXT] cost time: 5.2074596881866455
+VLM batch processing completed: 55.19s, Tasks: 27, avg per task: 2.04s
+[TEXT2TEXT] cost time: 3.005032539367676
+[TEXT2TEXT] cost time: 3.605921745300293
+[TEXT2TEXT] cost time: 1.0022304058074951
+[TEXT2TEXT] cost time: 3.8062262535095215
+VLM batch processing completed: 36.27s, Tasks: 19, avg per task: 1.91s
+[TEXT2TEXT] cost time: 2.003554105758667
+[TEXT2TEXT] cost time: 5.809460878372192
+[TEXT2TEXT] cost time: 4.807379245758057
+[TEXT2TEXT] cost time: 8.213218927383423
+VLM batch processing completed: 52.73s, Tasks: 31, avg per task: 1.70s
+[TEXT2TEXT] cost time: 4.005893707275391
+[TEXT2TEXT] cost time: 0.6017045974731445
+[TEXT2TEXT] cost time: 6.6099443435668945
+[TEXT2TEXT] cost time: 6.210626602172852
+VLM batch processing completed: 67.23s, Tasks: 34, avg per task: 1.98s
+[TEXT2TEXT] cost time: 1.4035961627960205
+[TEXT2TEXT] cost time: 31.63938570022583
+Thread 4 Accuracy: 2 / 2 99.999950000025
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 3.2048234939575195
+VLM batch processing completed: 8.09s, Tasks: 1, avg per task: 8.09s
+[TEXT2TEXT] cost time: 0.40186381340026855
+Thread 4 Accuracy: 3 / 3 99.99996666667778
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0024514198303223
+[TEXT2TEXT] cost time: 2.405428886413574
+[TEXT2TEXT] cost time: 3.4055559635162354
+VLM batch processing completed: 37.97s, Tasks: 19, avg per task: 2.00s
+[TEXT2TEXT] cost time: 2.203558921813965
+[TEXT2TEXT] cost time: 1.4028100967407227
+VLM batch processing completed: 3.08s, Tasks: 1, avg per task: 3.08s
+[TEXT2TEXT] cost time: 3.0053372383117676
+VLM batch processing completed: 3.15s, Tasks: 1, avg per task: 3.15s
+[TEXT2TEXT] cost time: 3.0063085556030273
+Thread 4 Accuracy: 3 / 4 74.9999812500047
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.405742883682251
+VLM batch processing completed: 9.82s, Tasks: 1, avg per task: 9.82s
+[TEXT2TEXT] cost time: 9.211881399154663
+Thread 4 Accuracy: 3 / 5 59.9999880000024
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.002183198928833
+[TEXT2TEXT] cost time: 14.017138004302979
+[TEXT2TEXT] cost time: 4.005702257156372
+VLM batch processing completed: 50.12s, Tasks: 21, avg per task: 2.39s
+[TEXT2TEXT] cost time: 0.40146446228027344
+[TEXT2TEXT] cost time: 1.6030151844024658
+[TEXT2TEXT] cost time: 1.002181053161621
+[TEXT2TEXT] cost time: 3.4057602882385254
+The video segment for <video_reader>5:0</video_reader> is empty. Please check the provided timestamps and ensure they are within the video's duration and the end_time_stamp is no less than the begin_time_stamp.
+The video segment for <video_reader>7:0</video_reader> is empty. Please check the provided timestamps and ensure they are within the video's duration and the end_time_stamp is no less than the begin_time_stamp.
+VLM batch processing completed: 29.92s, Tasks: 10, avg per task: 2.99s
+[TEXT2TEXT] cost time: 10.013499021530151
+[TEXT2TEXT] cost time: 1.8030195236206055
+[TEXT2TEXT] cost time: 8.012378215789795
+[TEXT2TEXT] cost time: 6.409961462020874
+VLM batch processing completed: 48.18s, Tasks: 24, avg per task: 2.01s
+[TEXT2TEXT] cost time: 7.411266088485718
+[TEXT2TEXT] cost time: 2.40434193611145
+VLM batch processing completed: 3.90s, Tasks: 1, avg per task: 3.90s
+[TEXT2TEXT] cost time: 0.8021135330200195
+VLM batch processing completed: 3.42s, Tasks: 1, avg per task: 3.42s
+[TEXT2TEXT] cost time: 3.205338716506958
+VLM batch processing completed: 3.59s, Tasks: 1, avg per task: 3.59s
+[TEXT2TEXT] cost time: 1.8033170700073242
+Thread 4 Accuracy: 4 / 6 66.66665555555741
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.202712059020996
+VLM batch processing completed: 2.13s, Tasks: 1, avg per task: 2.13s
+[TEXT2TEXT] cost time: 8.411948204040527
+[TEXT2TEXT] cost time: 6.608965158462524
+[TEXT2TEXT] cost time: 16.02122688293457
+VLM batch processing completed: 3.30s, Tasks: 1, avg per task: 3.30s
+[TEXT2TEXT] cost time: 1.202977180480957
+[TEXT2TEXT] cost time: 1.4034311771392822
+VLM batch processing completed: 3.38s, Tasks: 1, avg per task: 3.38s
+[TEXT2TEXT] cost time: 8.412065505981445
+Thread 4 Accuracy: 5 / 7 71.42856122449125
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8021097183227539
+VLM batch processing completed: 4.51s, Tasks: 1, avg per task: 4.51s
+[TEXT2TEXT] cost time: 0.6026053428649902
+Thread 4 Accuracy: 6 / 8 74.99999062500117
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8019366264343262
+VLM batch processing completed: 2.95s, Tasks: 1, avg per task: 2.95s
+[TEXT2TEXT] cost time: 0.6017570495605469
+Thread 4 Accuracy: 7 / 9 77.77776913580342
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.6023352146148682
+[TEXT2TEXT] cost time: 10.81353497505188
+[TEXT2TEXT] cost time: 3.005014419555664
+VLM batch processing completed: 18.87s, Tasks: 11, avg per task: 1.72s
+[TEXT2TEXT] cost time: 6.007594347000122
+[TEXT2TEXT] cost time: 16.420156717300415
+VLM batch processing completed: 3.49s, Tasks: 1, avg per task: 3.49s
+[TEXT2TEXT] cost time: 1.4062132835388184
+VLM batch processing completed: 3.58s, Tasks: 1, avg per task: 3.58s
+[TEXT2TEXT] cost time: 1.2024271488189697
+VLM batch processing completed: 3.02s, Tasks: 1, avg per task: 3.02s
+[TEXT2TEXT] cost time: 1.0039207935333252
+VLM batch processing completed: 3.29s, Tasks: 1, avg per task: 3.29s
+[TEXT2TEXT] cost time: 0.8020920753479004
+VLM batch processing completed: 3.33s, Tasks: 1, avg per task: 3.33s
+[TEXT2TEXT] cost time: 1.00276517868042
+Thread 4 Accuracy: 8 / 10 79.9999920000008
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8020908832550049
+[TEXT2TEXT] cost time: 3.205061674118042
+[TEXT2TEXT] cost time: 10.215276718139648
+VLM batch processing completed: 99.25s, Tasks: 62, avg per task: 1.60s
+[TEXT2TEXT] cost time: 8.812449932098389
+[TEXT2TEXT] cost time: 2.003575325012207
+[TEXT2TEXT] cost time: 1.002199411392212
+[TEXT2TEXT] cost time: 4.806794166564941
+VLM batch processing completed: 34.01s, Tasks: 22, avg per task: 1.55s
+[TEXT2TEXT] cost time: 0.8025119304656982
+[TEXT2TEXT] cost time: 12.817075490951538
+VLM batch processing completed: 3.31s, Tasks: 1, avg per task: 3.31s
+[TEXT2TEXT] cost time: 15.018718957901001
+VLM batch processing completed: 2.18s, Tasks: 1, avg per task: 2.18s
+[TEXT2TEXT] cost time: 1.0018937587738037
+VLM batch processing completed: 2.71s, Tasks: 1, avg per task: 2.71s
+[TEXT2TEXT] cost time: 13.218826293945312
+[TEXT2TEXT] cost time: 1.0020439624786377
+[TEXT2TEXT] cost time: 5.607714414596558
+VLM batch processing completed: 46.10s, Tasks: 27, avg per task: 1.71s
+[TEXT2TEXT] cost time: 1.003345012664795
+[TEXT2TEXT] cost time: 57.46988224983215
+[TEXT2TEXT] cost time: 61.67340874671936
+[TEXT2TEXT] cost time: 27.23766803741455
+Thread 4 Accuracy: 8 / 11 72.72726611570309
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.4031155109405518
+[TEXT2TEXT] cost time: 2.4039416313171387
+[TEXT2TEXT] cost time: 3.404820680618286
+VLM batch processing completed: 16.23s, Tasks: 14, avg per task: 1.16s
+[TEXT2TEXT] cost time: 7.610121250152588
+[TEXT2TEXT] cost time: 1.8040590286254883
+VLM batch processing completed: 3.57s, Tasks: 2, avg per task: 1.79s
+[TEXT2TEXT] cost time: 1.2041375637054443
+Thread 4 Accuracy: 9 / 12 74.99999375000053
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0024795532226562
+[TEXT2TEXT] cost time: 1.002650499343872
+[TEXT2TEXT] cost time: 4.60722541809082
+VLM batch processing completed: 49.52s, Tasks: 21, avg per task: 2.36s
+[TEXT2TEXT] cost time: 4.2063562870025635
+[TEXT2TEXT] cost time: 1.2023398876190186
+VLM batch processing completed: 3.15s, Tasks: 1, avg per task: 3.15s
+[TEXT2TEXT] cost time: 2.4041638374328613
+Thread 4 Accuracy: 10 / 13 76.92307100591762
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8029839992523193
+[TEXT2TEXT] cost time: 16.221492767333984
+[TEXT2TEXT] cost time: 21.62725806236267
+VLM batch processing completed: 20.62s, Tasks: 19, avg per task: 1.09s
+[TEXT2TEXT] cost time: 2.2039566040039062
+[TEXT2TEXT] cost time: 0.6022210121154785
+[TEXT2TEXT] cost time: 1.0022127628326416
+[TEXT2TEXT] cost time: 5.207578897476196
+VLM batch processing completed: 30.37s, Tasks: 25, avg per task: 1.21s
+[TEXT2TEXT] cost time: 2.2037041187286377
+[TEXT2TEXT] cost time: 3.0048952102661133
+[TEXT2TEXT] cost time: 1.0023469924926758
+[TEXT2TEXT] cost time: 3.205599546432495
+VLM batch processing completed: 11.35s, Tasks: 11, avg per task: 1.03s
+[TEXT2TEXT] cost time: 2.604419469833374
+[TEXT2TEXT] cost time: 1.8032450675964355
+[TEXT2TEXT] cost time: 3.606928825378418
+[TEXT2TEXT] cost time: 5.007176876068115
+VLM batch processing completed: 15.03s, Tasks: 15, avg per task: 1.00s
+[TEXT2TEXT] cost time: 3.605741500854492
+[TEXT2TEXT] cost time: 1.8030004501342773
+VLM batch processing completed: 2.48s, Tasks: 1, avg per task: 2.48s
+[TEXT2TEXT] cost time: 1.2027831077575684
+VLM batch processing completed: 2.75s, Tasks: 1, avg per task: 2.75s
+[TEXT2TEXT] cost time: 1.4027094841003418
+VLM batch processing completed: 3.24s, Tasks: 1, avg per task: 3.24s
+[TEXT2TEXT] cost time: 1.0018103122711182
+VLM batch processing completed: 2.71s, Tasks: 1, avg per task: 2.71s
+[TEXT2TEXT] cost time: 1.603053092956543
+[TEXT2TEXT] cost time: 7.2115044593811035
+[TEXT2TEXT] cost time: 5.007328510284424
+VLM batch processing completed: 13.03s, Tasks: 16, avg per task: 0.81s
+[TEXT2TEXT] cost time: 4.2062413692474365
+[TEXT2TEXT] cost time: 37.44669008255005
+VLM batch processing completed: 2.81s, Tasks: 1, avg per task: 2.81s
+[TEXT2TEXT] cost time: 7.8112123012542725
+[TEXT2TEXT] cost time: 1.2028155326843262
+[TEXT2TEXT] cost time: 5.008066892623901
+VLM batch processing completed: 12.81s, Tasks: 14, avg per task: 0.91s
+[TEXT2TEXT] cost time: 2.2044527530670166
+[TEXT2TEXT] cost time: 8.011759996414185
+Thread 4 Accuracy: 11 / 14 78.57142295918408
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0025758743286133
+[TEXT2TEXT] cost time: 1.0021681785583496
+[TEXT2TEXT] cost time: 5.407881259918213
+VLM batch processing completed: 22.01s, Tasks: 18, avg per task: 1.22s
+[TEXT2TEXT] cost time: 13.417125463485718
+[TEXT2TEXT] cost time: 1.0021693706512451
+[TEXT2TEXT] cost time: 1.0023014545440674
+[TEXT2TEXT] cost time: 10.023606538772583
+VLM batch processing completed: 22.84s, Tasks: 17, avg per task: 1.34s
+[TEXT2TEXT] cost time: 2.203584671020508
+[TEXT2TEXT] cost time: 1.002274751663208
+[TEXT2TEXT] cost time: 1.403174877166748
+[TEXT2TEXT] cost time: 8.412797212600708
+VLM batch processing completed: 17.35s, Tasks: 16, avg per task: 1.08s
+[TEXT2TEXT] cost time: 0.601841926574707
+[TEXT2TEXT] cost time: 55.666247844696045
+[TEXT2TEXT] cost time: 1.0024471282958984
+[TEXT2TEXT] cost time: 8.41126537322998
+VLM batch processing completed: 28.59s, Tasks: 25, avg per task: 1.14s
+[TEXT2TEXT] cost time: 7.4104180335998535
+[TEXT2TEXT] cost time: 4.006953477859497
+VLM batch processing completed: 2.21s, Tasks: 1, avg per task: 2.21s
+[TEXT2TEXT] cost time: 0.8023116588592529
+VLM batch processing completed: 2.24s, Tasks: 1, avg per task: 2.24s
+[TEXT2TEXT] cost time: 1.402968168258667
+Thread 4 Accuracy: 12 / 15 79.99999466666704
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8021759986877441
+VLM batch processing completed: 4.00s, Tasks: 1, avg per task: 4.00s
+[TEXT2TEXT] cost time: 0.6019597053527832
+Thread 4 Accuracy: 13 / 16 81.24999492187531
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0019588470458984
+[TEXT2TEXT] cost time: 2.2035324573516846
+[TEXT2TEXT] cost time: 5.207648038864136
+VLM batch processing completed: 14.31s, Tasks: 12, avg per task: 1.19s
+[TEXT2TEXT] cost time: 1.6030945777893066
+[TEXT2TEXT] cost time: 1.001896858215332
+VLM batch processing completed: 2.87s, Tasks: 1, avg per task: 2.87s
+[TEXT2TEXT] cost time: 0.8019967079162598
+Thread 4 Accuracy: 13 / 17 76.47058373702448
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2032179832458496
+[TEXT2TEXT] cost time: 3.6059060096740723
+[TEXT2TEXT] cost time: 3.805973529815674
+VLM batch processing completed: 54.55s, Tasks: 11, avg per task: 4.96s
+[TEXT2TEXT] cost time: 16.619840621948242
+[TEXT2TEXT] cost time: 21.426538944244385
+VLM batch processing completed: 7.31s, Tasks: 1, avg per task: 7.31s
+[TEXT2TEXT] cost time: 1.6037697792053223
+VLM batch processing completed: 5.97s, Tasks: 1, avg per task: 5.97s
+[TEXT2TEXT] cost time: 8.611267566680908
+Thread 4 Accuracy: 13 / 18 72.22221820987677
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.202441692352295
+[TEXT2TEXT] cost time: 1.202498197555542
+[TEXT2TEXT] cost time: 4.80743408203125
+VLM batch processing completed: 19.58s, Tasks: 14, avg per task: 1.40s
+[TEXT2TEXT] cost time: 3.6058993339538574
+[TEXT2TEXT] cost time: 1.402700424194336
+VLM batch processing completed: 2.23s, Tasks: 1, avg per task: 2.23s
+[TEXT2TEXT] cost time: 1.8035755157470703
+VLM batch processing completed: 2.36s, Tasks: 1, avg per task: 2.36s
+[TEXT2TEXT] cost time: 1.2026381492614746
+Thread 4 Accuracy: 14 / 19 73.68420664819965
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2024507522583008
+[TEXT2TEXT] cost time: 32.438875675201416
+[TEXT2TEXT] cost time: 9.212554454803467
+VLM batch processing completed: 54.17s, Tasks: 25, avg per task: 2.17s
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+[TEXT2TEXT] cost time: 4.806994438171387
+[TEXT2TEXT] cost time: 3.0063283443450928
+VLM batch processing completed: 5.82s, Tasks: 1, avg per task: 5.82s
+[TEXT2TEXT] cost time: 1.2030539512634277
+[TEXT2TEXT] cost time: 6.609787702560425
+[TEXT2TEXT] cost time: 7.00945782661438
+VLM batch processing completed: 40.43s, Tasks: 20, avg per task: 2.02s
+[TEXT2TEXT] cost time: 0.20128464698791504
+[TEXT2TEXT] cost time: 0.8016741275787354
+VLM batch processing completed: 2.61s, Tasks: 1, avg per task: 2.61s
+[TEXT2TEXT] cost time: 1.603119134902954
+VLM batch processing completed: 4.16s, Tasks: 1, avg per task: 4.16s
+[TEXT2TEXT] cost time: 0.6016068458557129
+Thread 4 Accuracy: 14 / 20 69.99999650000018
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.202834129333496
+[TEXT2TEXT] cost time: 2.6044538021087646
+[TEXT2TEXT] cost time: 16.621025562286377
+VLM batch processing completed: 88.68s, Tasks: 47, avg per task: 1.89s
+[TEXT2TEXT] cost time: 1.0023486614227295
+[TEXT2TEXT] cost time: 26.032524585723877
+Thread 4 Accuracy: 15 / 21 71.42856802721104
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 2.2080554962158203
+[TEXT2TEXT] cost time: 1.60203218460083
+[TEXT2TEXT] cost time: 7.409909248352051
+VLM batch processing completed: 21.35s, Tasks: 17, avg per task: 1.26s
+[TEXT2TEXT] cost time: 1.8032293319702148
+[TEXT2TEXT] cost time: 1.0021588802337646
+VLM batch processing completed: 2.67s, Tasks: 1, avg per task: 2.67s
+[TEXT2TEXT] cost time: 2.0041520595550537
+Thread 4 Accuracy: 15 / 22 68.18181508264477
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.4015665054321289
+[TEXT2TEXT] cost time: 1.402914047241211
+[TEXT2TEXT] cost time: 5.608060121536255
+VLM batch processing completed: 23.25s, Tasks: 17, avg per task: 1.37s
+[TEXT2TEXT] cost time: 1.8030390739440918
+[TEXT2TEXT] cost time: 1.0022039413452148
+[TEXT2TEXT] cost time: 1.0020906925201416
+[TEXT2TEXT] cost time: 3.605790615081787
+VLM batch processing completed: 12.33s, Tasks: 12, avg per task: 1.03s
+[TEXT2TEXT] cost time: 0.8021883964538574
+[TEXT2TEXT] cost time: 1.002401351928711
+[TEXT2TEXT] cost time: 1.002058982849121
+[TEXT2TEXT] cost time: 3.8061695098876953
+VLM batch processing completed: 14.37s, Tasks: 14, avg per task: 1.03s
+[TEXT2TEXT] cost time: 5.207421779632568
+[TEXT2TEXT] cost time: 1.002190351486206
+[TEXT2TEXT] cost time: 1.2025957107543945
+[TEXT2TEXT] cost time: 4.206088542938232
+VLM batch processing completed: 16.22s, Tasks: 19, avg per task: 0.85s
+[TEXT2TEXT] cost time: 0.8018200397491455
+[TEXT2TEXT] cost time: 9.413145303726196
+VLM batch processing completed: 3.22s, Tasks: 1, avg per task: 3.22s
+[TEXT2TEXT] cost time: 12.415463924407959
+Thread 4 Accuracy: 15 / 23 65.21738846880919
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 3.2048017978668213
+[TEXT2TEXT] cost time: 2.8040294647216797
+[TEXT2TEXT] cost time: 11.815039157867432
+VLM batch processing completed: 47.57s, Tasks: 24, avg per task: 1.98s
+[TEXT2TEXT] cost time: 1.0023458003997803
+[TEXT2TEXT] cost time: 2.0033304691314697
+VLM batch processing completed: 3.96s, Tasks: 1, avg per task: 3.96s
+[TEXT2TEXT] cost time: 2.0033557415008545
+VLM batch processing completed: 3.63s, Tasks: 1, avg per task: 3.63s
+[TEXT2TEXT] cost time: 16.42081928253174
+VLM batch processing completed: 3.81s, Tasks: 1, avg per task: 3.81s
+[TEXT2TEXT] cost time: 4.0063722133636475
+Thread 4 Accuracy: 16 / 24 66.666663888889
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 24.83028769493103
+[TEXT2TEXT] cost time: 2.2037580013275146
+[TEXT2TEXT] cost time: 8.211766481399536
+VLM batch processing completed: 21.50s, Tasks: 17, avg per task: 1.26s
+[TEXT2TEXT] cost time: 0.8018884658813477
+[TEXT2TEXT] cost time: 4.005812406539917
+VLM batch processing completed: 1.70s, Tasks: 1, avg per task: 1.70s
+[TEXT2TEXT] cost time: 1.003572702407837
+Thread 4 Accuracy: 17 / 25 67.9999972800001
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8019473552703857
+[TEXT2TEXT] cost time: 1.0023257732391357
+[TEXT2TEXT] cost time: 7.41291069984436
+VLM batch processing completed: 30.44s, Tasks: 27, avg per task: 1.13s
+[TEXT2TEXT] cost time: 0.6016175746917725
+[TEXT2TEXT] cost time: 17.823252201080322
+[TEXT2TEXT] cost time: 2.408186912536621
+[TEXT2TEXT] cost time: 3.2047438621520996
+VLM batch processing completed: 18.79s, Tasks: 13, avg per task: 1.45s
+[TEXT2TEXT] cost time: 34.84954071044922
+[TEXT2TEXT] cost time: 0.40143561363220215
+[TEXT2TEXT] cost time: 18.42215657234192
+[TEXT2TEXT] cost time: 3.8053700923919678
+VLM batch processing completed: 20.32s, Tasks: 17, avg per task: 1.20s
+[TEXT2TEXT] cost time: 0.40142083168029785
+[TEXT2TEXT] cost time: 0.6016521453857422
+[TEXT2TEXT] cost time: 1.0023882389068604
+[TEXT2TEXT] cost time: 3.4058165550231934
+VLM batch processing completed: 19.29s, Tasks: 15, avg per task: 1.29s
+[TEXT2TEXT] cost time: 1.2034251689910889
+[TEXT2TEXT] cost time: 1.4027230739593506
+[TEXT2TEXT] cost time: 0.60154128074646
+[TEXT2TEXT] cost time: 5.207270383834839
+VLM batch processing completed: 25.12s, Tasks: 23, avg per task: 1.09s
+[TEXT2TEXT] cost time: 0.6020138263702393
+[TEXT2TEXT] cost time: 9.41490912437439
+Thread 4 Accuracy: 18 / 26 69.23076656804744
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.6019632816314697
+[TEXT2TEXT] cost time: 1.2029354572296143
+[TEXT2TEXT] cost time: 4.005983591079712
+VLM batch processing completed: 21.01s, Tasks: 17, avg per task: 1.24s
+[TEXT2TEXT] cost time: 0.8026530742645264
+[TEXT2TEXT] cost time: 0.6022496223449707
+[TEXT2TEXT] cost time: 0.8020987510681152
+INFO 10-11 09:36:56 [__init__.py:235] Automatically detected platform cuda.
+Save path: ./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+Max workers: 1
+498 502
+Checking valid data...
+Valid data count: 84
+Loaded 128 previously processed samples
+Total samples: 84, Already processed: 128, To process: 58
+Starting multiprocessing with 1 workers...
+Initializing VLLM server with conservative settings...
+INFO 10-11 09:37:18 [config.py:1604] Using max model len 50000
+INFO 10-11 09:37:19 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-11 09:37:20 [core.py:572] Waiting for init message from front-end.
+INFO 10-11 09:37:20 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=50000, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-11 09:37:25 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-11 09:37:25 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-11 09:37:26 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-11 09:37:26 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-11 09:37:26 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-11 09:37:26 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-11 09:39:10 [default_loader.py:262] Loading weights took 104.11 seconds
+INFO 10-11 09:39:11 [gpu_model_runner.py:1892] Model loading took 15.6271 GiB and 104.365855 seconds
+INFO 10-11 09:39:11 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 32768 tokens, and profiled with 1 video items of the maximum feature size.
+INFO 10-11 09:39:22 [gpu_worker.py:255] Available KV cache memory: 51.70 GiB
+INFO 10-11 09:39:22 [kv_cache_utils.py:833] GPU KV cache size: 968,048 tokens
+INFO 10-11 09:39:22 [kv_cache_utils.py:837] Maximum concurrency for 50,000 tokens per request: 19.36x
+INFO 10-11 09:39:22 [core.py:193] init engine (profile, create kv cache, warmup model) took 10.99 seconds
+[TEXT2TEXT] cost time: 0.806452751159668
+[TEXT2TEXT] cost time: 0.8020572662353516
+[TEXT2TEXT] cost time: 7.210620641708374
+VLM batch processing completed: 26.96s, Tasks: 17, avg per task: 1.59s
+[TEXT2TEXT] cost time: 7.61120080947876
+[TEXT2TEXT] cost time: 0.6017158031463623
+[TEXT2TEXT] cost time: 12.617019414901733
+[TEXT2TEXT] cost time: 4.207464933395386
+VLM batch processing completed: 20.65s, Tasks: 20, avg per task: 1.03s
+[TEXT2TEXT] cost time: 0.6017422676086426
+[TEXT2TEXT] cost time: 1.0026159286499023
+[TEXT2TEXT] cost time: 1.0038261413574219
+[TEXT2TEXT] cost time: 11.815958499908447
+VLM batch processing completed: 22.55s, Tasks: 21, avg per task: 1.07s
+[TEXT2TEXT] cost time: 1.2039518356323242
+[TEXT2TEXT] cost time: 1.2026636600494385
+[TEXT2TEXT] cost time: 5.207792043685913
+[TEXT2TEXT] cost time: 4.407040119171143
+VLM batch processing completed: 20.15s, Tasks: 19, avg per task: 1.06s
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+[TEXT2TEXT] cost time: 106.93029403686523
+[TEXT2TEXT] cost time: 2.20386004447937
+[TEXT2TEXT] cost time: 4.206809997558594
+[TEXT2TEXT] cost time: 13.419060707092285
+VLM batch processing completed: 16.27s, Tasks: 15, avg per task: 1.08s
+[TEXT2TEXT] cost time: 3.2056798934936523
+[TEXT2TEXT] cost time: 1.6030378341674805
+VLM batch processing completed: 6.89s, Tasks: 1, avg per task: 6.89s
+[TEXT2TEXT] cost time: 8.411822080612183
+[TEXT2TEXT] cost time: 2.203981876373291
+[TEXT2TEXT] cost time: 4.0062384605407715
+VLM batch processing completed: 25.67s, Tasks: 18, avg per task: 1.43s
+[TEXT2TEXT] cost time: 1.002187728881836
+[TEXT2TEXT] cost time: 1.2025978565216064
+[TEXT2TEXT] cost time: 1.4027361869812012
+[TEXT2TEXT] cost time: 5.007175445556641
+VLM batch processing completed: 17.08s, Tasks: 17, avg per task: 1.00s
+[TEXT2TEXT] cost time: 2.003413677215576
+[TEXT2TEXT] cost time: 4.8067240715026855
+[TEXT2TEXT] cost time: 0.8018219470977783
+[TEXT2TEXT] cost time: 4.407804250717163
+VLM batch processing completed: 18.31s, Tasks: 19, avg per task: 0.96s
+[TEXT2TEXT] cost time: 7.2098307609558105
+[TEXT2TEXT] cost time: 0.6016340255737305
+[TEXT2TEXT] cost time: 3.0052645206451416
+[TEXT2TEXT] cost time: 8.212699890136719
+VLM batch processing completed: 24.53s, Tasks: 24, avg per task: 1.02s
+[TEXT2TEXT] cost time: 4.80711817741394
+[TEXT2TEXT] cost time: 1.4042584896087646
+[TEXT2TEXT] cost time: 3.004901647567749
+[TEXT2TEXT] cost time: 6.8099586963653564
+VLM batch processing completed: 29.88s, Tasks: 30, avg per task: 1.00s
+[TEXT2TEXT] cost time: 0.40141773223876953
+[TEXT2TEXT] cost time: 6.009167671203613
+VLM batch processing completed: 3.03s, Tasks: 1, avg per task: 3.03s
+[TEXT2TEXT] cost time: 6.409158229827881
+[TEXT2TEXT] cost time: 1.0024499893188477
+[TEXT2TEXT] cost time: 29.63731026649475
+VLM batch processing completed: 44.26s, Tasks: 40, avg per task: 1.11s
+[TEXT2TEXT] cost time: 7.61029052734375
+[TEXT2TEXT] cost time: 59.47764801979065
+[TEXT2TEXT] cost time: 61.07205390930176
+VLM batch processing completed: 3.86s, Tasks: 1, avg per task: 3.86s
+[TEXT2TEXT] cost time: 63.080942153930664
+[TEXT2TEXT] cost time: 1.4026780128479004
+[TEXT2TEXT] cost time: 6.208265781402588
+VLM batch processing completed: 20.80s, Tasks: 17, avg per task: 1.22s
+[TEXT2TEXT] cost time: 2.6041784286499023
+[TEXT2TEXT] cost time: 5.208160877227783
+Thread 4 Accuracy: 0 / 1 0.0
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0024285316467285
+[TEXT2TEXT] cost time: 4.006126165390015
+[TEXT2TEXT] cost time: 2.404508113861084
+VLM batch processing completed: 19.71s, Tasks: 12, avg per task: 1.64s
+[TEXT2TEXT] cost time: 0.20113372802734375
+[TEXT2TEXT] cost time: 0.0004534721374511719
+[TEXT2TEXT] cost time: 0.0004239082336425781
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 7.219807863235474
+VLM batch processing completed: 5.06s, Tasks: 1, avg per task: 5.06s
+[TEXT2TEXT] cost time: 2.405198812484741
+[TEXT2TEXT] cost time: 3.005056142807007
+[TEXT2TEXT] cost time: 4.206313133239746
+VLM batch processing completed: 29.17s, Tasks: 17, avg per task: 1.72s
+[TEXT2TEXT] cost time: 8.411497831344604
+[TEXT2TEXT] cost time: 0.00048422813415527344
+[TEXT2TEXT] cost time: 0.000518798828125
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 5.407937526702881
+[TEXT2TEXT] cost time: 0.6020603179931641
+[TEXT2TEXT] cost time: 3.0045294761657715
+VLM batch processing completed: 20.95s, Tasks: 12, avg per task: 1.75s
+[TEXT2TEXT] cost time: 1.8033404350280762
+[TEXT2TEXT] cost time: 2.2038824558258057
+[TEXT2TEXT] cost time: 1.0024287700653076
+[TEXT2TEXT] cost time: 5.208142042160034
+VLM batch processing completed: 38.97s, Tasks: 24, avg per task: 1.62s
+[TEXT2TEXT] cost time: 4.0061516761779785
+[TEXT2TEXT] cost time: 33.03990364074707
+VLM batch processing completed: 5.53s, Tasks: 1, avg per task: 5.53s
+[TEXT2TEXT] cost time: 26.634255170822144
+Thread 4 Accuracy: 1 / 2 49.9999750000125
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 12.816796779632568
+[TEXT2TEXT] cost time: 1.6048214435577393
+[TEXT2TEXT] cost time: 17.22220253944397
+VLM batch processing completed: 89.42s, Tasks: 49, avg per task: 1.82s
+[TEXT2TEXT] cost time: 11.418792009353638
+[TEXT2TEXT] cost time: 43.25646686553955
+Thread 4 Accuracy: 1 / 3 33.333322222225924
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 3.6055822372436523
+[TEXT2TEXT] cost time: 2.203660488128662
+[TEXT2TEXT] cost time: 9.016485214233398
+VLM batch processing completed: 41.65s, Tasks: 19, avg per task: 2.19s
+[TEXT2TEXT] cost time: 2.404778480529785
+[TEXT2TEXT] cost time: 1.8039631843566895
+VLM batch processing completed: 3.40s, Tasks: 1, avg per task: 3.40s
+[TEXT2TEXT] cost time: 1.0024266242980957
+Thread 4 Accuracy: 1 / 4 24.99999375000156
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.801997184753418
+VLM batch processing completed: 5.82s, Tasks: 1, avg per task: 5.82s
+[TEXT2TEXT] cost time: 1.8053081035614014
+[TEXT2TEXT] cost time: 5.207635164260864
+[TEXT2TEXT] cost time: 5.2080979347229
+VLM batch processing completed: 34.37s, Tasks: 13, avg per task: 2.64s
+[TEXT2TEXT] cost time: 0.4018890857696533
+[TEXT2TEXT] cost time: 2.4044272899627686
+[TEXT2TEXT] cost time: 1.0023250579833984
+[TEXT2TEXT] cost time: 7.210232734680176
+VLM batch processing completed: 100.52s, Tasks: 41, avg per task: 2.45s
+[TEXT2TEXT] cost time: 12.015517473220825
+[TEXT2TEXT] cost time: 1.202570915222168
+[TEXT2TEXT] cost time: 7.8125224113464355
+[TEXT2TEXT] cost time: 20.627963304519653
+VLM batch processing completed: 50.38s, Tasks: 22, avg per task: 2.29s
+[TEXT2TEXT] cost time: 5.007479667663574
+[TEXT2TEXT] cost time: 2.404822826385498
+VLM batch processing completed: 3.63s, Tasks: 1, avg per task: 3.63s
+[TEXT2TEXT] cost time: 2.0038747787475586
+[TEXT2TEXT] cost time: 1.8038485050201416
+[TEXT2TEXT] cost time: 9.814961910247803
+VLM batch processing completed: 41.81s, Tasks: 18, avg per task: 2.32s
+[TEXT2TEXT] cost time: 2.003700017929077
+[TEXT2TEXT] cost time: 8.792421817779541
+[TEXT2TEXT] cost time: 2.203958034515381
+[TEXT2TEXT] cost time: 9.61384892463684
+VLM batch processing completed: 72.97s, Tasks: 30, avg per task: 2.43s
+[TEXT2TEXT] cost time: 6.009512901306152
+[TEXT2TEXT] cost time: 2.6051015853881836
+[TEXT2TEXT] cost time: 3.4054312705993652
+[TEXT2TEXT] cost time: 5.808210849761963
+VLM batch processing completed: 43.04s, Tasks: 18, avg per task: 2.39s
+[TEXT2TEXT] cost time: 5.207895517349243
+[TEXT2TEXT] cost time: 13.417957067489624
+VLM batch processing completed: 5.14s, Tasks: 1, avg per task: 5.14s
+[TEXT2TEXT] cost time: 4.807239294052124
+Thread 4 Accuracy: 2 / 5 39.9999920000016
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.6019909381866455
+VLM batch processing completed: 4.37s, Tasks: 1, avg per task: 4.37s
+[TEXT2TEXT] cost time: 0.4018285274505615
+Thread 4 Accuracy: 3 / 6 49.99999166666805
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.6017615795135498
+[TEXT2TEXT] cost time: 0.8022902011871338
+[TEXT2TEXT] cost time: 6.009009599685669
+VLM batch processing completed: 22.19s, Tasks: 18, avg per task: 1.23s
+[TEXT2TEXT] cost time: 7.211480140686035
+[TEXT2TEXT] cost time: 0.6019408702850342
+[TEXT2TEXT] cost time: 6.210492849349976
+[TEXT2TEXT] cost time: 5.808987855911255
+VLM batch processing completed: 26.23s, Tasks: 21, avg per task: 1.25s
+[TEXT2TEXT] cost time: 1.6033334732055664
+[TEXT2TEXT] cost time: 59.67278861999512
+[TEXT2TEXT] cost time: 0.6017563343048096
+[TEXT2TEXT] cost time: 7.009115695953369
+VLM batch processing completed: 13.60s, Tasks: 13, avg per task: 1.05s
+[TEXT2TEXT] cost time: 0.6017630100250244
+[TEXT2TEXT] cost time: 34.842243671417236
+[TEXT2TEXT] cost time: 1.202850103378296
+[TEXT2TEXT] cost time: 8.812109470367432
+VLM batch processing completed: 27.40s, Tasks: 22, avg per task: 1.25s
+[TEXT2TEXT] cost time: 3.806034803390503
+[TEXT2TEXT] cost time: 1.603400707244873
+VLM batch processing completed: 3.75s, Tasks: 1, avg per task: 3.75s
+[TEXT2TEXT] cost time: 5.208379507064819
+Thread 4 Accuracy: 4 / 7 57.142848979593
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.4033286571502686
+VLM batch processing completed: 3.28s, Tasks: 1, avg per task: 3.28s
+[TEXT2TEXT] cost time: 0.8023314476013184
+Thread 4 Accuracy: 5 / 8 62.499992187500986
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8019213676452637
+VLM batch processing completed: 5.88s, Tasks: 1, avg per task: 5.88s
+[TEXT2TEXT] cost time: 1.202317237854004
+[TEXT2TEXT] cost time: 1.4031648635864258
+[TEXT2TEXT] cost time: 18.627086639404297
+VLM batch processing completed: 179.61s, Tasks: 66, avg per task: 2.72s
+[TEXT2TEXT] cost time: 4.609874963760376
+[TEXT2TEXT] cost time: 1.2026360034942627
+Thread 4 Accuracy: 6 / 9 66.66665925926009
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2028963565826416
+[TEXT2TEXT] cost time: 28.438049793243408
+[TEXT2TEXT] cost time: 3.0058231353759766
+VLM batch processing completed: 17.37s, Tasks: 14, avg per task: 1.24s
+[TEXT2TEXT] cost time: 1.0028488636016846
+[TEXT2TEXT] cost time: 0.4018373489379883
+Thread 4 Accuracy: 7 / 10 69.9999930000007
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8020303249359131
+[TEXT2TEXT] cost time: 2.604792356491089
+[TEXT2TEXT] cost time: 3.806396722793579
+VLM batch processing completed: 26.16s, Tasks: 19, avg per task: 1.38s
+[TEXT2TEXT] cost time: 4.6079254150390625
+[TEXT2TEXT] cost time: 0.802192211151123
+[TEXT2TEXT] cost time: 5.008424520492554
+[TEXT2TEXT] cost time: 3.0049567222595215
+VLM batch processing completed: 15.75s, Tasks: 14, avg per task: 1.12s
+[TEXT2TEXT] cost time: 0.4017367362976074
+[TEXT2TEXT] cost time: 13.4201021194458
+[TEXT2TEXT] cost time: 0.6017982959747314
+[TEXT2TEXT] cost time: 6.008259534835815
+VLM batch processing completed: 26.14s, Tasks: 23, avg per task: 1.14s
+[TEXT2TEXT] cost time: 3.0047388076782227
+[TEXT2TEXT] cost time: 0.8019559383392334
+[TEXT2TEXT] cost time: 2.0038068294525146
+[TEXT2TEXT] cost time: 4.6064958572387695
+VLM batch processing completed: 15.67s, Tasks: 14, avg per task: 1.12s
+[TEXT2TEXT] cost time: 0.6019854545593262
+[TEXT2TEXT] cost time: 0.6021089553833008
+[TEXT2TEXT] cost time: 6.009080410003662
+[TEXT2TEXT] cost time: 5.411459922790527
+VLM batch processing completed: 11.20s, Tasks: 10, avg per task: 1.12s
+[TEXT2TEXT] cost time: 0.8021697998046875
+[TEXT2TEXT] cost time: 1.4035801887512207
+VLM batch processing completed: 6.94s, Tasks: 1, avg per task: 6.94s
+[TEXT2TEXT] cost time: 1.8035142421722412
+VLM batch processing completed: 3.53s, Tasks: 1, avg per task: 3.53s
+[TEXT2TEXT] cost time: 0.8020803928375244
+VLM batch processing completed: 3.90s, Tasks: 1, avg per task: 3.90s
+[TEXT2TEXT] cost time: 0.6019768714904785
+VLM batch processing completed: 3.08s, Tasks: 1, avg per task: 3.08s
+[TEXT2TEXT] cost time: 22.23053240776062
+Thread 4 Accuracy: 8 / 11 72.72726611570309
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 3.405963897705078
+[TEXT2TEXT] cost time: 0.8019239902496338
+[TEXT2TEXT] cost time: 3.2059314250946045
+VLM batch processing completed: 15.12s, Tasks: 12, avg per task: 1.26s
+[TEXT2TEXT] cost time: 0.6020817756652832
+[TEXT2TEXT] cost time: 26.035137176513672
+[TEXT2TEXT] cost time: 1.202768087387085
+[TEXT2TEXT] cost time: 4.206733465194702
+VLM batch processing completed: 10.50s, Tasks: 12, avg per task: 0.87s
+[TEXT2TEXT] cost time: 4.607218503952026
+[TEXT2TEXT] cost time: 1.0023863315582275
+Thread 4 Accuracy: 8 / 12 66.66666111111158
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8023402690887451
+[TEXT2TEXT] cost time: 1.8037302494049072
+[TEXT2TEXT] cost time: 2.805159091949463
+VLM batch processing completed: 49.32s, Tasks: 10, avg per task: 4.93s
+[TEXT2TEXT] cost time: 1.6032724380493164
+[TEXT2TEXT] cost time: 1.2025609016418457
+VLM batch processing completed: 8.89s, Tasks: 1, avg per task: 8.89s
+[TEXT2TEXT] cost time: 0.6018595695495605
+Thread 4 Accuracy: 9 / 13 69.23076390532586
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0022521018981934
+[TEXT2TEXT] cost time: 1.0025928020477295
+[TEXT2TEXT] cost time: 5.808046340942383
+VLM batch processing completed: 34.17s, Tasks: 17, avg per task: 2.01s
+[TEXT2TEXT] cost time: 3.405702590942383
+[TEXT2TEXT] cost time: 1.4027199745178223
+VLM batch processing completed: 2.91s, Tasks: 1, avg per task: 2.91s
+[TEXT2TEXT] cost time: 1.4028658866882324
+VLM batch processing completed: 3.34s, Tasks: 1, avg per task: 3.34s
+[TEXT2TEXT] cost time: 3.6059176921844482
+VLM batch processing completed: 3.18s, Tasks: 1, avg per task: 3.18s
+[TEXT2TEXT] cost time: 2.604177236557007
+VLM batch processing completed: 3.57s, Tasks: 1, avg per task: 3.57s
+[TEXT2TEXT] cost time: 2.0035758018493652
+VLM batch processing completed: 3.03s, Tasks: 1, avg per task: 3.03s
+[TEXT2TEXT] cost time: 1.8035600185394287
+VLM batch processing completed: 3.33s, Tasks: 1, avg per task: 3.33s
+[TEXT2TEXT] cost time: 8.211724281311035
+VLM batch processing completed: 3.19s, Tasks: 1, avg per task: 3.19s
+[TEXT2TEXT] cost time: 51.065303802490234
+Thread 4 Accuracy: 9 / 14 64.28570969387788
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.6046409606933594
+[TEXT2TEXT] cost time: 5.2081944942474365
+[TEXT2TEXT] cost time: 4.20625901222229
+VLM batch processing completed: 35.90s, Tasks: 18, avg per task: 1.99s
+[TEXT2TEXT] cost time: 2.404252290725708
+[TEXT2TEXT] cost time: 18.824086904525757
+VLM batch processing completed: 2.86s, Tasks: 1, avg per task: 2.86s
+[TEXT2TEXT] cost time: 10.815174579620361
+VLM batch processing completed: 2.49s, Tasks: 1, avg per task: 2.49s
+[TEXT2TEXT] cost time: 2.8047995567321777
+VLM batch processing completed: 3.08s, Tasks: 1, avg per task: 3.08s
+[TEXT2TEXT] cost time: 10.613665342330933
+VLM batch processing completed: 2.97s, Tasks: 1, avg per task: 2.97s
+[TEXT2TEXT] cost time: 14.820404291152954
+VLM batch processing completed: 3.02s, Tasks: 1, avg per task: 3.02s
+[TEXT2TEXT] cost time: 11.415494680404663
+Thread 4 Accuracy: 9 / 15 59.999996000000266
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 4.006665229797363
+[TEXT2TEXT] cost time: 1.202547311782837
+[TEXT2TEXT] cost time: 22.22965121269226
+VLM batch processing completed: 3.02s, Tasks: 1, avg per task: 3.02s
+[TEXT2TEXT] cost time: 0.8022670745849609
+[TEXT2TEXT] cost time: 19.626506567001343
+VLM batch processing completed: 2.56s, Tasks: 1, avg per task: 2.56s
+[TEXT2TEXT] cost time: 0.6017451286315918
+Thread 4 Accuracy: 10 / 16 62.49999609375024
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 11.41561484336853
+[TEXT2TEXT] cost time: 2.0040037631988525
+[TEXT2TEXT] cost time: 9.012366771697998
+VLM batch processing completed: 55.34s, Tasks: 27, avg per task: 2.05s
+[TEXT2TEXT] cost time: 1.402909278869629
+[TEXT2TEXT] cost time: 2.404512643814087
+Thread 4 Accuracy: 10 / 17 58.8235259515573
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8025741577148438
+[TEXT2TEXT] cost time: 1.4031858444213867
+[TEXT2TEXT] cost time: 5.409043788909912
+VLM batch processing completed: 12.39s, Tasks: 11, avg per task: 1.13s
+[TEXT2TEXT] cost time: 1.8041293621063232
+[TEXT2TEXT] cost time: 0.6019666194915771
+[TEXT2TEXT] cost time: 15.181312322616577
+[TEXT2TEXT] cost time: 4.406534910202026
+VLM batch processing completed: 15.59s, Tasks: 16, avg per task: 0.97s
+[TEXT2TEXT] cost time: 0.4018101692199707
+[TEXT2TEXT] cost time: 1.2025272846221924
+[TEXT2TEXT] cost time: 8.812259912490845
+[TEXT2TEXT] cost time: 4.206863880157471
+VLM batch processing completed: 15.93s, Tasks: 14, avg per task: 1.14s
+[TEXT2TEXT] cost time: 3.405555248260498
+[TEXT2TEXT] cost time: 4.005814552307129
+[TEXT2TEXT] cost time: 6.610376358032227
+[TEXT2TEXT] cost time: 3.6049740314483643
+VLM batch processing completed: 12.20s, Tasks: 11, avg per task: 1.11s
+[TEXT2TEXT] cost time: 1.2028005123138428
+[TEXT2TEXT] cost time: 14.018851280212402
+[TEXT2TEXT] cost time: 2.604283332824707
+[TEXT2TEXT] cost time: 5.007144927978516
+VLM batch processing completed: 11.53s, Tasks: 13, avg per task: 0.89s
+[TEXT2TEXT] cost time: 0.6016669273376465
+[TEXT2TEXT] cost time: 19.025310754776
+[TEXT2TEXT] cost time: 1.803466796875
+[TEXT2TEXT] cost time: 3.60510516166687
+VLM batch processing completed: 10.80s, Tasks: 12, avg per task: 0.90s
+[TEXT2TEXT] cost time: 2.4047203063964844
+[TEXT2TEXT] cost time: 3.0049986839294434
+[TEXT2TEXT] cost time: 7.010387659072876
+[TEXT2TEXT] cost time: 5.80961537361145
+VLM batch processing completed: 20.77s, Tasks: 21, avg per task: 0.99s
+[TEXT2TEXT] cost time: 1.0028395652770996
+[TEXT2TEXT] cost time: 7.010014533996582
+VLM batch processing completed: 2.28s, Tasks: 1, avg per task: 2.28s
+[TEXT2TEXT] cost time: 2.4043471813201904
+[TEXT2TEXT] cost time: 0.0010099411010742188
+[TEXT2TEXT] cost time: 0.0008566379547119141
+VLM batch processing completed: 13.62s, Tasks: 16, avg per task: 0.85s
+[TEXT2TEXT] cost time: 3.005246639251709
+[TEXT2TEXT] cost time: 4.00604772567749
+VLM batch processing completed: 1.76s, Tasks: 1, avg per task: 1.76s
+[TEXT2TEXT] cost time: 4.607257843017578
+[TEXT2TEXT] cost time: 0.8019115924835205
+[TEXT2TEXT] cost time: 3.205589771270752
+VLM batch processing completed: 9.87s, Tasks: 12, avg per task: 0.82s
+[TEXT2TEXT] cost time: 1.0022716522216797
+[TEXT2TEXT] cost time: 13.217866897583008
+[TEXT2TEXT] cost time: 1.0059406757354736
+[TEXT2TEXT] cost time: 35.04503774642944
+VLM batch processing completed: 14.32s, Tasks: 13, avg per task: 1.10s
+[TEXT2TEXT] cost time: 0.8024551868438721
+[TEXT2TEXT] cost time: 6.811574459075928
+VLM batch processing completed: 2.46s, Tasks: 1, avg per task: 2.46s
+[TEXT2TEXT] cost time: 8.012248992919922
+VLM batch processing completed: 1.99s, Tasks: 1, avg per task: 1.99s
+[TEXT2TEXT] cost time: 53.07058048248291
+VLM batch processing completed: 2.26s, Tasks: 1, avg per task: 2.26s
+[TEXT2TEXT] cost time: 34.44698166847229
+VLM batch processing completed: 2.63s, Tasks: 1, avg per task: 2.63s
+[TEXT2TEXT] cost time: 59.07489800453186
+VLM batch processing completed: 2.81s, Tasks: 1, avg per task: 2.81s
+[TEXT2TEXT] cost time: 24.429162740707397
+[TEXT2TEXT] cost time: 1.0022337436676025
+[TEXT2TEXT] cost time: 2.404275417327881
+VLM batch processing completed: 10.13s, Tasks: 12, avg per task: 0.84s
+[TEXT2TEXT] cost time: 1.4030213356018066
+[TEXT2TEXT] cost time: 3.004913806915283
+[TEXT2TEXT] cost time: 7.8870933055877686
+[TEXT2TEXT] cost time: 2.808840274810791
+VLM batch processing completed: 11.66s, Tasks: 11, avg per task: 1.06s
+[TEXT2TEXT] cost time: 4.607627868652344
+[TEXT2TEXT] cost time: 6.809137582778931
+VLM batch processing completed: 1.99s, Tasks: 1, avg per task: 1.99s
+Thread 4 Accuracy: 10 / 18 55.555552469135975
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 11.2162184715271
+[TEXT2TEXT] cost time: 1.402559518814087
+[TEXT2TEXT] cost time: 5.430557012557983
+VLM batch processing completed: 40.74s, Tasks: 21, avg per task: 1.94s
+[TEXT2TEXT] cost time: 4.206926107406616
+[TEXT2TEXT] cost time: 2.0041608810424805
+VLM batch processing completed: 3.20s, Tasks: 1, avg per task: 3.20s
+[TEXT2TEXT] cost time: 2.4047210216522217
+Thread 4 Accuracy: 11 / 19 57.894733795014005
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.4028480052947998
+[TEXT2TEXT] cost time: 1.20249342918396
+[TEXT2TEXT] cost time: 38.85128712654114
+[TEXT2TEXT] cost time: 0.0005097389221191406
+[TEXT2TEXT] cost time: 0.0005633831024169922
+VLM batch processing completed: 378.87s, Tasks: 165, avg per task: 2.30s
+[TEXT2TEXT] cost time: 7.410978078842163
+[TEXT2TEXT] cost time: 1.8033113479614258
+VLM batch processing completed: 3.77s, Tasks: 1, avg per task: 3.77s
+[TEXT2TEXT] cost time: 1.602877140045166
+VLM batch processing completed: 3.98s, Tasks: 1, avg per task: 3.98s
+[TEXT2TEXT] cost time: 16.903178215026855
+VLM batch processing completed: 5.57s, Tasks: 1, avg per task: 5.57s
+[TEXT2TEXT] cost time: 3.2049920558929443
+VLM batch processing completed: 5.44s, Tasks: 1, avg per task: 5.44s
+[TEXT2TEXT] cost time: 3.2051165103912354
+VLM batch processing completed: 5.36s, Tasks: 1, avg per task: 5.36s
+[TEXT2TEXT] cost time: 10.016521453857422
+VLM batch processing completed: 5.45s, Tasks: 1, avg per task: 5.45s
+[TEXT2TEXT] cost time: 3.6060779094696045
+VLM batch processing completed: 3.63s, Tasks: 1, avg per task: 3.63s
+[TEXT2TEXT] cost time: 6.2091217041015625
+Thread 4 Accuracy: 12 / 20 59.99999700000015
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8022432327270508
+[TEXT2TEXT] cost time: 21.430022954940796
+[TEXT2TEXT] cost time: 9.928902387619019
+VLM batch processing completed: 30.48s, Tasks: 13, avg per task: 2.34s
+[TEXT2TEXT] cost time: 2.003661632537842
+[TEXT2TEXT] cost time: 1.2026352882385254
+VLM batch processing completed: 4.17s, Tasks: 1, avg per task: 4.17s
+[TEXT2TEXT] cost time: 1.2025237083435059
+Thread 4 Accuracy: 12 / 21 57.14285442176883
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0023369789123535
+[TEXT2TEXT] cost time: 2.8046507835388184
+[TEXT2TEXT] cost time: 9.012595176696777
+VLM batch processing completed: 96.08s, Tasks: 40, avg per task: 2.40s
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+[TEXT2TEXT] cost time: 20.824848175048828
+[TEXT2TEXT] cost time: 3.8060128688812256
+VLM batch processing completed: 3.11s, Tasks: 1, avg per task: 3.11s
+[TEXT2TEXT] cost time: 11.414910554885864
+VLM batch processing completed: 4.07s, Tasks: 1, avg per task: 4.07s
+[TEXT2TEXT] cost time: 2.2043018341064453
+VLM batch processing completed: 3.62s, Tasks: 1, avg per task: 3.62s
+[TEXT2TEXT] cost time: 1.6031558513641357
+VLM batch processing completed: 5.52s, Tasks: 1, avg per task: 5.52s
+[TEXT2TEXT] cost time: 2.605116605758667
+Thread 4 Accuracy: 13 / 22 59.0909064049588
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0024957656860352
+[TEXT2TEXT] cost time: 0.8022398948669434
+[TEXT2TEXT] cost time: 6.809885740280151
+VLM batch processing completed: 40.69s, Tasks: 39, avg per task: 1.04s
+[TEXT2TEXT] cost time: 1.6048426628112793
+[TEXT2TEXT] cost time: 0.6018810272216797
+[TEXT2TEXT] cost time: 4.807495355606079
+[TEXT2TEXT] cost time: 6.609430551528931
+VLM batch processing completed: 27.27s, Tasks: 28, avg per task: 0.97s
+[TEXT2TEXT] cost time: 1.2023637294769287
+[TEXT2TEXT] cost time: 1.00238037109375
+[TEXT2TEXT] cost time: 1.0027048587799072
+[TEXT2TEXT] cost time: 4.2079551219940186
+VLM batch processing completed: 16.58s, Tasks: 17, avg per task: 0.98s
+[TEXT2TEXT] cost time: 0.6017844676971436
+[TEXT2TEXT] cost time: 22.82906937599182
+[TEXT2TEXT] cost time: 2.003584861755371
+[TEXT2TEXT] cost time: 4.206042051315308
+VLM batch processing completed: 17.03s, Tasks: 18, avg per task: 0.95s
+[TEXT2TEXT] cost time: 2.0034542083740234
+[TEXT2TEXT] cost time: 7.010430812835693
+[TEXT2TEXT] cost time: 4.406618356704712
+[TEXT2TEXT] cost time: 6.009216547012329
+VLM batch processing completed: 19.19s, Tasks: 19, avg per task: 1.01s
+[TEXT2TEXT] cost time: 3.6054630279541016
+[TEXT2TEXT] cost time: 2.6048965454101562
+VLM batch processing completed: 2.24s, Tasks: 1, avg per task: 2.24s
+[TEXT2TEXT] cost time: 1.2029142379760742
+VLM batch processing completed: 1.74s, Tasks: 1, avg per task: 1.74s
+[TEXT2TEXT] cost time: 1.6034231185913086
+VLM batch processing completed: 2.28s, Tasks: 1, avg per task: 2.28s
+[TEXT2TEXT] cost time: 3.20539927482605
+[TEXT2TEXT] cost time: 2.2043066024780273
+[TEXT2TEXT] cost time: 7.0113677978515625
+VLM batch processing completed: 43.84s, Tasks: 38, avg per task: 1.15s
+[TEXT2TEXT] cost time: 0.8033320903778076
+[TEXT2TEXT] cost time: 6.809622764587402
+[TEXT2TEXT] cost time: 3.805584669113159
+[TEXT2TEXT] cost time: 4.60695481300354
+VLM batch processing completed: 19.67s, Tasks: 19, avg per task: 1.04s
+[TEXT2TEXT] cost time: 0.20122599601745605
+[TEXT2TEXT] cost time: 53.26566195487976
+[TEXT2TEXT] cost time: 1.0029799938201904
+[TEXT2TEXT] cost time: 9.212282657623291
+VLM batch processing completed: 32.88s, Tasks: 29, avg per task: 1.13s
+[TEXT2TEXT] cost time: 1.0024840831756592
+[TEXT2TEXT] cost time: 8.41228437423706
+VLM batch processing completed: 2.30s, Tasks: 1, avg per task: 2.30s
+[TEXT2TEXT] cost time: 8.81306791305542
+Thread 4 Accuracy: 13 / 23 56.52173667296797
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8019399642944336
+[TEXT2TEXT] cost time: 2.003574848175049
+[TEXT2TEXT] cost time: 3.805957078933716
+VLM batch processing completed: 17.10s, Tasks: 16, avg per task: 1.07s
+[TEXT2TEXT] cost time: 3.6060848236083984
+[TEXT2TEXT] cost time: 0.6018674373626709
+[TEXT2TEXT] cost time: 7.210991621017456
+[TEXT2TEXT] cost time: 2.203683376312256
+VLM batch processing completed: 11.57s, Tasks: 11, avg per task: 1.05s
+[TEXT2TEXT] cost time: 4.407599449157715
+[TEXT2TEXT] cost time: 4.4066362380981445
+[TEXT2TEXT] cost time: 0.8019568920135498
+[TEXT2TEXT] cost time: 3.405527353286743
+VLM batch processing completed: 17.03s, Tasks: 16, avg per task: 1.06s
+[TEXT2TEXT] cost time: 1.8039333820343018
+[TEXT2TEXT] cost time: 1.002643346786499
+[TEXT2TEXT] cost time: 1.0022120475769043
+[TEXT2TEXT] cost time: 6.409497976303101
+VLM batch processing completed: 19.26s, Tasks: 19, avg per task: 1.01s
+[TEXT2TEXT] cost time: 4.206816911697388
+[TEXT2TEXT] cost time: 4.206879615783691
+VLM batch processing completed: 6.97s, Tasks: 1, avg per task: 6.97s
+[TEXT2TEXT] cost time: 2.4095847606658936
+[TEXT2TEXT] cost time: 1.0025453567504883
+[TEXT2TEXT] cost time: 4.4069108963012695
+VLM batch processing completed: 19.10s, Tasks: 20, avg per task: 0.95s
+[TEXT2TEXT] cost time: 11.215694427490234
+[TEXT2TEXT] cost time: 2.003300905227661
+[TEXT2TEXT] cost time: 1.2025647163391113
+[TEXT2TEXT] cost time: 6.008821487426758
+VLM batch processing completed: 13.47s, Tasks: 16, avg per task: 0.84s
+[TEXT2TEXT] cost time: 2.0041301250457764
+[TEXT2TEXT] cost time: 4.8071129322052
+VLM batch processing completed: 5.96s, Tasks: 1, avg per task: 5.96s
+[TEXT2TEXT] cost time: 4.607890367507935
+[TEXT2TEXT] cost time: 1.202636957168579
+[TEXT2TEXT] cost time: 3.8061575889587402
+VLM batch processing completed: 8.25s, Tasks: 8, avg per task: 1.03s
+[TEXT2TEXT] cost time: 3.005333185195923
+[TEXT2TEXT] cost time: 6.809762477874756
+[TEXT2TEXT] cost time: 1.6033284664154053
+[TEXT2TEXT] cost time: 4.20623779296875
+VLM batch processing completed: 18.46s, Tasks: 20, avg per task: 0.92s
+[TEXT2TEXT] cost time: 0.8025619983673096
+[TEXT2TEXT] cost time: 3.80609393119812
+Thread 4 Accuracy: 14 / 24 58.33333090277788
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 3.0054190158843994
+[TEXT2TEXT] cost time: 1.6030385494232178
+[TEXT2TEXT] cost time: 13.017407178878784
+VLM batch processing completed: 69.32s, Tasks: 75, avg per task: 0.92s
+[TEXT2TEXT] cost time: 1.0021822452545166
+[TEXT2TEXT] cost time: 0.6017735004425049
+[TEXT2TEXT] cost time: 1.0026257038116455
+[TEXT2TEXT] cost time: 5.80904483795166
+VLM batch processing completed: 28.07s, Tasks: 30, avg per task: 0.94s
+[TEXT2TEXT] cost time: 1.0027899742126465
+[TEXT2TEXT] cost time: 24.83216643333435
+[TEXT2TEXT] cost time: 1.2025501728057861
+[TEXT2TEXT] cost time: 10.613961458206177
+VLM batch processing completed: 29.13s, Tasks: 31, avg per task: 0.94s
+[TEXT2TEXT] cost time: 1.202559471130371
+[TEXT2TEXT] cost time: 0.40165019035339355
+[TEXT2TEXT] cost time: 5.408310651779175
+[TEXT2TEXT] cost time: 4.41156530380249
+VLM batch processing completed: 22.80s, Tasks: 24, avg per task: 0.95s
+[TEXT2TEXT] cost time: 0.602013111114502
+[TEXT2TEXT] cost time: 0.6022820472717285
+[TEXT2TEXT] cost time: 1.002485990524292
+[TEXT2TEXT] cost time: 4.607345819473267
+VLM batch processing completed: 22.52s, Tasks: 26, avg per task: 0.87s
+[TEXT2TEXT] cost time: 6.655109405517578
+[TEXT2TEXT] cost time: 0.6017954349517822
+[TEXT2TEXT] cost time: 6.20890474319458
+[TEXT2TEXT] cost time: 6.609288692474365
+VLM batch processing completed: 23.68s, Tasks: 26, avg per task: 0.91s
+[TEXT2TEXT] cost time: 3.4054975509643555
+[TEXT2TEXT] cost time: 2.204120635986328
+Thread 4 Accuracy: 15 / 25 59.9999976000001
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0021905899047852
+[TEXT2TEXT] cost time: 4.607190370559692
+[TEXT2TEXT] cost time: 6.008638381958008
+VLM batch processing completed: 30.08s, Tasks: 21, avg per task: 1.43s
+[TEXT2TEXT] cost time: 0.6019790172576904
+[TEXT2TEXT] cost time: 6.008892297744751
+VLM batch processing completed: 1.86s, Tasks: 1, avg per task: 1.86s
+[TEXT2TEXT] cost time: 0.6017677783966064
+Thread 4 Accuracy: 16 / 26 61.53845917159772
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 8.411521911621094
+[TEXT2TEXT] cost time: 3.2081704139709473
+[TEXT2TEXT] cost time: 9.212731838226318
+VLM batch processing completed: 25.59s, Tasks: 23, avg per task: 1.11s
+[TEXT2TEXT] cost time: 1.4028379917144775
+[TEXT2TEXT] cost time: 2.0038912296295166
+VLM batch processing completed: 2.47s, Tasks: 1, avg per task: 2.47s
+[TEXT2TEXT] cost time: 0.4014723300933838
+Thread 4 Accuracy: 17 / 27 62.96296063100145
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2025055885314941
+[TEXT2TEXT] cost time: 11.415606260299683
+[TEXT2TEXT] cost time: 6.009097576141357
+VLM batch processing completed: 97.14s, Tasks: 20, avg per task: 4.86s
+[TEXT2TEXT] cost time: 0.6019201278686523
+[TEXT2TEXT] cost time: 1.2022840976715088
+VLM batch processing completed: 5.97s, Tasks: 1, avg per task: 5.97s
+[TEXT2TEXT] cost time: 1.6030316352844238
+VLM batch processing completed: 6.30s, Tasks: 1, avg per task: 6.30s
+[TEXT2TEXT] cost time: 1.0028586387634277
+Thread 4 Accuracy: 18 / 28 64.285711989796
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.403378963470459
+[TEXT2TEXT] cost time: 1.6033179759979248
+[TEXT2TEXT] cost time: 21.82654881477356
+VLM batch processing completed: 17.54s, Tasks: 24, avg per task: 0.73s
+[TEXT2TEXT] cost time: 3.205252170562744
+[TEXT2TEXT] cost time: 2.0037925243377686
+VLM batch processing completed: 1.78s, Tasks: 1, avg per task: 1.78s
+[TEXT2TEXT] cost time: 8.211338758468628
+VLM batch processing completed: 1.52s, Tasks: 1, avg per task: 1.52s
+[TEXT2TEXT] cost time: 1.2026515007019043
+VLM batch processing completed: 1.92s, Tasks: 1, avg per task: 1.92s
+[TEXT2TEXT] cost time: 1.6034502983093262
+VLM batch processing completed: 1.88s, Tasks: 1, avg per task: 1.88s
+[TEXT2TEXT] cost time: 2.2094216346740723
+VLM batch processing completed: 2.03s, Tasks: 1, avg per task: 2.03s
+[TEXT2TEXT] cost time: 1.202721357345581
+VLM batch processing completed: 1.64s, Tasks: 1, avg per task: 1.64s
+[TEXT2TEXT] cost time: 1.2027933597564697
+VLM batch processing completed: 1.75s, Tasks: 1, avg per task: 1.75s
+[TEXT2TEXT] cost time: 5.00778865814209
+VLM batch processing completed: 1.73s, Tasks: 1, avg per task: 1.73s
+[TEXT2TEXT] cost time: 1.803417682647705
+VLM batch processing completed: 1.93s, Tasks: 1, avg per task: 1.93s
+[TEXT2TEXT] cost time: 1.803802490234375
+VLM batch processing completed: 1.42s, Tasks: 1, avg per task: 1.42s
+[TEXT2TEXT] cost time: 2.605365753173828
+VLM batch processing completed: 2.68s, Tasks: 1, avg per task: 2.68s
+[TEXT2TEXT] cost time: 1.4040346145629883
+VLM batch processing completed: 2.44s, Tasks: 1, avg per task: 2.44s
+[TEXT2TEXT] cost time: 1.002558946609497
+VLM batch processing completed: 1.59s, Tasks: 1, avg per task: 1.59s
+[TEXT2TEXT] cost time: 1.403026819229126
+VLM batch processing completed: 2.05s, Tasks: 1, avg per task: 2.05s
+[TEXT2TEXT] cost time: 34.84352922439575
+Thread 4 Accuracy: 18 / 29 62.068963376932295
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 2.2038564682006836
+[TEXT2TEXT] cost time: 1.0022697448730469
+[TEXT2TEXT] cost time: 3.8058090209960938
+VLM batch processing completed: 26.64s, Tasks: 23, avg per task: 1.16s
+[TEXT2TEXT] cost time: 0.401965856552124
+[TEXT2TEXT] cost time: 3.0061533451080322
+[TEXT2TEXT] cost time: 1.2025864124298096
+[TEXT2TEXT] cost time: 7.010359287261963
+VLM batch processing completed: 35.87s, Tasks: 31, avg per task: 1.16s
+[TEXT2TEXT] cost time: 0.8020670413970947
+[TEXT2TEXT] cost time: 2.604750871658325
+VLM batch processing completed: 4.01s, Tasks: 1, avg per task: 4.01s
+[TEXT2TEXT] cost time: 7.010052680969238
+Thread 4 Accuracy: 19 / 30 63.33333122222229
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8016440868377686
+[TEXT2TEXT] cost time: 5.208182096481323
+[TEXT2TEXT] cost time: 7.812166690826416
+VLM batch processing completed: 13.93s, Tasks: 11, avg per task: 1.27s
+[TEXT2TEXT] cost time: 1.0023086071014404
+[TEXT2TEXT] cost time: 1.4029419422149658
+VLM batch processing completed: 2.62s, Tasks: 1, avg per task: 2.62s
+[TEXT2TEXT] cost time: 1.2031044960021973
+VLM batch processing completed: 2.66s, Tasks: 1, avg per task: 2.66s
+[TEXT2TEXT] cost time: 1.0027399063110352
+VLM batch processing completed: 2.42s, Tasks: 1, avg per task: 2.42s
+[TEXT2TEXT] cost time: 1.0029582977294922
+VLM batch processing completed: 2.56s, Tasks: 1, avg per task: 2.56s
+[TEXT2TEXT] cost time: 1.0021307468414307
+VLM batch processing completed: 2.65s, Tasks: 1, avg per task: 2.65s
+[TEXT2TEXT] cost time: 1.0027320384979248
+VLM batch processing completed: 2.83s, Tasks: 1, avg per task: 2.83s
+[TEXT2TEXT] cost time: 22.226481437683105
+Thread 4 Accuracy: 19 / 31 61.29032060353804
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 8.411821842193604
+[TEXT2TEXT] cost time: 1.0022904872894287
+[TEXT2TEXT] cost time: 5.408222436904907
+VLM batch processing completed: 16.97s, Tasks: 14, avg per task: 1.21s
+[TEXT2TEXT] cost time: 14.01941466331482
+[TEXT2TEXT] cost time: 1.2025120258331299
+[TEXT2TEXT] cost time: 4.206212043762207
+[TEXT2TEXT] cost time: 3.406198740005493
+VLM batch processing completed: 15.49s, Tasks: 15, avg per task: 1.03s
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+[TEXT2TEXT] cost time: 43.25130867958069
+[TEXT2TEXT] cost time: 18.423954248428345
+VLM batch processing completed: 2.29s, Tasks: 1, avg per task: 2.29s
+[TEXT2TEXT] cost time: 1.2026607990264893
+VLM batch processing completed: 2.22s, Tasks: 1, avg per task: 2.22s
+[TEXT2TEXT] cost time: 2.6043858528137207
+VLM batch processing completed: 2.45s, Tasks: 1, avg per task: 2.45s
+[TEXT2TEXT] cost time: 1.6033754348754883
+[TEXT2TEXT] cost time: 27.43688416481018
+[TEXT2TEXT] cost time: 3.806530714035034
+VLM batch processing completed: 15.13s, Tasks: 14, avg per task: 1.08s
+[TEXT2TEXT] cost time: 0.6016771793365479
+[TEXT2TEXT] cost time: 6.609779119491577
+VLM batch processing completed: 2.17s, Tasks: 1, avg per task: 2.17s
+[TEXT2TEXT] cost time: 0.6018998622894287
+Thread 4 Accuracy: 19 / 32 59.37499814453131
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8020741939544678
+[TEXT2TEXT] cost time: 8.011529684066772
+[TEXT2TEXT] cost time: 4.006261825561523
+VLM batch processing completed: 18.66s, Tasks: 13, avg per task: 1.44s
+[TEXT2TEXT] cost time: 0.2011570930480957
+[TEXT2TEXT] cost time: 0.8018410205841064
+[TEXT2TEXT] cost time: 1.0021629333496094
+[TEXT2TEXT] cost time: 2.404393434524536
+The video segment for <video_reader>3:0</video_reader> is empty. Please check the provided timestamps and ensure they are within the video's duration and the end_time_stamp is no less than the begin_time_stamp.
+The video segment for <video_reader>5:0</video_reader> is empty. Please check the provided timestamps and ensure they are within the video's duration and the end_time_stamp is no less than the begin_time_stamp.
+The video segment for <video_reader>6:0</video_reader> is empty. Please check the provided timestamps and ensure they are within the video's duration and the end_time_stamp is no less than the begin_time_stamp.
+VLM batch processing completed: 10.92s, Tasks: 9, avg per task: 1.21s
+[TEXT2TEXT] cost time: 0.40137577056884766
+[TEXT2TEXT] cost time: 2.003751516342163
+[TEXT2TEXT] cost time: 3.004664182662964
+[TEXT2TEXT] cost time: 3.4053773880004883
+VLM batch processing completed: 16.22s, Tasks: 16, avg per task: 1.01s
+[TEXT2TEXT] cost time: 8.814029216766357
+[TEXT2TEXT] cost time: 5.81038236618042
+[TEXT2TEXT] cost time: 1.2025628089904785
+[TEXT2TEXT] cost time: 3.8066511154174805
+VLM batch processing completed: 20.19s, Tasks: 17, avg per task: 1.19s
+[TEXT2TEXT] cost time: 2.8050379753112793
+[TEXT2TEXT] cost time: 2.003537178039551
+VLM batch processing completed: 2.35s, Tasks: 1, avg per task: 2.35s
+[TEXT2TEXT] cost time: 1.803938865661621
+VLM batch processing completed: 7.13s, Tasks: 1, avg per task: 7.13s
+[TEXT2TEXT] cost time: 2.0039353370666504
+[TEXT2TEXT] cost time: 3.20568585395813
+[TEXT2TEXT] cost time: 4.807073354721069
+VLM batch processing completed: 16.72s, Tasks: 15, avg per task: 1.11s
+[TEXT2TEXT] cost time: 0.8022370338439941
+[TEXT2TEXT] cost time: 1.6034374237060547
+[TEXT2TEXT] cost time: 4.206701040267944
+[TEXT2TEXT] cost time: 4.406615257263184
+VLM batch processing completed: 17.70s, Tasks: 15, avg per task: 1.18s
+[TEXT2TEXT] cost time: 2.8070857524871826
+[TEXT2TEXT] cost time: 31.043378829956055
+[TEXT2TEXT] cost time: 1.2058703899383545
+[TEXT2TEXT] cost time: 5.207371711730957
+VLM batch processing completed: 22.97s, Tasks: 23, avg per task: 1.00s
+[TEXT2TEXT] cost time: 1.2024421691894531
+[TEXT2TEXT] cost time: 10.21502685546875
+Thread 4 Accuracy: 20 / 33 60.60605876951337
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8020522594451904
+[TEXT2TEXT] cost time: 2.003387212753296
+[TEXT2TEXT] cost time: 4.206460952758789
+VLM batch processing completed: 16.73s, Tasks: 13, avg per task: 1.29s
+[TEXT2TEXT] cost time: 19.825516939163208
+[TEXT2TEXT] cost time: 0.601945161819458
+[TEXT2TEXT] cost time: 32.240520000457764
+[TEXT2TEXT] cost time: 8.812744617462158
+VLM batch processing completed: 21.25s, Tasks: 19, avg per task: 1.12s
+[TEXT2TEXT] cost time: 3.004572868347168
+[TEXT2TEXT] cost time: 0.601940393447876
+[TEXT2TEXT] cost time: 3.0056650638580322
+[TEXT2TEXT] cost time: 3.005049228668213
+VLM batch processing completed: 16.50s, Tasks: 13, avg per task: 1.27s
+[TEXT2TEXT] cost time: 5.007959604263306
+[TEXT2TEXT] cost time: 0.6018123626708984
+[TEXT2TEXT] cost time: 0.8025991916656494
+[TEXT2TEXT] cost time: 7.410978078842163
+VLM batch processing completed: 18.95s, Tasks: 18, avg per task: 1.05s
+[TEXT2TEXT] cost time: 3.005391836166382
+[TEXT2TEXT] cost time: 8.612416505813599
+Thread 4 Accuracy: 21 / 34 61.764704065744006
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 2.2040464878082275
+[TEXT2TEXT] cost time: 1.8030941486358643
+[TEXT2TEXT] cost time: 6.209656238555908
+VLM batch processing completed: 54.92s, Tasks: 33, avg per task: 1.66s
+[TEXT2TEXT] cost time: 4.40695333480835
+[TEXT2TEXT] cost time: 2.203709602355957
+Thread 4 Accuracy: 21 / 35 59.99999828571434
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 2.005006790161133
+[TEXT2TEXT] cost time: 3.4059882164001465
+[TEXT2TEXT] cost time: 19.624573945999146
+VLM batch processing completed: 16.74s, Tasks: 13, avg per task: 1.29s
+[TEXT2TEXT] cost time: 1.6036808490753174
+[TEXT2TEXT] cost time: 2.204366445541382
+Thread 4 Accuracy: 22 / 36 61.1111094135803
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 2.8051342964172363
+[TEXT2TEXT] cost time: 5.809319019317627
+[TEXT2TEXT] cost time: 5.608386516571045
+VLM batch processing completed: 20.63s, Tasks: 17, avg per task: 1.21s
+[TEXT2TEXT] cost time: 0.601905345916748
+[TEXT2TEXT] cost time: 1.0026423931121826
+[TEXT2TEXT] cost time: 1.002220630645752
+[TEXT2TEXT] cost time: 2.8046536445617676
+VLM batch processing completed: 14.72s, Tasks: 14, avg per task: 1.05s
+[TEXT2TEXT] cost time: 0.20116305351257324
+[TEXT2TEXT] cost time: 0.6017789840698242
+[TEXT2TEXT] cost time: 1.0024921894073486
+[TEXT2TEXT] cost time: 3.4055941104888916
+VLM batch processing completed: 21.52s, Tasks: 18, avg per task: 1.20s
+[TEXT2TEXT] cost time: 0.6017272472381592
+[TEXT2TEXT] cost time: 15.019500017166138
+[TEXT2TEXT] cost time: 1.0020110607147217
+[TEXT2TEXT] cost time: 3.605278968811035
+VLM batch processing completed: 19.40s, Tasks: 17, avg per task: 1.14s
+[TEXT2TEXT] cost time: 1.6028809547424316
+[TEXT2TEXT] cost time: 5.808442115783691
+VLM batch processing completed: 2.12s, Tasks: 1, avg per task: 2.12s
+[TEXT2TEXT] cost time: 10.213710069656372
+VLM batch processing completed: 3.59s, Tasks: 1, avg per task: 3.59s
+[TEXT2TEXT] cost time: 13.41993498802185
+[TEXT2TEXT] cost time: 0.8019843101501465
+[TEXT2TEXT] cost time: 9.613171339035034
+VLM batch processing completed: 50.70s, Tasks: 52, avg per task: 0.97s
+[TEXT2TEXT] cost time: 0.40195441246032715
+[TEXT2TEXT] cost time: 4.606928110122681
+Thread 4 Accuracy: 23 / 37 62.16216048210378
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0035061836242676
+[TEXT2TEXT] cost time: 7.645925998687744
+[TEXT2TEXT] cost time: 4.4064621925354
+VLM batch processing completed: 17.81s, Tasks: 14, avg per task: 1.27s
+[TEXT2TEXT] cost time: 0.8025007247924805
+[TEXT2TEXT] cost time: 1.0026631355285645
+VLM batch processing completed: 2.97s, Tasks: 1, avg per task: 2.97s
+[TEXT2TEXT] cost time: 22.62960696220398
+Thread 4 Accuracy: 24 / 38 63.15789307479229
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 5.207956790924072
+VLM batch processing completed: 2.28s, Tasks: 1, avg per task: 2.28s
+[TEXT2TEXT] cost time: 0.6016924381256104
+Thread 4 Accuracy: 25 / 39 64.10256245890866
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0020778179168701
+[TEXT2TEXT] cost time: 6.809875011444092
+[TEXT2TEXT] cost time: 4.407593488693237
+VLM batch processing completed: 22.18s, Tasks: 19, avg per task: 1.17s
+[TEXT2TEXT] cost time: 1.0024361610412598
+[TEXT2TEXT] cost time: 0.6018197536468506
+[TEXT2TEXT] cost time: 1.0020430088043213
+[TEXT2TEXT] cost time: 2.8045904636383057
+VLM batch processing completed: 11.85s, Tasks: 12, avg per task: 0.99s
+[TEXT2TEXT] cost time: 12.816812515258789
+[TEXT2TEXT] cost time: 0.8021245002746582
+[TEXT2TEXT] cost time: 1.002143383026123
+[TEXT2TEXT] cost time: 5.407617092132568
+VLM batch processing completed: 17.55s, Tasks: 13, avg per task: 1.35s
+[TEXT2TEXT] cost time: 52.864824056625366
+[TEXT2TEXT] cost time: 8.411185503005981
+[TEXT2TEXT] cost time: 1.602980375289917
+[TEXT2TEXT] cost time: 4.8068811893463135
+VLM batch processing completed: 16.55s, Tasks: 15, avg per task: 1.10s
+[TEXT2TEXT] cost time: 0.8020155429840088
+[TEXT2TEXT] cost time: 8.211770057678223
+Thread 4 Accuracy: 26 / 40 64.99999837500005
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 3.605557918548584
+[TEXT2TEXT] cost time: 2.804793357849121
+[TEXT2TEXT] cost time: 3.4053375720977783
+VLM batch processing completed: 14.87s, Tasks: 13, avg per task: 1.14s
+[TEXT2TEXT] cost time: 0.8060083389282227
+[TEXT2TEXT] cost time: 1.6033961772918701
+[TEXT2TEXT] cost time: 1.4030706882476807
+[TEXT2TEXT] cost time: 3.6057732105255127
+VLM batch processing completed: 18.64s, Tasks: 17, avg per task: 1.10s
+[TEXT2TEXT] cost time: 1.0026962757110596
+[TEXT2TEXT] cost time: 6.61000657081604
+[TEXT2TEXT] cost time: 7.208578586578369
+[TEXT2TEXT] cost time: 4.6079230308532715
+VLM batch processing completed: 11.86s, Tasks: 12, avg per task: 0.99s
+[TEXT2TEXT] cost time: 1.0034353733062744
+[TEXT2TEXT] cost time: 63.48175501823425
+[TEXT2TEXT] cost time: 1.0023207664489746
+[TEXT2TEXT] cost time: 3.405040979385376
+VLM batch processing completed: 14.35s, Tasks: 14, avg per task: 1.03s
+[TEXT2TEXT] cost time: 0.6019473075866699
+[TEXT2TEXT] cost time: 42.05133366584778
+Thread 4 Accuracy: 27 / 41 65.85365693039861
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 41.05104875564575
+[TEXT2TEXT] cost time: 2.203533411026001
+[TEXT2TEXT] cost time: 9.4127197265625
+VLM batch processing completed: 18.62s, Tasks: 11, avg per task: 1.69s
+[TEXT2TEXT] cost time: 4.00630259513855
+[TEXT2TEXT] cost time: 2.0040392875671387
+VLM batch processing completed: 2.70s, Tasks: 1, avg per task: 2.70s
+[TEXT2TEXT] cost time: 1.8033177852630615
+VLM batch processing completed: 3.79s, Tasks: 1, avg per task: 3.79s
+[TEXT2TEXT] cost time: 1.8036048412322998
+Thread 4 Accuracy: 27 / 42 64.28571275510208
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8024723529815674
+[TEXT2TEXT] cost time: 1.4031357765197754
+[TEXT2TEXT] cost time: 5.4079670906066895
+VLM batch processing completed: 21.62s, Tasks: 20, avg per task: 1.08s
+[TEXT2TEXT] cost time: 8.011470079421997
+[TEXT2TEXT] cost time: 1.0027015209197998
+VLM batch processing completed: 2.47s, Tasks: 1, avg per task: 2.47s
+[TEXT2TEXT] cost time: 1.0023837089538574
+VLM batch processing completed: 2.05s, Tasks: 1, avg per task: 2.05s
+[TEXT2TEXT] cost time: 1.2030537128448486
+VLM batch processing completed: 2.64s, Tasks: 1, avg per task: 2.64s
+[TEXT2TEXT] cost time: 7.411974668502808
+VLM batch processing completed: 2.37s, Tasks: 1, avg per task: 2.37s
+[TEXT2TEXT] cost time: 8.612619161605835
+Thread 4 Accuracy: 27 / 43 62.79069621416986
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.802189826965332
+VLM batch processing completed: 4.87s, Tasks: 1, avg per task: 4.87s
+[TEXT2TEXT] cost time: 1.0034444332122803
+VLM batch processing completed: 4.13s, Tasks: 1, avg per task: 4.13s
+[TEXT2TEXT] cost time: 2.6043317317962646
+Thread 4 Accuracy: 28 / 44 63.636362190082686
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.002532958984375
+[TEXT2TEXT] cost time: 1.8040974140167236
+[TEXT2TEXT] cost time: 10.414541959762573
+VLM batch processing completed: 18.61s, Tasks: 13, avg per task: 1.43s
+[TEXT2TEXT] cost time: 1.4025790691375732
+[TEXT2TEXT] cost time: 0.8020663261413574
+VLM batch processing completed: 2.68s, Tasks: 1, avg per task: 2.68s
+[TEXT2TEXT] cost time: 4.206759929656982
+VLM batch processing completed: 2.76s, Tasks: 1, avg per task: 2.76s
+[TEXT2TEXT] cost time: 0.6022648811340332
+VLM batch processing completed: 2.48s, Tasks: 1, avg per task: 2.48s
+[TEXT2TEXT] cost time: 1.203028917312622
+VLM batch processing completed: 1.79s, Tasks: 1, avg per task: 1.79s
+[TEXT2TEXT] cost time: 1.2027502059936523
+VLM batch processing completed: 2.10s, Tasks: 1, avg per task: 2.10s
+[TEXT2TEXT] cost time: 4.206177473068237
+VLM batch processing completed: 2.67s, Tasks: 1, avg per task: 2.67s
+[TEXT2TEXT] cost time: 10.013796091079712
+Thread 4 Accuracy: 28 / 45 62.22222083950621
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2029147148132324
+[TEXT2TEXT] cost time: 1.0021977424621582
+[TEXT2TEXT] cost time: 3.20475697517395
+VLM batch processing completed: 18.26s, Tasks: 11, avg per task: 1.66s
+[TEXT2TEXT] cost time: 2.003722906112671
+[TEXT2TEXT] cost time: 1.6033434867858887
+VLM batch processing completed: 5.85s, Tasks: 1, avg per task: 5.85s
+[TEXT2TEXT] cost time: 1.4029450416564941
+VLM batch processing completed: 3.46s, Tasks: 1, avg per task: 3.46s
+[TEXT2TEXT] cost time: 1.8039348125457764
+Thread 4 Accuracy: 28 / 46 60.86956389413992
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.20271897315979
+[TEXT2TEXT] cost time: 0.8018579483032227
+[TEXT2TEXT] cost time: 3.2050294876098633
+VLM batch processing completed: 15.26s, Tasks: 11, avg per task: 1.39s
+[TEXT2TEXT] cost time: 0.4016914367675781
+[TEXT2TEXT] cost time: 19.623591899871826
+[TEXT2TEXT] cost time: 2.00346302986145
+[TEXT2TEXT] cost time: 6.609206914901733
+VLM batch processing completed: 10.91s, Tasks: 12, avg per task: 0.91s
+[TEXT2TEXT] cost time: 0.6022043228149414
+[TEXT2TEXT] cost time: 1.2025067806243896
+VLM batch processing completed: 2.00s, Tasks: 1, avg per task: 2.00s
+[TEXT2TEXT] cost time: 1.002856731414795
+Thread 4 Accuracy: 28 / 47 59.57446681756454
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0024464130401611
+[TEXT2TEXT] cost time: 4.406620025634766
+[TEXT2TEXT] cost time: 2.2039339542388916
+VLM batch processing completed: 12.47s, Tasks: 10, avg per task: 1.25s
+[TEXT2TEXT] cost time: 3.4060044288635254
+[TEXT2TEXT] cost time: 1.002363920211792
+Thread 4 Accuracy: 29 / 48 60.41666540798614
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8023481369018555
+VLM batch processing completed: 5.53s, Tasks: 1, avg per task: 5.53s
+[TEXT2TEXT] cost time: 1.2035939693450928
+[TEXT2TEXT] cost time: 1.202718734741211
+[TEXT2TEXT] cost time: 2.6043434143066406
+VLM batch processing completed: 11.44s, Tasks: 10, avg per task: 1.14s
+[TEXT2TEXT] cost time: 5.0087926387786865
+[TEXT2TEXT] cost time: 3.4056811332702637
+VLM batch processing completed: 5.83s, Tasks: 5, avg per task: 1.17s
+[TEXT2TEXT] cost time: 2.40411639213562
+VLM batch processing completed: 3.48s, Tasks: 1, avg per task: 3.48s
+[TEXT2TEXT] cost time: 7.6104302406311035
+VLM batch processing completed: 2.72s, Tasks: 2, avg per task: 1.36s
+[TEXT2TEXT] cost time: 3.806150197982788
+VLM batch processing completed: 2.58s, Tasks: 2, avg per task: 1.29s
+[TEXT2TEXT] cost time: 3.806640863418579
+Thread 4 Accuracy: 30 / 49 61.22448854643901
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8020098209381104
+VLM batch processing completed: 6.32s, Tasks: 1, avg per task: 6.32s
+[TEXT2TEXT] cost time: 5.00750994682312
+Thread 4 Accuracy: 31 / 50 61.99999876000003
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0025391578674316
+[TEXT2TEXT] ERROR: Timeout, model: /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base
+[TEXT2TEXT] cost time: 92.7092227935791
+[TEXT2TEXT] cost time: 7.810411691665649
+VLM batch processing completed: 29.51s, Tasks: 18, avg per task: 1.64s
+[TEXT2TEXT] cost time: 2.604642391204834
+[TEXT2TEXT] cost time: 2.2083611488342285
+VLM batch processing completed: 5.54s, Tasks: 1, avg per task: 5.54s
+[TEXT2TEXT] cost time: 1.2031521797180176
+Thread 4 Accuracy: 32 / 51 62.745096808919676
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.80228590965271
+VLM batch processing completed: 7.86s, Tasks: 1, avg per task: 7.86s
+[TEXT2TEXT] cost time: 2.20400071144104
+[TEXT2TEXT] cost time: 1.602715253829956
+[TEXT2TEXT] cost time: 10.214191675186157
+VLM batch processing completed: 164.43s, Tasks: 34, avg per task: 4.84s
+[TEXT2TEXT] cost time: 5.20754599571228
+[TEXT2TEXT] cost time: 4.006019353866577
+VLM batch processing completed: 13.17s, Tasks: 2, avg per task: 6.59s
+[TEXT2TEXT] cost time: 3.2058916091918945
+Thread 4 Accuracy: 32 / 52 61.53846035502961
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8021934032440186
+[TEXT2TEXT] cost time: 1.0022926330566406
+[TEXT2TEXT] cost time: 2.8044540882110596
+VLM batch processing completed: 13.87s, Tasks: 12, avg per task: 1.16s
+[TEXT2TEXT] cost time: 3.4055540561676025
+[TEXT2TEXT] cost time: 1.0020902156829834
+VLM batch processing completed: 2.31s, Tasks: 1, avg per task: 2.31s
+[TEXT2TEXT] cost time: 4.806914329528809
+Thread 4 Accuracy: 33 / 53 62.26414976860095
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.4029722213745117
+[TEXT2TEXT] cost time: 2.0035300254821777
+[TEXT2TEXT] cost time: 6.007922410964966
+VLM batch processing completed: 26.91s, Tasks: 12, avg per task: 2.24s
+[TEXT2TEXT] cost time: 1.4027884006500244
+[TEXT2TEXT] cost time: 13.621857166290283
+VLM batch processing completed: 5.58s, Tasks: 1, avg per task: 5.58s
+[TEXT2TEXT] cost time: 9.812552690505981
+Thread 4 Accuracy: 33 / 54 61.111109979423894
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.2024071216583252
+VLM batch processing completed: 0.60s, Tasks: 1, avg per task: 0.60s
+[TEXT2TEXT] cost time: 0.6024298667907715
+Thread 4 Accuracy: 34 / 55 61.818180694214895
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 0.8018958568572998
+VLM batch processing completed: 4.19s, Tasks: 1, avg per task: 4.19s
+[TEXT2TEXT] cost time: 0.6022555828094482
+Thread 4 Accuracy: 35 / 56 62.4999988839286
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.202925205230713
+VLM batch processing completed: 3.72s, Tasks: 1, avg per task: 3.72s
+[TEXT2TEXT] cost time: 5.007454872131348
+[TEXT2TEXT] cost time: 3.8064992427825928
+[TEXT2TEXT] cost time: 16.020064115524292
+VLM batch processing completed: 131.91s, Tasks: 92, avg per task: 1.43s
+[TEXT2TEXT] cost time: 4.806676387786865
+[TEXT2TEXT] cost time: 1.2022132873535156
+Thread 4 Accuracy: 36 / 57 63.15789362880888
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+[TEXT2TEXT] cost time: 1.0021767616271973
+[TEXT2TEXT] cost time: 0.8018465042114258
+[TEXT2TEXT] cost time: 6.40737509727478
+VLM batch processing completed: 44.65s, Tasks: 40, avg per task: 1.12s
+[TEXT2TEXT] cost time: 0.4014596939086914
+[TEXT2TEXT] cost time: 0.0005061626434326172
+[TEXT2TEXT] cost time: 0.0005593299865722656
+[TEMPORAL GROUNDING] Warning: Failed to get valid answer after 3 retries
+[TEXT2TEXT] cost time: 1.0020554065704346
+[TEXT2TEXT] cost time: 0.601473331451416
+[TEXT2TEXT] cost time: 3.4052188396453857
+VLM batch processing completed: 18.32s, Tasks: 17, avg per task: 1.08s
+[TEXT2TEXT] cost time: 1.0022969245910645
+[TEXT2TEXT] cost time: 0.6017024517059326
+[TEXT2TEXT] cost time: 1.202514886856079
+[TEXT2TEXT] cost time: 3.2047336101531982
+VLM batch processing completed: 15.52s, Tasks: 14, avg per task: 1.11s
+[TEXT2TEXT] cost time: 0.8020853996276855
+[TEXT2TEXT] cost time: 0.6015069484710693
+[TEXT2TEXT] cost time: 1.2026331424713135
+[TEXT2TEXT] cost time: 3.605452060699463
+VLM batch processing completed: 16.50s, Tasks: 17, avg per task: 0.97s
+[TEXT2TEXT] cost time: 0.8018691539764404
+[TEXT2TEXT] cost time: 0.6016390323638916
+[TEXT2TEXT] cost time: 1.001922607421875
+[TEXT2TEXT] cost time: 3.004408359527588
+VLM batch processing completed: 14.86s, Tasks: 13, avg per task: 1.14s
+[TEXT2TEXT] cost time: 0.40151429176330566
+[TEXT2TEXT] cost time: 1.2025477886199951
+[TEXT2TEXT] cost time: 0.801969051361084
+[TEXT2TEXT] cost time: 4.206193447113037
+VLM batch processing completed: 15.73s, Tasks: 16, avg per task: 0.98s
+[TEXT2TEXT] cost time: 0.6016066074371338
+[TEXT2TEXT] cost time: 3.0046632289886475
+VLM batch processing completed: 2.96s, Tasks: 1, avg per task: 2.96s
+[TEXT2TEXT] cost time: 4.005895614624023
+VLM batch processing completed: 2.23s, Tasks: 1, avg per task: 2.23s
+[TEXT2TEXT] cost time: 8.610882043838501
+[TEXT2TEXT] cost time: 0.801929235458374
+[TEXT2TEXT] cost time: 3.805873155593872
+VLM batch processing completed: 18.22s, Tasks: 17, avg per task: 1.07s
+[TEXT2TEXT] cost time: 0.8020877838134766
+[TEXT2TEXT] cost time: 9.412202835083008
+Thread 4 Accuracy: 37 / 58 63.79310234839479
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+
+Processing completed!
+Total processed samples: 186
+Final accuracy: 58.06% (108/186)
+INFO 10-11 12:46:37 [__init__.py:235] Automatically detected platform cuda.
+Save path: ./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+Max workers: 1
+498 502
+Checking valid data...
+Valid data count: 84
+Loaded 494 previously processed samples
+Total samples: 84, Already processed: 494, To process: 1
+Starting multiprocessing with 1 workers...
+Initializing VLLM server with conservative settings...
+INFO 10-11 12:46:57 [config.py:1604] Using max model len 50000
+INFO 10-11 12:46:58 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-11 12:46:59 [core.py:572] Waiting for init message from front-end.
+INFO 10-11 12:46:59 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', speculative_config=None, tokenizer='/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=50000, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/minghao/Models/Qwen2.5-VL-7B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}
+INFO 10-11 12:47:03 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-11 12:47:04 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-11 12:47:04 [gpu_model_runner.py:1843] Starting to load model /share/project/minghao/Models/Qwen2.5-VL-7B-Instruct...
+INFO 10-11 12:47:04 [gpu_model_runner.py:1875] Loading model from scratch...
+WARNING 10-11 12:47:04 [vision.py:91] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 10-11 12:47:04 [cuda.py:290] Using Flash Attention backend on V1 engine.
+INFO 10-11 12:48:34 [default_loader.py:262] Loading weights took 89.67 seconds
+INFO 10-11 12:48:34 [gpu_model_runner.py:1892] Model loading took 15.6271 GiB and 89.945766 seconds
+INFO 10-11 12:48:34 [gpu_model_runner.py:2380] Encoder cache will be initialized with a budget of 32768 tokens, and profiled with 1 video items of the maximum feature size.
+INFO 10-11 12:48:44 [gpu_worker.py:255] Available KV cache memory: 51.70 GiB
+INFO 10-11 12:48:44 [kv_cache_utils.py:833] GPU KV cache size: 968,048 tokens
+INFO 10-11 12:48:44 [kv_cache_utils.py:837] Maximum concurrency for 50,000 tokens per request: 19.36x
+INFO 10-11 12:48:44 [core.py:193] init engine (profile, create kv cache, warmup model) took 9.81 seconds
+[TEXT2TEXT] cost time: 0.6016013622283936
+[TEXT2TEXT] cost time: 2.4036974906921387
+[TEXT2TEXT] cost time: 3.0044333934783936
+VLM batch processing completed: 16.77s, Tasks: 11, avg per task: 1.52s
+[TEXT2TEXT] cost time: 2.0037014484405518
+[TEXT2TEXT] cost time: 0.601921796798706
+[TEXT2TEXT] cost time: 1.0025701522827148
+[TEXT2TEXT] cost time: 4.60670018196106
+VLM batch processing completed: 15.73s, Tasks: 16, avg per task: 0.98s
+[TEXT2TEXT] cost time: 0.40165257453918457
+[TEXT2TEXT] cost time: 0.601984977722168
+[TEXT2TEXT] cost time: 1.2022974491119385
+[TEXT2TEXT] cost time: 4.206110954284668
+VLM batch processing completed: 19.49s, Tasks: 14, avg per task: 1.39s
+[TEXT2TEXT] cost time: 2.6044819355010986
+[TEXT2TEXT] cost time: 1.6033623218536377
+[TEXT2TEXT] cost time: 1.2028675079345703
+[TEXT2TEXT] cost time: 9.212336301803589
+VLM batch processing completed: 13.02s, Tasks: 11, avg per task: 1.18s
+[TEXT2TEXT] cost time: 1.2025704383850098
+[TEXT2TEXT] cost time: 1.6028964519500732
+[TEXT2TEXT] cost time: 1.0021848678588867
+[TEXT2TEXT] cost time: 4.405508041381836
+VLM batch processing completed: 18.48s, Tasks: 17, avg per task: 1.09s
+[TEXT2TEXT] cost time: 0.6017599105834961
+[TEXT2TEXT] cost time: 0.8019022941589355
+[TEXT2TEXT] cost time: 0.8019602298736572
+[TEXT2TEXT] cost time: 25.43225598335266
+VLM batch processing completed: 95.90s, Tasks: 84, avg per task: 1.14s
+[TEXT2TEXT] cost time: 1.002415657043457
+[TEXT2TEXT] cost time: 4.40669322013855
+[TEXT2TEXT] cost time: 0.6016578674316406
+[TEXT2TEXT] cost time: 3.6053967475891113
+VLM batch processing completed: 15.22s, Tasks: 14, avg per task: 1.09s
+[TEXT2TEXT] cost time: 49.66097688674927
+[TEXT2TEXT] cost time: 11.817240953445435
+[TEXT2TEXT] cost time: 1.803802728652954
+[TEXT2TEXT] cost time: 4.006498336791992
+VLM batch processing completed: 16.66s, Tasks: 16, avg per task: 1.04s
+[TEXT2TEXT] cost time: 0.40212559700012207
+[TEXT2TEXT] cost time: 38.851847410202026
+[TEXT2TEXT] cost time: 0.8017404079437256
+[TEXT2TEXT] cost time: 3.0054945945739746
+VLM batch processing completed: 11.14s, Tasks: 11, avg per task: 1.01s
+[TEXT2TEXT] cost time: 1.6031255722045898
+[TEXT2TEXT] cost time: 1.6030547618865967
+VLM batch processing completed: 2.22s, Tasks: 1, avg per task: 2.22s
+[TEXT2TEXT] cost time: 3.0048766136169434
+[TEXT2TEXT] cost time: 0.8019230365753174
+[TEXT2TEXT] cost time: 5.20762038230896
+VLM batch processing completed: 19.14s, Tasks: 19, avg per task: 1.01s
+[TEXT2TEXT] cost time: 0.4020688533782959
+[TEXT2TEXT] cost time: 4.60707688331604
+[TEXT2TEXT] cost time: 0.0008499622344970703
+[TEXT2TEXT] cost time: 0.0009007453918457031
+VLM batch processing completed: 13.30s, Tasks: 16, avg per task: 0.83s
+[TEXT2TEXT] cost time: 0.40142178535461426
+[TEXT2TEXT] cost time: 6.006894111633301
+[TEXT2TEXT] cost time: 1.202209711074829
+[TEXT2TEXT] cost time: 4.006015062332153
+VLM batch processing completed: 26.56s, Tasks: 21, avg per task: 1.26s
+[TEXT2TEXT] cost time: 0.8020672798156738
+[TEXT2TEXT] cost time: 8.211023569107056
+[TEXT2TEXT] cost time: 1.202592134475708
+[TEXT2TEXT] cost time: 24.834123611450195
+VLM batch processing completed: 12.38s, Tasks: 15, avg per task: 0.83s
+[TEXT2TEXT] cost time: 1.6033785343170166
+[TEXT2TEXT] cost time: 18.423278093338013
+[TEXT2TEXT] cost time: 0.0006029605865478516
+[TEXT2TEXT] cost time: 0.0005669593811035156
+VLM batch processing completed: 11.94s, Tasks: 11, avg per task: 1.09s
+[TEXT2TEXT] cost time: 0.4014456272125244
+[TEXT2TEXT] cost time: 58.47330689430237
+[TEXT2TEXT] cost time: 26.63325548171997
+[TEXT2TEXT] cost time: 1.2022898197174072
+[TEXT2TEXT] cost time: 4.6066954135894775
+VLM batch processing completed: 14.07s, Tasks: 16, avg per task: 0.88s
+[TEXT2TEXT] cost time: 0.6016290187835693
+[TEXT2TEXT] cost time: 26.03357219696045
+[TEXT2TEXT] cost time: 16.621718883514404
+[TEXT2TEXT] cost time: 10.61476182937622
+Thread 4 Accuracy: 0 / 1 0.0
+./eval_result/mix/mlvu_LRM_checkpoint-40_full_model_TEMP_saves_qwen25-7b-sft-temporal_grounding_real_6k_base_VLM_Qwen2.5-VL-7B-Instruct_TOPK_10_CLIP_10.json.part4
+
+Processing completed!
+Total processed samples: 495
+Final accuracy: 58.79% (291/495)

@@ -1,0 +1,17 @@
+{
+  "video_path": "/share/project/huaying/benchmark/mlvu/videos/test_tutorial_21.mp4",
+  "question": "Which technique is primarily used when editing the landscape photo in the video?",
+  "options": [
+    "A. Sharpening",
+    "B. Color correction",
+    "C. Compositing",
+    "D. Contrast enhancement",
+    "E. Saturation adjustment",
+    "F. Exposure adjustment"
+  ],
+  "ground_truth": "C",
+  "predicted_answer": "C",
+  "is_correct": true,
+  "total_rounds": 5,
+  "conversation_length": 10
+}

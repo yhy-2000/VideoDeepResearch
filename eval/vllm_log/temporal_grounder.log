@@ -1,0 +1,102 @@
+INFO 10-15 09:04:52 [__init__.py:235] Automatically detected platform cuda.
+2025-10-15 09:04:54,850 - INFO - Initializing Temporal VLM_Listener with process ID: 1068566_91f4ef19
+2025-10-15 09:04:54,851 - INFO - Started cleanup thread for output directory
+2025-10-15 09:04:54,851 - INFO - Initializing VLLM server with conservative settings...
+INFO 10-15 09:05:04 [config.py:1604] Using max model len 32768
+INFO 10-15 09:05:05 [config.py:2434] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-15 09:05:06 [core.py:572] Waiting for init message from front-end.
+INFO 10-15 09:05:06 [core.py:71] Initializing a V1 LLM engine (v0.10.0) with config: model='/share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base', speculative_config=None, tokenizer='/share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":512,"local_cache_dir":null}
+INFO 10-15 09:05:09 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+WARNING 10-15 09:05:09 [topk_topp_sampler.py:59] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+INFO 10-15 09:05:09 [gpu_model_runner.py:1843] Starting to load model /share/project/huaying/VideoDeepResearch/train/LLaMA-Factory-main/saves/qwen25-7b-sft-temporal_grounding_real_6k_base...
+INFO 10-15 09:05:09 [gpu_model_runner.py:1875] Loading model from scratch...
+INFO 10-15 09:05:10 [cuda.py:290] Using Flash Attention backend on V1 engine.
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:23<01:11, 23.82s/it]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:49<00:49, 24.84s/it]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [01:11<00:23, 23.82s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [01:17<00:00, 16.51s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [01:17<00:00, 19.32s/it]
+
+INFO 10-15 09:06:27 [default_loader.py:262] Loading weights took 77.33 seconds
+INFO 10-15 09:06:27 [gpu_model_runner.py:1892] Model loading took 14.2717 GiB and 77.556036 seconds
+INFO 10-15 09:06:34 [backends.py:530] Using cache directory: /root/.cache/vllm/torch_compile_cache/901f7347a3/rank_0_0/backbone for vLLM's torch.compile
+INFO 10-15 09:06:34 [backends.py:541] Dynamo bytecode transform time: 5.99 s
+INFO 10-15 09:06:38 [backends.py:161] Directly load the compiled graph(s) for dynamic shape from the cache, took 4.348 s
+INFO 10-15 09:06:39 [monitor.py:34] torch.compile takes 5.99 s in total
+INFO 10-15 09:06:40 [gpu_worker.py:255] Available KV cache memory: 47.24 GiB
+INFO 10-15 09:06:40 [kv_cache_utils.py:833] GPU KV cache size: 884,512 tokens
+INFO 10-15 09:06:40 [kv_cache_utils.py:837] Maximum concurrency for 32,768 tokens per request: 26.99x
+Capturing CUDA graph shapes:   0%|          | 0/67 [00:00<?, ?it/s]Capturing CUDA graph shapes:   4%|▍         | 3/67 [00:00<00:02, 28.86it/s]Capturing CUDA graph shapes:  10%|█         | 7/67 [00:00<00:02, 29.44it/s]Capturing CUDA graph shapes:  15%|█▍        | 10/67 [00:00<00:02, 26.92it/s]Capturing CUDA graph shapes:  19%|█▉        | 13/67 [00:00<00:02, 25.70it/s]Capturing CUDA graph shapes:  24%|██▍       | 16/67 [00:00<00:01, 26.12it/s]Capturing CUDA graph shapes:  30%|██▉       | 20/67 [00:00<00:01, 27.73it/s]Capturing CUDA graph shapes:  34%|███▍      | 23/67 [00:00<00:01, 27.76it/s]Capturing CUDA graph shapes:  39%|███▉      | 26/67 [00:00<00:01, 27.52it/s]Capturing CUDA graph shapes:  43%|████▎     | 29/67 [00:01<00:01, 24.71it/s]Capturing CUDA graph shapes:  48%|████▊     | 32/67 [00:01<00:01, 25.72it/s]Capturing CUDA graph shapes:  52%|█████▏    | 35/67 [00:01<00:01, 25.95it/s]Capturing CUDA graph shapes:  57%|█████▋    | 38/67 [00:01<00:01, 25.54it/s]Capturing CUDA graph shapes:  61%|██████    | 41/67 [00:01<00:01, 25.22it/s]Capturing CUDA graph shapes:  66%|██████▌   | 44/67 [00:01<00:00, 25.86it/s]Capturing CUDA graph shapes:  70%|███████   | 47/67 [00:01<00:00, 25.96it/s]Capturing CUDA graph shapes:  75%|███████▍  | 50/67 [00:01<00:00, 25.58it/s]Capturing CUDA graph shapes:  79%|███████▉  | 53/67 [00:02<00:00, 25.66it/s]Capturing CUDA graph shapes:  84%|████████▎ | 56/67 [00:02<00:00, 22.93it/s]Capturing CUDA graph shapes:  88%|████████▊ | 59/67 [00:02<00:00, 23.96it/s]Capturing CUDA graph shapes:  93%|█████████▎| 62/67 [00:02<00:00, 24.77it/s]Capturing CUDA graph shapes:  97%|█████████▋| 65/67 [00:02<00:00, 25.92it/s]Capturing CUDA graph shapes: 100%|██████████| 67/67 [00:02<00:00, 25.99it/s]
+INFO 10-15 09:06:43 [gpu_model_runner.py:2485] Graph capturing finished in 3 secs, took 1.73 GiB
+INFO 10-15 09:06:43 [core.py:193] init engine (profile, create kv cache, warmup model) took 15.60 seconds
+2025-10-15 09:06:44,218 - INFO - VLLM server initialized successfully
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 1
+2025-10-15 09:07:10,266 - INFO - [1068566_91f4ef19] Starting batch generation for 1 inputs...
+INFO 10-15 09:07:10 [chat_utils.py:473] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+2025-10-15 09:07:11,422 - INFO - [1068566_91f4ef19] Batch processing completed: 1.16s for 1 tasks
+[TEMP] find files: 0
+[TEMP] find files: 1
+2025-10-15 09:07:12,429 - INFO - [1068566_91f4ef19] Starting batch generation for 1 inputs...
+2025-10-15 09:10:55,160 - INFO - Deleted stale lock file: ./vllm_io_files/vllm_input_temporal/8d68dfbed4a82ffe4378cbb4b99b3d31040087a18e0dd09bb12f66ecb1033897.pkl.lock
+2025-10-15 09:10:55,160 - INFO - Lock cleanup completed: deleted 1 stale lock files
+2025-10-15 09:10:55,237 - INFO - [1068566_91f4ef19] Batch processing completed: 222.81s for 1 tasks
+[TEMP] find files: 1
+2025-10-15 09:10:55,239 - INFO - [1068566_91f4ef19] Starting batch generation for 1 inputs...
+2025-10-15 09:10:55,304 - INFO - [1068566_91f4ef19] Batch processing completed: 0.06s for 1 tasks
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0
+[TEMP] find files: 0

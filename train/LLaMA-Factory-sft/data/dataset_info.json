@@ -1,0 +1,22 @@
+{
+    "video_marathon_planner": {
+        "file_name": "video_marathon_planner.json",
+        "columns": {
+          "prompt": "instruction",
+          "query": "input",
+          "response": "output",
+          "system": "system",
+          "history": "history"
+        }
+    },
+    "video_marathon_temporal_grounding": {
+        "file_name": "video_marathon_temporal_grounding.json",
+        "columns": {
+          "prompt": "instruction",
+          "query": "input",
+          "response": "output",
+          "system": "system",
+          "history": "history"
+        }
+    }
+}

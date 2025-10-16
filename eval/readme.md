@@ -1,15 +1,15 @@
-Before running the test code, you need to first download the datasets from the official websites of each benchmark. The data directory structure should be formatted as follows:
+<!-- Before running the test code, you need to first download the datasets from the official websites of each benchmark. The data directory structure should be formatted as follows:
 
 ```
 DATASET_DIR/
-├── LongVideoBench
+├── MLVU
 │   ├── videos
 │   ├── subtitles
-│   ├── qa_val.json
+│   ├── qa.json
 ...
 ```
 
-The `qa_val.json` file contains a list where each element is a dictionary with the following format:
+The `qa.json` file contains a list where each element is a dictionary with the following format:
 
 ```json
 {
@@ -25,7 +25,7 @@ The `qa_val.json` file contains a list where each element is a dictionary with t
     "question_category": "TAA",
     "level": "L2-Relation",
     "id": "soNQYQXrx_A_1",
-    "video_path": "~/benchmark/formulated/LongVideoBench/videos/soNQYQXrx_A.mp4",
+    "video_path": "~/benchmark/formulated/MLVU/videos/soNQYQXrx_A.mp4",
     "subtitle_path": "soNQYQXrx_A_en.json",
     "duration_group": 600,
     "starting_timestamp_for_subtitles": 0,
@@ -43,4 +43,15 @@ The `qa_val.json` file contains a list where each element is a dictionary with t
 }
 ```
 
-After preparing the data, you can run the corresponding preprocessing code and test code according to the instructions in `eval.sh`.
+After preparing the data, run 
+```
+bash eval/preprocess/preprocess.sh
+```
+to preprocess the videos
+
+
+Then you can run the evaluation code to evaluate on specific dataset. 
+```
+bash eval.sh
+```
+-->
