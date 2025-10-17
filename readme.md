@@ -13,6 +13,7 @@
 
 ## 🎉 News 
 2025.10.16 - We released the newest version of VideoDeepResearch called VideoExplorer! It's smaller, cheaper, but just as effective in long video understanding. Details refer to our [updated paper]("https://arxiv.org/pdf/2506.10821"). ✨
+
 2025.06.10 - We released the first version of VideoDeepResearch. 🎬
 
 ## 🚀 Overview
