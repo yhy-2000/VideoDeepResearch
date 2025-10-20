@@ -6,6 +6,13 @@
     </a>
 </p>
 
+## 🎬 Demo
+
+<div align="center">
+    <video src="https://github.com/user-attachments/assets/6f90154b-1ab4-4df3-ac02-1deb26d702f1"/>
+</div>
+
+
 ## 👉 Introduction
 
 **VideoExplorer** is a novel framework for long-video understanding  that moves beyond single-pass reasoning. Inspired by the "thinking with video" principle, it performs **faithful, efficient, and interpretable reasoning** by dynamically exploring video content.
